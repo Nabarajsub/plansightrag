@@ -29,7 +29,7 @@ authors:
     affiliation: >-
       Department of Electrical Engineering & Computer Science,
       University of Wyoming
-repository-code: https://github.com/<ORG>/plansightrag
+repository-code: https://github.com/Nabarajsub/plansightrag
 license: MIT
 keywords:
   - multimodal retrieval-augmented generation

@@ -41,9 +41,38 @@ ROOT_DOCS = {
         ("MDOT", "Michigan DOT Standard Plans", "held-out zero-shot transfer"),
 }
 
-# Known publisher landing pages. Leave blank rather than guessing.
+# Publisher pages, keyed by collection. Verified to resolve; do not guess these.
 URLS = {
-    "WYDOT": "", "Caltrans": "", "AZDOT": "", "CDOT": "", "FDOT": "", "MDOT": "",
+    "wydot_2026": "https://www.dot.state.wy.us/home/engineering_technical_programs/"
+                  "manuals_publications/standardplans.html",
+    "california_2025": "https://dot.ca.gov/programs/design/"
+                       "2025-ccs-standard-plans-and-standard-specifications",
+    "arizona_2025": "https://azdot.gov/business/engineering-and-construction/"
+                    "roadway-engineering/roadway-design/construction-standard",
+    "colorado_2025": "https://www.codot.gov/programs/bridge/bridge-manuals/"
+                     "design-standards/structural-worksheets-pdfs",
+    "florida_2026": "https://www.fdot.gov/design/standardplans/current/27",
+    "michigan_2025": "https://mdotjboss.state.mi.us/stdplan/standardPlansHome.htm",
+    "wydot_design_manual": "https://www.dot.state.wy.us/home/engineering_technical_programs/"
+                           "manuals_publications.html",
+}
+# Direct-download URLs for individual documents, where one is published.
+DOC_URLS = {
+    "Wyoming 2021 Standard Specifications for Road and Bridge Construction.pdf":
+        "https://www.dot.state.wy.us/files/live/sites/wydot/files/shared/Construction/"
+        "2021%20Standard%20Specifications/"
+        "Wyoming%202021%20Standard%20Specifications%20for%20Road%20and%20Bridge%20Construction.pdf",
+    "C_standards_combined_set_arizona.pdf":
+        "https://apps.azdot.gov/files/Roadway-Engineering/Construction-Standard-Drawings/"
+        "C_standards_combined_set.pdf",
+    "Michian standard book.pdf":
+        "https://mdotjboss.state.mi.us/stdplan/standardPlansHome.htm",
+}
+# Access conditions that affect redistribution.
+ACCESS_NOTES = {
+    "WYDOT": "WYDOT Standard Plans are copyrighted by the Wyoming Department of "
+             "Transportation and distributed through a click-through acceptance page. "
+             "Obtain them directly from WYDOT; they are not redistributed here.",
 }
 
 
@@ -145,7 +174,8 @@ def main():
                 "bytes": st.st_size,
                 "sha256": sha256(path),
                 "file_mtime": datetime.datetime.fromtimestamp(st.st_mtime, datetime.timezone.utc).strftime("%Y-%m-%d"),
-                "url": URLS.get(agency, ""),
+                "url": DOC_URLS.get(fn) or URLS.get(top, ""),
+                "access_note": ACCESS_NOTES.get(agency, ""),
             })
             entries[-1]["_top"] = top
 
@@ -178,8 +208,8 @@ def main():
                  "package. Verify you hold the same edition by checking sha256, then "
                  "rasterize at 200 DPI (400 DPI for the tiling study) and set PLANS_ROOT.",
         "_verify": "sha256sum <file>   # compare against the sha256 field below",
-        "_url_note": "Empty url fields must be filled with the publisher's download page "
-                     "before publication.",
+        "_url_note": "url points at the publisher page (or the direct download where one "
+                     "exists). Editions are revised over time -- always confirm sha256.",
         "generated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d"),
         "totals": {
             "documents_on_record": len(entries),

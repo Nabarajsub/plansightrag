@@ -1,7 +1,7 @@
 {
  "_note": "Source documents for the five-DOT index, the Michigan transfer set and the real-standards rule-grounding corpus. These PDFs are public records published by the issuing agencies and are NOT redistributed with this package. Verify you hold the same edition by checking sha256, then rasterize at 200 DPI (400 DPI for the tiling study) and set PLANS_ROOT.",
  "_verify": "sha256sum <file>   # compare against the sha256 field below",
- "_url_note": "Empty url fields must be filled with the publisher's download page before publication.",
+ "_url_note": "url points at the publisher page (or the direct download where one exists). Editions are revised over time -- always confirm sha256.",
  "generated": "2026-08-05",
  "totals": {
   "documents_on_record": 66,
@@ -64,7 +64,8 @@
    "bytes": 14670887,
    "sha256": "b9d9c159b59d9d0848d155ebe9a0548f118e9153095319f19f6e969a1efdcb2e",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://apps.azdot.gov/files/Roadway-Engineering/Construction-Standard-Drawings/C_standards_combined_set.pdf",
+   "access_note": "",
    "benchmark_pages_from_this_document": 178,
    "used_in_reported_index": true
   },
@@ -77,7 +78,8 @@
    "bytes": 24726368,
    "sha256": "bba4f3e25ab49382deae30e20632ea720f6a8af1226cba663634158b7b346769",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.codot.gov/programs/bridge/bridge-manuals/design-standards/structural-worksheets-pdfs",
+   "access_note": "",
    "benchmark_pages_from_this_document": 62,
    "used_in_reported_index": true
   },
@@ -90,7 +92,8 @@
    "bytes": 115854535,
    "sha256": "b5cc39f8bad41eebbeb141f231be98be45857af63268cd7eb566abbd8e1124b9",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://dot.ca.gov/programs/design/2025-ccs-standard-plans-and-standard-specifications",
+   "access_note": "",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -103,7 +106,8 @@
    "bytes": 121588741,
    "sha256": "1a571bcda9ac4d25ffa9bf4422ca325c9b13e879d5528c668e15667e1fa64eaf",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://dot.ca.gov/programs/design/2025-ccs-standard-plans-and-standard-specifications",
+   "access_note": "",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -116,7 +120,8 @@
    "bytes": 120675623,
    "sha256": "376c4a622bd88cda9879e14000814c3f4c289ca66b9428d3105820a2b635b570",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://dot.ca.gov/programs/design/2025-ccs-standard-plans-and-standard-specifications",
+   "access_note": "",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -129,7 +134,8 @@
    "bytes": 127398948,
    "sha256": "d5a1ec1c3a80aab0d146b75e9a068f3b3f553352899023ca6fdd72c19c5f5f3f",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://dot.ca.gov/programs/design/2025-ccs-standard-plans-and-standard-specifications",
+   "access_note": "",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -142,7 +148,8 @@
    "bytes": 91102876,
    "sha256": "788fada6fce52540726b15d7d8234a49b41ddbdcf9e18d1ed8a971272f7b39db",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://dot.ca.gov/programs/design/2025-ccs-standard-plans-and-standard-specifications",
+   "access_note": "",
    "benchmark_pages_from_this_document": 596,
    "used_in_reported_index": true
   },
@@ -155,7 +162,8 @@
    "bytes": 171884185,
    "sha256": "cd0fd8182f5d9bdbc6f0e130daacff7ab2ee5835d4ce38dc2d6818e813cc85fe",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.fdot.gov/design/standardplans/current/27",
+   "access_note": "",
    "benchmark_pages_from_this_document": 746,
    "used_in_reported_index": true
   },
@@ -168,7 +176,8 @@
    "bytes": 35654743,
    "sha256": "c12aea2ba57691551a4aac85351a43cb59eebf689ac4dbbca9c513001cb4413c",
    "file_mtime": "2026-05-19",
-   "url": "",
+   "url": "https://mdotjboss.state.mi.us/stdplan/standardPlansHome.htm",
+   "access_note": "",
    "benchmark_pages_from_this_document": 39,
    "used_in_reported_index": true
   },
@@ -181,7 +190,8 @@
    "bytes": 1596968,
    "sha256": "2d46e27c1e4c4ee8ca667d97f19cbc05bdebbdc8a4044e4621d933eaa50fb769",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 5,
    "used_in_reported_index": true
   },
@@ -194,7 +204,8 @@
    "bytes": 85077,
    "sha256": "ba79f5660f5d3421f6104282a09694d4fa42d43d7270123d292e3dfe63d196d8",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -207,7 +218,8 @@
    "bytes": 353215,
    "sha256": "8b738736dc44405d8054a12378157fe1cbf48ed67179b188fa8114458f06b3cb",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -220,7 +232,8 @@
    "bytes": 679906,
    "sha256": "d9d261f3994f850871dae009525350510977fd6a04a1a7f7aed0ce02edb5c087",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -233,7 +246,8 @@
    "bytes": 2586556,
    "sha256": "b49d4866075249d516440ec26427d1c1ce9c190774d5171f1f96e08d6375b228",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -246,7 +260,8 @@
    "bytes": 4577094,
    "sha256": "93a1d35e1e400d96e4a69fab333f84c2fb6ed7f599e0403a2be99f24083bf892",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 11,
    "used_in_reported_index": true
   },
@@ -259,7 +274,8 @@
    "bytes": 613053,
    "sha256": "a935fe123f592abaad0acdeba5a3703d94bdf141bf6bf7b63d42230ee66227a6",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -272,7 +288,8 @@
    "bytes": 511623,
    "sha256": "6330ad188c1c5a1da2fe8b93ae1088e15cd19d851351e79b9ef1c42e0a0d15f5",
    "file_mtime": "2026-07-07",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -285,7 +302,8 @@
    "bytes": 2323725,
    "sha256": "5ec96c51f8f6d7caea06ec1dfaf4c153086860ad8cc15de69ecb9f7199a2e31d",
    "file_mtime": "2026-07-07",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -298,7 +316,8 @@
    "bytes": 5859336,
    "sha256": "f178b86640116a1deb9ebdb8c1469a800ab388d8bacc9ab55baefbb75237ad31",
    "file_mtime": "2026-07-07",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -311,7 +330,8 @@
    "bytes": 1074739,
    "sha256": "46952367c0df1309d66c51d797d40f15fc1b608f75772649413052ff0abe3f09",
    "file_mtime": "2026-07-07",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 0,
    "used_in_reported_index": false
   },
@@ -324,7 +344,8 @@
    "bytes": 253223,
    "sha256": "be5f6a43b4ec78d5d9e1f8ef9b5ea535f5a67da7ed7fa1c260538c00216262a9",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -337,7 +358,8 @@
    "bytes": 1417850,
    "sha256": "5e02dd58392eb21acdfbbd6e73de5cd1903aba6e4b44f576f775d8502f41a393",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 4,
    "used_in_reported_index": true
   },
@@ -350,7 +372,8 @@
    "bytes": 1055084,
    "sha256": "daee314c54e4300dfc941de382cf9b0dda1d0ace3d4747797357a8721fd22de0",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 3,
    "used_in_reported_index": true
   },
@@ -363,7 +386,8 @@
    "bytes": 315816,
    "sha256": "25e2cded0f0fcfd52de1e7bc93f5d9481c111b4c7394ee90aa04f6eb98d73137",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -376,7 +400,8 @@
    "bytes": 561500,
    "sha256": "86bd2bb43ce881cd56421fe9294ed479cc934cae3ebc54af81171aa04ca8438f",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 3,
    "used_in_reported_index": true
   },
@@ -389,7 +414,8 @@
    "bytes": 1505547,
    "sha256": "dbbbf49d1bae0cf09f77f52de4bb987b6eca9d1cf554885933f518e9d71fae48",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -402,7 +428,8 @@
    "bytes": 3010786,
    "sha256": "dba8d805486a353758ffdc2d52a929d58d4045b77daff0eb9f2f56e8651918cf",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 6,
    "used_in_reported_index": true
   },
@@ -415,7 +442,8 @@
    "bytes": 1069364,
    "sha256": "0fc42ce26a055e55b9258e4556b2393d3aa32402bece8d4c890d436d0f4f6e01",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -428,7 +456,8 @@
    "bytes": 1762659,
    "sha256": "fec7b20b6c086098816c786e59a8b0b7cbd8fd2c1fa19eab73fde96b1c7c0cf0",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 4,
    "used_in_reported_index": true
   },
@@ -441,7 +470,8 @@
    "bytes": 2136382,
    "sha256": "725d17e2dd8e4f02fdffc96ce31ec5adb4e8e84afdd0d69f4843995c6952776c",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -454,7 +484,8 @@
    "bytes": 2263675,
    "sha256": "27e35d034f934dce0af07267b5218bcaa9f5b5b510b181f999d7fc077c9a97ca",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 4,
    "used_in_reported_index": true
   },
@@ -467,7 +498,8 @@
    "bytes": 733592,
    "sha256": "9d47e533c1b622bb13c21cbcdad5d14cfa2552a7d7e38b28e733138bbdf34de5",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -480,7 +512,8 @@
    "bytes": 7290015,
    "sha256": "e2229b689eba4c2e5c13177aeee230b12ed847c8a5b0752f8bf555814e119dd7",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 15,
    "used_in_reported_index": true
   },
@@ -493,7 +526,8 @@
    "bytes": 5347107,
    "sha256": "35c20e7c33ef2a009ef424e08b7504bad184a4f7263afba5bd8b3be834a79316",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 18,
    "used_in_reported_index": true
   },
@@ -506,7 +540,8 @@
    "bytes": 2789358,
    "sha256": "d8fa54c4489cd38b0560516a499ab8b2e4bf74d72b6d38d0f3f5b7e27a0ec7ac",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 15,
    "used_in_reported_index": true
   },
@@ -519,7 +554,8 @@
    "bytes": 3465874,
    "sha256": "e471da5186ca108bce3b755d6094ea57f1f8ada1ec82b644e7f3049d55bd472d",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 12,
    "used_in_reported_index": true
   },
@@ -532,7 +568,8 @@
    "bytes": 2281287,
    "sha256": "c33087b7afaaf5aec572989d5013256f56cb65f6aa432b2e4ff22aeb19230438",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 10,
    "used_in_reported_index": true
   },
@@ -545,7 +582,8 @@
    "bytes": 2739453,
    "sha256": "ca7dfef1090aa4b85a510e1c364d1fe3c1048f53f1afb53eb42aeb4ccf2e3475",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 6,
    "used_in_reported_index": true
   },
@@ -558,7 +596,8 @@
    "bytes": 1380153,
    "sha256": "802735dff9679f3c9a6418c246103c6cd87c3a141fd57195927ce7d94cd08a20",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -571,7 +610,8 @@
    "bytes": 1602346,
    "sha256": "7ec7d1ae8f26525504d8eb2db72adb854cd11ad4bd3ac281d2479997f401c7ec",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 3,
    "used_in_reported_index": true
   },
@@ -584,7 +624,8 @@
    "bytes": 3728385,
    "sha256": "bbf21aefc4be4d4872878ecd79c17f60b1c2fd1bbcac766fb3776b9f106407d3",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 8,
    "used_in_reported_index": true
   },
@@ -597,7 +638,8 @@
    "bytes": 2220505,
    "sha256": "101f7817fe52603f63de1101b1f640b51b2d6f7a8ac63ff8fbf55371ffa46ae5",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 3,
    "used_in_reported_index": true
   },
@@ -610,7 +652,8 @@
    "bytes": 456382,
    "sha256": "fde34f21e6774216be237b95270c44c1047f8e17ed0e4c0810e7c3cdc4de686b",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -623,7 +666,8 @@
    "bytes": 521279,
    "sha256": "617db45d96f885829c867a486d2fd05a576b7cb4b09ec531cd90b05fe20e412d",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -636,7 +680,8 @@
    "bytes": 344289,
    "sha256": "105500ac63a214e15d54c203e7eef4ab841e65fb05fa5912dab9e9358f5c6fe4",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -649,7 +694,8 @@
    "bytes": 1865170,
    "sha256": "21c1d37165b82acb4473d89383df857747dfca78337da2397a429a643ecb7d6f",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 3,
    "used_in_reported_index": true
   },
@@ -662,7 +708,8 @@
    "bytes": 1945372,
    "sha256": "4847eb6af4bc89a415d9261738a7723b16ba56773eca1f90a8a933b046f233d0",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 5,
    "used_in_reported_index": true
   },
@@ -675,7 +722,8 @@
    "bytes": 393573,
    "sha256": "4bd5128e57762ec7859c3f46f6d014830105c766b0ffb36faa62464852aa4b2c",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -688,7 +736,8 @@
    "bytes": 478147,
    "sha256": "e1c962717902432ed6fd1cf251e631603e4e2d38e6c854ffb005b1912ce4129f",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -701,7 +750,8 @@
    "bytes": 8215581,
    "sha256": "9f38683eba0a46f2f8d848389acf8cd6e23fb7d2f3f4c0fd838e1436dab72c4f",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 7,
    "used_in_reported_index": true
   },
@@ -714,7 +764,8 @@
    "bytes": 399525,
    "sha256": "f065d7172da76a8b1b1d9f25a7133fb2075131c814a87ebe9cd28038b08582bf",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -727,7 +778,8 @@
    "bytes": 2425347,
    "sha256": "b076714efb44e6700dac12f4623b181c01a6c2414f945d863a2c59903ad3a36e",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 5,
    "used_in_reported_index": true
   },
@@ -740,7 +792,8 @@
    "bytes": 164995,
    "sha256": "34bef4ef3cfa9f504d497d52a8f22a812f46b020c440abe448bc4439dca96060",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -753,7 +806,8 @@
    "bytes": 2919988,
    "sha256": "a8eafdd317e7657401222510b9665d55c26991e19c42fa7464b403dd8996f058",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -766,7 +820,8 @@
    "bytes": 418668,
    "sha256": "cd0522e7dda1535117bc11550fd5581ec13d4318665dea599761ec5faaaa0f92",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -779,7 +834,8 @@
    "bytes": 3048494,
    "sha256": "4848b0f7abc6c6c6803301957370e30ff717b0368ac17e05283df10e81546141",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 7,
    "used_in_reported_index": true
   },
@@ -792,7 +848,8 @@
    "bytes": 2428921,
    "sha256": "79a3d9eee32d2eb2e55381490a3dd5e9c46dc732787f47d292fad54dba092e09",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 4,
    "used_in_reported_index": true
   },
@@ -805,7 +862,8 @@
    "bytes": 164598,
    "sha256": "12c6cc42f34c04235340c9274c4016c267658457fff437eeb1f84abfbb8be227",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 1,
    "used_in_reported_index": true
   },
@@ -818,7 +876,8 @@
    "bytes": 618734,
    "sha256": "7a3f00109adec80d3d609cbdc140e62b41b470d2f68e2f8652f8ffa007aae58a",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -831,7 +890,8 @@
    "bytes": 521851,
    "sha256": "cf11a873f006378c0b5ef04fd058629bfdc740e122444352c6248c0ecfe04681",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -844,7 +904,8 @@
    "bytes": 1587129,
    "sha256": "fe62c919d3d2499b48e10bdef8997f08d674e1f3e959b3d2b275e0e6f4ddfce2",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 12,
    "used_in_reported_index": true
   },
@@ -857,7 +918,8 @@
    "bytes": 1953659,
    "sha256": "22ea1981e8f1cb9cd7298e42e1d1a73a5581e9aade31d4d49f479cf3a57feca7",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 9,
    "used_in_reported_index": true
   },
@@ -870,7 +932,8 @@
    "bytes": 2999284,
    "sha256": "4d451d5ef35502ec82a0aceec94de989d63482665aabd48bf52d48dde5ab3f80",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 11,
    "used_in_reported_index": true
   },
@@ -883,7 +946,8 @@
    "bytes": 932594,
    "sha256": "c8d2807fba7c71dd08eb2c1afa3b8e1aa0d9f31a7b3d5308c5c6119e3befb4d3",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -896,7 +960,8 @@
    "bytes": 412004,
    "sha256": "935911fa78ef04047f6bec7b71eecf3ebf8734bb1198792c3ad289ebe9438276",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   },
@@ -909,7 +974,8 @@
    "bytes": 257220,
    "sha256": "8a8505029c682273ba24d417e4823f59c6154801e4bc1a891c7ac7d5386c1411",
    "file_mtime": "2026-05-14",
-   "url": "",
+   "url": "https://www.dot.state.wy.us/home/engineering_technical_programs/manuals_publications/standardplans.html",
+   "access_note": "WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation and distributed through a click-through acceptance page. Obtain them directly from WYDOT; they are not redistributed here.",
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   }

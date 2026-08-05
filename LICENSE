@@ -30,8 +30,12 @@ Benchmark annotations (questions, answers, splits, page_index.json, compliance
 ground truth) are released under Creative Commons Attribution 4.0 (CC BY 4.0).
 
 State DOT Standard Plan documents are NOT redistributed here and are NOT
-covered by this license. They are public records published by the respective
-agencies; obtain them from the agency websites listed in README.md.
+covered by this license. Obtain them from the agency websites recorded in
+data/sources.json.
+
+Note in particular that WYDOT Standard Plans are COPYRIGHTED by the Wyoming
+Department of Transportation and are distributed under a click-through
+acceptance agreement. They may not be redistributed.
 
 This work was funded by the Wyoming Department of Transportation under grant
 RS03225. CONFIRM LICENSING TERMS WITH WYDOT BEFORE PUBLISHING.

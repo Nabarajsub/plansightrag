@@ -1,6 +1,7 @@
 PLANSIGHTRAG — RELEASE PACKAGE MANIFEST
 PlanSightRAG: A Visual-First Multimodal RAG for Question Answering and
 Compliance Checking on Civil Standard Plans
+https://github.com/Nabarajsub/plansightrag
 ========================================================================
 
 [files]    157 total   [size] 9.5 MB
@@ -36,8 +37,10 @@ Compliance Checking on Civil Standard Plans
                         under the pinned environment (matplotlib 3.10.8)
   index composition     sources.json attributes 1,898 five-DOT pages, matching
                         the manuscript exactly across all five agencies
+  source documents      66 PDFs recorded with SHA-256; all publisher URLs verified
 
 --- not redistributed ---
-  plan page images      rebuild from the PDFs in data/sources.json; set PLANS_ROOT
+  plan page images      obtain from the URLs in data/sources.json; set PLANS_ROOT
+                        (WYDOT plans are copyrighted, click-through access)
   CAD compliance images regenerable from code/compliance/make_*.py
   model weights         Hugging Face, at the SHAs in data/models.json

@@ -15,7 +15,7 @@ its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 ## Quick start
 
 ```bash
-git clone https://github.com/<ORG>/plansightrag && cd plansightrag
+git clone git@github.com:Nabarajsub/plansightrag.git && cd plansightrag
 pip install -r requirements.txt
 
 # Plan images are not redistributed. Rebuild them from the public DOT PDFs,
@@ -145,6 +145,26 @@ Regenerate the derived artifacts with:
 python code/make_release_artifacts.py     # prompts, seeds, models, requirements
 ```
 
+## Baseline checkpoint versions
+
+Two ColPali checkpoints were evaluated under the identical 424-query / 1,898-page
+protocol. They are different models, not conflicting measurements of one model:
+
+| Checkpoint | Recall@5 | Report |
+|---|---|---|
+| `vidore/colpali-v1.2` | **76.89%** | `reports/retrieval/tiling_full_page_424.json` |
+| `vidore/colpali-v1.3` | **69.58%** | `reports/retrieval/colpali_v13.json` |
+
+**v1.2 is the companion backbone** used for the tiling, re-ranking, binary-quantization
+and bootstrap-CI analyses, and it is the ColPali figure quoted in the manuscript.
+v1.3 is included for completeness. The adopted retriever for all headline results is
+`nomic-ai/colnomic-embed-multimodal-3b` at 92.69%.
+
+Unrelated coincidence worth flagging, because the numbers collide: **69.58** also
+appears in the manuscript as the percentage-point gap between ColNomic-3B (92.69)
+and the strongest hybrid baseline (23.11). That is a different quantity from
+ColPali-v1.3's 69.58% Recall@5.
+
 ## Data sources and licensing
 
 State DOT Standard Plans are public records published by the issuing agencies and
@@ -167,6 +187,10 @@ Download from:
 | Colorado DOT | 2025 Bridge Detail Worksheets | 62 |
 | Florida DOT | 2026 Design Standards | 780 |
 | Michigan DOT | Standard Plans (held-out transfer set) | 298 |
+
+**WYDOT Standard Plans are copyrighted by the Wyoming Department of Transportation**
+and are distributed through a click-through acceptance page. Obtain them directly
+from WYDOT. This is one reason no plan imagery is redistributed in this repository.
 
 Rasterize at 200 DPI page-level (400 DPI for the tiling study) and set
 `PLANS_ROOT`. See `LICENSE` for the split between code (MIT) and benchmark
