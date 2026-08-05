@@ -1,0 +1,26 @@
+[
+  {
+    "id": "synthetic_fail_01",
+    "query": "A contractor proposed a steel stake spacing of 15 ft for the silt fence installation in Plan 606-4B. Is this compliant with the maximum spacing requirement?",
+    "expected_plans": [
+      "606-4B"
+    ],
+    "expected_steps": 2,
+    "status": "error",
+    "error": "Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx",
+    "elapsed_seconds": 165.9,
+    "detected_fail": false
+  },
+  {
+    "id": "synthetic_fail_02",
+    "query": "According to the grading notes in Plan 203-2A, the contractor wishes to scarify the surface to a depth of 2 inches in the fill section. Verify if this depth is compliant.",
+    "expected_plans": [
+      "203-2A"
+    ],
+    "expected_steps": 2,
+    "status": "error",
+    "error": "Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx",
+    "elapsed_seconds": 108.1,
+    "detected_fail": false
+  }
+]

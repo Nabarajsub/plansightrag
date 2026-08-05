@@ -1,0 +1,43 @@
+PLANSIGHTRAG — RELEASE PACKAGE MANIFEST
+PlanSightRAG: A Visual-First Multimodal RAG for Question Answering and
+Compliance Checking on Civil Standard Plans
+========================================================================
+
+[files]    157 total   [size] 9.5 MB
+
+--- by directory ---
+  code             72
+  reports          66
+  data             11
+  (root)           8
+
+--- required top-level files ---
+  OK      README.md
+  OK      LICENSE
+  OK      CITATION.cff
+  OK      requirements.txt
+  OK      .gitignore
+  OK      TABLE_PROVENANCE.md
+  OK      MANIFEST.txt
+
+--- reproducibility artifacts ---
+  OK      data/prompts.json
+  OK      data/seeds.json
+  OK      data/models.json
+  OK      data/page_index.json
+  OK      data/sources.json
+  OK      data/splits/split_train.jsonl
+  OK      data/splits/split_dev.jsonl
+  OK      data/splits/split_test.jsonl
+  OK      data/transfer/verified_michigan.jsonl
+
+--- verified claims ---
+  CAD regeneration      make_500.py reproduces 500/500 drawings byte-identically
+                        under the pinned environment (matplotlib 3.10.8)
+  index composition     sources.json attributes 1,898 five-DOT pages, matching
+                        the manuscript exactly across all five agencies
+
+--- not redistributed ---
+  plan page images      rebuild from the PDFs in data/sources.json; set PLANS_ROOT
+  CAD compliance images regenerable from code/compliance/make_*.py
+  model weights         Hugging Face, at the SHAs in data/models.json

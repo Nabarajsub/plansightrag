@@ -1,0 +1,54 @@
+{
+  "retriever": "nomic-ai/colnomic-embed-multimodal-3b",
+  "tag": "colnomic_3b",
+  "backend": "colx",
+  "benchmark": {
+    "n_pairs": 4056,
+    "overall_recall@5": 91.47,
+    "per_agency": {
+      "WYDOT": {
+        "n": 558,
+        "recall@5": 93.37
+      },
+      "Caltrans": {
+        "n": 1226,
+        "recall@5": 91.92
+      },
+      "AZDOT": {
+        "n": 414,
+        "recall@5": 89.13
+      },
+      "CDOT": {
+        "n": 278,
+        "recall@5": 90.29
+      },
+      "FDOT": {
+        "n": 1580,
+        "recall@5": 91.27
+      }
+    },
+    "per_category": {
+      "Visual Interpretation": {
+        "n": 1400,
+        "recall@5": 92.71
+      },
+      "Dimensional Accuracy": {
+        "n": 1015,
+        "recall@5": 95.37
+      },
+      "Logical Reasoning": {
+        "n": 1157,
+        "recall@5": 87.64
+      },
+      "Hallucination Rate": {
+        "n": 484,
+        "recall@5": 88.84
+      }
+    }
+  },
+  "michigan_transfer": {
+    "n_pairs": 93,
+    "overall_recall@5": 93.55
+  },
+  "elapsed_sec": 519.8
+}

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: >-
+  PlanSightRAG: A Visual-First Multimodal RAG for Question Answering and
+  Compliance Checking on Civil Standard Plans
+message: If you use this software or benchmark, please cite it as below.
+type: software
+authors:
+  - family-names: Subedi
+    given-names: Nabaraj
+    orcid: https://orcid.org/0009-0005-1596-8641
+    affiliation: >-
+      Department of Electrical Engineering & Computer Science,
+      University of Wyoming
+  - family-names: Datta
+    given-names: Shuvo Dip
+    orcid: https://orcid.org/0000-0001-8604-3148
+    affiliation: >-
+      Department of Civil & Architectural Engineering & Construction
+      Management, University of Wyoming
+  - family-names: Abdelaty
+    given-names: Ahmed
+    orcid: https://orcid.org/0000-0001-7329-452X
+    affiliation: >-
+      Department of Civil & Architectural Engineering & Construction
+      Management, University of Wyoming
+  - family-names: Sheshappanavar
+    given-names: Shivanand Venkanna
+    orcid: https://orcid.org/0000-0003-4039-2910
+    affiliation: >-
+      Department of Electrical Engineering & Computer Science,
+      University of Wyoming
+repository-code: https://github.com/<ORG>/plansightrag
+license: MIT
+keywords:
+  - multimodal retrieval-augmented generation
+  - vision-language models
+  - engineering drawings
+  - automated compliance checking
+  - visual document retrieval

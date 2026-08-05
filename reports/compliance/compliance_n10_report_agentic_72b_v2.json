@@ -1,0 +1,569 @@
+{
+  "n_total": 10,
+  "judge_correct_pct": 100.0,
+  "judge_correct_on_compliant": "5/5",
+  "judge_correct_on_noncompliant": "5/5",
+  "elapsed_min": 15.685314365228017,
+  "results": [
+    {
+      "name": "culvert_ok",
+      "plan_id": "B-505",
+      "ground_truth_compliant": true,
+      "query": "Verify whether the reinforced concrete box culvert section in plan B-505 (agency WYDOT) meets the following compliance requirements: Concrete cover.",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Concrete cover",
+          "search_query": "reinforced concrete box culvert section in plan B-505 agency WYDOT",
+          "operator": ">=",
+          "threshold": "2.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Concrete cover",
+          "ref_plan_id": "FY 2026-27 STANDARD PLANS",
+          "ref_agency": "FDOT",
+          "ref_image_path": "<PSR_ROOT>/data/florida_2026/images/florida_2026_page_777.png",
+          "finding_json": {
+            "actual_value": "2.5",
+            "compare": "2.5 >= 2.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The concrete cover is 2.5 inches, meeting the requirement."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover met the requirement of being at least 2.0 inches with an actual value of 2.5 inches.",
+        "violated_rules": []
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover met the requirement of being at least 2.0 inches with an actual value of 2.5 inches.\",\n  \"violated_rules\": []\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "culvert_bad",
+      "plan_id": "B-505V",
+      "ground_truth_compliant": false,
+      "query": "Verify whether the reinforced concrete box culvert section in plan B-505V (agency WYDOT) meets the following compliance requirements: Concrete cover.",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Concrete cover",
+          "search_query": "reinforced concrete box culvert section in plan B-505V agency WYDOT",
+          "operator": ">=",
+          "threshold": "2.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Concrete cover",
+          "ref_plan_id": "C-13.10",
+          "ref_agency": "AZDOT",
+          "ref_image_path": "<PSR_ROOT>/data/arizona_2025/images/arizona_2025_page_141.png",
+          "finding_json": {
+            "actual_value": "1.0",
+            "compare": "1.0 vs 2.0",
+            "result": "FAIL",
+            "evidence_source": "DESIGN",
+            "notes": "The concrete cover is less than the required 2.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover check failed as it was less than the required 2.0 inches.",
+        "violated_rules": [
+          "Concrete cover"
+        ]
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover check failed as it was less than the required 2.0 inches.\",\n  \"violated_rules\": [\"Concrete cover\"]\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "guardrail_ok",
+      "plan_id": "606-7B",
+      "ground_truth_compliant": true,
+      "query": "Verify whether the steel post guardrail foundation in plan 606-7B (agency WYDOT) meets the following compliance requirements: Footing depth.",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Footing depth",
+          "search_query": "plan 606-7B WYDOT",
+          "operator": ">=",
+          "threshold": "30.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Footing depth",
+          "ref_plan_id": "606-7B",
+          "ref_agency": "WYDOT",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "36",
+            "compare": "36 >= 30.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The footing depth of 36 inches meets the required minimum of 30 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth check passed, meeting the required minimum of 30 inches.",
+        "violated_rules": []
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth check passed, meeting the required minimum of 30 inches.\",\n  \"violated_rules\": []\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "guardrail_bad",
+      "plan_id": "606-7C",
+      "ground_truth_compliant": false,
+      "query": "Verify whether the steel post guardrail foundation in plan 606-7C (agency WYDOT) meets the following compliance requirements: Footing depth.",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Footing depth",
+          "search_query": "plan 606-7C WYDOT",
+          "operator": ">=",
+          "threshold": "30.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Footing depth",
+          "ref_plan_id": "606-7B",
+          "ref_agency": "WYDOT",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "24",
+            "compare": "24 vs 30.0",
+            "result": "FAIL",
+            "evidence_source": "DESIGN",
+            "notes": "The footing depth is less than the required 30.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth check failed as it was less than the required 30.0 inches.",
+        "violated_rules": [
+          "Step 1 (Footing depth)"
+        ]
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth check failed as it was less than the required 30.0 inches.\",\n  \"violated_rules\": [\"Step 1 (Footing depth)\"]\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "rebar_ok",
+      "plan_id": "A77B",
+      "ground_truth_compliant": true,
+      "query": "Verify whether the reinforced concrete beam rebar detail in plan A77B (agency Caltrans) meets the following compliance requirements: Stirrup spacing, Concrete cover.",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Stirrup spacing",
+          "search_query": "reinforced concrete beam rebar detail in plan A77B",
+          "operator": "<=",
+          "threshold": "15.0",
+          "unit": "inches"
+        },
+        {
+          "step": 2,
+          "check_name": "Concrete cover",
+          "search_query": "reinforced concrete beam rebar detail in plan A77B",
+          "operator": ">=",
+          "threshold": "2.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Stirrup spacing",
+          "ref_plan_id": "A77C",
+          "ref_agency": "Caltrans",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "8",
+            "compare": "8 <= 15.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The stirrup spacing is 8 inches, which meets the requirement."
+          }
+        },
+        {
+          "step": 2,
+          "check_name": "Concrete cover",
+          "ref_plan_id": "A77B",
+          "ref_agency": "Caltrans",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "2.0",
+            "compare": "2.0 >= 2.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The concrete cover meets the required minimum of 2.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "Both the stirrup spacing and concrete cover checks passed, meeting all compliance requirements.",
+        "violated_rules": []
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both the stirrup spacing and concrete cover checks passed, meeting all compliance requirements.\",\n  \"violated_rules\": []\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "rebar_bad",
+      "plan_id": "A77C",
+      "ground_truth_compliant": false,
+      "query": "Verify whether the reinforced concrete beam rebar detail in plan A77C (agency Caltrans) meets the following compliance requirements: Stirrup spacing, Concrete cover.",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Stirrup spacing",
+          "search_query": "reinforced concrete beam rebar detail in plan A77C",
+          "operator": "<=",
+          "threshold": "15.0",
+          "unit": "inches"
+        },
+        {
+          "step": 2,
+          "check_name": "Concrete cover",
+          "search_query": "reinforced concrete beam rebar detail in plan A77C",
+          "operator": ">=",
+          "threshold": "2.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Stirrup spacing",
+          "ref_plan_id": "A77C",
+          "ref_agency": "Caltrans",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "18",
+            "compare": "18 vs 15.0",
+            "result": "FAIL",
+            "evidence_source": "DESIGN",
+            "notes": "The stirrup spacing is 18 inches, which exceeds the required maximum of 15.0 inches."
+          }
+        },
+        {
+          "step": 2,
+          "check_name": "Concrete cover",
+          "ref_plan_id": "A77B",
+          "ref_agency": "Caltrans",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "2.0",
+            "compare": "2.0 >= 2.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The concrete cover meets the required minimum of 2.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing check failed as it exceeded the required maximum of 15.0 inches.",
+        "violated_rules": [
+          "Stirrup spacing"
+        ]
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing check failed as it exceeded the required maximum of 15.0 inches.\",\n  \"violated_rules\": [\"Stirrup spacing\"]\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "inlet_ok",
+      "plan_id": "232-001",
+      "ground_truth_compliant": true,
+      "query": "Verify whether the curb drainage inlet in plan 232-001 (agency FDOT) meets the following compliance requirements: Grate opening.",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Grate opening",
+          "search_query": "plan 232-001 agency FDOT",
+          "operator": "<=",
+          "threshold": "4.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Grate opening",
+          "ref_plan_id": "425-052",
+          "ref_agency": "FDOT",
+          "ref_image_path": "<PSR_ROOT>/data/florida_2026/images/florida_2026_page_194.png",
+          "finding_json": {
+            "actual_value": "4.0",
+            "compare": "4.0 vs 4.0",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The grate opening is exactly 4.0 inches, meeting the requirement."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All checks passed, including the grate opening which met the requirement.",
+        "violated_rules": []
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"All checks passed, including the grate opening which met the requirement.\",\n  \"violated_rules\": []\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "inlet_bad",
+      "plan_id": "232-002",
+      "ground_truth_compliant": false,
+      "query": "Verify whether the curb drainage inlet in plan 232-002 (agency FDOT) meets the following compliance requirements: Grate opening.",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Grate opening",
+          "search_query": "plan 232-002 agency FDOT",
+          "operator": "<=",
+          "threshold": "4.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Grate opening",
+          "ref_plan_id": "603-1B",
+          "ref_agency": "WYDOT",
+          "ref_image_path": "<PLANS_ROOT>/Wyoming_DOT_603-1B  (r1)(OCT_2020)_page_6.png",
+          "finding_json": {
+            "actual_value": "9.0",
+            "compare": "9.0 vs 4.0",
+            "result": "FAIL",
+            "evidence_source": "DESIGN",
+            "notes": "The grate opening exceeds the required maximum of 4.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening check failed as it exceeded the required maximum of 4.0 inches.",
+        "violated_rules": [
+          "Grate opening"
+        ]
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening check failed as it exceeded the required maximum of 4.0 inches.\",\n  \"violated_rules\": [\"Grate opening\"]\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "signpost_ok",
+      "plan_id": "C-25.10",
+      "ground_truth_compliant": true,
+      "query": "Verify whether the breakaway sign post foundation in plan C-25.10 (agency AZDOT) meets the following compliance requirements: Anchor bolt embedment.",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Anchor bolt embedment",
+          "search_query": "plan C-25.10 from agency AZDOT",
+          "operator": ">=",
+          "threshold": "12.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Anchor bolt embedment",
+          "ref_plan_id": "C-25.10",
+          "ref_agency": "AZDOT",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "12",
+            "compare": "12 >= 12.0 inches",
+            "result": "PASS",
+            "evidence_source": "DESIGN",
+            "notes": "The anchor bolt embedment meets the required minimum of 12.0 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All checks passed, including the anchor bolt embedment meeting the required minimum.",
+        "violated_rules": []
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"All checks passed, including the anchor bolt embedment meeting the required minimum.\",\n  \"violated_rules\": []\n}\n```",
+      "judge_correct": true
+    },
+    {
+      "name": "signpost_bad",
+      "plan_id": "C-25.11",
+      "ground_truth_compliant": false,
+      "query": "Verify whether the breakaway sign post foundation in plan C-25.11 (agency AZDOT) meets the following compliance requirements: Anchor bolt embedment.",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "planner_steps": [
+        {
+          "step": 1,
+          "check_name": "Anchor bolt embedment",
+          "search_query": "plan C-25.11 from agency AZDOT",
+          "operator": ">=",
+          "threshold": "12.0",
+          "unit": "inches"
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "check_name": "Anchor bolt embedment",
+          "ref_plan_id": "C-25.10",
+          "ref_agency": "AZDOT",
+          "ref_image_path": null,
+          "finding_json": {
+            "actual_value": "4",
+            "compare": "4 vs 12.0",
+            "result": "FAIL",
+            "evidence_source": "DESIGN",
+            "notes": "The anchor bolt embedment is only 4 inches, which does not meet the required minimum of 12 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment check failed as it did not meet the required minimum of 12 inches.",
+        "violated_rules": [
+          "Anchor bolt embedment"
+        ]
+      },
+      "synth_raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment check failed as it did not meet the required minimum of 12 inches.\",\n  \"violated_rules\": [\"Anchor bolt embedment\"]\n}\n```",
+      "judge_correct": true
+    }
+  ]
+}

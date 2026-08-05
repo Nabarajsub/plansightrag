@@ -1,0 +1,462 @@
+{
+  "metrics": {
+    "N_total": 24,
+    "N_successful": 24,
+    "TP_overall": 19,
+    "FN_overall": 5,
+    "TPR_overall": 0.7917,
+    "FNR_overall": 0.2083,
+    "TPR_by_type": {
+      "M_dim": 0.875,
+      "M_note": 0.875,
+      "M_sym": 0.625
+    },
+    "N_by_type": {
+      "M_dim": 8,
+      "M_note": 8,
+      "M_sym": 8
+    }
+  },
+  "results": [
+    {
+      "id": "fn_dim_01",
+      "type": "M_dim",
+      "query": "A contractor proposed a steel stake vertical spacing of 15 ft [4.6 m] at the centre of each enclosure for silt fence installation per Plan 606-4B. Is this compliant with the required spacing in the standard plan?",
+      "expected_plans": [
+        "606-4B"
+      ],
+      "magnitude_pct": 300,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 74.0,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "606-4B"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    },
+    {
+      "id": "fn_dim_02",
+      "type": "M_dim",
+      "query": "According to Plan 203-2A grading notes, the contractor proposes to scarify the fill-section surface to a depth of only 2 inches [50 mm]. Verify whether this scarification depth is compliant with the required specification.",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "magnitude_pct": -66,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 52.1,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_dim_03",
+      "type": "M_dim",
+      "query": "The contractor's submission for Plan 511-1A proposes a V-mesh end strip height of 3'-6\" [1.07 m] in the EXPANDED VIEW. Is this dimension consistent with the required end strip height shown on the standard plan?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "magnitude_pct": 160,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 59.8,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_dim_04",
+      "type": "M_dim",
+      "query": "For Plan 203-2A, the contractor plans a Moisture Density Control (MDC) depth of 5 feet [1.5 m] below the ditch bottom, citing Note H. Verify whether this depth meets the maximum specified in the grading notes.",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "magnitude_pct": 150,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 58.0,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_dim_05",
+      "type": "M_dim",
+      "query": "In the stake spacing table of Plan 511-1A, the contractor proposes a 'DOWN' stake spacing of 8.0 feet [2.4 m] for a 1V:3H slope configuration. Does this match the value required in the STAKE SPACING TABLE?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "magnitude_pct": 122,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 55.7,
+      "status": "success",
+      "pred_verdict": "PASS",
+      "detected_fail": false,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_dim_06",
+      "type": "M_dim",
+      "query": "The proposed guardrail post spacing in Plan 606-7C installation is 12 ft [3.66 m]. Verify whether this exceeds the maximum allowable post spacing specified by the standard.",
+      "expected_plans": [
+        "606-7C"
+      ],
+      "magnitude_pct": 92,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 56.3,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "606-7C"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_dim_07",
+      "type": "M_dim",
+      "query": "For Plan 202-1 mailbox installation, the proposed clearance between the mailbox face and the edge of the travelled way is 2 feet [0.6 m]. Verify compliance with the minimum offset requirement in the standard.",
+      "expected_plans": [
+        "202-1"
+      ],
+      "magnitude_pct": -60,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 48.2,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "202-1"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_dim_08",
+      "type": "M_dim",
+      "query": "The contour ditch cross section proposed for a Plan 203-2A application has a depth of 6 inches [150 mm] and a bottom width of 6 inches [150 mm]. Verify whether these dimensions satisfy the minimum cross-section requirements on the grading notes.",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "magnitude_pct": -50,
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 52.3,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_note_01",
+      "type": "M_note",
+      "query": "A contractor's gabion basket installation per Plan 511-1A omits the geotextile fabric underlayment described in the plan notes. Is the installation compliant with Plan 511-1A?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 51.6,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    },
+    {
+      "id": "fn_note_02",
+      "type": "M_note",
+      "query": "For Plan 203-2A, the contractor proposes fill compaction without performing the moisture density control procedure referenced in the grading notes. Is this practice compliant?",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 56.2,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 4
+    },
+    {
+      "id": "fn_note_03",
+      "type": "M_note",
+      "query": "The contractor installs silt fencing per Plan 606-4B but does not include the wire ties specified for the enclosure in the plan notes. Verify whether omitting the wire ties is compliant.",
+      "expected_plans": [
+        "606-4B"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 52.5,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "606-4B"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 9
+    },
+    {
+      "id": "fn_note_04",
+      "type": "M_note",
+      "query": "For guardrail end-treatment installation per Plan 606-7C, the contractor skips the crash-attenuator anchoring detail described in the plan's installation notes. Verify compliance.",
+      "expected_plans": [
+        "606-7C"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 54.1,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "606-7C"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 6
+    },
+    {
+      "id": "fn_note_05",
+      "type": "M_note",
+      "query": "For Plan 203-2A contour ditch construction, the contractor installs the ditch on the downslope side of the right-of-way instead of following the location rule in Grading Note D. Is this compliant?",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 45.6,
+      "status": "success",
+      "pred_verdict": "PASS",
+      "detected_fail": false,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_note_06",
+      "type": "M_note",
+      "query": "A drainage pipe installation under Plan 511-1A omits the bedding gravel layer referenced in the installation notes and places the pipe directly on compacted subgrade. Is this compliant?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 58.9,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    },
+    {
+      "id": "fn_note_07",
+      "type": "M_note",
+      "query": "For Plan 202-1, the contractor installs a mailbox without attaching the breakaway support detail referenced in the plan notes. Verify whether the installation is compliant with the breakaway requirement.",
+      "expected_plans": [
+        "202-1"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 53.8,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "202-1"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 11
+    },
+    {
+      "id": "fn_note_08",
+      "type": "M_note",
+      "query": "For Plan 203-2A fill section construction, the contractor skips scarification of the existing ground surface described in the grading notes before placing fill. Is this compliant?",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 58.9,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_sym_01",
+      "type": "M_sym",
+      "query": "In Plan 511-1A EXPANDED VIEW, the contractor used steel stakes in place of wire ties at the centre of each enclosure where the plus (+) symbols are shown. Is this substitution compliant with the symbol convention on the plan?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 56.8,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    },
+    {
+      "id": "fn_sym_02",
+      "type": "M_sym",
+      "query": "For a gabion basket installation following Plan 511-1A page 2, the contractor omitted the internal diaphragms and used a single-cell construction. Is this compliant with the standard plan's internal component requirement?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 55.2,
+      "status": "success",
+      "pred_verdict": "PASS",
+      "detected_fail": false,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    },
+    {
+      "id": "fn_sym_03",
+      "type": "M_sym",
+      "query": "A Plan 605-1 underdrain installation uses the drainage fabric as a horizontal separator layer above the gravel, instead of lining the trench bottom and vertical sides as depicted in the plan. Is this compliant?",
+      "expected_plans": [
+        "605-1"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 57.8,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "605-1"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_sym_04",
+      "type": "M_sym",
+      "query": "For Plan 606-4B silt fence installation, the contractor uses wooden stakes in place of the steel stakes shown in the plan symbol legend. Is this substitution compliant?",
+      "expected_plans": [
+        "606-4B"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 52.9,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "606-4B"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 6
+    },
+    {
+      "id": "fn_sym_05",
+      "type": "M_sym",
+      "query": "A Plan 606-7C guardrail end treatment uses a concrete end anchor in place of the cable anchor assembly depicted on the standard sheet. Is this substitution compliant with the plan's component requirements?",
+      "expected_plans": [
+        "606-7C"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 60.1,
+      "status": "success",
+      "pred_verdict": "PASS",
+      "detected_fail": false,
+      "plans_found": [
+        "606-7C"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 10
+    },
+    {
+      "id": "fn_sym_06",
+      "type": "M_sym",
+      "query": "In Plan 511-1A, the contractor replaces the V-mesh end strips with flat wire mesh panels at the enclosure ends. Is this substitution consistent with the component depicted on the plan?",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 61.2,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 11
+    },
+    {
+      "id": "fn_sym_07",
+      "type": "M_sym",
+      "query": "For Plan 202-1 mailbox support, the contractor installs a round steel post instead of the breakaway wooden post shown in the standard. Is this component substitution compliant?",
+      "expected_plans": [
+        "202-1"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 50.7,
+      "status": "success",
+      "pred_verdict": "FAIL",
+      "detected_fail": true,
+      "plans_found": [
+        "202-1"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 11
+    },
+    {
+      "id": "fn_sym_08",
+      "type": "M_sym",
+      "query": "A Plan 203-2A fill section is constructed using rock riprap on the scarified surface in place of the prepared soil layer required by the section drawing. Is this compliant with the section detail?",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "gt_verdict": "FAIL",
+      "elapsed_seconds": 64.0,
+      "status": "success",
+      "pred_verdict": "PASS",
+      "detected_fail": false,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "steps_executed": 8
+    }
+  ]
+}

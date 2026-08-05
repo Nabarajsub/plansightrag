@@ -1,0 +1,305 @@
+{
+  "n_total": 4,
+  "retrieval_top5_pct": 100.0,
+  "judge_correct_pct": 100.0,
+  "judge_correct_on_compliant": "2/2",
+  "judge_correct_on_noncompliant": "2/2",
+  "results": [
+    {
+      "name": "culvert_dense_ok",
+      "plan_id": "B-505 (DENSE)",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "D88",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "B-505 (DENSE)",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "AZDOT",
+          "plan_id": "C-10.75",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "B-505V (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "D75B",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.5 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.5 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_dense_bad",
+      "plan_id": "B-505V (DENSE)",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Type B row has concrete cover = 1.0\" which violates ACI 2\" min.",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "D88",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "B-505 (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "AZDOT",
+          "plan_id": "C-10.75",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "B-505V (DENSE)",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "D75B",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.0 inch",
+            "threshold": "2.0 inches",
+            "compare": "1.0 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.0 inch does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.0 inch\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.0 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.0 inch does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "rebar_dense_ok",
+      "plan_id": "A77B (DENSE)",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "A77C (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "B-505 (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "A77B (DENSE)",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "B-505V (DENSE)",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "14\"",
+            "threshold": "15\"",
+            "compare": "14\" <= 15\" -> PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0\"",
+            "threshold": "2.0\"",
+            "compare": "2.0\" >= 2.0\" -> PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"14\\\"\",\n      \"threshold\": \"15\\\"\",\n      \"compare\": \"14\\\" <= 15\\\" -> PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" >= 2.0\\\" -> PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_dense_bad",
+      "plan_id": "A77C (DENSE)",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Type C row has stirrup spacing 18\" but beam height 30\" requires max d/2 = 15\".",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "A77C (DENSE)",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "B-505 (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "A77B (DENSE)",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "B-505V (DENSE)",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "18.0 inches",
+            "threshold": "15.0 inches",
+            "compare": "18.0 > 15.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 15 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"18.0 inches\",\n      \"threshold\": \"15.0 inches\",\n      \"compare\": \"18.0 > 15.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 15 inches\"\n}\n```"
+    }
+  ]
+}

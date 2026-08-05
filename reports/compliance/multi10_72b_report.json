@@ -1,0 +1,2009 @@
+{
+  "n_total": 10,
+  "judge_correct_pct": 90.0,
+  "judge_correct_on_compliant": "4/5",
+  "judge_correct_on_noncompliant": "5/5",
+  "by_n_plans": {
+    "2": "4/4 (100%)",
+    "3": "2/2 (100%)",
+    "4": "2/2 (100%)",
+    "5": "1/2 (50%)"
+  },
+  "elapsed_min": 36.35159173806508,
+  "results": [
+    {
+      "name": "n2_beam_ok_a",
+      "n_plans": 2,
+      "plan_id": "DSGN-N2-01",
+      "ground_truth_compliant": true,
+      "expected_violated_key": null,
+      "expected_violated_rule": null,
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.5 inches."
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "check": "Confirm that the minimum rebar yield strength is at least 60 ksi."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5 inches",
+            "compare": "2.5 inches >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets and exceeds the applicable standard threshold of 2.0 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "60 ksi",
+            "compare": "60 ksi >= 60 ksi",
+            "result": "PASS",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 60 ksi, which meets the applicable standard threshold of >= 60 ksi."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All components checked (concrete_cover and rebar_grade) have passed their respective compliance checks. There are no failed steps, hence the overall verdict is COMPLIANT.",
+        "violated_components": []
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n2_beam_ok_b",
+      "n_plans": 2,
+      "plan_id": "DSGN-N2-02",
+      "ground_truth_compliant": true,
+      "expected_violated_key": null,
+      "expected_violated_rule": null,
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "check": "Verify that the minimum rebar yield strength is at least 75 ksi, which exceeds the required 60 ksi threshold."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.0 inches",
+            "compare": "2.0 inches >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is exactly 2.0 inches, which meets the applicable standard threshold."
+          }
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "75 ksi",
+            "compare": "75 ksi >= 60 ksi",
+            "result": "PASS",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 75 ksi, which meets and exceeds the required threshold of 60 ksi as per the applicable standard."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All components checked (concrete_cover and rebar_grade) have passed their respective compliance checks. There are no failed steps, hence the overall verdict is COMPLIANT.",
+        "violated_components": []
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n2_beam_bad_a",
+      "n_plans": 2,
+      "plan_id": "DSGN-N2-03",
+      "ground_truth_compliant": false,
+      "expected_violated_key": "concrete_cover",
+      "expected_violated_rule": "Cover 1.0\" < 2.0\" min (ACI 318/AASHTO)",
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "check": "Confirm that the rebar yield strength meets or exceeds 60 ksi."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "1.0 inches",
+            "compare": "1.0 inches vs 2.0 inches",
+            "result": "FAIL",
+            "notes": "The minimum concrete cover specified in the design drawing is 1.0 inch, which does not meet the required threshold of >= 2.0 inches as per the applicable standard."
+          }
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "60 ksi",
+            "compare": "60 ksi >= 60 ksi",
+            "result": "PASS",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 60 ksi, which meets the applicable standard threshold of >= 60 ksi."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover component failed to meet the required threshold of >= 2.0 inches as per the applicable standard, with an actual value of 1.0 inches. Since any failing component results in a non-compliant verdict, the overall status is NON_COMPLIANT.",
+        "violated_components": [
+          "concrete_cover"
+        ]
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n2_beam_bad_b",
+      "n_plans": 2,
+      "plan_id": "DSGN-N2-04",
+      "ground_truth_compliant": false,
+      "expected_violated_key": "rebar_grade",
+      "expected_violated_rule": "Rebar Grade 40 < Grade 60 min (ASTM A615)",
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.5 inches, meeting or exceeding the required threshold of 2.0 inches."
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "check": "Verify that the minimum rebar yield strength is 40 ksi, and ensure it meets or exceeds the required threshold of 60 ksi."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5 inches",
+            "compare": "2.5 inches >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets and exceeds the applicable standard threshold of 2.0 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "40 ksi",
+            "compare": "40 ksi vs 60 ksi",
+            "result": "FAIL",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 40 ksi, which does not meet the required threshold of >= 60 ksi as per the applicable standard."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The multi-component compliance check for n2_beam_bad_b resulted in a failure due to the rebar grade not meeting the required threshold. While the concrete cover met the applicable standard, the rebar grade was below the minimum requirement.",
+        "violated_components": [
+          "rebar_grade"
+        ]
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n3_bearing_ok",
+      "n_plans": 3,
+      "plan_id": "DSGN-N3-01",
+      "ground_truth_compliant": true,
+      "expected_violated_key": null,
+      "expected_violated_rule": null,
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "bearing_pad_thickness",
+          "check": "Verify that the minimum bearing pad thickness is at least 1.25 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_class",
+          "check": "Confirm that the minimum compressive strength of the concrete is at least 4500 psi."
+        },
+        {
+          "step": 3,
+          "component": "anchor_bolt_embed",
+          "check": "Ensure that the minimum anchor bolt embedment is at least 14 inches."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "bearing_pad_thickness",
+          "search_query": "elastomeric bearing pad thickness bridge",
+          "applicable_plans_hint": [
+            "AASHTO LRFD 14.7",
+            "Caltrans Sec 51"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "515-062",
+            "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55053",
+              "sheet_title": "STANDARD DETAILS FOR TEMPORARY BRIDGE STRUCTURE PR"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "000-525",
+              "sheet_title": "RAMP TERMINALS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-1",
+              "sheet_title": "END ANCHORAGE TYPE C - TRAILING END"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-052",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (STEEL)"
+            }
+          ]
+        },
+        {
+          "component": "concrete_class",
+          "search_query": "concrete class strength requirements bridge",
+          "applicable_plans_hint": [
+            "WYDOT 706",
+            "Caltrans Sec 90"
+          ],
+          "top1": {
+            "agency": "AZDOT",
+            "plan_id": "C-15.30",
+            "sheet_title": "PLAN - CATCH BASIN TYPE 4 - SINGLE PLAN - CATCH BASIN TYPE 4 - DOUBLE"
+          },
+          "top5": [
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-15.30",
+              "sheet_title": "PLAN - CATCH BASIN TYPE 4 - SINGLE PLAN - CATCH BA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27",
+              "sheet_title": "PERIMETER WALLS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.44",
+              "sheet_title": "Concrete Median Barrier 42\" Type \"F\" with Variable"
+            }
+          ]
+        },
+        {
+          "component": "anchor_bolt_embed",
+          "search_query": "anchor bolt embedment minimum sign post",
+          "applicable_plans_hint": [
+            "AASHTO",
+            "AZDOT C-25"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B11-210",
+            "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B11-210",
+              "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-13.55",
+              "sheet_title": "Pipe Cattle/Vehicle Pass Mitered End Treatment"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-013",
+              "sheet_title": "SINGLE POST SIGN SUPPORT BARRIER TOP-MOUNTED"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-080",
+              "sheet_title": "PIPE GUIDERAIL (STEEL)"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S103",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS ONE POST TYPE STEEL"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "bearing_pad_thickness",
+          "ref_plan": "FDOT/515-062",
+          "finding_json": {
+            "actual_value": "1.25 inches",
+            "compare": "1.25 inches >= 1.0 inches",
+            "result": "PASS",
+            "notes": "The minimum bearing pad thickness specified in the design drawing is 1.25 inches, which meets and exceeds the applicable standard threshold of 1.0 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_class",
+          "ref_plan": "AZDOT/C-15.30",
+          "finding_json": {
+            "actual_value": "4500 psi",
+            "compare": "4500 psi >= 4000 psi",
+            "result": "PASS",
+            "notes": "The minimum compressive strength specified in the design drawing is 4500 psi, which exceeds the required threshold of 4000 psi."
+          }
+        },
+        {
+          "step": 3,
+          "component": "anchor_bolt_embed",
+          "ref_plan": "Caltrans/B11-210",
+          "finding_json": {
+            "actual_value": "14\"",
+            "compare": "14\" >= 12 inches",
+            "result": "PASS",
+            "notes": "The minimum anchor bolt embedment specified in the design drawing is 14 inches, which meets and exceeds the required threshold of 12 inches as per the applicable standard."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All components (bearing_pad_thickness, concrete_class, and anchor_bolt_embed) have passed their respective compliance checks. There are no failed steps, thus the overall verdict is compliant.",
+        "violated_components": []
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n3_bearing_bad",
+      "n_plans": 3,
+      "plan_id": "DSGN-N3-02",
+      "ground_truth_compliant": false,
+      "expected_violated_key": "anchor_bolt_embed",
+      "expected_violated_rule": "Anchor embed 6\" < 12\" min (AASHTO)",
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "bearing_pad_thickness",
+          "check": "Verify that the minimum bearing pad thickness is at least 1.5 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_class",
+          "check": "Confirm that the minimum compressive strength of the concrete is at least 4500 psi."
+        },
+        {
+          "step": 3,
+          "component": "anchor_bolt_embed",
+          "check": "Ensure that the minimum anchor bolt embedment is at least 6 inches."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "bearing_pad_thickness",
+          "search_query": "elastomeric bearing pad thickness bridge",
+          "applicable_plans_hint": [
+            "AASHTO LRFD 14.7",
+            "Caltrans Sec 51"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "515-062",
+            "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55053",
+              "sheet_title": "STANDARD DETAILS FOR TEMPORARY BRIDGE STRUCTURE PR"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "000-525",
+              "sheet_title": "RAMP TERMINALS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-1",
+              "sheet_title": "END ANCHORAGE TYPE C - TRAILING END"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-052",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (STEEL)"
+            }
+          ]
+        },
+        {
+          "component": "concrete_class",
+          "search_query": "concrete class strength requirements bridge",
+          "applicable_plans_hint": [
+            "WYDOT 706",
+            "Caltrans Sec 90"
+          ],
+          "top1": {
+            "agency": "AZDOT",
+            "plan_id": "C-15.30",
+            "sheet_title": "PLAN - CATCH BASIN TYPE 4 - SINGLE PLAN - CATCH BASIN TYPE 4 - DOUBLE"
+          },
+          "top5": [
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-15.30",
+              "sheet_title": "PLAN - CATCH BASIN TYPE 4 - SINGLE PLAN - CATCH BA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27",
+              "sheet_title": "PERIMETER WALLS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.44",
+              "sheet_title": "Concrete Median Barrier 42\" Type \"F\" with Variable"
+            }
+          ]
+        },
+        {
+          "component": "anchor_bolt_embed",
+          "search_query": "anchor bolt embedment minimum sign post",
+          "applicable_plans_hint": [
+            "AASHTO",
+            "AZDOT C-25"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B11-210",
+            "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B11-210",
+              "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-13.55",
+              "sheet_title": "Pipe Cattle/Vehicle Pass Mitered End Treatment"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-013",
+              "sheet_title": "SINGLE POST SIGN SUPPORT BARRIER TOP-MOUNTED"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-080",
+              "sheet_title": "PIPE GUIDERAIL (STEEL)"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S103",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS ONE POST TYPE STEEL"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "bearing_pad_thickness",
+          "ref_plan": "FDOT/515-062",
+          "finding_json": {
+            "actual_value": "1.5 inches",
+            "compare": "1.5 inches >= 1.0 inches",
+            "result": "PASS",
+            "notes": "The minimum bearing pad thickness specified in the design drawing is 1.5 inches, which meets and exceeds the applicable standard threshold of 1.0 inch."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_class",
+          "ref_plan": "AZDOT/C-15.30",
+          "finding_json": {
+            "actual_value": "4500 psi",
+            "compare": "4500 psi >= 4000 psi",
+            "result": "PASS",
+            "notes": "The minimum compressive strength specified in the design drawing is 4500 psi, which exceeds the required threshold of 4000 psi."
+          }
+        },
+        {
+          "step": 3,
+          "component": "anchor_bolt_embed",
+          "ref_plan": "Caltrans/B11-210",
+          "finding_json": {
+            "actual_value": "6\"",
+            "compare": "6\" vs 12 inches",
+            "result": "FAIL",
+            "notes": "The minimum anchor bolt embedment specified in the design drawing is 6 inches, which does not meet the required threshold of 12 inches as per the applicable standard."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The audit identified that while the bearing pad thickness and concrete class met their respective standards, the anchor bolt embedment did not meet the required threshold. Since any single component failing results in non-compliance, the overall verdict is NON_COMPLIANT.",
+        "violated_components": [
+          "anchor_bolt_embed"
+        ]
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n4_approach_ok",
+      "n_plans": 4,
+      "plan_id": "DSGN-N4-01",
+      "ground_truth_compliant": true,
+      "expected_violated_key": null,
+      "expected_violated_rule": null,
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "pavement_thickness",
+          "check": "Verify that the minimum pavement structural thickness is at least 6.0 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 3,
+          "component": "joint_seal_width",
+          "check": "Verify that the minimum joint seal width is at least 0.5 inches."
+        },
+        {
+          "step": 4,
+          "component": "rebar_grade",
+          "check": "Verify that the minimum rebar yield strength is at least 60 ksi."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "pavement_thickness",
+          "search_query": "pavement structural section thickness asphalt",
+          "applicable_plans_hint": [
+            "AASHTO Pavement Design",
+            "FDOT 350"
+          ],
+          "top1": {
+            "agency": "AZDOT",
+            "plan_id": "C-04.30",
+            "sheet_title": "Spillway Length Table"
+          },
+          "top5": [
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-04.30",
+              "sheet_title": "Spillway Length Table"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "350-001",
+              "sheet_title": "CONCRETE PAVEMENT JOINTS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.21",
+              "sheet_title": "GUARDRAIL END TERMINAL PAD LAYOUT FOR MSKT"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-4",
+              "sheet_title": "MANHOLE COLLARS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.23",
+              "sheet_title": "GUARDRAIL END TERMINAL PAD LAYOUT FOR SGET"
+            }
+          ]
+        },
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "joint_seal_width",
+          "search_query": "joint seal width expansion joint pavement",
+          "applicable_plans_hint": [
+            "Caltrans P20",
+            "WYDOT 706"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "520-020",
+            "sheet_title": "ROADWAY INSTALLATIONS - RIGID PAVEMENT"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "520-020",
+              "sheet_title": "ROADWAY INSTALLATIONS - RIGID PAVEMENT"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "370-001",
+              "sheet_title": "Bridge Approach Expansion Joint Concrete Pavement "
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "CONCRETE PAVEMENT JOINTS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "414-2",
+              "sheet_title": "TRANSVERSE JOINT DOWEL ASSEMBLY AND JOINT SEAL DET"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-07.01",
+              "sheet_title": "PCCP JOINTS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "pavement_thickness",
+          "ref_plan": "AZDOT/C-04.30",
+          "finding_json": {
+            "actual_value": "8.0",
+            "compare": "8.0 >= 6.0 inches",
+            "result": "PASS",
+            "notes": "The minimum pavement structural thickness specified in the design drawing is 8.0 inches, which meets and exceeds the applicable standard threshold of 6.0 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5",
+            "compare": "2.5 >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets and exceeds the required threshold of 2.0 inches as per ACI 318/AASHTO LRFD."
+          }
+        },
+        {
+          "step": 3,
+          "component": "joint_seal_width",
+          "ref_plan": "FDOT/520-020",
+          "finding_json": {
+            "actual_value": "0.75",
+            "compare": "0.75 >= 0.5 inches",
+            "result": "PASS",
+            "notes": "The minimum joint seal width specified in the design drawing is 0.75 inches, which meets and exceeds the applicable standard threshold of 0.5 inches."
+          }
+        },
+        {
+          "step": 4,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "60 ksi",
+            "compare": "60 ksi >= 60 ksi",
+            "result": "PASS",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 60 ksi, which meets the applicable standard threshold of >= 60 ksi."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "COMPLIANT",
+        "rationale": "All components (pavement_thickness, concrete_cover, joint_seal_width, rebar_grade) have passed their respective compliance checks. There are no failed steps, hence the overall verdict is COMPLIANT.",
+        "violated_components": []
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n4_approach_bad",
+      "n_plans": 4,
+      "plan_id": "DSGN-N4-02",
+      "ground_truth_compliant": false,
+      "expected_violated_key": "pavement_thickness",
+      "expected_violated_rule": "Pavement 4\" < 6\" min (AASHTO)",
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "pavement_thickness",
+          "check": "Verify that the minimum pavement structural thickness is at least 6.0 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "check": "Verify that the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 3,
+          "component": "joint_seal_width",
+          "check": "Verify that the minimum joint seal width is at least 0.5 inches."
+        },
+        {
+          "step": 4,
+          "component": "rebar_grade",
+          "check": "Verify that the minimum rebar yield strength is at least 60 ksi."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "pavement_thickness",
+          "search_query": "pavement structural section thickness asphalt",
+          "applicable_plans_hint": [
+            "AASHTO Pavement Design",
+            "FDOT 350"
+          ],
+          "top1": {
+            "agency": "AZDOT",
+            "plan_id": "C-04.30",
+            "sheet_title": "Spillway Length Table"
+          },
+          "top5": [
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-04.30",
+              "sheet_title": "Spillway Length Table"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "350-001",
+              "sheet_title": "CONCRETE PAVEMENT JOINTS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.21",
+              "sheet_title": "GUARDRAIL END TERMINAL PAD LAYOUT FOR MSKT"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-4",
+              "sheet_title": "MANHOLE COLLARS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-10.23",
+              "sheet_title": "GUARDRAIL END TERMINAL PAD LAYOUT FOR SGET"
+            }
+          ]
+        },
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "joint_seal_width",
+          "search_query": "joint seal width expansion joint pavement",
+          "applicable_plans_hint": [
+            "Caltrans P20",
+            "WYDOT 706"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "520-020",
+            "sheet_title": "ROADWAY INSTALLATIONS - RIGID PAVEMENT"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "520-020",
+              "sheet_title": "ROADWAY INSTALLATIONS - RIGID PAVEMENT"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "370-001",
+              "sheet_title": "Bridge Approach Expansion Joint Concrete Pavement "
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "CONCRETE PAVEMENT JOINTS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "414-2",
+              "sheet_title": "TRANSVERSE JOINT DOWEL ASSEMBLY AND JOINT SEAL DET"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-07.01",
+              "sheet_title": "PCCP JOINTS"
+            }
+          ]
+        },
+        {
+          "component": "rebar_grade",
+          "search_query": "reinforcing steel grade specification standard",
+          "applicable_plans_hint": [
+            "ASTM A615",
+            "AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "615-1",
+            "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "CAST-IN-PLACE AND PRECAST FOUNDATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "625-3",
+              "sheet_title": "GENERAL REQUIREMENTS AND TYPE A AND B MANHOLE DETA"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "TYPE K TEMPORARY CONCRETE BARRIER SYSTEM"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55019",
+              "sheet_title": "CURVED CHAIN LINK FENCE"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "pavement_thickness",
+          "ref_plan": "AZDOT/C-04.30",
+          "finding_json": {
+            "actual_value": "4.0 inches",
+            "compare": "4.0 inches vs 6.0 inches",
+            "result": "FAIL",
+            "notes": "The minimum pavement structural thickness specified in the design drawing is 4.0 inches, which does not meet the required threshold of >= 6.0 inches as per the applicable standard."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5",
+            "compare": "2.5 >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets the applicable standard threshold of >= 2.0 inches."
+          }
+        },
+        {
+          "step": 3,
+          "component": "joint_seal_width",
+          "ref_plan": "FDOT/520-020",
+          "finding_json": {
+            "actual_value": "0.75",
+            "compare": "0.75 >= 0.5 inches",
+            "result": "PASS",
+            "notes": "The minimum joint seal width specified in the design drawing is 0.75 inches, which meets and exceeds the applicable standard threshold of 0.5 inches."
+          }
+        },
+        {
+          "step": 4,
+          "component": "rebar_grade",
+          "ref_plan": "WYDOT/615-1",
+          "finding_json": {
+            "actual_value": "60 ksi",
+            "compare": "60 ksi >= 60 ksi",
+            "result": "PASS",
+            "notes": "The minimum rebar yield strength specified in the design drawing is 60 ksi, which meets the applicable standard threshold of >= 60 ksi."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The overall compliance check failed due to the non-compliance of the pavement_thickness component. The actual value of 4.0 inches does not meet the required threshold of >= 6.0 inches as per the applicable standard.",
+        "violated_components": [
+          "pavement_thickness"
+        ]
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "n5_pier_ok",
+      "n_plans": 5,
+      "plan_id": "DSGN-N5-01",
+      "ground_truth_compliant": true,
+      "expected_violated_key": null,
+      "expected_violated_rule": null,
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "footing_depth",
+          "check": "Verify that the minimum footing depth is at least 30 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "check": "Ensure the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 3,
+          "component": "stirrup_spacing",
+          "check": "Confirm that the maximum stirrup spacing does not exceed d/2 inches."
+        },
+        {
+          "step": 4,
+          "component": "bearing_pad_thickness",
+          "check": "Check that the minimum bearing pad thickness is at least 1.0 inch."
+        },
+        {
+          "step": 5,
+          "component": "anchor_bolt_embed",
+          "check": "Validate that the minimum anchor bolt embedment is at least 12 inches."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "footing_depth",
+          "search_query": "post foundation minimum footing depth guardrail",
+          "applicable_plans_hint": [
+            "WYDOT 606.05",
+            "FDOT 515"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-1B",
+            "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-1B",
+              "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-6C",
+              "sheet_title": "BOX BEAM GUARDRAIL"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "H2",
+              "sheet_title": "LANDSCAPE DETAILS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-19.10",
+              "sheet_title": "CONCRETE SURFACE ROAD WITH CONCRETE WALLS"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "UTILITY CONFLICT POLE"
+            }
+          ]
+        },
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "stirrup_spacing",
+          "search_query": "stirrup spacing requirements beam reinforcement",
+          "applicable_plans_hint": [
+            "ACI 318"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B6-1",
+            "sheet_title": "GIRDER WEB REINFORCEMENT"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B6-1",
+              "sheet_title": "GIRDER WEB REINFORCEMENT"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S119",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS SIGN MOUNTING DETAI"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "Cattle Guards"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-090",
+              "sheet_title": "DYNAMIC MESSAGE SIGN WALK-IN"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-1B",
+              "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+            }
+          ]
+        },
+        {
+          "component": "bearing_pad_thickness",
+          "search_query": "elastomeric bearing pad thickness bridge",
+          "applicable_plans_hint": [
+            "AASHTO LRFD 14.7",
+            "Caltrans Sec 51"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "515-062",
+            "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55053",
+              "sheet_title": "STANDARD DETAILS FOR TEMPORARY BRIDGE STRUCTURE PR"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "000-525",
+              "sheet_title": "RAMP TERMINALS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-1",
+              "sheet_title": "END ANCHORAGE TYPE C - TRAILING END"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-052",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (STEEL)"
+            }
+          ]
+        },
+        {
+          "component": "anchor_bolt_embed",
+          "search_query": "anchor bolt embedment minimum sign post",
+          "applicable_plans_hint": [
+            "AASHTO",
+            "AZDOT C-25"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B11-210",
+            "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B11-210",
+              "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-13.55",
+              "sheet_title": "Pipe Cattle/Vehicle Pass Mitered End Treatment"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-013",
+              "sheet_title": "SINGLE POST SIGN SUPPORT BARRIER TOP-MOUNTED"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-080",
+              "sheet_title": "PIPE GUIDERAIL (STEEL)"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S103",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS ONE POST TYPE STEEL"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "footing_depth",
+          "ref_plan": "WYDOT/603-1B",
+          "finding_json": {
+            "actual_value": "48",
+            "compare": "48 >= 30inches",
+            "result": "PASS",
+            "notes": "The minimum footing depth specified in the design drawing is 48 inches, which meets and exceeds the applicable standard threshold of 30 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5 inches",
+            "compare": "2.5 inches >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets and exceeds the required threshold of 2.0 inches as per ACI 318/AASHTO LRFD."
+          }
+        },
+        {
+          "step": 3,
+          "component": "stirrup_spacing",
+          "ref_plan": "Caltrans/B6-1",
+          "finding_json": {
+            "actual_value": "10\"",
+            "compare": "10\" <= d/2 inches",
+            "result": "FAIL",
+            "notes": "The design specifies a maximum stirrup spacing of 10 inches, which does not comply with the ACI 318 requirement that it must be less than or equal to d/2 inches."
+          }
+        },
+        {
+          "step": 4,
+          "component": "bearing_pad_thickness",
+          "ref_plan": "FDOT/515-062",
+          "finding_json": {
+            "actual_value": "1.25 inches",
+            "compare": "1.25 inches >= 1.0 inches",
+            "result": "PASS",
+            "notes": "The minimum bearing pad thickness specified in the design drawing is 1.25 inches, which meets and exceeds the applicable standard threshold of 1.0 inches."
+          }
+        },
+        {
+          "step": 5,
+          "component": "anchor_bolt_embed",
+          "ref_plan": "Caltrans/B11-210",
+          "finding_json": {
+            "actual_value": "14",
+            "compare": "14 >= 12inches",
+            "result": "PASS",
+            "notes": "The minimum anchor bolt embedment specified in the design drawing is 14 inches, which meets and exceeds the applicable standard threshold of 12 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The overall compliance check for n5_pier_ok resulted in a NON_COMPLIANT verdict because at least one component did not meet the specified requirements. Specifically, the stirrup spacing failed to comply with the ACI 318 requirement.",
+        "violated_components": [
+          "stirrup_spacing"
+        ]
+      },
+      "judge_correct": false
+    },
+    {
+      "name": "n5_pier_bad",
+      "n_plans": 5,
+      "plan_id": "DSGN-N5-02",
+      "ground_truth_compliant": false,
+      "expected_violated_key": "stirrup_spacing",
+      "expected_violated_rule": "Stirrup 28\" > d/2 max (ACI 318) for column (typ. < 12\")",
+      "planner_steps": [
+        {
+          "step": 1,
+          "component": "footing_depth",
+          "check": "Verify that the minimum footing depth is at least 30 inches."
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "check": "Ensure the minimum concrete cover is at least 2.0 inches."
+        },
+        {
+          "step": 3,
+          "component": "stirrup_spacing",
+          "check": "Confirm that the maximum stirrup spacing does not exceed d/2 inches."
+        },
+        {
+          "step": 4,
+          "component": "bearing_pad_thickness",
+          "check": "Check that the minimum bearing pad thickness is at least 1.0 inch."
+        },
+        {
+          "step": 5,
+          "component": "anchor_bolt_embed",
+          "check": "Validate that the minimum anchor bolt embedment is at least 12 inches."
+        }
+      ],
+      "retrievals_per_component": [
+        {
+          "component": "footing_depth",
+          "search_query": "post foundation minimum footing depth guardrail",
+          "applicable_plans_hint": [
+            "WYDOT 606.05",
+            "FDOT 515"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-1B",
+            "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-1B",
+              "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-6C",
+              "sheet_title": "BOX BEAM GUARDRAIL"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "H2",
+              "sheet_title": "LANDSCAPE DETAILS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-19.10",
+              "sheet_title": "CONCRETE SURFACE ROAD WITH CONCRETE WALLS"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "FY 2026-27 STANDARD PLANS",
+              "sheet_title": "UTILITY CONFLICT POLE"
+            }
+          ]
+        },
+        {
+          "component": "concrete_cover",
+          "search_query": "concrete cover requirements reinforced section",
+          "applicable_plans_hint": [
+            "ACI 318 / AASHTO LRFD"
+          ],
+          "top1": {
+            "agency": "WYDOT",
+            "plan_id": "603-5",
+            "sheet_title": "PIPE COLLARS"
+          },
+          "top5": [
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-5",
+              "sheet_title": "PIPE COLLARS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D93A",
+              "sheet_title": "PIPE RISER CONNECTIONS"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-12.30",
+              "sheet_title": "CHAIN LINK CABLE BARRIER"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "Unknown",
+              "sheet_title": "REINFORCING STEEL BENDING DIAGRAMS"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "D75B",
+              "sheet_title": "CONCRETE PIPE INLETS"
+            }
+          ]
+        },
+        {
+          "component": "stirrup_spacing",
+          "search_query": "stirrup spacing requirements beam reinforcement",
+          "applicable_plans_hint": [
+            "ACI 318"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B6-1",
+            "sheet_title": "GIRDER WEB REINFORCEMENT"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B6-1",
+              "sheet_title": "GIRDER WEB REINFORCEMENT"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S119",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS SIGN MOUNTING DETAI"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "615-1",
+              "sheet_title": "Cattle Guards"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-090",
+              "sheet_title": "DYNAMIC MESSAGE SIGN WALK-IN"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "603-1B",
+              "sheet_title": "PIPE FILL HEIGHT CHART AND INSTALLATION DETAILS"
+            }
+          ]
+        },
+        {
+          "component": "bearing_pad_thickness",
+          "search_query": "elastomeric bearing pad thickness bridge",
+          "applicable_plans_hint": [
+            "AASHTO LRFD 14.7",
+            "Caltrans Sec 51"
+          ],
+          "top1": {
+            "agency": "FDOT",
+            "plan_id": "515-062",
+            "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+          },
+          "top5": [
+            {
+              "agency": "FDOT",
+              "plan_id": "515-062",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (ALUMINUM)"
+            },
+            {
+              "agency": "CDOT",
+              "plan_id": "55053",
+              "sheet_title": "STANDARD DETAILS FOR TEMPORARY BRIDGE STRUCTURE PR"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "000-525",
+              "sheet_title": "RAMP TERMINALS"
+            },
+            {
+              "agency": "WYDOT",
+              "plan_id": "606-1",
+              "sheet_title": "END ANCHORAGE TYPE C - TRAILING END"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-052",
+              "sheet_title": "PEDESTRIAN/BICYCLE RAILING (STEEL)"
+            }
+          ]
+        },
+        {
+          "component": "anchor_bolt_embed",
+          "search_query": "anchor bolt embedment minimum sign post",
+          "applicable_plans_hint": [
+            "AASHTO",
+            "AZDOT C-25"
+          ],
+          "top1": {
+            "agency": "Caltrans",
+            "plan_id": "B11-210",
+            "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+          },
+          "top5": [
+            {
+              "agency": "Caltrans",
+              "plan_id": "B11-210",
+              "sheet_title": "CALIFORNIA ST-76 BRIDGE RAIL DETAILS No. 1"
+            },
+            {
+              "agency": "AZDOT",
+              "plan_id": "C-13.55",
+              "sheet_title": "Pipe Cattle/Vehicle Pass Mitered End Treatment"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "700-013",
+              "sheet_title": "SINGLE POST SIGN SUPPORT BARRIER TOP-MOUNTED"
+            },
+            {
+              "agency": "FDOT",
+              "plan_id": "515-080",
+              "sheet_title": "PIPE GUIDERAIL (STEEL)"
+            },
+            {
+              "agency": "Caltrans",
+              "plan_id": "S103",
+              "sheet_title": "OVERHEAD SIGNS-VERSATILE TRUSS ONE POST TYPE STEEL"
+            }
+          ]
+        }
+      ],
+      "audit_results": [
+        {
+          "step": 1,
+          "component": "footing_depth",
+          "ref_plan": "WYDOT/603-1B",
+          "finding_json": {
+            "actual_value": "48",
+            "compare": "48 >= 30inches",
+            "result": "PASS",
+            "notes": "The minimum footing depth specified in the design drawing is 48 inches, which meets and exceeds the applicable standard threshold of 30 inches."
+          }
+        },
+        {
+          "step": 2,
+          "component": "concrete_cover",
+          "ref_plan": "WYDOT/603-5",
+          "finding_json": {
+            "actual_value": "2.5 inches",
+            "compare": "2.5 inches >= 2.0 inches",
+            "result": "PASS",
+            "notes": "The minimum concrete cover specified in the design drawing is 2.5 inches, which meets and exceeds the required threshold of 2.0 inches as per ACI 318/AASHTO LRFD."
+          }
+        },
+        {
+          "step": 3,
+          "component": "stirrup_spacing",
+          "ref_plan": "Caltrans/B6-1",
+          "finding_json": {
+            "actual_value": "28\"",
+            "compare": "28\" vs d/2",
+            "result": "FAIL",
+            "notes": "The design specifies a maximum stirrup spacing of 28 inches, which does not comply with the ACI 318 requirement that it must be less than or equal to d/2. Without knowing 'd', we cannot definitively say if 28\" is <= d/2, but typically 'd' would need to be greater than 56\" for this to pass, which is uncommon."
+          }
+        },
+        {
+          "step": 4,
+          "component": "bearing_pad_thickness",
+          "ref_plan": "FDOT/515-062",
+          "finding_json": {
+            "actual_value": "1.25 inches",
+            "compare": "1.25 inches >= 1.0 inches",
+            "result": "PASS",
+            "notes": "The minimum bearing pad thickness specified in the design drawing is 1.25 inches, which meets and exceeds the applicable standard threshold of 1.0 inches."
+          }
+        },
+        {
+          "step": 5,
+          "component": "anchor_bolt_embed",
+          "ref_plan": "Caltrans/B11-210",
+          "finding_json": {
+            "actual_value": "14",
+            "compare": "14 >= 12inches",
+            "result": "PASS",
+            "notes": "The minimum anchor bolt embedment specified in the design drawing is 14 inches, which meets and exceeds the applicable standard threshold of 12 inches."
+          }
+        }
+      ],
+      "synthesis": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The overall compliance check failed due to one component not meeting the specified requirements. The stirrup spacing was found to be non-compliant as it did not satisfy the ACI 318 requirement that it must be less than or equal to d/2. All other components met their respective standards.",
+        "violated_components": [
+          "stirrup_spacing"
+        ]
+      },
+      "judge_correct": true
+    }
+  ]
+}

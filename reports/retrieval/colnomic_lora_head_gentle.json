@@ -1,0 +1,7 @@
+{
+  "tag": "head_gentle",
+  "mode": "head",
+  "adapter": "colnomic_head_gentle",
+  "test_recall@5": 92.69,
+  "michigan_recall@5": 93.55
+}

@@ -1,0 +1,7 @@
+{
+  "tag": "full_lm",
+  "mode": "full",
+  "adapter": "colnomic_full_lm",
+  "test_recall@5": 55.66,
+  "michigan_recall@5": 75.27
+}

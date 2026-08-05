@@ -1,0 +1,378 @@
+{
+  "n_total": 10,
+  "retrieval_top5_pct": 80.0,
+  "judge_correct_pct": 100.0,
+  "judge_correct_on_compliant": "5/5",
+  "judge_correct_on_noncompliant": "5/5",
+  "elapsed_min": 10.340705414613089,
+  "results": [
+    {
+      "name": "culvert_ok",
+      "plan_id": "B-505",
+      "ground_truth_compliant": true,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "question": "Does the rebar spacing of 9 inches comply with the required maximum spacing as indicated in the notes?",
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.5 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.5 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_bad",
+      "plan_id": "B-505V",
+      "ground_truth_compliant": false,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "question": "Does the rebar spacing of 9 inches comply with the minimum spacing requirement?",
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.0 inch",
+            "threshold": "2.0 inches",
+            "compare": "1.0 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.0 inch does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.0 inch\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.0 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.0 inch does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "guardrail_ok",
+      "plan_id": "606-7B",
+      "ground_truth_compliant": true,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "question": "Does the footing depth of 36 inches meet the minimum requirement as specified in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "36",
+            "threshold": "30",
+            "compare": "36 >= 30",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 36 inches meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"36\",\n      \"threshold\": \"30\",\n      \"compare\": \"36 >= 30\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth of 36 inches meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "guardrail_bad",
+      "plan_id": "606-7C",
+      "ground_truth_compliant": false,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "question": "Does the footing depth of 24 inches meet the minimum required depth as specified in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "24",
+            "threshold": "30",
+            "compare": "24 < 30",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 24 inches does not meet the minimum requirement of 30 inches.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"24\",\n      \"threshold\": \"30\",\n      \"compare\": \"24 < 30\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 24 inches does not meet the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+      "name": "rebar_ok",
+      "plan_id": "A77B",
+      "ground_truth_compliant": true,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "question": "Does the clear cover of 2.0 inches meet the minimum requirement as indicated in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "8 inches",
+            "threshold": "15 inches",
+            "compare": "8 <= 15 -> PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0 -> PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"8 inches\",\n      \"threshold\": \"15 inches\",\n      \"compare\": \"8 <= 15 -> PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0 -> PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_bad",
+      "plan_id": "A77C",
+      "ground_truth_compliant": false,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "question": "Does the clear cover of 2.0 inches meet the minimum requirement as indicated in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "18.0 inches",
+            "threshold": "15.0 inches",
+            "compare": "18.0 > 15.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 15 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"18.0 inches\",\n      \"threshold\": \"15.0 inches\",\n      \"compare\": \"18.0 > 15.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 15 inches\"\n}\n```"
+    },
+    {
+      "name": "inlet_ok",
+      "plan_id": "232-001",
+      "ground_truth_compliant": true,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "question": "What is the minimum required cover for the cast iron grate as specified in the notes?",
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.0",
+            "threshold": "4.0",
+            "compare": "4.0 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening meets the required threshold of 4.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.0\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.0 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening meets the required threshold of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_bad",
+      "plan_id": "232-002",
+      "ground_truth_compliant": false,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "question": "What is the minimum required cover for the cast iron grate as specified in the standard plan?",
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "9.0 inches",
+            "threshold": "4.0 inches",
+            "compare": "9.0 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the maximum allowed size of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"9.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"9.0 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the maximum allowed size of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "signpost_ok",
+      "plan_id": "C-25.10",
+      "ground_truth_compliant": true,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "question": "Does the anchor bolt depth of 12 inches meet the minimum embedment requirement as specified in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "12",
+            "threshold": "12.0",
+            "compare": "12 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "All checks passed as the anchor bolt embedment meets the minimum requirement.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"12 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"All checks passed as the anchor bolt embedment meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "signpost_bad",
+      "plan_id": "C-25.11",
+      "ground_truth_compliant": false,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "question": "Does the anchor bolt depth of 4 inches meet the minimum embedment requirement of 12 inches as specified in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "4.0 inches",
+            "threshold": "12.0 inches",
+            "compare": "4.0 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 4.0 inches does not meet the minimum requirement of 12.0 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"4.0 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 4.0 inches does not meet the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    }
+  ]
+}

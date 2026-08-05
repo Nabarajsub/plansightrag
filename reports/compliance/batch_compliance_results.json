@@ -1,0 +1,178 @@
+{
+  "metrics": {
+    "total_queries": 8,
+    "successful_queries": 8,
+    "plan_decomposition_success_rate": 1.0,
+    "per_step_retrieval_accuracy": 1.0,
+    "per_step_audit_finding_quality": 1.0,
+    "end_to_end_synthesis_correctness": 1.0,
+    "visual_evidence_trail_completeness": 0.0,
+    "avg_elapsed_seconds": 60.9125
+  },
+  "results": [
+    {
+      "id": "comp_01",
+      "query": "Verify that the geotextile fabric placement in Plan 511-1A meets the fill slope requirements specified in Plan 203-2A",
+      "expected_plans": [
+        "511-1A",
+        "203-2A"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 8,
+      "decomposition_success": true,
+      "plans_found": [
+        "511-1A",
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 74.7
+    },
+    {
+      "id": "comp_02",
+      "query": "Check whether the guardrail end treatment in Plan 606-7C complies with the clear zone width requirements from Plan 606-2B",
+      "expected_plans": [
+        "606-7C",
+        "606-2B"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 7,
+      "decomposition_success": true,
+      "plans_found": [
+        "606-7C",
+        "606-2B"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 58.5
+    },
+    {
+      "id": "comp_03",
+      "query": "Verify that the drainage pipe installation in Plan 511-1A follows the bedding and backfill specifications in the standard",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 8,
+      "decomposition_success": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 68.8
+    },
+    {
+      "id": "comp_04",
+      "query": "Does the mailbox installation approach in Plan 202-1 meet the minimum sight distance requirements for the posted speed?",
+      "expected_plans": [
+        "202-1"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 9,
+      "decomposition_success": true,
+      "plans_found": [
+        "202-1"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 55.7
+    },
+    {
+      "id": "comp_05",
+      "query": "Verify that the gabion basket dimensions in Plan 511-1A match the erosion control specifications for the given slope gradient",
+      "expected_plans": [
+        "511-1A"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 10,
+      "decomposition_success": true,
+      "plans_found": [
+        "511-1A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 61.1
+    },
+    {
+      "id": "comp_06",
+      "query": "Check if the steel stake spacing in Plan 606-4B for silt fence installation meets the maximum spacing requirement specified in the notes",
+      "expected_plans": [
+        "606-4B"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 8,
+      "decomposition_success": true,
+      "plans_found": [
+        "606-4B"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 57.0
+    },
+    {
+      "id": "comp_07",
+      "query": "Verify that the scarification depth requirement in Plan 203-2A is consistent with the moisture density control specifications in the grading notes",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 10,
+      "decomposition_success": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 54.6
+    },
+    {
+      "id": "comp_08",
+      "query": "Check whether the contour ditch dimensions in Plan 203-2A meet the minimum cross-section requirements for the design storm flow",
+      "expected_plans": [
+        "203-2A"
+      ],
+      "expected_steps": 2,
+      "steps_executed": 9,
+      "decomposition_success": true,
+      "plans_found": [
+        "203-2A"
+      ],
+      "retrieval_accuracy": 1.0,
+      "has_synthesis": true,
+      "has_verdict": true,
+      "evidence_images": 2,
+      "evidence_complete": false,
+      "status": "success",
+      "elapsed_seconds": 56.9
+    }
+  ]
+}

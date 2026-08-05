@@ -1,0 +1,133 @@
+{
+  "experiment": "Model-as-auditor verdict on real WYDOT plan imagery (Qwen2.5-VL-72B + CoT + given rule)",
+  "model": "Qwen/Qwen2.5-VL-72B-Instruct",
+  "n": 12,
+  "verdict_accuracy": 100.0,
+  "n_compliant": 6,
+  "n_noncompliant": 6,
+  "correct_on_compliant": 6,
+  "correct_on_noncompliant": 6,
+  "results": [
+    {
+      "id": "audit_00_ok",
+      "component": "travel-lane cross slope",
+      "submitted_value": "2.00%",
+      "rule": "WYDOT travel-lane cross slope shall not exceed 2.0%",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": " that the travel-lane cross slope shall not exceed 2.0%. Since 2.00% is equal to 2.0%, the proposed design complies with the governing rule.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_00_bad",
+      "component": "travel-lane cross slope",
+      "submitted_value": "4.50%",
+      "rule": "WYDOT travel-lane cross slope shall not exceed 2.0%",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "exceeds the governing rule of 2.0% for WYDOT travel-lane cross slopes. Therefore, this design does not meet the compliance requirements.\n\nVERDICT: NON_COMPLIANT"
+    },
+    {
+      "id": "audit_01_ok",
+      "component": "embankment fill backslope",
+      "submitted_value": "2:1 (H:V)",
+      "rule": "WYDOT embankment fill slope shall be 2:1 or flatter (>= 2 horizontal to 1 vertical)",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": "is 2:1 (H:V). According to the governing rule, the embankment fill slope must be 2:1 or flatter. A 2:1 slope meets this requirement exactly.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_01_bad",
+      "component": "embankment fill backslope",
+      "submitted_value": "1.25:1 (H:V)",
+      "rule": "WYDOT embankment fill slope shall be 2:1 or flatter (>= 2 horizontal to 1 vertical)",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "ill slope must be 2:1 or flatter. A 1.25:1 slope is steeper than the required 2:1, which means it does not meet the compliance standard.\n\nVERDICT: NON_COMPLIANT"
+    },
+    {
+      "id": "audit_02_ok",
+      "component": "recoverable foreslope",
+      "submitted_value": "6:1 (H:V)",
+      "rule": "Recoverable foreslope within the clear zone shall be 4:1 or flatter",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": "coverable foreslope within the clear zone must be 4:1 or flatter. A 6:1 slope is flatter than a 4:1 slope, meaning it meets the requirement.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_02_bad",
+      "component": "recoverable foreslope",
+      "submitted_value": "3:1 (H:V)",
+      "rule": "Recoverable foreslope within the clear zone shall be 4:1 or flatter",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "pe within the clear zone must be 4:1 or flatter. A 3:1 slope is steeper than the required 4:1, thus not meeting the compliance criteria.\n\nVERDICT: NON_COMPLIANT"
+    },
+    {
+      "id": "audit_03_ok",
+      "component": "ditch foreslope",
+      "submitted_value": "5:1 (H:V)",
+      "rule": "Ditch foreslope within the clear zone shall be 4:1 or flatter",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": "the ditch foreslope within the clear zone must be 4:1 or flatter. A 5:1 slope is flatter than a 4:1 slope, meaning it meets the requirement.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_03_bad",
+      "component": "ditch foreslope",
+      "submitted_value": "2:1 (H:V)",
+      "rule": "Ditch foreslope within the clear zone shall be 4:1 or flatter",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "pe within the clear zone must be 4:1 or flatter. A 2:1 slope is steeper than the required 4:1, thus not meeting the compliance criteria.\n\nVERDICT: NON_COMPLIANT"
+    },
+    {
+      "id": "audit_04_ok",
+      "component": "backslope ratio",
+      "submitted_value": "3:1 (H:V)",
+      "rule": "Cut backslope shall be 2:1 or flatter (>= 2 horizontal to 1 vertical)",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": " governing rule requires a cut backslope ratio of 2:1 or flatter. A 3:1 ratio is indeed flatter than a 2:1 ratio, as it has a gentler slope.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_04_bad",
+      "component": "backslope ratio",
+      "submitted_value": "1:1 (H:V)",
+      "rule": "Cut backslope shall be 2:1 or flatter (>= 2 horizontal to 1 vertical)",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "d be no more than 1 unit of vertical drop. A 1:1 ratio is steeper than the required 2:1 ratio, thus not meeting the compliance standard.\n\nVERDICT: NON_COMPLIANT"
+    },
+    {
+      "id": "audit_05_ok",
+      "component": "cross slope",
+      "submitted_value": "2.00%",
+      "rule": "WYDOT travel-lane cross slope shall not exceed 2.0%",
+      "gt_compliant": true,
+      "verdict": "COMPLIANT",
+      "correct": true,
+      "response_tail": "t the travel-lane cross slope shall not exceed 2.0%. Since the proposed design meets the specified limit, there is no violation of the rule.\n\nVERDICT: COMPLIANT"
+    },
+    {
+      "id": "audit_05_bad",
+      "component": "cross slope",
+      "submitted_value": "5.00%",
+      "rule": "WYDOT travel-lane cross slope shall not exceed 2.0%",
+      "gt_compliant": false,
+      "verdict": "NON_COMPLIANT",
+      "correct": true,
+      "response_tail": "t specifies the travel-lane cross slope shall not exceed 2.0%. Therefore, the proposed design does not meet the compliance requirements.\n\nVERDICT: NON_COMPLIANT"
+    }
+  ],
+  "elapsed_sec": 275.6
+}

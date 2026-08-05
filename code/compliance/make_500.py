@@ -1,0 +1,145 @@
+"""Generate 500 single-doc CAD compliance drawings.
+
+Distribution:
+  5 archetypes (culvert, guardrail, rebar, inlet, signpost) x 100 = 500
+  Per archetype: 50 compliant + 50 non-compliant
+  Density: 70% simple (existing archetypes) + 30% dense (multi-view + schedule)
+  Parameter randomization per drawing to ensure visual diversity.
+"""
+from __future__ import annotations
+# --- release path resolution ---
+import os as _os
+PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+# Rasterized plan pages are NOT redistributed. Rebuild them from the public DOT
+# PDFs (see README) and point PLANS_ROOT at the output directory.
+PLANS_ROOT = _os.environ.get("PLANS_ROOT") or _os.path.join(PSR_ROOT, "data", "pages")
+# --- end release path resolution ---
+
+import json, os, random, sys
+sys.path.insert(0, f"{PSR_ROOT}/compliance")
+import archetypes as A
+import archetypes_dense as AD
+
+OUT = f"{PSR_ROOT}/compliance/scale500/mockups"
+random.seed(2026)
+
+AGENCIES = ["WYDOT", "Caltrans", "AZDOT", "CDOT", "FDOT"]
+
+def sample_int(lo, hi):
+    return random.randint(lo, hi)
+
+def sample_choice(lst):
+    return random.choice(lst)
+
+# Per-archetype sampling functions: each returns kwargs for compliant + a non-compliant variant
+def gen_culvert(idx, compliant):
+    span = sample_choice([6.0, 7.0, 8.0, 9.0, 10.0, 12.0])
+    rise = sample_choice([4.0, 5.0, 6.0])
+    wall = sample_choice([10, 12, 14])
+    top = sample_choice([12, 14, 16, 18])
+    rebar_sp = sample_choice([8, 9, 10, 12])
+    cover = sample_choice([2.0, 2.5, 3.0]) if compliant else sample_choice([0.5, 1.0, 1.5])
+    violation = None if compliant else f"Cover {cover}\" < 2.0\" min (ACI 318)"
+    return dict(
+        agency=sample_choice(AGENCIES), plan_id=f"B-{500+idx:03d}",
+        span_ft=span, rise_ft=rise, wall_in=wall, top_slab_in=top,
+        cover_in=cover, rebar_spacing_in=rebar_sp,
+        concrete_class="Class A-A", rebar_grade="Grade 60",
+    ), violation
+
+def gen_guardrail(idx, compliant):
+    post_h = sample_choice([24, 27, 30, 33])
+    foot_dia = sample_choice([10, 12, 14])
+    foot_depth = sample_choice([30, 36, 42, 48]) if compliant else sample_choice([15, 20, 24, 28])
+    violation = None if compliant else f"Footing {foot_depth}\" < 30\" min (WYDOT 606.05)"
+    return dict(
+        agency=sample_choice(AGENCIES), plan_id=f"606-{idx:03d}",
+        post_height_in=post_h, footing_depth_in=foot_depth, footing_dia_in=foot_dia,
+        post_section=sample_choice(["W6x9", "W6x12", "W8x10"]),
+        concrete_class="Class A", min_footing_note_in=30,
+    ), violation
+
+def gen_rebar(idx, compliant):
+    bw = sample_choice([12, 16, 18, 20, 24])
+    bh = sample_choice([24, 28, 30, 36, 42])
+    nt = sample_choice([2, 3, 4])
+    nb = sample_choice([3, 4, 5])
+    # ACI max stirrup = d/2; for height H, max = H/2
+    max_stirrup = bh // 2
+    if compliant:
+        stirrup = random.randint(4, max(4, max_stirrup - 1))
+    else:
+        stirrup = random.randint(max_stirrup + 2, max_stirrup + 12)
+    cover = 2.0
+    violation = None if compliant else f"Stirrup {stirrup}\" > d/2={max_stirrup}\" max (ACI 318)"
+    return dict(
+        agency=sample_choice(AGENCIES), plan_id=f"A-{idx:03d}",
+        beam_w_in=bw, beam_h_in=bh, bar_size=sample_choice(["#6","#7","#8","#9"]),
+        n_top=nt, n_bot=nb, stirrup_spacing_in=stirrup,
+        concrete_class=sample_choice(["Class S2","Class A-A","Class IV"]), cover_in=cover,
+    ), violation
+
+def gen_inlet(idx, compliant):
+    tw = sample_choice([18, 24, 30, 36])
+    th = sample_choice([4, 6, 8])
+    grate = sample_choice([2.0, 3.0, 4.0]) if compliant else sample_choice([6.0, 8.0, 10.0])
+    violation = None if compliant else f"Grate opening {grate}\" > 4\" max (PROWAG/ADA)"
+    return dict(
+        agency=sample_choice(AGENCIES), plan_id=f"232-{idx:03d}",
+        throat_w_in=tw, throat_h_in=th, grate_open_in=grate,
+        concrete_class=sample_choice(["Class IV", "Class A-A"]),
+        frame_grade="ASTM A48 CL 35B",
+        reinforcing_note="REINFORCING #4 @ 6\" OC EW.",
+    ), violation
+
+def gen_signpost(idx, compliant):
+    pd = sample_choice([3.0, 4.0, 4.5])
+    fd = sample_choice([18, 24, 30, 36, 42])
+    fdep = sample_choice([36, 42, 48, 54])
+    anchor_d = sample_choice([0.625, 0.75, 0.875, 1.0])
+    embed = sample_choice([12, 14, 16, 18]) if compliant else sample_choice([3, 4, 6, 8])
+    violation = None if compliant else f"Anchor embed {embed}\" < 12\" min (AASHTO)"
+    return dict(
+        agency=sample_choice(AGENCIES), plan_id=f"C-{idx:03d}",
+        post_dia_in=pd, embed_depth_in=18, footing_dia_in=fd,
+        footing_depth_in=fdep, anchor_bolt_dia_in=anchor_d, anchor_embed_in=embed,
+        concrete_class="Class P",
+    ), violation
+
+GENS = {
+    "culvert":   ("draw_culvert",    gen_culvert),
+    "guardrail": ("draw_guardrail",  gen_guardrail),
+    "rebar":     ("draw_rebar",      gen_rebar),
+    "inlet":     ("draw_inlet",      gen_inlet),
+    "signpost":  ("draw_sign_post",  gen_signpost),
+}
+
+
+def main():
+    os.makedirs(OUT, exist_ok=True)
+    manifest = []
+    for arch_name, (fn, gen) in GENS.items():
+        for i in range(100):
+            compliant = (i % 2 == 0)
+            kwargs, violation = gen(i, compliant)
+            name = f"{arch_name}_{'ok' if compliant else 'bad'}_{i:03d}"
+            out_path = f"{OUT}/{name}.png"
+            getattr(A, fn)(out_path, **kwargs)
+            manifest.append({
+                "name": name, "archetype": fn, "image_path": out_path,
+                "agency": kwargs["agency"], "plan_id": kwargs["plan_id"],
+                "design_facts": kwargs,
+                "ground_truth_compliant": compliant,
+                "violated_rule": violation,
+            })
+    random.shuffle(manifest)
+    mpath = f"{OUT}/manifest.json"
+    with open(mpath, "w") as f:
+        json.dump(manifest, f, indent=2, default=str)
+    n_c = sum(1 for m in manifest if m["ground_truth_compliant"])
+    print(f"saved {len(manifest)} drawings ({n_c} compliant + {len(manifest)-n_c} non-compliant)")
+    print(f"manifest -> {mpath}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# large artifacts — never commit
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+data/pages/
+cache/
+*.preclean
+
+# rasterized plan images are not redistributed (see README)
+*.png
+*.jpg
+*.jpeg
+*.pdf
+!docs/*.png
+
+.DS_Store
+*.log
+*.swp
+
+# internal pre-submission audit — contains unresolved provenance notes and
+# manuscript-internal LaTeX labels. Publish only once those notes are resolved.
+CONSISTENCY_CHECK.md

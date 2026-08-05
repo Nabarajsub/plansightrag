@@ -1,0 +1,3509 @@
+{
+  "n_total": 50,
+  "retrieval_top5_pct": 42.0,
+  "judge_correct_pct": 100.0,
+  "judge_correct_on_compliant": "25/25",
+  "judge_correct_on_noncompliant": "25/25",
+  "results": [
+    {
+      "name": "guardrail_adv_bad_01",
+      "plan_id": "606-701",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing 29\" < 30\" min (WYDOT 606.05)",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "29",
+            "threshold": "30.0",
+            "compare": "29 < 30.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 29 inches does not meet the minimum requirement of 30 inches.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"29\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"29 < 30.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 29 inches does not meet the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_bad_05",
+      "plan_id": "606-705",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing 28\" < 30\" min (WYDOT 606.05)",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 9,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "28",
+            "threshold": "30",
+            "compare": "28 < 30",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 28 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"28\",\n      \"threshold\": \"30\",\n      \"compare\": \"28 < 30\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 28 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_ok_04",
+      "plan_id": "B-704",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 7,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.1",
+            "threshold": "2.0",
+            "compare": "2.1 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.1 inches meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.1\",\n      \"threshold\": \"2.0\",\n      \"compare\": \"2.1 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover of 2.1 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_ok_08",
+      "plan_id": "B-708",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 8,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_bad_03",
+      "plan_id": "B-703",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Cover 1.75\" < 2.0\" min (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 9,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.8 inches",
+            "threshold": "2.0 inches",
+            "compare": "1.8 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.8 inches does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.8 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.8 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.8 inches does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_bad_05",
+      "plan_id": "B-705",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Cover 1.875\" < 2.0\" min (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 6,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.9 inches",
+            "threshold": "2.0 inches",
+            "compare": "1.9 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.9 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.9 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_bad_07",
+      "plan_id": "C-707",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor embed 10.5\" < 12\" min (AASHTO)",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 5,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": true
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "10.5",
+            "threshold": "12.0",
+            "compare": "10.5 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"10.5\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"10.5 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_ok_04",
+      "plan_id": "232-704",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "3.8",
+            "threshold": "4.0",
+            "compare": "3.8 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 3.8 inches meets the requirement of being less than or equal to 4.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.8\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"3.8 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening of 3.8 inches meets the requirement of being less than or equal to 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_ok_04",
+      "plan_id": "A-704",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 15\"",
+          "operator": "<=",
+          "threshold": 15.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 5,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": true
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "15.0 inches",
+            "threshold": "15.0 inches",
+            "compare": "15.0 <= 15.0",
+            "result": "PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"15.0 inches\",\n      \"threshold\": \"15.0 inches\",\n      \"compare\": \"15.0 <= 15.0\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_bad_01",
+      "plan_id": "232-701",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 4.25\" > 4\" max (PROWAG/ADA)",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.2",
+            "threshold": "4.0",
+            "compare": "4.2 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the allowed maximum of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.2\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.2 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_bad_09",
+      "plan_id": "A-709",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup 16\" > d/2=14\" max (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 14\"",
+          "operator": "<=",
+          "threshold": 14.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "16.0 inches",
+            "threshold": "14.0 inches",
+            "compare": "16.0 > 14.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 14 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"16.0 inches\",\n      \"threshold\": \"14.0 inches\",\n      \"compare\": \"16.0 > 14.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 14 inches\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_bad_07",
+      "plan_id": "A-707",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup 15\" > d/2=14\" max (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 14\"",
+          "operator": "<=",
+          "threshold": 14.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "15.0 inches",
+            "threshold": "14.0 inches",
+            "compare": "15.0 > 14.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 14 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"15.0 inches\",\n      \"threshold\": \"14.0 inches\",\n      \"compare\": \"15.0 > 14.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 14 inches\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_ok_02",
+      "plan_id": "A-702",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 14\"",
+          "operator": "<=",
+          "threshold": 14.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 9,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "14",
+            "threshold": "14.0",
+            "compare": "14 <= 14.0",
+            "result": "PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0",
+            "threshold": "2.0",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"14\",\n      \"threshold\": \"14.0\",\n      \"compare\": \"14 <= 14.0\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0\",\n      \"threshold\": \"2.0\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_ok_08",
+      "plan_id": "232-708",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "3.8",
+            "threshold": "4.0",
+            "compare": "3.8 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 3.8 inches meets the requirement of being less than or equal to 4.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.8\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"3.8 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening of 3.8 inches meets the requirement of being less than or equal to 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_bad_05",
+      "plan_id": "232-705",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 4.25\" > 4\" max (PROWAG/ADA)",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 9,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.2",
+            "threshold": "4.0",
+            "compare": "4.2 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the allowed maximum of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.2\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.2 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_bad_09",
+      "plan_id": "B-709",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Cover 1.75\" < 2.0\" min (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.8 inches",
+            "threshold": "2.0 inches",
+            "compare": "1.8 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.8 inches does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.8 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.8 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.8 inches does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_ok_00",
+      "plan_id": "232-700",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.0",
+            "threshold": "4.0",
+            "compare": "4.0 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 4.0 inches meets the required threshold.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.0\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.0 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening of 4.0 inches meets the required threshold.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_ok_02",
+      "plan_id": "232-702",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.0 inches",
+            "threshold": "4.0 inches",
+            "compare": "4.0 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening meets the required threshold of 4.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"4.0 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening meets the required threshold of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_bad_09",
+      "plan_id": "606-709",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing 27\" < 30\" min (WYDOT 606.05)",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 8,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "27",
+            "threshold": "30",
+            "compare": "27 < 30",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 27 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"27\",\n      \"threshold\": \"30\",\n      \"compare\": \"27 < 30\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 27 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_ok_08",
+      "plan_id": "C-708",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 8,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "13",
+            "threshold": "12.0",
+            "compare": "13 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The anchor bolt embedment of 13 inches meets the minimum requirement of 12 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"13\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"13 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment of 13 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_bad_03",
+      "plan_id": "232-703",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 4.25\" > 4\" max (PROWAG/ADA)",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.2",
+            "threshold": "4.0",
+            "compare": "4.2 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the allowed maximum of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.2\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.2 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_bad_05",
+      "plan_id": "C-705",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor embed 10.5\" < 12\" min (AASHTO)",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 7,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "10.5",
+            "threshold": "12.0",
+            "compare": "10.5 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"10.5\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"10.5 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_ok_00",
+      "plan_id": "606-700",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "32",
+            "threshold": "30.0",
+            "compare": "32 >= 30.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 32 inches meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"32\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"32 >= 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth of 32 inches meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_ok_06",
+      "plan_id": "A-706",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 14\"",
+          "operator": "<=",
+          "threshold": 14.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 6,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "14.0 inches",
+            "threshold": "14.0 inches",
+            "compare": "14.0 <= 14.0",
+            "result": "PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"14.0 inches\",\n      \"threshold\": \"14.0 inches\",\n      \"compare\": \"14.0 <= 14.0\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_ok_06",
+      "plan_id": "C-706",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "13.0",
+            "threshold": "12.0",
+            "compare": "13.0 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "All checks passed as the anchor bolt embedment meets the minimum requirement.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"13.0\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"13.0 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"All checks passed as the anchor bolt embedment meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_ok_06",
+      "plan_id": "232-706",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 10,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "3.5",
+            "threshold": "4.0",
+            "compare": "3.5 <= 4.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 3.5 inches meets the requirement of being less than or equal to 4.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.5\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"3.5 <= 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The grate opening of 3.5 inches meets the requirement of being less than or equal to 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_ok_08",
+      "plan_id": "606-708",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "30",
+            "threshold": "30.0",
+            "compare": "30 >= 30.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 30 inches meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"30\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"30 >= 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_ok_06",
+      "plan_id": "B-706",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.1",
+            "threshold": "2.0",
+            "compare": "2.1 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.1 inches meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.1\",\n      \"threshold\": \"2.0\",\n      \"compare\": \"2.1 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover of 2.1 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_ok_00",
+      "plan_id": "A-700",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 12\"",
+          "operator": "<=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "12.0 inches",
+            "threshold": "12.0 inches",
+            "compare": "12.0 <= 12.0",
+            "result": "PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"12.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12.0 <= 12.0\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_bad_03",
+      "plan_id": "A-703",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup 16\" > d/2=14\" max (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 14\"",
+          "operator": "<=",
+          "threshold": 14.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 10,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "16.0 inches",
+            "threshold": "14.0 inches",
+            "compare": "16.0 > 14.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 14 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"16.0 inches\",\n      \"threshold\": \"14.0 inches\",\n      \"compare\": \"16.0 > 14.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 14 inches\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_bad_03",
+      "plan_id": "C-703",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor embed 10.5\" < 12\" min (AASHTO)",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "10.5",
+            "threshold": "12.0",
+            "compare": "10.5 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"10.5\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"10.5 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_bad_09",
+      "plan_id": "C-709",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor embed 10.5\" < 12\" min (AASHTO)",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 10,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "10.5",
+            "threshold": "12.0",
+            "compare": "10.5 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"10.5\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"10.5 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 10.5 inches does not meet the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_ok_08",
+      "plan_id": "A-708",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 12\"",
+          "operator": "<=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "11.0 inches",
+            "threshold": "12.0 inches",
+            "compare": "11.0 <= 12.0",
+            "result": "PASS"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "Both stirrup spacing and concrete cover meet the specified thresholds.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"11.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"11.0 <= 12.0\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"Both stirrup spacing and concrete cover meet the specified thresholds.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_bad_01",
+      "plan_id": "B-701",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Cover 1.9375\" < 2.0\" min (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 5,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": true
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.9 inches",
+            "threshold": "2.0 inches",
+            "compare": "1.9 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.9 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.9 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_ok_00",
+      "plan_id": "C-700",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 9,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "12.0",
+            "threshold": "12.0",
+            "compare": "12.0 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The anchor bolt embedment meets the minimum requirement of 12.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12.0\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"12.0 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_bad_01",
+      "plan_id": "C-701",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor embed 11\" < 12\" min (AASHTO)",
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "11",
+            "threshold": "12.0",
+            "compare": "11 < 12.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The anchor bolt embedment depth of 11 inches does not meet the minimum requirement of 12 inches.",
+        "violated_rule": "AASHTO / std spec"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"11\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"11 < 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment depth of 11 inches does not meet the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_ok_02",
+      "plan_id": "C-702",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "12.0 inches",
+            "threshold": "12.0 inches",
+            "compare": "12.0 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The anchor bolt embedment meets the minimum requirement of 12.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12.0 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_bad_01",
+      "plan_id": "A-701",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup 17\" > d/2=16\" max (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 16\"",
+          "operator": "<=",
+          "threshold": 16.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 8,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "17.0 inches",
+            "threshold": "16.0 inches",
+            "compare": "17.0 > 16.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 16 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"17.0 inches\",\n      \"threshold\": \"16.0 inches\",\n      \"compare\": \"17.0 > 16.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 16 inches\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_bad_03",
+      "plan_id": "606-703",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing 27\" < 30\" min (WYDOT 606.05)",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 6,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "27 inches",
+            "threshold": "30 inches",
+            "compare": "27 < 30",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 27 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"27 inches\",\n      \"threshold\": \"30 inches\",\n      \"compare\": \"27 < 30\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 27 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_ok_02",
+      "plan_id": "606-702",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 5,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": true
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "32",
+            "threshold": "30.0",
+            "compare": "32 >= 30.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 32 inches meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"32\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"32 >= 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth of 32 inches meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_bad_07",
+      "plan_id": "B-707",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Cover 1.875\" < 2.0\" min (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "1.9 inches",
+            "threshold": "2.0 inches",
+            "compare": "1.9 < 2.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.",
+        "violated_rule": "ACI 318 / AASHTO LRFD"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.9 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.9 < 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The concrete cover of 1.9 inches does not meet the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_ok_00",
+      "plan_id": "B-700",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "rebar_adv_bad_05",
+      "plan_id": "A-705",
+      "archetype": "draw_rebar",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup 18\" > d/2=16\" max (ACI 318)",
+      "checks_injected": [
+        {
+          "name": "Stirrup spacing",
+          "rule": "ACI 318 max = d/2 = 16\"",
+          "operator": "<=",
+          "threshold": 16.0,
+          "unit": "inches",
+          "hint": "labeled '#3 STIRRUPS @ X\" OC' on the leader callout"
+        },
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 7,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "B6-1",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "A-708",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "A-707",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "A-709",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "Caltrans",
+          "plan_id": "A-704",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Stirrup Spacing",
+            "actual_value": "18.0 inches",
+            "threshold": "16.0 inches",
+            "compare": "18.0 > 16.0",
+            "result": "FAIL"
+          },
+          {
+            "name": "Concrete Cover",
+            "actual_value": "2.0 inches",
+            "threshold": "2.0 inches",
+            "compare": "2.0 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The stirrup spacing exceeds the maximum allowed by ACI 318.",
+        "violated_rule": "ACI 318 max stirrup spacing of d/2 = 16 inches"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup Spacing\",\n      \"actual_value\": \"18.0 inches\",\n      \"threshold\": \"16.0 inches\",\n      \"compare\": \"18.0 > 16.0\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete Cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The stirrup spacing exceeds the maximum allowed by ACI 318.\",\n  \"violated_rule\": \"ACI 318 max stirrup spacing of d/2 = 16 inches\"\n}\n```"
+    },
+    {
+      "name": "culvert_adv_ok_02",
+      "plan_id": "B-702",
+      "archetype": "draw_culvert",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Concrete cover",
+          "rule": "ACI 318 / AASHTO LRFD",
+          "operator": ">=",
+          "threshold": 2.0,
+          "unit": "inches",
+          "hint": "labeled 'COVER = X\" MIN' near the wall hatching"
+        }
+      ],
+      "retrieval_self_rank": 4,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "CDOT",
+          "plan_id": "B-700",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "CDOT",
+          "plan_id": "B-709",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "CDOT",
+          "plan_id": "B-706",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "B-702",
+          "is_self": true
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "B-701",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Concrete cover",
+            "actual_value": "2.2",
+            "threshold": "2.0",
+            "compare": "2.2 >= 2.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.2 inches meets the minimum requirement of 2.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.2\",\n      \"threshold\": \"2.0\",\n      \"compare\": \"2.2 >= 2.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The concrete cover of 2.2 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_ok_06",
+      "plan_id": "606-706",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "32",
+            "threshold": "30.0",
+            "compare": "32 >= 30.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 32 inches meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"32\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"32 >= 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth of 32 inches meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_bad_07",
+      "plan_id": "232-707",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 4.5\" > 4\" max (PROWAG/ADA)",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 8,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.5",
+            "threshold": "4.0",
+            "compare": "4.5 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the allowed maximum of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.5\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.5 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "signpost_adv_ok_04",
+      "plan_id": "C-704",
+      "archetype": "draw_sign_post",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Anchor bolt embedment",
+          "rule": "AASHTO / std spec",
+          "operator": ">=",
+          "threshold": 12.0,
+          "unit": "inches",
+          "hint": "labeled 'ANCHOR EMBED' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 6,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "C-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "C-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "C-702",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "C-703",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "CDOT",
+          "plan_id": "C-707",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Anchor bolt embedment",
+            "actual_value": "13.0",
+            "threshold": "12.0",
+            "compare": "13.0 >= 12.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The anchor bolt embedment of 13.0 inches meets the minimum requirement of 12.0 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"13.0\",\n      \"threshold\": \"12.0\",\n      \"compare\": \"13.0 >= 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The anchor bolt embedment of 13.0 inches meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_ok_04",
+      "plan_id": "606-704",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 10,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "30",
+            "threshold": "30.0",
+            "compare": "30 >= 30.0",
+            "result": "PASS"
+          }
+        ],
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth meets the minimum requirement of 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"30\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"30 >= 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"rationale\": \"The footing depth meets the minimum requirement of 30 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+      "name": "inlet_adv_bad_09",
+      "plan_id": "232-709",
+      "archetype": "draw_inlet",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 4.5\" > 4\" max (PROWAG/ADA)",
+      "checks_injected": [
+        {
+          "name": "Grate opening",
+          "rule": "PROWAG / ADA (vehicular surfaces)",
+          "operator": "<=",
+          "threshold": 4.0,
+          "unit": "inches",
+          "hint": "labeled 'GRATE OPENING = X\"' on the leader callout"
+        }
+      ],
+      "retrieval_self_rank": 7,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "232-703",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "D72F",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "D73A",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "232-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Grate opening",
+            "actual_value": "4.5",
+            "threshold": "4.0",
+            "compare": "4.5 > 4.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The grate opening exceeds the allowed maximum of 4.0 inches.",
+        "violated_rule": "PROWAG / ADA (vehicular surfaces)"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.5\",\n      \"threshold\": \"4.0\",\n      \"compare\": \"4.5 > 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The grate opening exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+      "name": "guardrail_adv_bad_07",
+      "plan_id": "606-707",
+      "archetype": "draw_guardrail",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing 29\" < 30\" min (WYDOT 606.05)",
+      "checks_injected": [
+        {
+          "name": "Footing depth",
+          "rule": "WYDOT 606.05",
+          "operator": ">=",
+          "threshold": 30.0,
+          "unit": "inches",
+          "hint": "labeled 'FOOTING DEPTH' on the vertical dimension below ground line"
+        }
+      ],
+      "retrieval_self_rank": 7,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "606-701",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "606-706",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "606-708",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "606-700",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-702",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "checks": [
+          {
+            "name": "Footing depth",
+            "actual_value": "29",
+            "threshold": "30.0",
+            "compare": "29 < 30.0",
+            "result": "FAIL"
+          }
+        ],
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The footing depth of 29 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.",
+        "violated_rule": "WYDOT 606.05"
+      },
+      "judge_correct": true,
+      "judge_raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"29\",\n      \"threshold\": \"30.0\",\n      \"compare\": \"29 < 30.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"rationale\": \"The footing depth of 29 inches does not meet the minimum requirement of 30 inches as per WYDOT 606.05.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    }
+  ]
+}

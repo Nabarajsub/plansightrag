@@ -1,0 +1,9 @@
+{
+  "n": 424,
+  "qwen72b_judge_accuracy": 79.95,
+  "internvl8b_judge_accuracy": 85.61,
+  "pairwise_agreement_pct": 92.92,
+  "cohens_kappa": 0.7532,
+  "interpretation": "kappa>0.6 substantial; >0.4 moderate",
+  "elapsed_sec": 538.9
+}

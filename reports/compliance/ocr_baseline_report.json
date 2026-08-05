@@ -1,0 +1,438 @@
+{
+  "experiment": "OCR + threshold-compare baseline on scale500 single-doc compliance",
+  "n": 500,
+  "ocr_verdict_accuracy": 76.4,
+  "value_extraction_rate": 46.6,
+  "vlm_reference_accuracy": 100.0,
+  "per_archetype": {
+    "draw_culvert": {
+      "accuracy": 100.0,
+      "value_found_rate": 100.0,
+      "n": 100
+    },
+    "draw_guardrail": {
+      "accuracy": 82.0,
+      "value_found_rate": 32.0,
+      "n": 100
+    },
+    "draw_inlet": {
+      "accuracy": 99.0,
+      "value_found_rate": 98.0,
+      "n": 100
+    },
+    "draw_rebar": {
+      "accuracy": 50.0,
+      "value_found_rate": 0.0,
+      "n": 100
+    },
+    "draw_sign_post": {
+      "accuracy": 51.0,
+      "value_found_rate": 3.0,
+      "n": 100
+    }
+  },
+  "n_failures": 118,
+  "failures": [
+    {
+      "name": "rebar_ok_004",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "guardrail_ok_014",
+      "archetype": "draw_guardrail",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 30.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_024",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_064",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_098",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_062",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_008",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_004",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_026",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_060",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_070",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_068",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_068",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_096",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_092",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_094",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_032",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_018",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_042",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_014",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "guardrail_ok_082",
+      "archetype": "draw_guardrail",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 30.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_002",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_048",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_046",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_042",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "guardrail_ok_084",
+      "archetype": "draw_guardrail",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 30.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_066",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_098",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_090",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_058",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "inlet_ok_050",
+      "archetype": "draw_inlet",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 4.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "guardrail_ok_030",
+      "archetype": "draw_guardrail",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 30.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_056",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_066",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_086",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_088",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "guardrail_ok_016",
+      "archetype": "draw_guardrail",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 30.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "rebar_ok_088",
+      "archetype": "draw_rebar",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": null,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_054",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    },
+    {
+      "name": "signpost_ok_020",
+      "archetype": "draw_sign_post",
+      "gt_compliant": true,
+      "pred_compliant": false,
+      "ocr_value": null,
+      "threshold": 12.0,
+      "value_found": false,
+      "violated_rule": null
+    }
+  ],
+  "elapsed_sec": 574.5
+}

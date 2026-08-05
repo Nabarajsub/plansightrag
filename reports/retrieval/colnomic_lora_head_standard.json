@@ -1,0 +1,7 @@
+{
+  "tag": "head_standard",
+  "mode": "head",
+  "adapter": "colnomic_head_standard",
+  "test_recall@5": 93.16,
+  "michigan_recall@5": 92.47
+}

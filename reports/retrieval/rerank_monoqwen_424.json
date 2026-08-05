@@ -1,0 +1,9 @@
+{
+  "topk": 20,
+  "base_recall@5": 76.65094339622641,
+  "ceiling_recall@k": 86.79245283018868,
+  "reranked_recall@5": 85.14150943396227,
+  "lift_pp": 8.49056603773586,
+  "reranker": "lightonai/MonoQwen2-VL-v0.1",
+  "base_retriever": "vidore/colpali-v1.2"
+}

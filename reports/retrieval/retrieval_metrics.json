@@ -1,0 +1,55 @@
+{
+  "test_424_rank_metrics": {
+    "recall@1": 66.75,
+    "recall@5": 92.45,
+    "MRR": 0.7773,
+    "nDCG@10": 0.8185,
+    "n": 424
+  },
+  "test_424_by_category": {
+    "Dimensional Accuracy": {
+      "recall@1": 67.86,
+      "recall@5": 97.32,
+      "MRR": 0.8029,
+      "nDCG@10": 0.8472,
+      "n": 112
+    },
+    "Hallucination Rate": {
+      "recall@1": 53.19,
+      "recall@5": 89.36,
+      "MRR": 0.682,
+      "nDCG@10": 0.741,
+      "n": 47
+    },
+    "Logical Reasoning": {
+      "recall@1": 69.17,
+      "recall@5": 88.33,
+      "MRR": 0.7783,
+      "nDCG@10": 0.8102,
+      "n": 120
+    },
+    "Visual Interpretation": {
+      "recall@1": 68.28,
+      "recall@5": 93.1,
+      "MRR": 0.7876,
+      "nDCG@10": 0.8284,
+      "n": 145
+    }
+  },
+  "michigan_joint_index": {
+    "recall@1": 68.82,
+    "recall@5": 91.4,
+    "MRR": 0.7789,
+    "nDCG@10": 0.817,
+    "n": 93,
+    "n_candidates": 2196
+  },
+  "michigan_only_index": {
+    "recall@1": 74.19,
+    "recall@5": 93.55,
+    "MRR": 0.8244,
+    "nDCG@10": 0.852,
+    "n": 93,
+    "n_candidates": 298
+  }
+}

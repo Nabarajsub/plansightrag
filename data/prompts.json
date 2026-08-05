@@ -1,0 +1,464 @@
+{
+  "_note": "Every prompt string in code/, extracted by parsing the source. {placeholders} are runtime substitutions.",
+  "n": 42,
+  "prompts": [
+    {
+      "name": "META_PROMPT",
+      "file": "code/benchmark_gen/build_michigan_index.py",
+      "line": 16,
+      "kind": "literal",
+      "text": "Analyze this engineering Standard Plan drawing.\n\nReturn STRICTLY valid JSON:\n{\n  \"plan_id\": \"the standard plan number visible on the sheet (e.g. 'A40A', 'III-7B', '799-1'); 'Unknown' if not visible\",\n  \"sheet_title\": \"the descriptive title of the sheet; 'Unknown' if not visible\",\n  \"category\": \"engineering discipline: Bridge, Roadway, Traffic, Drainage, Erosion, Pavement, Signing, Geotechnical, General\",\n  \"keywords\": [\"3-8 short visual keywords\"]\n}\n\nAgency = MDOT, year = 2025. Return ONLY the JSON.",
+      "placeholders": [],
+      "id": "P001"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_llama.py",
+      "line": 60,
+      "kind": "f-string",
+      "text": "{CATEGORY_PROMPT[category]}\n\nReturn ONLY the question text, no preamble, no answer.",
+      "placeholders": [
+        "CATEGORY_PROMPT"
+      ],
+      "id": "P002"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_llama.py",
+      "line": 70,
+      "kind": "f-string",
+      "text": "Previous question: {prev_q}\n\n{rephrase_prompt_for(category)}",
+      "placeholders": [
+        "prev_q",
+        "rephrase_prompt_for"
+      ],
+      "id": "P003"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_llama.py",
+      "line": 76,
+      "kind": "f-string",
+      "text": "{question}\n\nAnswer in one short sentence (or 'Not specified' if not on the page). Do not add preamble.",
+      "placeholders": [
+        "question"
+      ],
+      "id": "P004"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Dimensional Accuracy]",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 42,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question about a numeric dimension, distance, spacing, or measurement shown on this engineering standard plan. The answer must be a specific number with units visible on the page.",
+      "placeholders": [],
+      "id": "P005"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Visual Interpretation]",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 46,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question about a visual element of this engineering standard plan: a section view, callout, label, symbol, or hatching pattern. The answer must be a short phrase visible on the page.",
+      "placeholders": [],
+      "id": "P006"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Logical Reasoning]",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 50,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question that requires reading a note, table, or caption on this engineering standard plan to infer a condition or rule (e.g., 'When does X apply?', 'What does Y require?'). The answer must be supported by text on the page. Anchor the question with EXACT wording from the relevant note or table (e.g., 'per Note 3', 'in Table A', 'where Condition X applies').",
+      "placeholders": [],
+      "id": "P007"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Hallucination Rate]",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 57,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question whose answer is NOT visible on this page but sounds plausible (e.g., asking for a value or detail the page does not actually contain). The correct answer should be 'Not specified' with a brief explanation.",
+      "placeholders": [],
+      "id": "P008"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 117,
+      "kind": "f-string",
+      "text": "{CATEGORY_PROMPT[category]}\n\nReturn ONLY the question text, no preamble, no answer.",
+      "placeholders": [
+        "CATEGORY_PROMPT"
+      ],
+      "id": "P009"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 127,
+      "kind": "f-string",
+      "text": "Previous question: {prev_q}\n\n{rephrase_prompt_for(category)}",
+      "placeholders": [
+        "prev_q",
+        "rephrase_prompt_for"
+      ],
+      "id": "P010"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "line": 133,
+      "kind": "f-string",
+      "text": "{question}\n\nAnswer in one short sentence (or 'Not specified' if not on the page). Do not add preamble.",
+      "placeholders": [
+        "question"
+      ],
+      "id": "P011"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Dimensional Accuracy]",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 42,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question about a numeric dimension, distance, spacing, or measurement shown on this engineering standard plan. The answer must be a specific number with units visible on the page.",
+      "placeholders": [],
+      "id": "P012"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Visual Interpretation]",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 46,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question about a visual element of this engineering standard plan: a section view, callout, label, symbol, or hatching pattern. The answer must be a short phrase visible on the page.",
+      "placeholders": [],
+      "id": "P013"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Logical Reasoning]",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 50,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question that requires reading a note, table, or caption on this engineering standard plan to infer a condition or rule (e.g., 'When does X apply?', 'What does Y require?'). The answer must be supported by text on the page. Anchor the question with EXACT wording from the relevant note or table (e.g., 'per Note 3', 'in Table A', 'where Condition X applies').",
+      "placeholders": [],
+      "id": "P014"
+    },
+    {
+      "name": "CATEGORY_PROMPT[Hallucination Rate]",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 57,
+      "kind": "dict-entry",
+      "text": "Write ONE specific question whose answer is NOT visible on this page but sounds plausible (e.g., asking for a value or detail the page does not actually contain). The correct answer should be 'Not specified' with a brief explanation.",
+      "placeholders": [],
+      "id": "P015"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 117,
+      "kind": "f-string",
+      "text": "{CATEGORY_PROMPT[category]}\n\nReturn ONLY the question text, no preamble, no answer.",
+      "placeholders": [
+        "CATEGORY_PROMPT"
+      ],
+      "id": "P016"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 127,
+      "kind": "f-string",
+      "text": "Previous question: {prev_q}\n\n{rephrase_prompt_for(category)}",
+      "placeholders": [
+        "prev_q",
+        "rephrase_prompt_for"
+      ],
+      "id": "P017"
+    },
+    {
+      "name": "prompt",
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "line": 133,
+      "kind": "f-string",
+      "text": "{question}\n\nAnswer in one short sentence (or 'Not specified' if not on the page). Do not add preamble.",
+      "placeholders": [
+        "question"
+      ],
+      "id": "P018"
+    },
+    {
+      "name": "VERIFY_PROMPT",
+      "file": "code/benchmark_gen/verify_qwen7b.py",
+      "line": 24,
+      "kind": "literal",
+      "text": "You are verifying a synthetic QnA pair for a retrieval benchmark.\nQUESTION: {q}\nPROPOSED ANSWER: {a}\n\nLook at the image. Answer with exactly one of:\n  YES  -- the question is well-formed and the answer is supported by the page\n         (or, for a 'Not specified' answer, the page genuinely lacks the asked info).\n  NO   -- the question is malformed, off-page, or the answer contradicts the page.\nReturn ONLY YES or NO.",
+      "placeholders": [
+        "a",
+        "q"
+      ],
+      "id": "P019"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_multi.py",
+      "line": 138,
+      "kind": "f-string",
+      "text": "You are a compliance Planner reviewing a multi-component engineering design.\n\nThe design under review depicts {len(components_for_planner)} labeled component values.\nEach component is governed by a separate engineering standard plan.\n\nApplicable compliance rules (from registry):\n{cheat}\n\nTask: Produce one audit step per component. Output STRICT JSON list:\n[\n  {\"step\": 1, \"component\": \"<key>\", \"check\": \"<what to verify>\"},\n  ...\n]\nReturn ONLY the JSON list.",
+      "placeholders": [
+        "cheat",
+        "len"
+      ],
+      "id": "P020"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_multi.py",
+      "line": 169,
+      "kind": "f-string",
+      "text": "You are a compliance Auditor. Look at the DESIGN drawing.\n\nComponent under audit: {component_info['key']} ({rule['rule_name']})\nApplicable standard threshold: value must be {rule['operator']} {thresh} {rule['unit']}\nRetrieved reference standard (top-1): {ref['agency']} / {ref['plan_id']} / {ref['sheet_title']}\n\nProcedure:\n  1. EXTRACT the actual numeric value for this component from the DESIGN drawing.\n  2. Compare to threshold: state \"X {rule['operator']} {thresh}{rule['unit']} -> PASS or FAIL\".\n\nOutput STRICT JSON:\n{\"actual_value\": \"...\", \"compare\": \"X vs Y\", \"result\": \"PASS or FAIL\", \"notes\": \"...\"}",
+      "placeholders": [
+        "component_info",
+        "ref",
+        "rule",
+        "thresh"
+      ],
+      "id": "P021"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_multi.py",
+      "line": 187,
+      "kind": "f-string",
+      "text": "You are the Senior Compliance Auditor. Aggregate the per-step findings.\n\nOriginal query: {query}\n\nAudit findings:\n{findings}\n\nRule: if ANY step result is \"FAIL\", overall verdict = NON_COMPLIANT. Otherwise COMPLIANT.\n\nOutput STRICT JSON:\n{\"verdict\": \"COMPLIANT\" or \"NON_COMPLIANT\",\n  \"rationale\": \"...\",\n  \"violated_components\": [\"...\"]}",
+      "placeholders": [
+        "findings",
+        "query"
+      ],
+      "id": "P022"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_n10.py",
+      "line": 98,
+      "kind": "f-string",
+      "text": "You are a Compliance Planner. Decompose this query into one verification step PER required check.\n\nQuery: {query}\n\nRequired checks (these are PRE-RESOLVED for this drawing):\n{checks_text}\n\nFor each check, produce one step. Output STRICT JSON list:\n[\n  {\"step\": 1, \"check_name\": \"...\", \"search_query\": \"<a short query describing the relevant standard plan to retrieve>\", \"operator\": \"...\", \"threshold\": \"...\", \"unit\": \"...\"},\n  ...\n]\nReturn ONLY the JSON list, no preamble.",
+      "placeholders": [
+        "checks_text",
+        "query"
+      ],
+      "id": "P023"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_n10.py",
+      "line": 133,
+      "kind": "f-string",
+      "text": "You see the DESIGN drawing under review.\n\nRetrieved STANDARD reference (text context): {ref_text}\n\nAudit step: {step['check_name']}\nRequired: the value of \"{step['check_name']}\" in the DESIGN must be {step['operator']} {step['threshold']} {step['unit']}.\n\nDESIGN context (already extracted facts): {json.dumps(drawing_facts)}\n\nProcedure:\n  1. EXTRACT the actual numeric value for \"{step['check_name']}\" from the DESIGN drawing (read the label).\n  2. Compare to the threshold: state \"X {step['operator']} {step['threshold']}{step['unit']} -> PASS or FAIL\".\n\nOutput STRICT JSON:\n{\n  \"actual_value\": \"...\",\n  \"compare\": \"X vs Y\",\n  \"result\": \"PASS or FAIL\",\n  \"evidence_source\": \"DESIGN\",\n  \"notes\": \"one short sentence\"\n}",
+      "placeholders": [
+        "json",
+        "ref_text",
+        "step"
+      ],
+      "id": "P024"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/agentic_n10.py",
+      "line": 162,
+      "kind": "f-string",
+      "text": "You are a Senior Compliance Auditor. Synthesize the audit findings into a final verdict.\n\nOriginal Query: {query}\n\nAudit findings:\n{findings}\n\nRule: if ANY step result is \"FAIL\", the overall verdict is NON_COMPLIANT. Otherwise COMPLIANT.\n\nOutput STRICT JSON:\n{\n  \"verdict\": \"COMPLIANT\" or \"NON_COMPLIANT\",\n  \"rationale\": \"one sentence citing which check(s) drove the verdict\",\n  \"violated_rules\": [\"...\"]\n}",
+      "placeholders": [
+        "findings",
+        "query"
+      ],
+      "id": "P025"
+    },
+    {
+      "name": "COMPLIANCE_PROMPTS[single_doc]",
+      "file": "code/compliance/compliance_smoke.py",
+      "line": 104,
+      "kind": "dict-entry",
+      "text": "Looking at this engineering standard plan, write ONE specific question an engineer would ask to check whether this design is compliant with the agency's standard plan requirements. Anchor the question with a specific labeled value visible on the page (a dimension, a material class, a rebar spec). Return ONLY the question.",
+      "placeholders": [],
+      "id": "P026"
+    },
+    {
+      "name": "COMPLIANCE_PROMPTS[cross_doc]",
+      "file": "code/compliance/compliance_smoke.py",
+      "line": 111,
+      "kind": "dict-entry",
+      "text": "Looking at this engineering standard plan, write ONE specific compliance question that would require comparing this design to MULTIPLE state DOT standards (e.g., would this footing depth meet both WYDOT and FDOT minimums?). Anchor with a specific labeled value visible on the page. Return ONLY the question.",
+      "placeholders": [],
+      "id": "P027"
+    },
+    {
+      "name": "JUDGE_PROMPT_SINGLE",
+      "file": "code/compliance/compliance_smoke.py",
+      "line": 138,
+      "kind": "literal",
+      "text": "You are a compliance reviewer.\n\nDRAWING SUMMARY: {summary}\n\nRETRIEVED STANDARD REFERENCES (top {k}):\n{refs}\n\nTask: Decide if the DRAWING is compliant with the agency standard.\n\nOutput STRICT JSON:\n{{\n  \"verdict\": \"COMPLIANT\" or \"NON_COMPLIANT\",\n  \"rationale\": \"one short sentence citing the spec value(s) checked\",\n  \"violated_rule\": \"the violated rule, or 'none'\"\n}}",
+      "placeholders": [
+        "k",
+        "refs",
+        "summary"
+      ],
+      "id": "P028"
+    },
+    {
+      "name": "JUDGE_PROMPT_CROSS",
+      "file": "code/compliance/compliance_smoke.py",
+      "line": 154,
+      "kind": "literal",
+      "text": "You are a compliance reviewer evaluating a design against MULTIPLE state DOT standards.\n\nDRAWING SUMMARY: {summary}\n\nRETRIEVED STANDARD REFERENCES (top {k}):\n{refs}\n\nTask: For EACH agency referenced (WYDOT, FDOT, etc.), decide if the DRAWING meets that agency's minimum requirements.\n\nOutput STRICT JSON:\n{{\n  \"per_agency\": {{\n    \"WYDOT\": {{\"verdict\": \"COMPLIANT\" or \"NON_COMPLIANT\", \"rationale\": \"...\"}},\n    \"FDOT\":  {{\"verdict\": \"COMPLIANT\" or \"NON_COMPLIANT\", \"rationale\": \"...\"}}\n  }},\n  \"violated_rule\": \"the violated rule(s), or 'none'\"\n}}",
+      "placeholders": [
+        "k",
+        "refs",
+        "summary"
+      ],
+      "id": "P029"
+    },
+    {
+      "name": "JUDGE_RULES",
+      "file": "code/compliance/compliance_smoke_n10.py",
+      "line": 38,
+      "kind": "literal",
+      "text": "Engineering compliance rules to consider:\n- ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\n- ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\n- WYDOT 606.05: guardrail post footing min depth 30 inches.\n- FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\n- AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\n- PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.",
+      "placeholders": [],
+      "id": "P030"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/run_500_queries.py",
+      "line": 67,
+      "kind": "f-string",
+      "text": "You are a Compliance Planner. Decompose this query into 2-3 verification steps.\n\nQuery: {query}\n\nOutput STRICT JSON list of objects, each with keys (step, description, search_query, expected_plan_id_hint).\nReturn ONLY the JSON list, no preamble.",
+      "placeholders": [
+        "query"
+      ],
+      "id": "P031"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/run_500_queries.py",
+      "line": 82,
+      "kind": "f-string",
+      "text": "You are a Compliance Auditor. Look at the retrieved standard plan.\n\nStep Goal: {step_desc}\nOriginal Query: {original_query}\nReference: {ref_txt}\n\nReport:\n- Findings: what specific values, notes, or rules are visible on this page?\n- Verdict: PASS, FAIL, or INSUFFICIENT_EVIDENCE for this step.\nReturn JSON: {\"findings\": \"...\", \"verdict\": \"PASS or FAIL or INSUFFICIENT_EVIDENCE\"}",
+      "placeholders": [
+        "original_query",
+        "ref_txt",
+        "step_desc"
+      ],
+      "id": "P032"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/run_500_queries.py",
+      "line": 98,
+      "kind": "f-string",
+      "text": "You are the Senior Compliance Auditor. Aggregate the per-step findings into a final verdict.\n\nOriginal Query: {query}\n\nAudit findings:\n{fbody}\n\nRule: if ANY step verdict is FAIL, overall = FAIL. If all PASS, overall = PASS. If any INSUFFICIENT_EVIDENCE and no FAIL, overall = INSUFFICIENT_EVIDENCE (treated as PASS for binary scoring).\n\nOutput STRICT JSON: {\"verdict\": \"PASS or FAIL or INSUFFICIENT_EVIDENCE\", \"rationale\": \"...\"}",
+      "placeholders": [
+        "fbody",
+        "query"
+      ],
+      "id": "P033"
+    },
+    {
+      "name": "prompt",
+      "file": "code/compliance/run_real_auditor.py",
+      "line": 53,
+      "kind": "f-string",
+      "text": "You are a WYDOT engineering compliance auditor. This is a real standard cross-section sheet with a 'PROPOSED DESIGN SUBMITTAL' callout. Governing rule: {m['rule']}. Read the value stated in the PROPOSED DESIGN SUBMITTAL callout for '{m['component']}', compare it to the governing rule, and decide compliance. Reason briefly, then end with exactly one line: 'VERDICT: COMPLIANT' or 'VERDICT: NON_COMPLIANT'.",
+      "placeholders": [
+        "m"
+      ],
+      "id": "P034"
+    },
+    {
+      "name": "DOC_PROMPT_PREFIX",
+      "file": "code/retrieval/bench_dse.py",
+      "line": 35,
+      "kind": "literal",
+      "text": "What is shown in this image?",
+      "placeholders": [],
+      "id": "P035"
+    },
+    {
+      "name": "JUDGE_ID",
+      "file": "code/retrieval/bench_tiling_judge_424.py",
+      "line": 33,
+      "kind": "literal",
+      "text": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "placeholders": [],
+      "id": "P036"
+    },
+    {
+      "name": "prompt",
+      "file": "code/retrieval/bench_tiling_judge_424.py",
+      "line": 172,
+      "kind": "f-string",
+      "text": "You are grading an answer to a question about an engineering drawing.\n\nQuestion: {q}\nReference answer: {ref}\nSubmitted answer: {a}\n\nDoes the submitted answer convey the same essential information as the reference (allowing for paraphrase, units, rounding)? Reply exactly YES or NO.",
+      "placeholders": [
+        "a",
+        "q",
+        "ref"
+      ],
+      "id": "P037"
+    },
+    {
+      "name": "PROMPT",
+      "file": "code/retrieval/crossfamily_judge.py",
+      "line": 22,
+      "kind": "literal",
+      "text": "You are grading an answer to a question about an engineering drawing.\n\nQuestion: {q}\nReference answer: {ref}\nModel answer: {ans}\n\nIs the model answer correct and consistent with the reference (allowing for paraphrase, units, and rounding)? Reply with exactly one word: YES or NO.",
+      "placeholders": [
+        "ans",
+        "q",
+        "ref"
+      ],
+      "id": "P038"
+    },
+    {
+      "name": "JUDGE_ID",
+      "file": "code/retrieval/eval_424_judge.py",
+      "line": 35,
+      "kind": "literal",
+      "text": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "placeholders": [],
+      "id": "P039"
+    },
+    {
+      "name": "prompt",
+      "file": "code/retrieval/eval_424_judge.py",
+      "line": 221,
+      "kind": "f-string",
+      "text": "You are grading an answer to a question about an engineering drawing.\n\nQuestion: {q}\nReference answer: {ref}\nSubmitted answer: {ans}\n\nDoes the submitted answer convey the same essential information as the reference (allowing for paraphrase, units, and rounding)? Reply with exactly one word: YES or NO.",
+      "placeholders": [
+        "ans",
+        "q",
+        "ref"
+      ],
+      "id": "P040"
+    },
+    {
+      "name": "JUDGE_ID",
+      "file": "code/retrieval/eval_78q_judge.py",
+      "line": 34,
+      "kind": "literal",
+      "text": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "placeholders": [],
+      "id": "P041"
+    },
+    {
+      "name": "prompt",
+      "file": "code/retrieval/eval_78q_judge.py",
+      "line": 217,
+      "kind": "f-string",
+      "text": "You are grading an answer to a question about an engineering drawing.\n\nQuestion: {q}\nReference answer: {ref}\nSubmitted answer: {ans}\n\nDoes the submitted answer convey the same essential information as the reference (allowing for paraphrase, units, and rounding)? Reply with exactly one word: YES or NO.",
+      "placeholders": [
+        "ans",
+        "q",
+        "ref"
+      ],
+      "id": "P042"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "indexing": {
+    "n_pages": 1898,
+    "total_s": 437.5,
+    "pages_per_s": 4.34,
+    "min_for_1898": 7.3
+  },
+  "retrieval_latency_ms": {
+    "p50": 119.9,
+    "p90": 120.9,
+    "p99": 121.8,
+    "mean": 120.0,
+    "n": 120
+  },
+  "reranking": {
+    "error": "Can't load image processor for 'lightonai/MonoQwen2-VL-v0.1'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwi"
+  },
+  "agentic_audit_s_per_query_ref": 60.9
+}

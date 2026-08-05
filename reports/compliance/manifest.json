@@ -1,0 +1,236 @@
+[
+  {
+    "name": "culvert_dense_ok",
+    "archetype": "draw_culvert",
+    "archetype_dense": "draw_culvert_dense",
+    "image_path": "<PSR_ROOT>/compliance/mockups_dense4/culvert_dense_ok.png",
+    "agency": "WYDOT",
+    "plan_id": "B-505 (DENSE)",
+    "design_facts": {
+      "span_ft": 8.0,
+      "rise_ft": 5.0,
+      "wall_in": 12,
+      "top_in": 14,
+      "cover_in": 2.5,
+      "stirrup_in": 8,
+      "schedule": [
+        {
+          "span_ft": 6.0,
+          "rise_ft": 4.0,
+          "wall_in": 10,
+          "top_in": 12,
+          "cover_in": 2.0,
+          "stirrup_in": 8
+        },
+        {
+          "span_ft": 8.0,
+          "rise_ft": 5.0,
+          "wall_in": 12,
+          "top_in": 14,
+          "cover_in": 2.5,
+          "stirrup_in": 8
+        },
+        {
+          "span_ft": 10.0,
+          "rise_ft": 6.0,
+          "wall_in": 14,
+          "top_in": 16,
+          "cover_in": 2.5,
+          "stirrup_in": 9
+        },
+        {
+          "span_ft": 12.0,
+          "rise_ft": 7.0,
+          "wall_in": 16,
+          "top_in": 18,
+          "cover_in": 3.0,
+          "stirrup_in": 9
+        }
+      ],
+      "hero_idx": 1,
+      "agency": "WYDOT",
+      "rebar_spacing_in": 8
+    },
+    "ground_truth_compliant": true,
+    "violated_rule": null
+  },
+  {
+    "name": "culvert_dense_bad",
+    "archetype": "draw_culvert",
+    "archetype_dense": "draw_culvert_dense",
+    "image_path": "<PSR_ROOT>/compliance/mockups_dense4/culvert_dense_bad.png",
+    "agency": "WYDOT",
+    "plan_id": "B-505V (DENSE)",
+    "design_facts": {
+      "span_ft": 8.0,
+      "rise_ft": 5.0,
+      "wall_in": 12,
+      "top_in": 14,
+      "cover_in": 1.0,
+      "stirrup_in": 8,
+      "schedule": [
+        {
+          "span_ft": 6.0,
+          "rise_ft": 4.0,
+          "wall_in": 10,
+          "top_in": 12,
+          "cover_in": 2.0,
+          "stirrup_in": 8
+        },
+        {
+          "span_ft": 8.0,
+          "rise_ft": 5.0,
+          "wall_in": 12,
+          "top_in": 14,
+          "cover_in": 1.0,
+          "stirrup_in": 8
+        },
+        {
+          "span_ft": 10.0,
+          "rise_ft": 6.0,
+          "wall_in": 14,
+          "top_in": 16,
+          "cover_in": 2.5,
+          "stirrup_in": 9
+        },
+        {
+          "span_ft": 12.0,
+          "rise_ft": 7.0,
+          "wall_in": 16,
+          "top_in": 18,
+          "cover_in": 3.0,
+          "stirrup_in": 9
+        }
+      ],
+      "hero_idx": 1,
+      "agency": "WYDOT",
+      "rebar_spacing_in": 8
+    },
+    "ground_truth_compliant": false,
+    "violated_rule": "Type B row has concrete cover = 1.0\" which violates ACI 2\" min."
+  },
+  {
+    "name": "rebar_dense_ok",
+    "archetype": "draw_rebar",
+    "archetype_dense": "draw_rebar_dense",
+    "image_path": "<PSR_ROOT>/compliance/mockups_dense4/rebar_dense_ok.png",
+    "agency": "Caltrans",
+    "plan_id": "A77B (DENSE)",
+    "design_facts": {
+      "width_in": 18,
+      "height_in": 30,
+      "n_top": 3,
+      "n_bot": 4,
+      "bar_size": 8,
+      "stirrup_in": 14,
+      "cover_in": 2.0,
+      "schedule": [
+        {
+          "width_in": 12,
+          "height_in": 24,
+          "n_top": 2,
+          "n_bot": 3,
+          "bar_size": 6,
+          "stirrup_in": 10,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 16,
+          "height_in": 28,
+          "n_top": 3,
+          "n_bot": 4,
+          "bar_size": 7,
+          "stirrup_in": 12,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 18,
+          "height_in": 30,
+          "n_top": 3,
+          "n_bot": 4,
+          "bar_size": 8,
+          "stirrup_in": 14,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 20,
+          "height_in": 36,
+          "n_top": 4,
+          "n_bot": 5,
+          "bar_size": 8,
+          "stirrup_in": 16,
+          "cover_in": 2.0
+        }
+      ],
+      "hero_idx": 2,
+      "agency": "Caltrans",
+      "beam_h_in": 30,
+      "beam_w_in": 18,
+      "stirrup_spacing_in": 14
+    },
+    "ground_truth_compliant": true,
+    "violated_rule": null
+  },
+  {
+    "name": "rebar_dense_bad",
+    "archetype": "draw_rebar",
+    "archetype_dense": "draw_rebar_dense",
+    "image_path": "<PSR_ROOT>/compliance/mockups_dense4/rebar_dense_bad.png",
+    "agency": "Caltrans",
+    "plan_id": "A77C (DENSE)",
+    "design_facts": {
+      "width_in": 18,
+      "height_in": 30,
+      "n_top": 3,
+      "n_bot": 4,
+      "bar_size": 8,
+      "stirrup_in": 18,
+      "cover_in": 2.0,
+      "schedule": [
+        {
+          "width_in": 12,
+          "height_in": 24,
+          "n_top": 2,
+          "n_bot": 3,
+          "bar_size": 6,
+          "stirrup_in": 10,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 16,
+          "height_in": 28,
+          "n_top": 3,
+          "n_bot": 4,
+          "bar_size": 7,
+          "stirrup_in": 12,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 18,
+          "height_in": 30,
+          "n_top": 3,
+          "n_bot": 4,
+          "bar_size": 8,
+          "stirrup_in": 18,
+          "cover_in": 2.0
+        },
+        {
+          "width_in": 20,
+          "height_in": 36,
+          "n_top": 4,
+          "n_bot": 5,
+          "bar_size": 8,
+          "stirrup_in": 16,
+          "cover_in": 2.0
+        }
+      ],
+      "hero_idx": 2,
+      "agency": "Caltrans",
+      "beam_h_in": 30,
+      "beam_w_in": 18,
+      "stirrup_spacing_in": 18
+    },
+    "ground_truth_compliant": false,
+    "violated_rule": "Type C row has stirrup spacing 18\" but beam height 30\" requires max d/2 = 15\"."
+  }
+]

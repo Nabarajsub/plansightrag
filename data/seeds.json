@@ -1,0 +1,60 @@
+{
+  "_note": "All random seeds, per script. Re-running a script with its seed reproduces the sampling exactly.",
+  "seeds": [
+    {
+      "file": "code/benchmark_gen/generate_llama.py",
+      "seed": 43,
+      "controls": "page sampling + drafter question order (Llama drafter)"
+    },
+    {
+      "file": "code/benchmark_gen/generate_qwen.py",
+      "seed": 42,
+      "controls": "page sampling + drafter question order (Qwen drafter)"
+    },
+    {
+      "file": "code/benchmark_gen/generate_qwen_michigan.py",
+      "seed": 42,
+      "controls": "page sampling for the held-out Michigan transfer set"
+    },
+    {
+      "file": "code/compliance/make_500.py",
+      "seed": 2026,
+      "controls": "parameter randomisation, 500 single-doc CAD drawings"
+    },
+    {
+      "file": "code/compliance/make_500_queries.py",
+      "seed": 2026,
+      "controls": "query construction for the 500 single-doc set"
+    },
+    {
+      "file": "code/compliance/make_multi100.py",
+      "seed": 2026,
+      "controls": "parameter randomisation, 100 multi-plan drawings"
+    },
+    {
+      "file": "code/compliance/make_stress50.py",
+      "seed": 7777,
+      "controls": "near-threshold adversarial stress set (50 drawings)"
+    },
+    {
+      "file": "code/lora/train_colnomic.py",
+      "seed": 0,
+      "controls": "see script"
+    },
+    {
+      "file": "code/lora/train_full_lora.py",
+      "seed": 0,
+      "controls": "see script"
+    },
+    {
+      "file": "code/lora/train_head.py",
+      "seed": 0,
+      "controls": "unique-image batch sampler"
+    },
+    {
+      "file": "code/lora/train_lora.py",
+      "seed": 0,
+      "controls": "see script"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "Autonomous Rule-Grounding (retrieve spec -> extract threshold -> audit)",
+  "retriever": "nomic-ai/colnomic-embed-multimodal-3b",
+  "extractor": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "n": 500,
+  "retrieval_section_acc": 100.0,
+  "threshold_extraction_acc": 100.0,
+  "verdict_acc_self_grounded": 100.0,
+  "verdict_acc_injected_reference": 100.0,
+  "n_failures": 0,
+  "failures": [],
+  "elapsed_sec": 373.4
+}

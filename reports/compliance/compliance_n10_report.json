@@ -1,0 +1,480 @@
+{
+  "n_total": 10,
+  "retrieval_top5_pct": 80.0,
+  "judge_correct_pct": 60.0,
+  "judge_correct_on_compliant": "5/5",
+  "judge_correct_on_noncompliant": "1/5",
+  "elapsed_min": 1.3116389433542888,
+  "results": [
+    {
+      "name": "culvert_ok",
+      "plan_id": "B-505",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "question": "Does the rebar spacing of 9 inches comply with the required maximum spacing as indicated in the notes?",
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "FDOT",
+          "plan_id": "FY 2026-27 STANDARD PLANS",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "603-1B",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "A77B",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "550-001",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "659-010",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The concrete cover of 2.5 inches meets the requirement of at least 2 inches as per ACI 318.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "culvert_bad",
+      "plan_id": "B-505V",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Concrete cover 1.0\" is below the 2\" minimum required by ACI 318 / AASHTO LRFD.",
+      "question": "Does the rebar spacing of 9 inches comply with the minimum spacing requirement?",
+      "retrieval_self_rank": null,
+      "retrieval_top5_hit": false,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "AZDOT",
+          "plan_id": "C-13.10",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "FDOT",
+          "plan_id": "521-513",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "603-1B",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "521-611",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "400-010",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "NON_COMPLIANT",
+        "rationale": "The minimum concrete cover of 1.0 inches does not meet the requirement of at least 2 inches as per ACI 318.",
+        "violated_rule": "ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces."
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "guardrail_ok",
+      "plan_id": "606-7B",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "question": "Does the footing depth of 36 inches meet the minimum requirement as specified in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "606-7B",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "AZDOT",
+          "plan_id": "C-10.44",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "WYDOT",
+          "plan_id": "606-7C",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "603-1B",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "AZDOT",
+          "plan_id": "C-10.40",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 36 inches meets the WYDOT requirement of at least 30 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "guardrail_bad",
+      "plan_id": "606-7C",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Footing depth 24\" is below the 30\" minimum required by WYDOT 606.05.",
+      "question": "Does the footing depth of 24 inches meet the minimum required depth as specified in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "606-7B",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "WYDOT",
+          "plan_id": "606-7C",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "AZDOT",
+          "plan_id": "C-10.40",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "C-10.44",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "603-1B",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 24 inches meets the minimum requirement of 30 inches as per WYDOT 606.05.",
+        "violated_rule": "none"
+      },
+      "judge_correct": false
+    },
+    {
+      "name": "rebar_ok",
+      "plan_id": "A77B",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "question": "Does the clear cover of 2.0 inches meet the minimum requirement as indicated in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "A77C",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "A77B",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "FDOT",
+          "plan_id": "FY 2026-27 STANDARD PLANS",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "B-505",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "B-505V",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The clear cover of 2.0 inches meets the ACI 318 requirement.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "rebar_bad",
+      "plan_id": "A77C",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Stirrup spacing 18\" exceeds ACI 318 max of d/2 (~15\" for a 30\" beam).",
+      "question": "Does the clear cover of 2.0 inches meet the minimum requirement as indicated in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "Caltrans",
+          "plan_id": "A77C",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "Caltrans",
+          "plan_id": "A77B",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "FDOT",
+          "plan_id": "FY 2026-27 STANDARD PLANS",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "B-505",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "B-505V",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The clear cover of 2.0 inches meets the ACI 318 requirement.",
+        "violated_rule": "none"
+      },
+      "judge_correct": false
+    },
+    {
+      "name": "inlet_ok",
+      "plan_id": "232-001",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "question": "What is the minimum required cover for the cast iron grate as specified in the notes?",
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "FDOT",
+          "plan_id": "232-002",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "FDOT",
+          "plan_id": "232-001",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "WYDOT",
+          "plan_id": "B-505",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "B-505V",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 4.0 inches complies with the requirement that drainage grate openings should be <= 4 inches.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "inlet_bad",
+      "plan_id": "232-002",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Grate opening 9\" exceeds the 4\" maximum required by ADA and bicycle-safety guidance (PROWAG).",
+      "question": "What is the minimum required cover for the cast iron grate as specified in the standard plan?",
+      "retrieval_self_rank": 3,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "WYDOT",
+          "plan_id": "603-1B",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "FDOT",
+          "plan_id": "232-001",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "FDOT",
+          "plan_id": "232-002",
+          "is_self": true
+        },
+        {
+          "rank": 4,
+          "agency": "FDOT",
+          "plan_id": "425-052",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "FDOT",
+          "plan_id": "FY 2026-27 STANDARD PLANS",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The grate opening of 9.0 inches complies with the requirement that drainage grate openings should be <= 1/2 inch (or <= 4 inches for vehicular surfaces) to prevent bicycle/wheelchair wheel entrapment.",
+        "violated_rule": "none"
+      },
+      "judge_correct": false
+    },
+    {
+      "name": "signpost_ok",
+      "plan_id": "C-25.10",
+      "ground_truth_compliant": true,
+      "expected_violated_rule": null,
+      "question": "Does the anchor bolt depth of 12 inches meet the minimum embedment requirement as specified in the notes?",
+      "retrieval_self_rank": 1,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "AZDOT",
+          "plan_id": "C-25.10",
+          "is_self": true
+        },
+        {
+          "rank": 2,
+          "agency": "AZDOT",
+          "plan_id": "C-25.11",
+          "is_self": false
+        },
+        {
+          "rank": 3,
+          "agency": "Caltrans",
+          "plan_id": "T4",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "AZDOT",
+          "plan_id": "C-13.55",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "AZDOT",
+          "plan_id": "C-04.50",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The anchor bolt embedment of 12 inches meets the AASHTO standard.",
+        "violated_rule": "none"
+      },
+      "judge_correct": true
+    },
+    {
+      "name": "signpost_bad",
+      "plan_id": "C-25.11",
+      "ground_truth_compliant": false,
+      "expected_violated_rule": "Anchor bolt embedment 4\" is below the 12\" minimum required by AASHTO / std spec.",
+      "question": "Does the anchor bolt depth of 4 inches meet the minimum embedment requirement of 12 inches as specified in the notes?",
+      "retrieval_self_rank": 2,
+      "retrieval_top5_hit": true,
+      "top5": [
+        {
+          "rank": 1,
+          "agency": "AZDOT",
+          "plan_id": "C-25.10",
+          "is_self": false
+        },
+        {
+          "rank": 2,
+          "agency": "AZDOT",
+          "plan_id": "C-25.11",
+          "is_self": true
+        },
+        {
+          "rank": 3,
+          "agency": "AZDOT",
+          "plan_id": "C-13.55",
+          "is_self": false
+        },
+        {
+          "rank": 4,
+          "agency": "Caltrans",
+          "plan_id": "T4",
+          "is_self": false
+        },
+        {
+          "rank": 5,
+          "agency": "WYDOT",
+          "plan_id": "606-2B",
+          "is_self": false
+        }
+      ],
+      "judge_verdict": {
+        "verdict": "COMPLIANT",
+        "rationale": "The footing depth of 42 inches meets the FDOT requirement.",
+        "violated_rule": "none"
+      },
+      "judge_correct": false
+    }
+  ]
+}

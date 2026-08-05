@@ -1,0 +1,152 @@
+{
+  "zeroshot": {
+    "tag": "zeroshot",
+    "adapter": "zero-shot",
+    "test_recall@5_overall": 76.88679245283019,
+    "test_per_agency": {
+      "WYDOT": {
+        "n": 53,
+        "recall@5": 83.01886792452831
+      },
+      "Caltrans": {
+        "n": 134,
+        "recall@5": 78.35820895522389
+      },
+      "AZDOT": {
+        "n": 46,
+        "recall@5": 78.26086956521739
+      },
+      "CDOT": {
+        "n": 31,
+        "recall@5": 48.38709677419355
+      },
+      "FDOT": {
+        "n": 160,
+        "recall@5": 78.75
+      }
+    },
+    "michigan_zeroshot_recall@5": 88.17204301075269,
+    "michigan_n": 93,
+    "elapsed_min": 0.8057878335316976
+  },
+  "lora": {
+    "tag": "lora",
+    "adapter": "lora_adapter",
+    "test_recall@5_overall": 35.37735849056604,
+    "test_per_agency": {
+      "WYDOT": {
+        "n": 53,
+        "recall@5": 52.83018867924528
+      },
+      "Caltrans": {
+        "n": 134,
+        "recall@5": 31.34328358208955
+      },
+      "AZDOT": {
+        "n": 46,
+        "recall@5": 32.608695652173914
+      },
+      "CDOT": {
+        "n": 31,
+        "recall@5": 16.129032258064516
+      },
+      "FDOT": {
+        "n": 160,
+        "recall@5": 37.5
+      }
+    },
+    "michigan_zeroshot_recall@5": 46.236559139784944,
+    "michigan_n": 93,
+    "elapsed_min": 0.829159939289093
+  },
+  "head_tuned": {
+    "tag": "head_tuned",
+    "head": "head_adapter/custom_text_proj.pt",
+    "test_recall@5_overall": 77.35849056603773,
+    "test_per_agency": {
+      "WYDOT": {
+        "n": 53,
+        "recall@5": 83.01886792452831
+      },
+      "Caltrans": {
+        "n": 134,
+        "recall@5": 77.61194029850746
+      },
+      "AZDOT": {
+        "n": 46,
+        "recall@5": 71.73913043478261
+      },
+      "CDOT": {
+        "n": 31,
+        "recall@5": 48.38709677419355
+      },
+      "FDOT": {
+        "n": 160,
+        "recall@5": 82.5
+      }
+    },
+    "michigan_zeroshot_recall@5": 88.17204301075269,
+    "michigan_n": 93,
+    "elapsed_min": 0.7685646732648214
+  },
+  "full_lora": {
+    "tag": "full_lora",
+    "lora": "full_lora_adapter/lora_deltas.pt",
+    "test_recall@5_overall": 60.84905660377358,
+    "test_per_agency": {
+      "WYDOT": {
+        "n": 53,
+        "recall@5": 69.81132075471699
+      },
+      "Caltrans": {
+        "n": 134,
+        "recall@5": 59.701492537313435
+      },
+      "AZDOT": {
+        "n": 46,
+        "recall@5": 52.17391304347826
+      },
+      "CDOT": {
+        "n": 31,
+        "recall@5": 41.935483870967744
+      },
+      "FDOT": {
+        "n": 160,
+        "recall@5": 65.0
+      }
+    },
+    "michigan_zeroshot_recall@5": 75.26881720430107,
+    "michigan_n": 93,
+    "elapsed_min": 0.7606185873349508
+  },
+  "head_gentle": {
+    "tag": "head_gentle",
+    "head": "head_gentle_adapter/custom_text_proj.pt",
+    "test_recall@5_overall": 76.65094339622641,
+    "test_per_agency": {
+      "WYDOT": {
+        "n": 53,
+        "recall@5": 84.90566037735849
+      },
+      "Caltrans": {
+        "n": 134,
+        "recall@5": 79.1044776119403
+      },
+      "AZDOT": {
+        "n": 46,
+        "recall@5": 78.26086956521739
+      },
+      "CDOT": {
+        "n": 31,
+        "recall@5": 45.16129032258065
+      },
+      "FDOT": {
+        "n": 160,
+        "recall@5": 77.5
+      }
+    },
+    "michigan_zeroshot_recall@5": 88.17204301075269,
+    "michigan_n": 93,
+    "elapsed_min": 0.7749053994814555
+  }
+}

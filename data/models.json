@@ -1,0 +1,146 @@
+{
+  "_note": "Commit SHAs pin the exact weights used. Load with from_pretrained(model_id, revision=<sha>).",
+  "decoding": {
+    "generation": {
+      "do_sample": false,
+      "note": "greedy decoding everywhere; no temperature or top_p is set",
+      "max_new_tokens": {
+        "question drafting": 128,
+        "answer drafting": 160,
+        "category rewrite": 120,
+        "metadata extraction": 256,
+        "verifier (yes/no)": 8,
+        "judge (binary)": 4,
+        "compliance JSON": 200,
+        "agentic step": 256
+      }
+    },
+    "retrieval": {
+      "batch_size": 4,
+      "index_dtype": "float32 (CPU-resident)",
+      "scoring": "ColBERT-style MaxSim late interaction"
+    }
+  },
+  "models": [
+    {
+      "model_id": "BAAI/bge-m3",
+      "role": "strongest text retrieval baseline (OCR + dense)",
+      "quantization": "fp32",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181"
+    },
+    {
+      "model_id": "OpenGVLab/InternVL2_5-8B",
+      "role": "alternative VQA generator",
+      "quantization": "bfloat16",
+      "revision": "e9e4c0dc1db56bfab10458671519b7fa3dd29463"
+    },
+    {
+      "model_id": "OpenGVLab/InternVL2_5-8B-MPO-hf",
+      "role": "cross-family judge (self-preference check)",
+      "quantization": "bfloat16",
+      "revision": "543db189852edd2dbf0c0395c6afe4159cdc842f"
+    },
+    {
+      "model_id": "Qwen/Qwen2-VL-2B-Instruct",
+      "role": "backbone of the DSE-Qwen2-2B retrieval baseline",
+      "quantization": "bfloat16",
+      "revision": "895c3a49bc3fa70a340399125c650a463535e71c"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "role": "drafter (benchmark generation) \u00b7 compliance auditor \u00b7 LLM-as-judge",
+      "quantization": "4-bit NF4 (BitsAndBytes), bfloat16 compute",
+      "revision": "89c86200743eec961a297729e7990e8f2ddbc4c5"
+    },
+    {
+      "model_id": "Qwen/Qwen2.5-VL-7B-Instruct",
+      "role": "VQA answerer \u00b7 benchmark verifier \u00b7 metadata extractor",
+      "quantization": "4-bit NF4 (BitsAndBytes), bfloat16 compute",
+      "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5"
+    },
+    {
+      "model_id": "facebook/nougat-small",
+      "role": "legacy OCR-free decode baseline",
+      "quantization": "fp32",
+      "revision": "dced72ae7bcdfcb82a9ef55543a90a7a5e4d32e6"
+    },
+    {
+      "model_id": "google/pix2struct-base",
+      "role": "legacy OCR-free decode baseline",
+      "quantization": "fp32",
+      "revision": "4605659ec5d82c985955ebdea8210f32fe54a682"
+    },
+    {
+      "model_id": "lightonai/MonoQwen2-VL-v0.1",
+      "role": "pointwise visual reranker (Apache-2.0)",
+      "quantization": "bfloat16",
+      "revision": "7f91c3a5d7ddbfe33fe0f70f75121c1225ad8af5"
+    },
+    {
+      "model_id": "meta-llama/Llama-3.2-90B-Vision-Instruct",
+      "role": "drafter (benchmark generation, Caltrans + FDOT)",
+      "quantization": "4-bit NF4 (BitsAndBytes)",
+      "revision": "e305d2a43a4adc6987308fe7d896fb8ec5f1a5d8"
+    },
+    {
+      "model_id": "microsoft/layoutlmv3-base",
+      "role": "legacy layout-embedding baseline",
+      "quantization": "fp32",
+      "revision": "cfbbbff0762e6aab37086fdd4739ad14fe7d5db4"
+    },
+    {
+      "model_id": "microsoft/udop-large",
+      "role": "legacy OCR-free decode baseline",
+      "quantization": "fp32",
+      "revision": "2d5f5b18aa2a3ad6b551933582ca49265f45afcf"
+    },
+    {
+      "model_id": "nomic-ai/colnomic-embed-multimodal-3b",
+      "role": "retriever \u2014 ADOPTED backbone; all headline retrieval, rule-grounding, real-plan",
+      "quantization": "bfloat16",
+      "revision": "86627b4a9b0cade577851a70afa469084f9863a4"
+    },
+    {
+      "model_id": "nomic-ai/colnomic-embed-multimodal-7b",
+      "role": "retriever \u2014 baseline comparison",
+      "quantization": "bfloat16",
+      "revision": "09dbc9502b66605d5be56d2226019b49c9fd3293"
+    },
+    {
+      "model_id": "nvidia/NV-Embed-v2",
+      "role": "text embedding baseline",
+      "quantization": "bfloat16",
+      "revision": "3fa59658547db50a1e8e3346cf057fd0c77ed6ef"
+    },
+    {
+      "model_id": "openai/clip-vit-base-patch32",
+      "role": "legacy global-embedding baseline",
+      "quantization": "fp32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+    },
+    {
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "role": "text encoder for OCR-free decode baselines",
+      "quantization": "fp32",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    },
+    {
+      "model_id": "vidore/colpali-v1.2",
+      "role": "retriever \u2014 PREDECESSOR backbone; companion ablations (tiling, rerank, quantization, CIs)",
+      "quantization": "bfloat16",
+      "revision": "6b89bc63c16809af4d111bfe412e2ac6bc3c9451"
+    },
+    {
+      "model_id": "vidore/colpali-v1.3",
+      "role": "retriever \u2014 baseline comparison",
+      "quantization": "bfloat16",
+      "revision": "1b5c8929330df1a66de441a9b5409a878f0de5b0"
+    },
+    {
+      "model_id": "vidore/colqwen2.5-v0.2",
+      "role": "retriever \u2014 baseline comparison",
+      "quantization": "bfloat16",
+      "revision": "6f6fcdfd1a114dfe365f529701b33d66b9349014"
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "experiment": "Real-plan compliance ablation (2 WYDOT projects vs 1,898-page standard index)",
+  "n_items": 12,
+  "n_projects": 2,
+  "retrieval_relevance@5": 83.33,
+  "verdict_accuracy": 100.0,
+  "n_compliant": 10,
+  "n_noncompliant": 2,
+  "results": [
+    {
+      "id": "cj_xsec_crossslope",
+      "project": "1507040",
+      "component": "roadway travel-lane cross slope (crown)",
+      "design_value": 2.0,
+      "threshold": 2.0,
+      "operator": "<=",
+      "retrieved_plan_ids": [
+        "000-510",
+        "Unknown",
+        "C-10.54",
+        "000-510",
+        "C-10.55"
+      ],
+      "retrieved_agencies": [
+        "FDOT",
+        "FDOT",
+        "AZDOT",
+        "FDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "000-510",
+      "vlm_extracted_limit": "0.10",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_xsec_backslope",
+      "project": "1507040",
+      "component": "embankment fill backslope ratio",
+      "design_value": 2.0,
+      "threshold": 2.0,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "C-17.15",
+        "C-04.50",
+        "C-02.30",
+        "Unknown",
+        "C-02.10"
+      ],
+      "retrieved_agencies": [
+        "AZDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "C-17.15",
+      "vlm_extracted_limit": "1/2:1",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_xsec_foreslope",
+      "project": "1507040",
+      "component": "foreslope ratio",
+      "design_value": 5.0,
+      "threshold": 4.0,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "524-001",
+        "C-03.10",
+        "C-02.10",
+        "C-02.30",
+        "Unknown"
+      ],
+      "retrieved_agencies": [
+        "FDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "C-03.10",
+      "vlm_extracted_limit": "10:1",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_pse_culvert",
+      "project": "1507040",
+      "component": "corrugated metal pipe culvert diameter",
+      "design_value": 60,
+      "threshold": 18,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "Unknown",
+        "C-13.10",
+        "430-040",
+        "A62DA",
+        "C-13.10"
+      ],
+      "retrieved_agencies": [
+        "AZDOT",
+        "AZDOT",
+        "FDOT",
+        "Caltrans",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "Unknown",
+      "vlm_extracted_limit": "42\"",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_pse_fence",
+      "project": "1507040",
+      "component": "fence Type E wood post",
+      "design_value": 1,
+      "threshold": 1,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "607-1A",
+        "550-001",
+        "550-001",
+        "FY 2026-27 STANDARD PLANS",
+        "A86B"
+      ],
+      "retrieved_agencies": [
+        "WYDOT",
+        "FDOT",
+        "FDOT",
+        "FDOT",
+        "Caltrans"
+      ],
+      "relevant_in_top5": false,
+      "relevant_plan_id": null,
+      "vlm_extracted_limit": "26\" [660]",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_xsec_crossslope_BAD",
+      "project": "1507040",
+      "component": "roadway travel-lane cross slope (crown)",
+      "design_value": 5.0,
+      "threshold": 2.0,
+      "operator": "<=",
+      "retrieved_plan_ids": [
+        "000-510",
+        "Unknown",
+        "C-10.54",
+        "000-510",
+        "C-10.55"
+      ],
+      "retrieved_agencies": [
+        "FDOT",
+        "FDOT",
+        "AZDOT",
+        "FDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "000-510",
+      "vlm_extracted_limit": "0.10",
+      "pred_compliant": false,
+      "gt_compliant": false,
+      "verdict_correct": true
+    },
+    {
+      "id": "cj_xsec_backslope_BAD",
+      "project": "1507040",
+      "component": "embankment fill backslope ratio",
+      "design_value": 1.0,
+      "threshold": 2.0,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "C-17.15",
+        "C-04.50",
+        "C-02.30",
+        "Unknown",
+        "C-02.10"
+      ],
+      "retrieved_agencies": [
+        "AZDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "C-17.15",
+      "vlm_extracted_limit": "1/2:1",
+      "pred_compliant": false,
+      "gt_compliant": false,
+      "verdict_correct": true
+    },
+    {
+      "id": "n3_pse_rcp",
+      "project": "n345107",
+      "component": "reinforced concrete pipe (RCP) culvert",
+      "design_value": 30,
+      "threshold": 12,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "A62D",
+        "A62DA",
+        "D79",
+        "D79A",
+        "D93A"
+      ],
+      "retrieved_agencies": [
+        "Caltrans",
+        "Caltrans",
+        "Caltrans",
+        "Caltrans",
+        "Caltrans"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "A62D",
+      "vlm_extracted_limit": "6'-6\" ID",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "n3_pse_rcparch",
+      "project": "n345107",
+      "component": "reinforced concrete pipe arch culvert",
+      "design_value": 59,
+      "threshold": 12,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "A62E",
+        "619-1",
+        "TOC",
+        "D86C",
+        "D89A"
+      ],
+      "retrieved_agencies": [
+        "Caltrans",
+        "WYDOT",
+        "Caltrans",
+        "Caltrans",
+        "Caltrans"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "A62E",
+      "vlm_extracted_limit": "2'-0\"",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "n3_pse_geotextile",
+      "project": "n345107",
+      "component": "geotextile material separation (non-woven)",
+      "design_value": 1,
+      "threshold": 1,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "446-001",
+        "446-001",
+        "425-001",
+        "440-001",
+        "446-001"
+      ],
+      "retrieved_agencies": [
+        "FDOT",
+        "FDOT",
+        "FDOT",
+        "FDOT",
+        "FDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "446-001",
+      "vlm_extracted_limit": "2\"",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "n3_pse_plate",
+      "project": "n345107",
+      "component": "structural plate pipe culvert",
+      "design_value": 108,
+      "threshold": 18,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "Unknown",
+        "622-1",
+        "A62DA",
+        "430-040",
+        "C-13.10"
+      ],
+      "retrieved_agencies": [
+        "AZDOT",
+        "WYDOT",
+        "Caltrans",
+        "FDOT",
+        "AZDOT"
+      ],
+      "relevant_in_top5": true,
+      "relevant_plan_id": "622-1",
+      "vlm_extracted_limit": "12 in [305 mm]",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    },
+    {
+      "id": "n3_pse_geogrid",
+      "project": "n345107",
+      "component": "biaxial geogrid reinforcement",
+      "design_value": 1,
+      "threshold": 1,
+      "operator": ">=",
+      "retrieved_plan_ids": [
+        "446-001",
+        "425-001",
+        "521-001",
+        "455-400",
+        "440-001"
+      ],
+      "retrieved_agencies": [
+        "FDOT",
+        "FDOT",
+        "FDOT",
+        "FDOT",
+        "FDOT"
+      ],
+      "relevant_in_top5": false,
+      "relevant_plan_id": null,
+      "vlm_extracted_limit": "NONE",
+      "pred_compliant": true,
+      "gt_compliant": true,
+      "verdict_correct": true
+    }
+  ],
+  "elapsed_sec": 160.2
+}
