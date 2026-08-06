@@ -18,17 +18,13 @@ A two-minute silent walkthrough of the pipeline, built from the actual plan shee
 and the actual sharpened-MaxSim heatmaps used in the study — not mock-ups.
 
 <div align="center">
-  <video
-    src="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4"
-    poster="https://github.com/Nabarajsub/plansightrag/raw/main/docs/demo_poster.png"
-    width="880" controls muted playsinline>
-    <a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4"><img src="docs/demo_poster.png" width="880" alt="PlanSightRAG — two-minute demo"></a>
-  </video>
+  <a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4"><img src="docs/demo_preview.gif" width="880" alt="Phase 3 — MaxSim retrieval and the sharpened heatmap reveal over WYDOT 203-2A"></a>
 </div>
 
 <p align="center">
-2:02 &nbsp;·&nbsp; 1920×1080 &nbsp;·&nbsp; H.264, no audio &nbsp;·&nbsp; 6.9 MB<br>
-<sub><a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4">download the video</a> &nbsp;·&nbsp; <a href="docs/DEMO_PROVENANCE.md">where every on-screen number comes from</a></sub>
+<b>Above — Phase 3 in real time:</b> MaxSim scores the candidates, then the sharpened heatmap sweeps across WYDOT 203-2A.<br>
+<b><a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4">Watch the full walkthrough</a></b> &nbsp;·&nbsp; 2:02 &nbsp;·&nbsp; 1920×1080 &nbsp;·&nbsp; H.264, no audio &nbsp;·&nbsp; 6.9 MB<br>
+<sub><a href="docs/DEMO_PROVENANCE.md">where every on-screen number comes from</a></sub>
 </p>
 
 | # | Scene | Length | What it shows |
