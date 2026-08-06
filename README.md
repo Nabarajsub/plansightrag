@@ -12,6 +12,34 @@ Every number in every table of the manuscript is reproduced by a script in `code
 that writes a JSON report in `reports/`. The mapping from each manuscript table to
 its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 
+## Demo
+
+A two-minute silent walkthrough of the pipeline, built from the actual plan sheets
+and the actual sharpened-MaxSim heatmaps used in the study — not mock-ups.
+
+[![PlanSightRAG — two-minute demo](docs/demo_poster.png)](docs/PlanSightRAG_demo.mp4)
+
+<p align="center">
+<b>▶ Click the image to play</b> &nbsp;·&nbsp; 2:02 &nbsp;·&nbsp; 1920×1080 &nbsp;·&nbsp; H.264, no audio &nbsp;·&nbsp; 6.9 MB<br>
+<sub><a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4">direct download</a> &nbsp;·&nbsp; <a href="docs/DEMO_PROVENANCE.md">where every on-screen number comes from</a></sub>
+</p>
+
+| # | Scene | Length | What it shows |
+|---|---|---|---|
+| 1 | Title | 9 s | Paper, authors, corpus scale |
+| 2 | The problem | 13 s | One sheet as an engineer reads it vs. as OCR hands it over, and the retrieval numbers that follow |
+| 3 | Phase 1 · Ingestion | 12 s | 66 PDFs → 1,898 pages at 200 DPI across five DOTs |
+| 4 | Phase 2 · Visual indexing | 12 s | ColNomic-3B patch grid → multi-vector embedding; 7.3 min offline |
+| 5 | Phase 3 · Retrieval & grounding | 16 s | MaxSim scoring, ranked candidates, then the heatmap reveal over WYDOT 203-2A |
+| 6 | Phase 4a · Visual QA | 12 s | A grounded answer beside the evidence gallery it came from |
+| 7 | Phase 4b · Agentic compliance | 20 s | Planner → Retriever → Auditor → Synthesizer, step by step, to a verdict |
+| 8 | Results | 16 s | Recall@5 across seven retrievers; compliance, transfer and rule-grounding |
+| 9 | Reproducibility | 12 s | table → report JSON → generator script |
+
+Every figure on screen is traced to a committed report in
+**`docs/DEMO_PROVENANCE.md`**, which also flags the three elements that are
+illustrative rather than measured.
+
 ## Quick start
 
 ```bash
