@@ -65,10 +65,3 @@ isn't one:
 
 Every plan sheet shown, and the sharpened MaxSim heatmap in scene 5, are the real
 artifacts from the study.
-
-## Rebuilding the video
-
-The renderer is not shipped in this repository because it reads the rasterized
-plan corpus, which is not redistributed here (see the README section "What is NOT
-included"). It is pure `Pillow` + `numpy` + `opencv-python` — no GPU, no model
-weights, no network — and is available on request.
