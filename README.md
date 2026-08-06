@@ -17,11 +17,11 @@ its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 A two-minute silent walkthrough of the pipeline, built from the actual plan sheets
 and the actual sharpened-MaxSim heatmaps used in the study — not mock-ups.
 
-[![PlanSightRAG — two-minute demo](docs/demo_poster.png)](https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4)
+[![PlanSightRAG — two-minute demo](docs/demo_poster.png)](docs/PlanSightRAG_demo.mp4)
 
 <p align="center">
 <b>▶ Click the image to play</b> &nbsp;·&nbsp; 2:02 &nbsp;·&nbsp; 1920×1080 &nbsp;·&nbsp; H.264, no audio &nbsp;·&nbsp; 6.9 MB<br>
-<sub><a href="docs/PlanSightRAG_demo.mp4">direct download</a> &nbsp;·&nbsp; <a href="docs/DEMO_PROVENANCE.md">where every on-screen number comes from</a></sub>
+<sub><a href="https://github.com/Nabarajsub/plansightrag/raw/main/docs/PlanSightRAG_demo.mp4">direct download</a> &nbsp;·&nbsp; <a href="docs/DEMO_PROVENANCE.md">where every on-screen number comes from</a></sub>
 </p>
 
 | # | Scene | Length | What it shows |
