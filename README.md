@@ -175,6 +175,21 @@ Regenerate the derived artifacts with:
 python code/make_release_artifacts.py     # prompts, seeds, models, requirements
 ```
 
+## Question fields
+
+| Field | Meaning |
+|---|---|
+| `query` / `answer` | **as evaluated** — every published metric is computed on these |
+| `malformed` | present on 25 of 4,056 records (0.62%) whose drafter output was a markdown header rather than a question |
+| `query_regenerated` / `answer_regenerated` | redrafted with Qwen2.5-VL-72B and re-verified, supplied so the released set is complete |
+
+`query` is never overwritten, so the shipped splits reproduce the reported numbers
+exactly. To work with the complete set instead:
+
+```python
+q = r.get("query_regenerated") or r["query"]
+```
+
 ## Baseline checkpoint versions
 
 Two ColPali checkpoints were evaluated under the identical 424-query / 1,898-page
@@ -227,3 +242,35 @@ Rasterize at 200 DPI page-level (400 DPI for the tiling study) and set
 annotations (CC BY 4.0).
 
 Funded by the Wyoming Department of Transportation, grant RS03225.
+
+## Revision analyses (`code/analysis/`)
+
+Added during the *Automation in Construction* major revision. Each script is
+self-contained and reads only artefacts shipped in this repository. Set
+`PSR_ROOT` to the repository root; scripts that need the full page corpus also
+honour `CLUSTER_ROOT`.
+
+| Script | What it produces | Cost |
+|---|---|---|
+| `capability_ladder.py` | Per-stage decomposition of compliance accuracy: retrieval → rule ID → rule interpretation → value extraction → arithmetic → verdict | CPU, seconds |
+| `numeric_match.py` | Judge-free arithmetic scoring of Dimensional Accuracy, and its agreement with the LLM judge | CPU, seconds |
+| `threshold_sensitivity.py` | Flip points for the H1–H4 acceptance thresholds, with effect sizes | CPU, seconds |
+| `colnomic_tiling_v2.py` | Six tile-score aggregations on the adopted backbone, two grids | 1 GPU, ~35 min/grid |
+| `compliance_retrieval_colnomic.py` | Compliance-set retrieval re-measured on ColNomic-3B | 1 GPU, ~2 min |
+| `faithfulness_probe.py` | Causal probe of the MaxSim heatmaps. **Result is confounded — see the docstring; not used as evidence in the paper.** | 1 GPU, ~5 min |
+
+### Verification (`code/analysis/verify_*.py`)
+
+These re-derive the revision's claims from the shipped artefacts rather than
+trusting the write-up. They are included so a reviewer can run the same checks.
+
+| Script | Checks |
+|---|---|
+| `verify_ledger.py` | Every numeric claim in the provenance ledger against its source file |
+| `verify_assumptions.py` | The assumptions each analysis rests on (field mappings, unit conventions, shared case sets) |
+| `verify_ladder_stratified.py` | Whether the capability-ladder findings survive the question-alignment confound |
+| `verify_crossdoc.py` | That superseded values are not presented as current |
+
+Running `verify_ledger.py` against this repository reports **50 checks passed, 0
+failed**. Claims whose source is not shipped here (per-baseline intermediate
+reports) are listed as unverified rather than assumed.

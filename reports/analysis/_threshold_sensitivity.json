@@ -1,0 +1,147 @@
+{
+ "note": "Threshold-sensitivity analysis for the pre-declared hypotheses H1-H4 (R2.10, stats 7).",
+ "n_boot": 10000,
+ "seed": 20260810,
+ "hypotheses": {
+  "H1": {
+   "declared_pp": 15.0,
+   "comparisons": {
+    "ocr_bm25_meta": {
+     "label": "strongest text (BM25 + OCR + metadata)",
+     "margin_pp": 34.67,
+     "boot_ci95": [
+      29.95,
+      39.39
+     ],
+     "cohen_h": 0.862,
+     "magnitude": "large",
+     "flip_threshold_pp": 34.67,
+     "verdict_at_declared": "supported"
+    },
+    "visionrag_pyramid_fixed": {
+     "label": "strongest hybrid (VisionRAG-pyramid, corrected)",
+     "margin_pp": 46.7,
+     "boot_ci95": [
+      41.75,
+      51.65
+     ],
+     "cohen_h": 1.103,
+     "magnitude": "large",
+     "flip_threshold_pp": 46.7,
+     "verdict_at_declared": "supported"
+    },
+    "bge_m3_ocr_tuned": {
+     "label": "strongest dense text (BGE-M3 tuned)",
+     "margin_pp": 42.69,
+     "boot_ci95": [
+      37.74,
+      47.64
+     ],
+     "cohen_h": 1.023,
+     "magnitude": "large",
+     "flip_threshold_pp": 42.69,
+     "verdict_at_declared": "supported"
+    }
+   },
+   "binding_margin_pp": 34.67,
+   "verdict_invariant_over_pp": [
+    0.0,
+    34.67
+   ],
+   "robustness": "robust"
+  },
+  "H2": {
+   "tests": {
+    "accuracy": {
+     "label": "CAD verdict accuracy, 6 sets pooled",
+     "k": 673,
+     "n": 674,
+     "point": 99.85,
+     "wilson_ci95": [
+      99.16,
+      99.97
+     ],
+     "declared_pct": 90.0,
+     "flip_threshold_pct": 99.85,
+     "declared_inside_ci": false,
+     "verdict_at_declared": "met"
+    },
+    "fp_avoidance": {
+     "label": "PASS set, false-positive avoidance",
+     "k": 8,
+     "n": 8,
+     "point": 100.0,
+     "wilson_ci95": [
+      67.56,
+      100.0
+     ],
+     "declared_pct": 90.0,
+     "flip_threshold_pct": 100.0,
+     "declared_inside_ci": true,
+     "verdict_at_declared": "met"
+    },
+    "sensitivity": {
+     "label": "FAIL set, sensitivity (TPR)",
+     "k": 19,
+     "n": 24,
+     "point": 79.17,
+     "wilson_ci95": [
+      59.53,
+      90.76
+     ],
+     "declared_pct": 60.0,
+     "flip_threshold_pct": 79.17,
+     "declared_inside_ci": true,
+     "verdict_at_declared": "met"
+    }
+   }
+  },
+  "H3": {
+   "in_domain_delta_pp": -37.03,
+   "direction": "negative",
+   "flip_threshold_pp": 0.0,
+   "robustness": "robust",
+   "note": "Rejected on sign, not on magnitude. The best LoRA configuration is worse than the off-the-shelf checkpoint, so no threshold in [0, inf) reverses the verdict."
+  },
+  "H4": {
+   "declared_pp": 20.0,
+   "measurements": {
+    "colpali_judge": {
+     "label": "judge accuracy, ColPali (as published)",
+     "delta_pp": 4.53,
+     "flip_threshold_pp": 4.53,
+     "verdict_at_declared": "rejected"
+    },
+    "colpali_retrieval": {
+     "label": "Recall@5, ColPali (as published)",
+     "delta_pp": 5.19,
+     "flip_threshold_pp": 5.19,
+     "verdict_at_declared": "rejected"
+    },
+    "colnomic_patch_union": {
+     "label": "Recall@5, ColNomic-3B, patch_union",
+     "delta_pp": 1.42,
+     "boot_ci95": [
+      -0.71,
+      3.54
+     ],
+     "mcnemar_p": 0.28627872467041016,
+     "flip_threshold_pp": 1.42,
+     "ci_spans_zero": true
+    },
+    "colnomic_published_max": {
+     "label": "Recall@5, ColNomic-3B, published_max",
+     "delta_pp": -8.49,
+     "boot_ci95": [
+      -12.03,
+      -5.19
+     ],
+     "mcnemar_p": 2.031594536044956e-06,
+     "flip_threshold_pp": -8.49,
+     "ci_spans_zero": false
+    }
+   },
+   "robustness": "robust"
+  }
+ }
+}

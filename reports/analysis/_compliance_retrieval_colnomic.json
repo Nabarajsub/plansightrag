@@ -1,0 +1,1321 @@
+{
+ "note": "Compliance-set retrieval on ColNomic-3B (A29b / Cluster E).",
+ "model_id": "nomic-ai/colnomic-embed-multimodal-3b",
+ "k": 5,
+ "n_queries": 100,
+ "n_index_pages": 1998,
+ "n_real_pages": 1898,
+ "n_mockups": 100,
+ "recall@5": 65.0,
+ "wilson95": [
+  55.25,
+  73.64
+ ],
+ "colpali_v12_baseline": 32.0,
+ "miss_top5_composition": {
+  "same_archetype_mockup": 175
+ },
+ "elapsed_min": 1.2,
+ "records": [
+  {
+   "name": "culvert_bad_001",
+   "question": "Is the concrete cover of 0.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_003",
+   "question": "Is the concrete cover of 1.0\" minimum maintained for all surfaces as specified in Note 3?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "real_page",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_007",
+   "question": "Is the concrete cover of 1.0\" minimum as specified in the notes met throughout all surfaces of the structure?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_019",
+   "question": "Is the concrete cover of 0.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_027",
+   "question": "Is the concrete cover of 1.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_031",
+   "question": "Is the concrete cover of 1.5\" minimum maintained for all surfaces as specified in Note 3?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "real_page",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_039",
+   "question": "Is the concrete cover of 1.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_bad_059",
+   "question": "Is the minimum cover of 0.5\" maintained for all surfaces as specified in Note 3?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "real_page"
+   ]
+  },
+  {
+   "name": "culvert_bad_083",
+   "question": "Is the minimum cover of 0.5\" maintained for all surfaces as specified in Note 3?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "real_page"
+   ]
+  },
+  {
+   "name": "culvert_bad_085",
+   "question": "Is the concrete cover of 1.0\" minimum as specified in the notes met throughout all surfaces of the structure?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_008",
+   "question": "Is the concrete cover of 3.0\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_018",
+   "question": "Is the concrete cover of 2.0\" minimum as specified in the notes met throughout all surfaces of the reinforced concrete box culvert?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_022",
+   "question": "Is the concrete cover of 2.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_032",
+   "question": "Is the concrete cover of 2.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_038",
+   "question": "Is the minimum cover of 3.0\" maintained for all surfaces as specified in Note 3?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "real_page"
+   ]
+  },
+  {
+   "name": "culvert_ok_046",
+   "question": "Is the concrete cover of 2.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_050",
+   "question": "Is the concrete cover of 2.5\" minimum maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_052",
+   "question": "Is the concrete cover of 2.0\" minimum as specified in the notes met throughout all surfaces of the structure?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_058",
+   "question": "Is the concrete cover of 3.0\" minimum as specified in the notes met throughout all surfaces of the structure?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "culvert_ok_090",
+   "question": "Is the minimum cover of 3.0\" maintained for all surfaces as specified in the notes?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_011",
+   "question": "Does the footing depth of 28\" meet the minimum footing depth requirement of 30\" as per Caltrans standards?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_027",
+   "question": "Is the 15\" footing depth sufficient to meet the minimum footing depth of 30\" as specified by CDOT?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_035",
+   "question": "Is the footing depth of 28\" meeting the minimum footing depth requirement of 30\" as per FDOT standards?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_045",
+   "question": "Is the footing depth of 24 inches meeting the minimum footing depth per CDOT requirement of 30 inches?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_049",
+   "question": "Is the 15\" footing depth sufficient to meet the minimum footing depth of 30\" as specified by FDOT?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_055",
+   "question": "Does the 15\" footing depth meet the minimum footing depth requirement of 30\" as specified by Caltrans?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_057",
+   "question": "Is the footing depth of 20\" meeting the minimum footing depth requirement per WYDOT, which is specified as 30\"?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_075",
+   "question": "Is the 15\" footing depth sufficient to meet the minimum footing depth of 30\" as per Caltrans requirements?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_083",
+   "question": "Does the footing depth of 28\" meet the minimum footing depth requirement of 30\" per Caltrans standards?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_bad_097",
+   "question": "Is the footing depth of 28 inches meeting the minimum footing depth requirement of 30 inches per FDOT standards?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_000",
+   "question": "Is the footing depth of 30\" as specified in the notes meeting the minimum footing depth per FDOT requirements?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_012",
+   "question": "Is the footing depth of 36 inches meeting the minimum footing depth per CDOT requirement of 30 inches?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_020",
+   "question": "Is the 42\" footing depth sufficient to meet the minimum footing depth requirement of 30\" as per Caltrans standards?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_028",
+   "question": "Is the footing depth of 42\" meeting the minimum footing depth requirement per CDOT, which is specified as 30\"?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_034",
+   "question": "Is the footing depth of 30\" meeting the minimum footing depth per CDOT requirements?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_036",
+   "question": "Does the footing depth of 36\" meet the minimum footing depth requirement per WYDOT, which is specified as 30\"?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "other_mockup",
+    "other_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_038",
+   "question": "Is the footing depth of 30\" meeting the minimum footing depth per FDOT requirements?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_044",
+   "question": "Is the footing depth of 48\" meeting the minimum footing depth per CDOT of 30\"?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_046",
+   "question": "Does the footing depth of 48\" meet the minimum footing depth requirement per Caltrans standards?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "guardrail_ok_060",
+   "question": "Is the footing depth of 48 inches sufficient to meet the minimum footing depth requirement per CDOT, which is specified as 30 inches?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_019",
+   "question": "Is the 18\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_021",
+   "question": "Is the 18\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 5,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold"
+   ]
+  },
+  {
+   "name": "inlet_bad_033",
+   "question": "Is the 8.0\" grate opening compliant with the specified minimum or maximum dimensions for effective drainage?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_037",
+   "question": "Is the 6\" gravel bedding provided as specified in note 4 sufficient for proper drainage and stability of the curb inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_039",
+   "question": "Is the 6\" gravel bedding provided as specified in note 4 sufficient for proper drainage and stability of the curb inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_061",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_065",
+   "question": "Is the 6\" gravel bedding provided as specified in note 4 sufficient for proper drainage and stability of the curb inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_079",
+   "question": "Is the 6\" gravel bedding provided as specified in note 4 sufficient for proper drainage and stability of the curb inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_083",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_bad_097",
+   "question": "Is the 8.0\" grate opening compliant with the specified maximum allowable opening size for effective drainage?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_010",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 5,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold"
+   ]
+  },
+  {
+   "name": "inlet_ok_018",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_026",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this curb drainage inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_036",
+   "question": "Is the 30\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_046",
+   "question": "Is the 24\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_050",
+   "question": "Is the 6\" gravel bedding provided as specified in note 4 sufficient for proper drainage and stability of the curb inlet?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_052",
+   "question": "Is the 36\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_060",
+   "question": "Is the 18\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_064",
+   "question": "Is the 18\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "inlet_ok_078",
+   "question": "Is the 24\" throat width sufficient to meet the required minimum flow capacity for this drainage inlet?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_005",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_011",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_015",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_023",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_025",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": true,
+   "rank": 5,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold"
+   ]
+  },
+  {
+   "name": "rebar_bad_051",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_053",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_055",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_059",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_bad_093",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_000",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_018",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_028",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_048",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_056",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_062",
+   "question": "Is the clear cover of 2.0\" minimum as specified in note 4 being met throughout the beam's cross-section?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_076",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_080",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_084",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "rebar_ok_090",
+   "question": "Does the clear cover of 2.0\" meet the minimum requirement specified in note 4?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_015",
+   "question": "Does the 12\" minimum embedment meet the required standard for anchor bolts as specified in ASTM F1554?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_031",
+   "question": "Does the 42\" diameter foundation meet the minimum embedment requirement of 12\" as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_033",
+   "question": "Does the 42\" depth of the foundation meet the minimum embedment requirement specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_047",
+   "question": "Does the 12\" minimum embedment meet the required standard as specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_057",
+   "question": "Does the anchor bolt embedment of 12\" meet the minimum requirement specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_069",
+   "question": "Does the 12\" minimum embedment meet the required standard for anchor bolts as specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_077",
+   "question": "Does the 12\" minimum embedment meet the required standard as specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_085",
+   "question": "Does the 12\" minimum embedment meet the required standard for anchor bolts as specified in ASTM F1554?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_089",
+   "question": "Does the 12\" minimum embedment meet the required minimum as specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_bad_097",
+   "question": "Does the 12\" minimum embedment meet the required standard as specified in note 3?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_010",
+   "question": "Does the 16\" anchor embedment meet the minimum embedment requirement of 12\" as specified in note 3?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_020",
+   "question": "Does the anchor bolt embedment of 18\" meet the minimum embedment requirement of 12\" as specified in note 3?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_030",
+   "question": "Does the anchor bolt embedment of 16\" meet the minimum embedment requirement of 12\" as specified in note 3?",
+   "hit": true,
+   "rank": 4,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_032",
+   "question": "Does the 16\" anchor embedment meet the minimum embedment requirement of 12\" as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_040",
+   "question": "Does the anchor bolt embedment of 16\" meet the minimum embedment requirement of 12\" as specified in note 3?",
+   "hit": true,
+   "rank": 3,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_052",
+   "question": "Does the 14\" anchor embedment meet the minimum embedment requirement of 12\" as specified in the notes?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_064",
+   "question": "Does the 14\" anchor embedment meet the minimum embedment requirement of 12\" as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_072",
+   "question": "Does the 12\" minimum embedment meet the required minimum as specified in the notes?",
+   "hit": true,
+   "rank": 1,
+   "top5_kinds": [
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_082",
+   "question": "Does the 18\" anchor embedment meet the minimum embedment requirement of 12\" as specified in the notes?",
+   "hit": false,
+   "rank": null,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  },
+  {
+   "name": "signpost_ok_096",
+   "question": "Does the 16\" anchor embedment meet the minimum embedment requirement of 12\" as specified in note 3?",
+   "hit": true,
+   "rank": 2,
+   "top5_kinds": [
+    "same_archetype_mockup",
+    "gold",
+    "same_archetype_mockup",
+    "same_archetype_mockup",
+    "same_archetype_mockup"
+   ]
+  }
+ ]
+}

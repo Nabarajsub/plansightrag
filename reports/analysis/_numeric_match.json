@@ -1,0 +1,228 @@
+{
+ "note": "Judge-free numeric scoring for Dimensional Accuracy (Cluster C).",
+ "tolerance": {
+  "relative": 0.02,
+  "absolute_mm": 1.5
+ },
+ "n_dimensional_items": 111,
+ "n_scorable": 102,
+ "n_unscorable": 9,
+ "cells": {
+  "qwen72b::agentic": {
+   "numeric_pct": 55.88,
+   "numeric_k": 57,
+   "numeric_n": 102,
+   "wilson95": [
+    46.21,
+    65.13
+   ],
+   "agreement_pct": 85.29,
+   "judge_false_accept": 7,
+   "judge_false_reject": 8
+  },
+  "qwen72b::cot": {
+   "numeric_pct": 56.86,
+   "numeric_k": 58,
+   "numeric_n": 102,
+   "wilson95": [
+    47.17,
+    66.05
+   ],
+   "agreement_pct": 86.27,
+   "judge_false_accept": 5,
+   "judge_false_reject": 9
+  },
+  "qwen72b::critic": {
+   "numeric_pct": 67.65,
+   "numeric_k": 69,
+   "numeric_n": 102,
+   "wilson95": [
+    58.07,
+    75.94
+   ],
+   "agreement_pct": 84.31,
+   "judge_false_accept": 8,
+   "judge_false_reject": 8
+  },
+  "qwen72b::decompose": {
+   "numeric_pct": 60.78,
+   "numeric_k": 62,
+   "numeric_n": 102,
+   "wilson95": [
+    51.08,
+    69.7
+   ],
+   "agreement_pct": 82.35,
+   "judge_false_accept": 7,
+   "judge_false_reject": 11
+  },
+  "qwen72b::ocrhybrid": {
+   "numeric_pct": 61.76,
+   "numeric_k": 63,
+   "numeric_n": 102,
+   "wilson95": [
+    52.07,
+    70.61
+   ],
+   "agreement_pct": 86.27,
+   "judge_false_accept": 6,
+   "judge_false_reject": 8
+  },
+  "qwen72b::retrieval": {
+   "numeric_pct": 61.76,
+   "numeric_k": 63,
+   "numeric_n": 102,
+   "wilson95": [
+    52.07,
+    70.61
+   ],
+   "agreement_pct": 93.14,
+   "judge_false_accept": 3,
+   "judge_false_reject": 4
+  },
+  "qwen72b::selfconsist": {
+   "numeric_pct": 58.82,
+   "numeric_k": 60,
+   "numeric_n": 102,
+   "wilson95": [
+    49.12,
+    67.88
+   ],
+   "agreement_pct": 93.14,
+   "judge_false_accept": 2,
+   "judge_false_reject": 5
+  },
+  "qwen72b::sliding": {
+   "numeric_pct": 55.88,
+   "numeric_k": 57,
+   "numeric_n": 102,
+   "wilson95": [
+    46.21,
+    65.13
+   ],
+   "agreement_pct": 87.25,
+   "judge_false_accept": 5,
+   "judge_false_reject": 8
+  },
+  "qwen72b::zeroshot": {
+   "numeric_pct": 64.71,
+   "numeric_k": 66,
+   "numeric_n": 102,
+   "wilson95": [
+    55.05,
+    73.29
+   ],
+   "agreement_pct": 90.2,
+   "judge_false_accept": 5,
+   "judge_false_reject": 5
+  },
+  "qwen7b::agentic": {
+   "numeric_pct": 58.82,
+   "numeric_k": 60,
+   "numeric_n": 102,
+   "wilson95": [
+    49.12,
+    67.88
+   ],
+   "agreement_pct": 92.16,
+   "judge_false_accept": 5,
+   "judge_false_reject": 3
+  },
+  "qwen7b::cot": {
+   "numeric_pct": 52.94,
+   "numeric_k": 54,
+   "numeric_n": 102,
+   "wilson95": [
+    43.32,
+    62.34
+   ],
+   "agreement_pct": 86.27,
+   "judge_false_accept": 7,
+   "judge_false_reject": 7
+  },
+  "qwen7b::critic": {
+   "numeric_pct": 68.63,
+   "numeric_k": 70,
+   "numeric_n": 102,
+   "wilson95": [
+    59.09,
+    76.82
+   ],
+   "agreement_pct": 86.27,
+   "judge_false_accept": 3,
+   "judge_false_reject": 11
+  },
+  "qwen7b::decompose": {
+   "numeric_pct": 60.78,
+   "numeric_k": 62,
+   "numeric_n": 102,
+   "wilson95": [
+    51.08,
+    69.7
+   ],
+   "agreement_pct": 89.22,
+   "judge_false_accept": 1,
+   "judge_false_reject": 10
+  },
+  "qwen7b::ocrhybrid": {
+   "numeric_pct": 63.73,
+   "numeric_k": 65,
+   "numeric_n": 102,
+   "wilson95": [
+    54.05,
+    72.4
+   ],
+   "agreement_pct": 88.24,
+   "judge_false_accept": 4,
+   "judge_false_reject": 8
+  },
+  "qwen7b::retrieval": {
+   "numeric_pct": 57.84,
+   "numeric_k": 59,
+   "numeric_n": 102,
+   "wilson95": [
+    48.15,
+    66.97
+   ],
+   "agreement_pct": 91.18,
+   "judge_false_accept": 5,
+   "judge_false_reject": 4
+  },
+  "qwen7b::selfconsist": {
+   "numeric_pct": 41.18,
+   "numeric_k": 42,
+   "numeric_n": 102,
+   "wilson95": [
+    32.12,
+    50.88
+   ],
+   "agreement_pct": 90.2,
+   "judge_false_accept": 7,
+   "judge_false_reject": 3
+  },
+  "qwen7b::sliding": {
+   "numeric_pct": 41.18,
+   "numeric_k": 42,
+   "numeric_n": 102,
+   "wilson95": [
+    32.12,
+    50.88
+   ],
+   "agreement_pct": 84.31,
+   "judge_false_accept": 11,
+   "judge_false_reject": 5
+  },
+  "qwen7b::zeroshot": {
+   "numeric_pct": 66.67,
+   "numeric_k": 68,
+   "numeric_n": 102,
+   "wilson95": [
+    57.06,
+    75.06
+   ],
+   "agreement_pct": 87.25,
+   "judge_false_accept": 4,
+   "judge_false_reject": 9
+  }
+ }
+}
