@@ -1,0 +1,110 @@
+{
+ "note": "Cross-split similarity and near-duplicate rates (R2 reproducibility item 2).",
+ "near_duplicate_cosine": 0.9,
+ "set_construction": {
+  "train": {
+   "questions": 3211,
+   "unique_pages": 1449,
+   "questions_per_page": 2.22
+  },
+  "dev": {
+   "questions": 421,
+   "unique_pages": 179,
+   "questions_per_page": 2.35
+  },
+  "test": {
+   "questions": 424,
+   "unique_pages": 187,
+   "questions_per_page": 2.27
+  },
+  "full": {
+   "questions": 4056,
+   "unique_pages": 1815,
+   "questions_per_page": 2.23
+  },
+  "michigan": {
+   "questions": 93,
+   "unique_pages": 39,
+   "questions_per_page": 2.38
+  }
+ },
+ "page_overlap": {
+  "dev|train": 0,
+  "dev|test": 0,
+  "test|train": 0
+ },
+ "question_similarity": {
+  "test_vs_train": {
+   "n": 424,
+   "mean_max_cosine": 0.5435,
+   "median_max_cosine": 0.5089,
+   "p95_max_cosine": 0.9489,
+   "n_near_dup": 28,
+   "pct_near_dup": 6.6,
+   "n_exact_dup": 18
+  },
+  "dev_vs_train": {
+   "n": 421,
+   "mean_max_cosine": 0.5542,
+   "median_max_cosine": 0.5202,
+   "p95_max_cosine": 1.0,
+   "n_near_dup": 33,
+   "pct_near_dup": 7.84,
+   "n_exact_dup": 22
+  }
+ },
+ "duplication_impact": {
+  "exact duplicate (>=0.999)": {
+   "k": 11,
+   "n": 18,
+   "recall@5": 61.11,
+   "wilson95": [
+    38.6,
+    79.7
+   ]
+  },
+  "near duplicate (>=0.90)": {
+   "k": 20,
+   "n": 28,
+   "recall@5": 71.43,
+   "wilson95": [
+    52.9,
+    84.7
+   ]
+  },
+  "NOT near-duplicate (<0.90)": {
+   "k": 373,
+   "n": 396,
+   "recall@5": 94.19,
+   "wilson95": [
+    91.4,
+    96.1
+   ]
+  },
+  "all test": {
+   "k": 393,
+   "n": 424,
+   "recall@5": 92.69,
+   "wilson95": [
+    89.8,
+    94.8
+   ]
+  }
+ },
+ "page_near_duplicates": {
+  "n_pages": 1898,
+  "threshold": 0.9,
+  "mean_nn_cosine": 0.7696,
+  "median_nn_cosine": 0.7812,
+  "max_nn_cosine": 0.9963,
+  "pages_with_near_dup": 449,
+  "pct_pages_with_near_dup": 23.66,
+  "distinct_near_dup_pairs": 399,
+  "test_pages_with_train_near_dup": 40,
+  "n_test_pages_in_index": 187,
+  "pct_test_pages_with_train_near_dup": 21.39,
+  "uncentred_mean_nn_cosine": 0.9624,
+  "uncentred_pct_flagged": 97.95,
+  "method_caveat": "mean-pooled multi-vector embeddings, mean-centred to remove anisotropy (the same correction applied to LayoutLMv3/UDOP in A25). A screen for duplicates, not a retrieval measurement."
+ }
+}
