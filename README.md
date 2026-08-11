@@ -257,6 +257,7 @@ honour `CLUSTER_ROOT`.
 | `threshold_sensitivity.py` | Flip points for the H1–H4 acceptance thresholds, with effect sizes | CPU, seconds |
 | `colnomic_tiling_v2.py` | Six tile-score aggregations on the adopted backbone, two grids | 1 GPU, ~35 min/grid |
 | `compliance_retrieval_colnomic.py` | Compliance-set retrieval re-measured on ColNomic-3B | 1 GPU, ~2 min |
+| `qa_grounding_cis.py` | Wilson, bootstrap and page-clustered intervals for the QA and grounding families | CPU, seconds |
 | `table9_frozen.py` | Table 9 re-run on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
 | `faithfulness_probe.py` | Causal probe of the MaxSim heatmaps. **Result is confounded — see the docstring; not used as evidence in the paper.** | 1 GPU, ~5 min |
 

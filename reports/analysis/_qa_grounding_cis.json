@@ -1,0 +1,539 @@
+{
+ "note": "Confidence intervals for the QA and grounding headline numbers (R2 statistics 3).",
+ "n_boot": 10000,
+ "seed": 42,
+ "qa": {
+  "n_questions": 422,
+  "n_unique_pages": 187,
+  "cells": {
+   "qwen72b::agentic": {
+    "k": 316,
+    "n": 422,
+    "accuracy": 74.88,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     70.53,
+     78.78
+    ],
+    "ci_query_bootstrap": [
+     70.62,
+     78.91
+    ],
+    "ci_page_clustered": [
+     70.73,
+     78.99
+    ]
+   },
+   "qwen72b::cot": {
+    "k": 304,
+    "n": 422,
+    "accuracy": 72.04,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     67.57,
+     76.11
+    ],
+    "ci_query_bootstrap": [
+     67.54,
+     76.3
+    ],
+    "ci_page_clustered": [
+     68.1,
+     76.01
+    ]
+   },
+   "qwen72b::critic": {
+    "k": 347,
+    "n": 422,
+    "accuracy": 82.23,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     78.29,
+     85.58
+    ],
+    "ci_query_bootstrap": [
+     78.44,
+     85.78
+    ],
+    "ci_page_clustered": [
+     78.1,
+     86.05
+    ]
+   },
+   "qwen72b::decompose": {
+    "k": 344,
+    "n": 422,
+    "accuracy": 81.52,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     77.53,
+     84.93
+    ],
+    "ci_query_bootstrap": [
+     77.73,
+     85.07
+    ],
+    "ci_page_clustered": [
+     77.91,
+     84.99
+    ]
+   },
+   "qwen72b::ocrhybrid": {
+    "k": 329,
+    "n": 422,
+    "accuracy": 77.96,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     73.76,
+     81.65
+    ],
+    "ci_query_bootstrap": [
+     73.93,
+     81.75
+    ],
+    "ci_page_clustered": [
+     74.01,
+     81.82
+    ]
+   },
+   "qwen72b::retrieval": {
+    "k": 298,
+    "n": 422,
+    "accuracy": 70.62,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     66.1,
+     74.76
+    ],
+    "ci_query_bootstrap": [
+     66.11,
+     74.88
+    ],
+    "ci_page_clustered": [
+     66.03,
+     75.12
+    ]
+   },
+   "qwen72b::selfconsist": {
+    "k": 291,
+    "n": 422,
+    "accuracy": 68.96,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     64.39,
+     73.18
+    ],
+    "ci_query_bootstrap": [
+     64.45,
+     73.22
+    ],
+    "ci_page_clustered": [
+     64.44,
+     73.52
+    ]
+   },
+   "qwen72b::sliding": {
+    "k": 304,
+    "n": 422,
+    "accuracy": 72.04,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     67.57,
+     76.11
+    ],
+    "ci_query_bootstrap": [
+     67.77,
+     76.3
+    ],
+    "ci_page_clustered": [
+     67.61,
+     76.27
+    ]
+   },
+   "qwen72b::zeroshot": {
+    "k": 324,
+    "n": 422,
+    "accuracy": 76.78,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     72.52,
+     80.55
+    ],
+    "ci_query_bootstrap": [
+     72.75,
+     80.81
+    ],
+    "ci_page_clustered": [
+     72.44,
+     80.91
+    ]
+   },
+   "qwen7b::agentic": {
+    "k": 319,
+    "n": 422,
+    "accuracy": 75.59,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     71.28,
+     79.45
+    ],
+    "ci_query_bootstrap": [
+     71.56,
+     79.62
+    ],
+    "ci_page_clustered": [
+     71.29,
+     79.86
+    ]
+   },
+   "qwen7b::cot": {
+    "k": 298,
+    "n": 422,
+    "accuracy": 70.62,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     66.1,
+     74.76
+    ],
+    "ci_query_bootstrap": [
+     66.11,
+     74.88
+    ],
+    "ci_page_clustered": [
+     65.91,
+     75.23
+    ]
+   },
+   "qwen7b::critic": {
+    "k": 326,
+    "n": 422,
+    "accuracy": 77.25,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     73.02,
+     80.99
+    ],
+    "ci_query_bootstrap": [
+     73.22,
+     81.28
+    ],
+    "ci_page_clustered": [
+     73.22,
+     81.18
+    ]
+   },
+   "qwen7b::decompose": {
+    "k": 320,
+    "n": 422,
+    "accuracy": 75.83,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     71.52,
+     79.67
+    ],
+    "ci_query_bootstrap": [
+     71.56,
+     79.86
+    ],
+    "ci_page_clustered": [
+     71.36,
+     80.05
+    ]
+   },
+   "qwen7b::ocrhybrid": {
+    "k": 325,
+    "n": 422,
+    "accuracy": 77.01,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     72.77,
+     80.77
+    ],
+    "ci_query_bootstrap": [
+     72.99,
+     81.04
+    ],
+    "ci_page_clustered": [
+     72.91,
+     81.02
+    ]
+   },
+   "qwen7b::retrieval": {
+    "k": 263,
+    "n": 422,
+    "accuracy": 62.32,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     57.61,
+     66.81
+    ],
+    "ci_query_bootstrap": [
+     57.58,
+     66.82
+    ],
+    "ci_page_clustered": [
+     57.68,
+     67.05
+    ]
+   },
+   "qwen7b::selfconsist": {
+    "k": 293,
+    "n": 422,
+    "accuracy": 69.43,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     64.88,
+     73.64
+    ],
+    "ci_query_bootstrap": [
+     64.93,
+     73.7
+    ],
+    "ci_page_clustered": [
+     65.22,
+     73.65
+    ]
+   },
+   "qwen7b::sliding": {
+    "k": 272,
+    "n": 422,
+    "accuracy": 64.45,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     59.78,
+     68.87
+    ],
+    "ci_query_bootstrap": [
+     59.95,
+     68.96
+    ],
+    "ci_page_clustered": [
+     59.37,
+     69.48
+    ]
+   },
+   "qwen7b::zeroshot": {
+    "k": 330,
+    "n": 422,
+    "accuracy": 78.2,
+    "n_unique_pages": 187,
+    "ci_wilson": [
+     74.01,
+     81.87
+    ],
+    "ci_query_bootstrap": [
+     74.17,
+     81.99
+    ],
+    "ci_page_clustered": [
+     73.9,
+     82.28
+    ]
+   }
+  }
+ },
+ "grounding": {
+  "corpus_pages": 931,
+  "n_tasks": 130,
+  "caveat": "No human-verified thresholds exist yet. Extraction CORRECTNESS and VERDICT accuracy are deliberately NOT computed; scoring them now would grade the model against its own proposals. Those come from step 4 post-verification.",
+  "overall": {
+   "relevant@1": {
+    "k": 73,
+    "n": 130,
+    "rate": 56.15,
+    "ci_wilson": [
+     47.57,
+     64.39
+    ],
+    "ci_bootstrap": [
+     47.69,
+     64.62
+    ]
+   },
+   "relevant@15": {
+    "k": 121,
+    "n": 130,
+    "rate": 93.08,
+    "ci_wilson": [
+     87.37,
+     96.32
+    ],
+    "ci_bootstrap": [
+     88.46,
+     96.92
+    ]
+   },
+   "extracted_any": {
+    "k": 24,
+    "n": 130,
+    "rate": 18.46,
+    "ci_wilson": [
+     12.73,
+     26.0
+    ],
+    "ci_bootstrap": [
+     12.31,
+     25.38
+    ]
+   }
+  },
+  "by_family": {
+   "culvert / pipe": {
+    "n": 59,
+    "relevant@15": 98.31,
+    "ci_relevant@15": [
+     91.0,
+     99.7
+    ],
+    "extracted_any": 15.25,
+    "ci_extracted_any": [
+     8.24,
+     26.52
+    ]
+   },
+   "roadway typical section / cross slope": {
+    "n": 19,
+    "relevant@15": 73.68,
+    "ci_relevant@15": [
+     51.21,
+     88.19
+    ],
+    "extracted_any": 5.26,
+    "ci_extracted_any": [
+     0.94,
+     24.64
+    ]
+   },
+   "earthwork / slope": {
+    "n": 19,
+    "relevant@15": 84.21,
+    "ci_relevant@15": [
+     62.43,
+     94.48
+    ],
+    "extracted_any": 15.79,
+    "ci_extracted_any": [
+     5.52,
+     37.57
+    ]
+   },
+   "roadside / ditch": {
+    "n": 8,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     67.56,
+     100.0
+    ],
+    "extracted_any": 50.0,
+    "ci_extracted_any": [
+     21.52,
+     78.48
+    ]
+   },
+   "guardrail / barrier": {
+    "n": 5,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     56.55,
+     100.0
+    ],
+    "extracted_any": 0.0,
+    "ci_extracted_any": [
+     0.0,
+     43.45
+    ]
+   },
+   "roadway typical section / shoulder": {
+    "n": 5,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     56.55,
+     100.0
+    ],
+    "extracted_any": 80.0,
+    "ci_extracted_any": [
+     37.55,
+     96.38
+    ]
+   },
+   "fence": {
+    "n": 5,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     56.55,
+     100.0
+    ],
+    "extracted_any": 20.0,
+    "ci_extracted_any": [
+     3.62,
+     62.45
+    ]
+   },
+   "roadway typical section / lane": {
+    "n": 3,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     43.85,
+     100.0
+    ],
+    "extracted_any": 0.0,
+    "ci_extracted_any": [
+     0.0,
+     56.15
+    ]
+   },
+   "roadside / clear zone slope": {
+    "n": 3,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     43.85,
+     100.0
+    ],
+    "extracted_any": 33.33,
+    "ci_extracted_any": [
+     6.15,
+     79.23
+    ]
+   },
+   "geotextile / erosion control": {
+    "n": 2,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     34.24,
+     100.0
+    ],
+    "extracted_any": 0.0,
+    "ci_extracted_any": [
+     0.0,
+     65.76
+    ]
+   },
+   "subgrade reinforcement / geogrid": {
+    "n": 1,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     20.65,
+     100.0
+    ],
+    "extracted_any": 100.0,
+    "ci_extracted_any": [
+     20.65,
+     100.0
+    ]
+   },
+   "erosion control / riprap": {
+    "n": 1,
+    "relevant@15": 100.0,
+    "ci_relevant@15": [
+     20.65,
+     100.0
+    ],
+    "extracted_any": 0.0,
+    "ci_extracted_any": [
+     0.0,
+     79.35
+    ]
+   }
+  }
+ }
+}
