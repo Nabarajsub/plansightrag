@@ -259,6 +259,9 @@ honour `CLUSTER_ROOT`.
 | `compliance_retrieval_colnomic.py` | Compliance-set retrieval re-measured on ColNomic-3B | 1 GPU, ~2 min |
 | `split_similarity.py` | Set construction, cross-split similarity, near-duplicate rates, and their effect on the headline | CPU, ~1 min |
 | `baseline_settings.py` | Per-baseline implementation settings across the eight fields R2 names | CPU, seconds |
+| `split_similarity.py` | Duplicate / near-duplicate rates and cross-split similarity, page and question level | CPU, ~10 min |
+| `baseline_settings_table.py` | Per-baseline implementation settings, with each generating script's documentation | CPU, seconds |
+| `compliance_calibration.py` | ECE, MCE, Brier and abstention for the compliance judge | 1 GPU, ~1.5 h |
 | `qa_grounding_cis.py` | Wilson, bootstrap and page-clustered intervals for the QA and grounding families | CPU, seconds |
 | `table9_frozen.py` | Table 9 re-run on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
 | `faithfulness_probe.py` | Causal probe of the MaxSim heatmaps. **Result is confounded — see the docstring; not used as evidence in the paper.** | 1 GPU, ~5 min |

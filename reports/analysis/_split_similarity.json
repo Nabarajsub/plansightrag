@@ -1,110 +1,123 @@
 {
- "note": "Cross-split similarity and near-duplicate rates (R2 reproducibility item 2).",
- "near_duplicate_cosine": 0.9,
- "set_construction": {
+ "note": "Cross-split similarity and duplicate/near-duplicate rates (R2 reproducibility 2).",
+ "near_duplicate_threshold": 0.8,
+ "ngram": 5,
+ "splits": {
   "train": {
-   "questions": 3211,
-   "unique_pages": 1449,
-   "questions_per_page": 2.22
+   "n_items": 3211,
+   "n_unique_pages": 1449,
+   "questions_per_page": 2.22,
+   "n_plan_families": 808
   },
   "dev": {
-   "questions": 421,
-   "unique_pages": 179,
-   "questions_per_page": 2.35
+   "n_items": 421,
+   "n_unique_pages": 179,
+   "questions_per_page": 2.35,
+   "n_plan_families": 139
   },
   "test": {
-   "questions": 424,
-   "unique_pages": 187,
-   "questions_per_page": 2.27
-  },
-  "full": {
-   "questions": 4056,
-   "unique_pages": 1815,
-   "questions_per_page": 2.23
-  },
-  "michigan": {
-   "questions": 93,
-   "unique_pages": 39,
-   "questions_per_page": 2.38
+   "n_items": 424,
+   "n_unique_pages": 187,
+   "questions_per_page": 2.27,
+   "n_plan_families": 146
   }
  },
- "page_overlap": {
-  "dev|train": 0,
-  "dev|test": 0,
-  "test|train": 0
- },
- "question_similarity": {
-  "test_vs_train": {
-   "n": 424,
-   "mean_max_cosine": 0.5435,
-   "median_max_cosine": 0.5089,
-   "p95_max_cosine": 0.9489,
-   "n_near_dup": 28,
-   "pct_near_dup": 6.6,
-   "n_exact_dup": 18
+ "exact_duplicate_page_groups": 0,
+ "exact_duplicate_pages": 0,
+ "pairwise_page_overlap": {
+  "train|dev": {
+   "shared_pages": 0,
+   "shared_plan_families": 62,
+   "family_overlap_pct": 44.6
   },
-  "dev_vs_train": {
-   "n": 421,
-   "mean_max_cosine": 0.5542,
-   "median_max_cosine": 0.5202,
-   "p95_max_cosine": 1.0,
-   "n_near_dup": 33,
-   "pct_near_dup": 7.84,
-   "n_exact_dup": 22
+  "train|test": {
+   "shared_pages": 0,
+   "shared_plan_families": 67,
+   "family_overlap_pct": 45.89
+  },
+  "dev|test": {
+   "shared_pages": 0,
+   "shared_plan_families": 26,
+   "family_overlap_pct": 18.71
   }
  },
- "duplication_impact": {
-  "exact duplicate (>=0.999)": {
-   "k": 11,
-   "n": 18,
-   "recall@5": 61.11,
-   "wilson95": [
-    38.6,
-    79.7
-   ]
-  },
-  "near duplicate (>=0.90)": {
-   "k": 20,
-   "n": 28,
-   "recall@5": 71.43,
-   "wilson95": [
-    52.9,
-    84.7
-   ]
-  },
-  "NOT near-duplicate (<0.90)": {
-   "k": 373,
-   "n": 396,
-   "recall@5": 94.19,
-   "wilson95": [
-    91.4,
-    96.1
-   ]
-  },
-  "all test": {
-   "k": 393,
-   "n": 424,
-   "recall@5": 92.69,
-   "wilson95": [
-    89.8,
-    94.8
-   ]
-  }
- },
- "page_near_duplicates": {
-  "n_pages": 1898,
-  "threshold": 0.9,
-  "mean_nn_cosine": 0.7696,
-  "median_nn_cosine": 0.7812,
-  "max_nn_cosine": 0.9963,
-  "pages_with_near_dup": 449,
-  "pct_pages_with_near_dup": 23.66,
-  "distinct_near_dup_pairs": 399,
-  "test_pages_with_train_near_dup": 40,
-  "n_test_pages_in_index": 187,
-  "pct_test_pages_with_train_near_dup": 21.39,
-  "uncentred_mean_nn_cosine": 0.9624,
-  "uncentred_pct_flagged": 97.95,
-  "method_caveat": "mean-pooled multi-vector embeddings, mean-centred to remove anisotropy (the same correction applied to LayoutLMv3/UDOP in A25). A screen for duplicates, not a retrieval measurement."
+ "question_level": {
+  "n_test": 424,
+  "n_near_duplicate_cross_split": 32,
+  "pct_near_duplicate": 7.55,
+  "n_exact_cross_split": 18,
+  "n_duplicate_within_test": 8,
+  "examples": [
+   {
+    "test_query": "What does \"All longitudinal lines within the limits of horizontal curves shall be on curve",
+    "match_split": "train",
+    "match_query": "What does \"All longitudinal lines within the limits of horizontal curves shall be on curve",
+    "jaccard": 1.0,
+    "same_page": false
+   },
+   {
+    "test_query": "What does \"The powder coating process shall be a two-coat system applied using electrostat",
+    "match_split": "train",
+    "match_query": "What does \"The powder coating process shall be a two coat system applied using electrostat",
+    "jaccard": 0.943,
+    "same_page": false
+   },
+   {
+    "test_query": "What does \"Leaveouts shall be provided in the pavement around guardrail posts 1 and 2\" req",
+    "match_split": "train",
+    "match_query": "What does \"Leaveouts shall be provided in the pavement around guardrail posts 1 and 2\" req",
+    "jaccard": 0.908,
+    "same_page": false
+   },
+   {
+    "test_query": "What is the maximum skew angle for a 20'-0\" slab width as specified in the \"Table of Quant",
+    "match_split": "train",
+    "match_query": "What is the maximum skew angle for a 20'-0\" slab width as specified in the \"Table of Quant",
+    "jaccard": 1.0,
+    "same_page": false
+   },
+   {
+    "test_query": "In Plan 55040B, which includes the unique phrase \"PLAN - SKEWED APPROACH SLAB WITH APPROAC",
+    "match_split": "train",
+    "match_query": "In Plan 55040A, which includes the unique phrase \"PLAN - SKEWED APPROACH SLAB WITH APPROAC",
+    "jaccard": 0.809,
+    "same_page": false
+   },
+   {
+    "test_query": "What is the length of the S401 bar in the skewed approach slab as shown in the \"PLAN - SKE",
+    "match_split": "train",
+    "match_query": "What is the length of the S401 bar in the skewed approach slab as shown in the \"PLAN - SKE",
+    "jaccard": 1.0,
+    "same_page": false
+   },
+   {
+    "test_query": "What is the maximum skew angle for a 20'-0\" slab width as specified in the \"TYPE E APPROAC",
+    "match_split": "train",
+    "match_query": "What is the maximum skew angle for a 20'-0\" slab width as specified in the \"TYPE A APPROAC",
+    "jaccard": 0.899,
+    "same_page": false
+   },
+   {
+    "test_query": "What is the minimum slope for the area immediately behind and beyond the terminal?",
+    "match_split": "train",
+    "match_query": "What is the minimum slope for the area immediately behind and beyond the terminal?",
+    "jaccard": 1.0,
+    "same_page": false
+   },
+   {
+    "test_query": "What is the length of the transition section in feet and inches as shown on the plan?",
+    "match_split": "train",
+    "match_query": "What is the length of the transition section in feet and inches as shown on the plan view?",
+    "jaccard": 0.939,
+    "same_page": false
+   },
+   {
+    "test_query": "What does \"PLACE THE REAR ANCHOR ON THE OPPOSITE SIDE OF THE SILL AS THE FRONT ANCHOR\" req",
+    "match_split": "train",
+    "match_query": "What does \"PLACE THE REAR ANCHOR ON THE OPPOSITE SIDE OF THE SILL AS THE FRONT ANCHOR\" req",
+    "jaccard": 1.0,
+    "same_page": false
+   }
+  ]
  }
 }
