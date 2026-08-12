@@ -257,8 +257,10 @@ honour `CLUSTER_ROOT`.
 | `threshold_sensitivity.py` | Flip points for the H1–H4 acceptance thresholds, with effect sizes | CPU, seconds |
 | `colnomic_tiling_v2.py` | Six tile-score aggregations on the adopted backbone, two grids | 1 GPU, ~35 min/grid |
 | `compliance_retrieval_colnomic.py` | Compliance-set retrieval re-measured on ColNomic-3B | 1 GPU, ~2 min |
+| `stats_all_methods.py` | Wilson, bootstrap and page-clustered intervals for all 57 retrieval runs | CPU, ~2 min |
 | `split_similarity.py` | Set construction, cross-split similarity, near-duplicate rates, and their effect on the headline | CPU, ~1 min |
 | `baseline_settings.py` | Per-baseline implementation settings across the eight fields R2 names | CPU, seconds |
+| `stats_all_methods.py` | Wilson, bootstrap and page-clustered intervals for all 57 retrieval runs | CPU, ~2 min |
 | `split_similarity.py` | Duplicate / near-duplicate rates and cross-split similarity, page and question level | CPU, ~10 min |
 | `baseline_settings_table.py` | Per-baseline implementation settings, with each generating script's documentation | CPU, seconds |
 | `compliance_calibration.py` | ECE, MCE, Brier and abstention for the compliance judge | 1 GPU, ~1.5 h |
