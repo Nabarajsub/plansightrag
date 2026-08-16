@@ -1,0 +1,2972 @@
+{
+ "note": "Calibration and abstention (R2 stats 6).",
+ "arm": "facts_withheld",
+ "n_bins": 10,
+ "elapsed_min": 61.9,
+ "configs": {
+  "7b_cot": {
+   "n": 100,
+   "accuracy_all": 50.0,
+   "wilson_all": [
+    40.38,
+    59.62
+   ],
+   "abstention_rate": 0.0,
+   "n_committed": 100,
+   "accuracy_committed": 50.0,
+   "ECE": 31.9,
+   "MCE": 50.73,
+   "Brier": 0.3729,
+   "reliability": [
+    {
+     "bin": "0.0-0.1",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.1-0.2",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.2-0.3",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.3-0.4",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.4-0.5",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.5-0.6",
+     "n": 1,
+     "mean_confidence": 50.0,
+     "accuracy": 0.0,
+     "gap": 50.0
+    },
+    {
+     "bin": "0.6-0.7",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.7-0.8",
+     "n": 58,
+     "mean_confidence": 70.0,
+     "accuracy": 51.7,
+     "gap": 18.3
+    },
+    {
+     "bin": "0.8-0.9",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.9-1.0",
+     "n": 41,
+     "mean_confidence": 99.5,
+     "accuracy": 48.8,
+     "gap": 50.7
+    }
+   ],
+   "records": [
+    {
+     "name": "culvert_bad_001",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"0.5\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"0.5\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "culvert_bad_003",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.0\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12.0'\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare"
+    },
+    {
+     "name": "culvert_bad_007",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.0\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12 inches\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12 inches vs 2 inches\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"0.5 inches\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"0.5 "
+    },
+    {
+     "name": "culvert_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"9\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\":"
+    },
+    {
+     "name": "culvert_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"9\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\":"
+    },
+    {
+     "name": "culvert_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"0.5\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"0.5\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "culvert_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"0.5\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\":"
+    },
+    {
+     "name": "culvert_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"1.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"1.0\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_ok_008",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"16\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"3\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"3\\\" vs 30\\\"\",\n      \"resul"
+    },
+    {
+     "name": "culvert_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_ok_022",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"7.0'\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"7.0' vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "culvert_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"14\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"7.0'\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "culvert_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"2.5\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\":"
+    },
+    {
+     "name": "culvert_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.5\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.5\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "culvert_ok_058",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"3\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"3\\\" vs 30\\\"\",\n      \"resul"
+    },
+    {
+     "name": "culvert_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"3.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"3.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "guardrail_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"28\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confide"
+    },
+    {
+     "name": "guardrail_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"15\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_035",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"28\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"14\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_045",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"20\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"20\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_049",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"10\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"15\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"14\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"15\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"15\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"20\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"20\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_075",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"10\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"15\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"15\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces\",\n      \"compare\": \"14\\\" vs 2\\\"\",\n      \"resul"
+    },
+    {
+     "name": "guardrail_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"28\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"10\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"resul"
+    },
+    {
+     "name": "guardrail_ok_012",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"36\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"10\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"42\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"10\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"33\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"33\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\",\n      \"compare\": \"42\\\" vs 42\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"12"
+    },
+    {
+     "name": "guardrail_ok_034",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"14\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"36\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"12\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces\",\n      \"compare\": \"10\\\" vs 2\\\"\",\n      \"resul"
+    },
+    {
+     "name": "guardrail_ok_044",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"48\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"14\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"24\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"24\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"48\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "guardrail_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches\",\n      \"compare\": \"48\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \""
+    },
+    {
+     "name": "inlet_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"10.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"10.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"6\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-pla"
+    },
+    {
+     "name": "inlet_bad_021",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "inlet_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "inlet_bad_037",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "inlet_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-plac"
+    },
+    {
+     "name": "inlet_bad_061",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-plac"
+    },
+    {
+     "name": "inlet_bad_065",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "inlet_bad_079",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"6.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"6.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-plac"
+    },
+    {
+     "name": "inlet_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "inlet_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"8.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"8.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "inlet_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"3.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"3.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-plac"
+    },
+    {
+     "name": "inlet_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"3.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"3.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "inlet_ok_026",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.5,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"4.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"4.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"none\",\n      \"compare\": \"36\\\" vs n/a\",\n      \"result\": \"UNCERTAIN\"\n    },\n    {\n      \"value\": \"6\\\"\","
+    },
+    {
+     "name": "inlet_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"2.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"r"
+    },
+    {
+     "name": "inlet_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"3.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"3.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"24\\\"\",\n      \"rule\": \"none\",\n      \"compare\": \"N/A\",\n      \"result\": \"UNCERTAIN\"\n    },\n    {\n      \"value\": \"6\\\"\",\n      \""
+    },
+    {
+     "name": "inlet_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"none\",\n      \"compare\": \"36\\\" vs d/2\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n   "
+    },
+    {
+     "name": "inlet_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"3.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"3.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"none\",\n      \"compare\": \"N/A\",\n      \"result\": \"UNCERTAIN\"\n    },\n    {\n      \"value\": \"6\\\"\",\n      \""
+    },
+    {
+     "name": "inlet_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"2.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"6\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place"
+    },
+    {
+     "name": "inlet_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"4.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"4.0\\\" vs 4\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"6\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place"
+    },
+    {
+     "name": "inlet_ok_078",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\",\n      \"compare\": \"2.0\\\" vs 4\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"24\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-plac"
+    },
+    {
+     "name": "rebar_bad_005",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"36\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"2\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": \""
+    },
+    {
+     "name": "rebar_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"29\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"20\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_bad_023",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"28\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"20\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_bad_025",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"26\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_bad_051",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"25\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": \"2"
+    },
+    {
+     "name": "rebar_bad_053",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"19\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"28\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"23\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_bad_093",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"30\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"22\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"36\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"13\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"30\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"28\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_048",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"11\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_ok_056",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"2.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"2.0\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"10\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\""
+    },
+    {
+     "name": "rebar_ok_062",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"24\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"24\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"2\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": \""
+    },
+    {
+     "name": "rebar_ok_076",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"42\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"24\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_080",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"28\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_084",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"36\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "rebar_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"28\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"28\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": "
+    },
+    {
+     "name": "signpost_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\",\n      \"compare\": \"42\\\" vs 42\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    },\n   "
+    },
+    {
+     "name": "signpost_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"42\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"3\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"3\\\" vs 2\\\"\",\n      \"resul"
+    },
+    {
+     "name": "signpost_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"4\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"4\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"4\\\"\",\n      \"rule\": \"ACI 318: stirrup spacing in beams should not exceed d/2 (half the effective depth).\",\n      \"compare\": \"4\\"
+    },
+    {
+     "name": "signpost_bad_047",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"48\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\""
+    },
+    {
+     "name": "signpost_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"4.0\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"4.0\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"0.88\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \""
+    },
+    {
+     "name": "signpost_bad_069",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"4\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"4\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\" v"
+    },
+    {
+     "name": "signpost_bad_077",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"48\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\""
+    },
+    {
+     "name": "signpost_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"6\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"6\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"1.00\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"1.00"
+    },
+    {
+     "name": "signpost_bad_089",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"48\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\""
+    },
+    {
+     "name": "signpost_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"54\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"54\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "signpost_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"16\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"54\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"54\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "signpost_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"42\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON"
+    },
+    {
+     "name": "signpost_ok_030",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"36\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"16\\\" vs 12\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON"
+    },
+    {
+     "name": "signpost_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"16\\\""
+    },
+    {
+     "name": "signpost_ok_040",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"30\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"30\\\" vs 30\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"36\\\" vs 2\\\"\",\n      \"res"
+    },
+    {
+     "name": "signpost_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"36\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"36\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"14\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"14\\\" vs 12\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON"
+    },
+    {
+     "name": "signpost_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"42\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"42\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "signpost_ok_072",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.7,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"12\\\"\",\n      \"rule\": \"AASHTO / standard practice: sign post anchor bolt minimum embedment 12 inches.\",\n      \"compare\": \"12\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"value\": \"48\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"48\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": "
+    },
+    {
+     "name": "signpost_ok_082",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"18\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"18\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"54\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"54\\\" vs 30\\\"\",\n      \"res"
+    },
+    {
+     "name": "signpost_ok_096",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"value\": \"16\\\"\",\n      \"rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\",\n      \"compare\": \"16\\\" vs 2\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"value\": \"54\\\"\",\n      \"rule\": \"WYDOT 606.05: guardrail post footing min depth 30 inches.\",\n      \"compare\": \"54\\\" vs 30\\\"\",\n      \"res"
+    }
+   ]
+  },
+  "72b_plain": {
+   "n": 100,
+   "accuracy_all": 70.0,
+   "wilson_all": [
+    60.41,
+    78.11
+   ],
+   "abstention_rate": 0.0,
+   "n_committed": 100,
+   "accuracy_committed": 70.0,
+   "ECE": 23.35,
+   "MCE": 23.35,
+   "Brier": 0.27,
+   "reliability": [
+    {
+     "bin": "0.0-0.1",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.1-0.2",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.2-0.3",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.3-0.4",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.4-0.5",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.5-0.6",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.6-0.7",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.7-0.8",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.8-0.9",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.9-1.0",
+     "n": 100,
+     "mean_confidence": 93.4,
+     "accuracy": 70.0,
+     "gap": 23.4
+    }
+   ],
+   "records": [
+    {
+     "name": "culvert_bad_001",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 0.5\\\" does not meet the ACI 318 requirement of a minimum 2\\\" cover for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_003",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 1 inch does not meet the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_007",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 1 inch does not meet the ACI 318 requirement of at least 2 inches for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 0.5\\\" does not meet the ACI 318 requirement of a minimum 2\\\" cover for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover specified as 1.5 inches does not meet the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover specified as 1.5\\\" MIN violates the ACI 318 requirement of a minimum 2\\\" cover for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 1.5 inches does not meet the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 0.5\\\" does not meet the ACI 318 requirement of a minimum 2\\\" cover for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 0.5\\\" does not meet the ACI 318 requirement of at least 2\\\" for embedded reinforcement on exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The concrete cover of 1.0 inch does not meet the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD: minimum concrete cover for embedded reinforcement >= 2 inches for cast-in-place exposed surfaces.\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_008",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 3.0 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches as specified by ACI 318 / AASHTO LRFD.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n**Explanation:**\n\n- **Concrete Cover:** The drawing specifies a minimum concrete cover of 2.0 inches, which complies with the ACI 318 / AASHTO LRFD requirement for embedded reinforcemen"
+    },
+    {
+     "name": "culvert_ok_022",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 2.5 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 2.5 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 3.0 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 2.5 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 2.5 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 2.0 inches, which meets the ACI 318 requirement for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_058",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 3 inches as specified by ACI 318 and AASHTO LRFD.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n- **Concrete Cover**: The drawing specifies a minimum concrete cover of 3 inches, which complies with the ACI 318 and AASHTO LRFD requirement of at least 2 inches for"
+    },
+    {
+     "name": "culvert_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum concrete cover of 3.0 inches, which meets the ACI 318 requirement of at least 2 inches for exposed surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement per WYDOT 606.05 and Caltrans standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement per WYDOT 606.05, and there are no other visible violations against the provided engineering compliance rules.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_035",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 28 inches violates the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_045",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement per WYDOT 606.05, and there are no visible violations of other specified engineering rules.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_049",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 30 inches does not meet the FDOT requirement of 42 inches for guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drawing specifies a minimum footing depth of 30 inches, which meets the WYDOT 606.05 requirement and exceeds the ACI 318 concrete cover requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a minimum footing depth of 30 inches, which meets the WYDOT 606.05 requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_075",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drawing specifies a minimum footing depth of 30 inches per Caltrans standards, but FDOT requires a minimum footing depth of 42 inches for guardrail posts.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement per WYDOT 606.05 and Caltrans standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 28 inches violates the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 30 inches violates the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_012",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 36 inches meets or exceeds the minimum requirements specified by WYDOT (30 inches) and CDOT (as per plan). Concrete cover and other specifics are not detailed but assumed compliant based on standard practices.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 42 inches meets or exceeds all relevant standards including WYDOT 606.05 and FDOT requirements.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 42 inches meets or exceeds the minimum requirements specified by WYDOT (30 inches) and FDOT (42 inches). The drawing also specifies Class A concrete, which aligns with typical standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_034",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement per WYDOT 606.05 and CDOT standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 36 inches meets the WYDOT 606.05 requirement of a minimum 30 inches, and there are no other visible violations of the provided engineering compliance rules.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 30 inches violates the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_044",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 48 inches meets or exceeds the minimum requirements specified by WYDOT (30 inches) and FDOT (42 inches).\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 48 inches meets or exceeds all relevant minimum depth requirements (30 inches per WYDOT 606.05 and 42 inches per FDOT). Concrete cover and other specifics are not detailed but assumed compliant based on Caltrans standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The footing depth of 48 inches meets or exceeds all relevant minimum depth requirements (30 inches per CDOT and 42 inches per FDOT).\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 10.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_021",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_037",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drainage grate opening of 8.0 inches violates PROWAG / ADA requirement that openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_061",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_065",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drainage grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_079",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drainage grate opening of 6.0 inches violates PROWAG / ADA requirement that openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 8.0 inches violates PROWAG / ADA's requirement that drainage grate openings be <= 4 inches.\",\n  \"violated_rule\": \"PROWAG / ADA: drainage grate openings <= 4 inches for vehicular surfaces to prevent bicycle/wheelchair wheel entrapment.\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The grate opening of 3.0 inches complies with PROWAG/ADA requirements, and the concrete class and reinforcement details meet ACI 318 standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drawing specifies a 3-inch grate opening, which complies with PROWAG/ADA requirements of \u22644 inches for vehicular surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_026",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a grate opening of 4.0 inches, which complies with PROWAG / ADA requirements for vehicular surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The drawing specifies a 2-inch grate opening, which complies with PROWAG/ADA requirements for vehicular surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 3.0 inches complies with PROWAG/ADA requirements, and the concrete class and reinforcement details meet ACI 318 standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The grate opening of 2.0 inches complies with PROWAG/ADA requirements, and the concrete class and reinforcement details meet ACI 318 standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The grate opening of 3.0 inches complies with PROWAG/ADA requirements, and the concrete class and reinforcement details meet ACI 318 standards.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing complies with PROWAG/ADA requirements as the grate opening is 2.0 inches, which is less than the maximum allowed 4 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing specifies a grate opening of 4.0 inches, which complies with PROWAG / ADA requirements for vehicular surfaces.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_078",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing complies with PROWAG / ADA requirements as the grate opening is 2.0 inches, which is less than the maximum allowed 4 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_005",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing requirements as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n- **Concrete Cover**: The notes specify a clear cover of 2.0 inches, which complies with the ACI 318 requirement of at least 2 inches for cast-in-place exposed surfaces.\n"
+    },
+    {
+     "name": "rebar_bad_023",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_025",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The notes specify a clear cover of 2.0 inches, which complies with the ACI 318 requirement of at least 2 inches for cast-in-place exposed "
+    },
+    {
+     "name": "rebar_bad_051",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing requirements as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n- **Concrete Cover**: The notes specify a clear cover of 2.0 inches, which complies with the ACI 318 requirement of at least 2 inches for cast-in-place exposed surfaces.\n"
+    },
+    {
+     "name": "rebar_bad_053",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed half the effective depth.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The notes specify a clear cover of 2.0 inches, which complies with the ACI 318 requirement of at least 2 inches for c"
+    },
+    {
+     "name": "rebar_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_093",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_048",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_056",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_062",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_076",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_080",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_084",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover of 2 inches and stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the minimum concrete cover requirement of 2 inches and the stirrup spacing does not exceed d/2 as per ACI 318.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the specified requirements including a minimum embedment of 12 inches for anchor bolts and a footing depth of 42 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows a 3-inch concrete cover over the anchor bolts, which exceeds the minimum of 2 inches required by ACI 318 "
+    },
+    {
+     "name": "signpost_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows a Class P concrete footing with a 4-inch embedment for the anchor bolts, which exceeds the minimum 2-inch"
+    },
+    {
+     "name": "signpost_bad_047",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all relevant specifications including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies a Class P concrete footing with a 6-inch anchor embedment, which exceeds the 2-inch minimum concrete cover required "
+    },
+    {
+     "name": "signpost_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies Class P Concrete with no explicit mention of concrete cover. However, the anchor bolts are em"
+    },
+    {
+     "name": "signpost_bad_069",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment, footing depth, and concrete cover.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows a 4-inch embedment of the anchor bolts into the Class P concrete footing, which exceeds the minimum 2-inch re"
+    },
+    {
+     "name": "signpost_bad_077",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment of 12 inches for anchor bolts and a footing depth of 48 inches which exceeds the minimum requirements.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies a Class P concrete footing with a 6-inch anchor embedment, which exceeds the 2-inch minimum c"
+    },
+    {
+     "name": "signpost_bad_089",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies a Class P concrete footing with a 6-inch embedment for anchor bolts, which exceeds the 2-inch minimum"
+    },
+    {
+     "name": "signpost_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment, footing depth, and concrete cover.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows an 8-inch embedment of the anchor bolts into the concrete, which exceeds the 2-inch minimum concrete cover re"
+    },
+    {
+     "name": "signpost_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment of 12 inches for anchor bolts and a footing depth of 54 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies Class P Concrete with no explicit mention of concrete cover. However, the anchor bolts are embedded a"
+    },
+    {
+     "name": "signpost_ok_030",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows Class P Concrete with no specific mention of concrete cover. However, since the anchor bolts are embedded"
+    },
+    {
+     "name": "signpost_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment of 12 inches for anchor bolts and a footing depth of 48 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_040",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 36 inches does not meet the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including concrete cover, footing depth, and anchor bolt embedment.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows Class P Concrete with no specific mention of concrete cover. However, since it's a standard plan, we assu"
+    },
+    {
+     "name": "signpost_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment, footing depth, and concrete cover.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing shows a Class P concrete footing with anchor bolts embedded at least 14 inches into the concrete, which exceeds the"
+    },
+    {
+     "name": "signpost_ok_072",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets the specified minimum embedment of 12 inches for anchor bolts and a footing depth of 48 inches, which exceeds the required minimums.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_082",
+     "expected": "COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 0.9,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 90,\n  \"rationale\": \"The footing depth of 54 inches does not meet the FDOT requirement of a minimum footing depth of 42 inches for utility pole/guardrail post foundations.\",\n  \"violated_rule\": \"FDOT: utility pole / guardrail post foundation min footing depth 42 inches.\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_096",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 0.95,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 95,\n  \"rationale\": \"The drawing meets all specified engineering compliance rules including minimum embedment, footing depth, and concrete cover.\",\n  \"violated_rule\": \"none\"\n}\n```\n\n### Explanation:\n\n1. **Concrete Cover**: The drawing specifies a Class P concrete footing with a minimum embedment of 12 inches, which satisfies the ACI 318 requirement"
+    }
+   ]
+  },
+  "72b_cot_thresh": {
+   "n": 100,
+   "accuracy_all": 97.0,
+   "wilson_all": [
+    91.55,
+    98.97
+   ],
+   "abstention_rate": 0.0,
+   "n_committed": 100,
+   "accuracy_committed": 97.0,
+   "ECE": 3.0,
+   "MCE": 3.0,
+   "Brier": 0.03,
+   "reliability": [
+    {
+     "bin": "0.0-0.1",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.1-0.2",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.2-0.3",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.3-0.4",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.4-0.5",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.5-0.6",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.6-0.7",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.7-0.8",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.8-0.9",
+     "n": 0,
+     "mean_confidence": null,
+     "accuracy": null,
+     "gap": null
+    },
+    {
+     "bin": "0.9-1.0",
+     "n": 100,
+     "mean_confidence": 100.0,
+     "accuracy": 97.0,
+     "gap": 3.0
+    }
+   ],
+   "records": [
+    {
+     "name": "culvert_bad_001",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"0.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"0.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 0.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_003",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.0 inch\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.0 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.0 inch is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_007",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.0 inch\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.0 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.0 inch is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"0.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"0.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 0.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"0.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"0.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 0.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"0.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"0.5 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 0.5 inches is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"1.0 inch\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"1.0 vs 2.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 1.0 inch is less than the required 2.0 inches.\",\n  \"violated_rule\": \"ACI 318 / AASHTO LRFD\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_008",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"3.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 3.0 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover meets the minimum requirement as specified.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_022",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"3.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 3.0 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.5 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.5 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 2.5 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"2.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 2.0 inches meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_058",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"3.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 3.0 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "culvert_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"2.0 inches\",\n      \"compare\": \"3.0 inches vs 2.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The concrete cover of 3.0 inches meets the minimum requirement of 2.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"28\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"28\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 28 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_027",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"15\\\"\",\n      \"threshold\": \"30\\\"\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 15 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_035",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"28 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"28 vs 30.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 28 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_045",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"20\\\"\",\n      \"threshold\": \"30\\\"\",\n      \"compare\": \"20\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 20 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_049",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"15\\\"\",\n      \"threshold\": \"30\\\"\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 15 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"15\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 15 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"20\\\"\",\n      \"threshold\": \"30\\\"\",\n      \"compare\": \"20\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 20 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_075",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"15\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"15\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 15 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"28\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"28\\\" vs 30\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 28 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"28 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"28 vs 30.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 28 inches is less than the required 30 inches.\",\n  \"violated_rule\": \"WYDOT 606.05\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"30\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"30\\\" vs 30.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_012",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"36.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"36.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 36.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"42.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"42.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 42.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"42.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"42.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 42.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_034",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"30\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"30\\\" vs 30.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"36.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"36.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 36.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_038",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"30\\\"\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"30\\\" vs 30.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 30 inches meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_044",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"48.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"48.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 48.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"48.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"48.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 48.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "guardrail_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Footing depth\",\n      \"actual_value\": \"48.0 inches\",\n      \"threshold\": \"30.0 inches\",\n      \"compare\": \"48.0 vs 30.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The footing depth of 48.0 inches meets the minimum requirement of 30.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_019",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening (PROWAG / ADA)\",\n      \"actual_value\": \"10.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"10.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 10.0 inches exceeds the maximum allowed 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular su"
+    },
+    {
+     "name": "inlet_bad_021",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed threshold of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n``"
+    },
+    {
+     "name": "inlet_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed threshold of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n``"
+    },
+    {
+     "name": "inlet_bad_037",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_039",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_061",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+     "name": "inlet_bad_065",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed threshold of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n``"
+    },
+    {
+     "name": "inlet_bad_079",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"6.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"6.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 6.0 inches exceeds the allowed threshold of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n``"
+    },
+    {
+     "name": "inlet_bad_083",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed threshold of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n``"
+    },
+    {
+     "name": "inlet_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"8.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"8.0 vs 4.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 8.0 inches exceeds the allowed maximum of 4.0 inches.\",\n  \"violated_rule\": \"PROWAG / ADA (vehicular surfaces)\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"3.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 3.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"3.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 3.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_026",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"4.0 inches vs 4.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening is exactly 4.0 inches as required by the rule.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_036",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"2.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 2.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_046",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"3.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 3.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_050",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"2.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 2.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"3.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"3.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 3.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_060",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"2.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 2.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"4.0 inches vs 4.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening matches the threshold exactly.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "inlet_ok_078",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Grate opening (PROWAG / ADA)\",\n      \"actual_value\": \"2.0 inches\",\n      \"threshold\": \"4.0 inches\",\n      \"compare\": \"2.0 vs 4.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The grate opening of 2.0 inches is within the allowed limit of 4.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "rebar_bad_005",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"27\\\"\",\n      \"threshold\": \"18\\\"\",\n      \"compare\": \"27\\\" vs 18\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n"
+    },
+    {
+     "name": "rebar_bad_011",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"29\\\"\",\n      \"threshold\": \"21\\\"\",\n      \"compare\": \"29\\\" vs 21\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"20\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"20\\\" vs 12\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_023",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"17\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"17\\\" vs 14\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_025",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"26\\\"\",\n      \"threshold\": \"18\\\"\",\n      \"compare\": \"26\\\" vs 18\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_051",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"25\\\"\",\n      \"threshold\": \"15\\\"\",\n      \"compare\": \"25\\\" vs 15\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n"
+    },
+    {
+     "name": "rebar_bad_053",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"18\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"18\\\" vs 14\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n"
+    },
+    {
+     "name": "rebar_bad_055",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"19\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"19\\\" vs 12\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_059",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"23\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"23\\\" vs 14\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"ratio"
+    },
+    {
+     "name": "rebar_bad_093",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"22\\\"\",\n      \"threshold\": \"15\\\"\",\n      \"compare\": \"22\\\" vs 15\\\"\",\n      \"result\": \"FAIL\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n"
+    },
+    {
+     "name": "rebar_ok_000",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"13\\\"\",\n      \"threshold\": \"18\\\"\",\n      \"compare\": \"13\\\" vs 18\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale"
+    },
+    {
+     "name": "rebar_ok_018",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"4\\\"\",\n      \"threshold\": \"15\\\"\",\n      \"compare\": \"4\\\" vs 15\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\":"
+    },
+    {
+     "name": "rebar_ok_028",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"8\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"8\\\" vs 14\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rat"
+    },
+    {
+     "name": "rebar_ok_048",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"11\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"11\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale"
+    },
+    {
+     "name": "rebar_ok_056",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"10\\\"\",\n      \"threshold\": \"18\\\"\",\n      \"compare\": \"10\\\" vs 18\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale"
+    },
+    {
+     "name": "rebar_ok_062",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"4\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"4\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\":"
+    },
+    {
+     "name": "rebar_ok_076",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"13\\\"\",\n      \"threshold\": \"21\\\"\",\n      \"compare\": \"13\\\" vs 21\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale"
+    },
+    {
+     "name": "rebar_ok_080",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"11\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"11\\\" vs 14\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2\\\"\",\n      \"threshold\": \"2\\\"\",\n      \"compare\": \"2\\\" vs 2\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale"
+    },
+    {
+     "name": "rebar_ok_084",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"16\\\"\",\n      \"threshold\": \"18\\\"\",\n      \"compare\": \"16\\\" vs 18\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"r"
+    },
+    {
+     "name": "rebar_ok_090",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Stirrup spacing\",\n      \"actual_value\": \"12\\\"\",\n      \"threshold\": \"14\\\"\",\n      \"compare\": \"12\\\" vs 14\\\"\",\n      \"result\": \"PASS\"\n    },\n    {\n      \"name\": \"Concrete cover\",\n      \"actual_value\": \"2.0\\\"\",\n      \"threshold\": \"2.0\\\"\",\n      \"compare\": \"2.0\\\" vs 2.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"r"
+    },
+    {
+     "name": "signpost_bad_015",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12.0 inches vs 12.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment meets the minimum requirement of 12.0 inches as specified.\",\n  \"violated_rule\": \"none\"\n}\n`"
+    },
+    {
+     "name": "signpost_bad_031",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12.0 vs 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 12.0 inches meets the minimum requirement.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_033",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"4.0 vs 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 4.0 inches is less than the required 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_047",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"6.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"6.0 vs 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 6.0 inches is less than the required 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_057",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"4.0 vs 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 4.0 inches is less than the required 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_069",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"4.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"4.0 vs 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 4.0 inches is less than the required 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_077",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"6\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"6 vs 12\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment depth of 6 inches is less than the required 12 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_085",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"6.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"6.0 vs 12.0\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment of 6.0 inches is less than the required 12.0 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_089",
+     "expected": "NON_COMPLIANT",
+     "verdict": "NON_COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"6\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"6\\\" vs 12.0\\\"\",\n      \"result\": \"FAIL\"\n    }\n  ],\n  \"verdict\": \"NON_COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 6 inches is less than the required 12 inches.\",\n  \"violated_rule\": \"AASHTO / std spec\"\n}\n```"
+    },
+    {
+     "name": "signpost_bad_097",
+     "expected": "NON_COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": false,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12.0 inches vs 12.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor embedment value matches the required minimum.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_010",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"16\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"16\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 16 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_020",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"18.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"18.0 vs 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 18.0 inches meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_030",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"16\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"16\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 16 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_032",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"16.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"16.0 vs 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 16.0 inches meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_040",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"16\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"16\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 16 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_052",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"14\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"14\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 14 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_064",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"14\\\"\",\n      \"threshold\": \"12.0\\\"\",\n      \"compare\": \"14\\\" vs 12.0\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 14 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_072",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"12\\\"\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"12\\\" vs 12.0 inches\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_082",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"18.0 inches\",\n      \"threshold\": \"12.0 inches\",\n      \"compare\": \"18.0 vs 12.0\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 18.0 inches meets the minimum requirement of 12.0 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    },
+    {
+     "name": "signpost_ok_096",
+     "expected": "COMPLIANT",
+     "verdict": "COMPLIANT",
+     "confidence": 1.0,
+     "abstained": false,
+     "correct": true,
+     "raw": "```json\n{\n  \"checks\": [\n    {\n      \"name\": \"Anchor bolt embedment\",\n      \"actual_value\": \"16\\\"\",\n      \"threshold\": \"12\\\"\",\n      \"compare\": \"16\\\" vs 12\\\"\",\n      \"result\": \"PASS\"\n    }\n  ],\n  \"verdict\": \"COMPLIANT\",\n  \"confidence\": 100,\n  \"rationale\": \"The anchor bolt embedment of 16 inches meets the minimum requirement of 12 inches.\",\n  \"violated_rule\": \"none\"\n}\n```"
+    }
+   ]
+  }
+ }
+}
