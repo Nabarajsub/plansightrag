@@ -266,18 +266,3 @@ honour `CLUSTER_ROOT`.
 | `table9_frozen.py` | Table 9 re-run on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
 | `faithfulness_probe.py` | Causal probe of the MaxSim heatmaps. **Result is confounded — see the docstring; not used as evidence in the paper.** | 1 GPU, ~5 min |
 
-### Verification (`code/analysis/verify_*.py`)
-
-These re-derive the revision's claims from the shipped artefacts rather than
-trusting the write-up. They are included so a reviewer can run the same checks.
-
-| Script | Checks |
-|---|---|
-| `verify_ledger.py` | Every numeric claim in the provenance ledger against its source file |
-| `verify_assumptions.py` | The assumptions each analysis rests on (field mappings, unit conventions, shared case sets) |
-| `verify_ladder_stratified.py` | Whether the capability-ladder findings survive the question-alignment confound |
-| `verify_crossdoc.py` | That superseded values are not presented as current |
-
-Running `verify_ledger.py` against this repository reports **50 checks passed, 0
-failed**. Claims whose source is not shipped here (per-baseline intermediate
-reports) are listed as unverified rather than assumed.
