@@ -32,10 +32,23 @@ def chk(tag, claim, got, want, tol=0.01):
 
 
 def J(p):
+    """Load a report JSON. A release clone keeps reports under several
+    subdirectories, so a name that is not where the caller expects is looked up
+    in the others before giving up -- otherwise a clone reports 'source missing'
+    for files it actually ships."""
     try:
         return json.load(open(p))
     except Exception:
-        return None
+        pass
+    base = _os.path.basename(p)
+    for sub in ("analysis", "retrieval", "compliance", "transfer_lora"):
+        alt = f"{PSR_ROOT}/reports/{sub}/{base}"
+        if alt != p and _os.path.exists(alt):
+            try:
+                return json.load(open(alt))
+            except Exception:
+                pass
+    return None
 
 
 # ---------------- A13 rank-1 conditioning ----------------
@@ -162,7 +175,9 @@ def is_stub(t):
     core = _re.sub(r"[\*\s:#\-]", "", STUB.sub("", (t or "").strip()))
     return len(core) < 8 or ("?" not in (t or "") and len((t or "").strip()) < 40)
 n_stub = n_tot = 0
-for f in sorted(glob.glob(f"{ROOT}/lora_finetune/split_*.jsonl")):
+_splits = (sorted(glob.glob(f"{PSR_ROOT}/data/splits/split_*.jsonl"))
+           or sorted(glob.glob(f"{ROOT}/lora_finetune/split_*.jsonl")))
+for f in _splits:
     for l in open(f):
         r = json.loads(l); n_tot += 1
         if is_stub(r.get("query")): n_stub += 1

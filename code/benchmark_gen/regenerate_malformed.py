@@ -32,12 +32,18 @@ Image.MAX_IMAGE_PIXELS = None
 DRAFTER = "Qwen/Qwen2.5-VL-72B-Instruct"
 VERIFIER = "Qwen/Qwen2.5-VL-7B-Instruct"
 SPLITS = sorted(glob.glob(f"{PSR_ROOT}/data/splits/split_*.jsonl"))
-# resolve page images on this machine
-LOCAL_DIRS = [d for d in ("/gscratch/nsubedi1/floorplan_qa/extracted_images",
+# Resolve page images on this machine. Point PLANS_ROOT (or PSR_IMAGE_DIRS, a
+# colon-separated list) at wherever the rendered plan pages live; the remaining
+# entries are the authors' own paths and are simply skipped when absent.
+_env_dirs = [d for d in os.environ.get("PSR_IMAGE_DIRS", "").split(":") if d]
+LOCAL_DIRS = [d for d in (_env_dirs + [
+                          PLANS_ROOT,
+                          os.path.expanduser("~/floorplan_qa/extracted_images"),
+                          "/gscratch/nsubedi1/floorplan_qa/extracted_images",
                           "/project/gr-wydot-chatbot/copalirag/data/colorado_2025/images",
                           "/project/gr-wydot-chatbot/copalirag/data/arizona_2025/images",
                           "/project/gr-wydot-chatbot/copalirag/data/florida_2026/images",
-                          PLANS_ROOT) if os.path.isdir(d)]
+                          ]) if d and os.path.isdir(d)]
 
 CATEGORY_PROMPT = {
     "Dimensional Accuracy":
