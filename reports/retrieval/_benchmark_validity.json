@@ -1,0 +1,154 @@
+{
+ "note": "Join over stored per-query hits and the refine-loop attempt chain. No model was re-run.",
+ "retriever": "ColNomic-3B",
+ "split": "424-pair page-disjoint test split over the 1,898-page index",
+ "by_refine_path": {
+  "never_rephrased": {
+   "n": 188,
+   "hits": 181,
+   "recall@5": 96.28,
+   "ci95_wilson": [
+    92.51,
+    98.18
+   ]
+  },
+  "rephrased_and_hit": {
+   "n": 149,
+   "hits": 144,
+   "recall@5": 96.64,
+   "ci95_wilson": [
+    92.39,
+    98.56
+   ]
+  },
+  "rephrased_at_cap": {
+   "n": 87,
+   "hits": 68,
+   "recall@5": 78.16,
+   "ci95_wilson": [
+    68.39,
+    85.55
+   ]
+  },
+  "ALL": {
+   "n": 424,
+   "hits": 393,
+   "recall@5": 92.69,
+   "ci95_wilson": [
+    89.81,
+    94.8
+   ]
+  }
+ },
+ "anchor_composition_final_wording": {
+  "none": {
+   "n": 187,
+   "pct": 44.1
+  },
+  "quoted": {
+   "n": 209,
+   "pct": 49.29
+  },
+  "unique_numeric": {
+   "n": 63,
+   "pct": 14.86
+  },
+  "plan_id": {
+   "n": 17,
+   "pct": 4.01
+  }
+ },
+ "anchor_added_by_refine_loop": {
+  "quoted": {
+   "n": 81,
+   "pct_of_all": 19.1
+  },
+  "plan_id": {
+   "n": 16,
+   "pct_of_all": 3.77
+  },
+  "unique_numeric": {
+   "n": 29,
+   "pct_of_all": 6.84
+  }
+ },
+ "recall_by_anchor": {
+  "plan_id_no": {
+   "n": 407,
+   "hits": 379,
+   "recall@5": 93.12,
+   "ci95_wilson": [
+    90.24,
+    95.2
+   ]
+  },
+  "quoted_no": {
+   "n": 215,
+   "hits": 200,
+   "recall@5": 93.02,
+   "ci95_wilson": [
+    88.81,
+    95.73
+   ]
+  },
+  "unique_numeric_no": {
+   "n": 361,
+   "hits": 335,
+   "recall@5": 92.8,
+   "ci95_wilson": [
+    89.66,
+    95.04
+   ]
+  },
+  "no_anchor_at_all": {
+   "n": 187,
+   "hits": 173,
+   "recall@5": 92.51,
+   "ci95_wilson": [
+    87.83,
+    95.49
+   ]
+  },
+  "quoted_yes": {
+   "n": 209,
+   "hits": 193,
+   "recall@5": 92.34,
+   "ci95_wilson": [
+    87.93,
+    95.23
+   ]
+  },
+  "unique_numeric_yes": {
+   "n": 63,
+   "hits": 58,
+   "recall@5": 92.06,
+   "ci95_wilson": [
+    82.73,
+    96.56
+   ]
+  },
+  "plan_id_yes": {
+   "n": 17,
+   "hits": 14,
+   "recall@5": 82.35,
+   "ci95_wilson": [
+    58.97,
+    93.81
+   ]
+  }
+ },
+ "split_integrity": {
+  "unique_pages_per_split": {
+   "train": 719,
+   "dev": 153,
+   "test": 154
+  },
+  "pages_in_more_than_one_split": 228,
+  "plan_ids_total": 967,
+  "plan_ids_straddling_splits": 103,
+  "plan_families_total": 749,
+  "plan_families_straddling_splits": 135,
+  "family_rule": "trailing letter stripped, e.g. 511-1A and 511-1B -> 511-1",
+  "family_disjoint_needed": true
+ }
+}
