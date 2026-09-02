@@ -237,8 +237,16 @@ Download from:
 and are distributed through a click-through acceptance page. Obtain them directly
 from WYDOT. This is one reason no plan imagery is redistributed in this repository.
 
-Rasterize at 200 DPI page-level (400 DPI for the tiling study) and set
-`PLANS_ROOT`. See `LICENSE` for the split between code (MIT) and benchmark
+Rebuild the page corpus with the shipped renderer, which reproduces the original
+scale and file naming per document (`data/render_map.json`):
+
+```bash
+python code/render_pages.py --pdf-dir /path/to/downloaded/pdfs --out data/pages
+export PLANS_ROOT=$PWD/data/pages
+```
+
+Source PDFs are named as in `data/sources.json`, which also carries their URLs and
+sha256. Rendered pages line up with `data/page_index.json` one-to-one. See `LICENSE` for the split between code (MIT) and benchmark
 annotations (CC BY 4.0).
 
 Funded by the Wyoming Department of Transportation, grant RS03225.
