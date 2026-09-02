@@ -139,11 +139,11 @@
  },
  "split_integrity": {
   "unique_pages_per_split": {
-   "train": 719,
-   "dev": 153,
-   "test": 154
+   "train": 1449,
+   "dev": 179,
+   "test": 187
   },
-  "pages_in_more_than_one_split": 228,
+  "pages_in_more_than_one_split": 0,
   "plan_ids_total": 967,
   "plan_ids_straddling_splits": 103,
   "plan_families_total": 749,

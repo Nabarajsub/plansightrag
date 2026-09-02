@@ -137,9 +137,9 @@ def main():
     per_split_pages = {}
     for s, p in SPLITS.items():
         rows = [json.loads(l) for l in open(p)]
-        per_split_pages[s] = len({os.path.basename(r.get("image_path") or r["page_id"]) for r in rows})
+        per_split_pages[s] = len({(os.path.basename(r["image_path"]) if r.get("image_path") else r["page_id"]) for r in rows})
         for r in rows:
-            pages.setdefault(os.path.basename(r.get("image_path") or r["page_id"]), set()).add(s)
+            pages.setdefault((os.path.basename(r["image_path"]) if r.get("image_path") else r["page_id"]), set()).add(s)
             plans.setdefault(str(r.get("plan_id")), set()).add(s)
             fams.setdefault(fam(r.get("plan_id")), set()).add(s)
     straddle = lambda d: sum(1 for v in d.values() if len(v) > 1)
