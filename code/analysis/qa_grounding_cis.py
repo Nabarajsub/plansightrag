@@ -1,7 +1,7 @@
-"""Confidence intervals for the QA and grounding headline numbers (R2 statistics 3).
+"""Confidence intervals for the QA and grounding headline numbers.
 
-Reviewer 2 asks for intervals on *all* headline results, not selected analyses.
-Retrieval and compliance already carry them; QA and grounding did not --
+Retrieval and compliance carry intervals on every headline result; QA and
+grounding did not --
 `vqa_results.json` stored only n and accuracy, and the real-corpus grounding
 report stored bare percentages.
 
@@ -18,13 +18,14 @@ Three intervals per cell, because they answer different questions:
   query bootstrap   resamples questions, distribution-free
   page-clustered    resamples *pages* and takes all their questions together
 
-The third matters for the same reason R2 raises it in statistics item 5:
-questions drawn from one page are correlated, so treating 424 questions as 424
+The third matters because questions drawn from one page are correlated, so treating 424 questions as 424
 independent observations overstates precision. Where the page-clustered interval
 is wider than the Wilson interval, that gap is the correlation.
 
     python qa_grounding_cis.py
 """
+
+from __future__ import annotations
 
 # --- release path resolution (release copy; the run-time original under
 # baselines_v2/ is unchanged) ---
@@ -34,7 +35,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import json
 import math

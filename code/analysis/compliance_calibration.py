@@ -1,7 +1,7 @@
-"""Calibration and abstention for the compliance judge (R2 statistics 6).
+"""Calibration and abstention for the compliance judge.
 
-Reviewer 2 asks for calibration alongside sensitivity, specificity, precision and
-recall. The other five are recoverable from the existing logs; calibration is not,
+Calibration is reported alongside sensitivity, specificity, precision and recall.
+The other five are recoverable from the existing logs; calibration is not,
 because every prompt in the study asks only for
 
     {"verdict": ..., "rationale": ..., "violated_rule": ...}
@@ -296,7 +296,7 @@ def main():
             "records": recs}
         print(f"  [done] {cfg}: acc {nk}/{len(recs)}  abstain "
               f"{results[cfg]['abstention_rate']}%  ECE {ece}", flush=True)
-        json.dump({"note": "Calibration and abstention (R2 stats 6).",
+        json.dump({"note": "Calibration and abstention.",
                    "arm": "facts_withheld", "n_bins": N_BINS,
                    "elapsed_min": round((time.time() - t0) / 60, 1),
                    "configs": results}, open(a.out, "w"), indent=1)

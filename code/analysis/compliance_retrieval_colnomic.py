@@ -1,9 +1,9 @@
-"""Compliance-set retrieval on the adopted backbone (A29b follow-up, Cluster E).
+"""Compliance-set retrieval on the adopted backbone.
 
 The retrieval rung of the capability ladder was measured with ColPali-v1.2 -- the
 predecessor backbone -- because `compliance/compliance_smoke_n10.py` hardcodes
-`vidore/colpali-v1.2`. That leaves the compliance table inconsistent with the rest
-of the paper, which is exactly the objection R1.8/R2.7/R2-repro 5 raise.
+`vidore/colpali-v1.2`. That would leave the compliance table inconsistent with the rest
+of the paper.
 
 This re-measures it with ColNomic-3B under the identical protocol: the 100
 CAD mockups are embedded and added to the 1,898-page five-DOT index, each
@@ -20,16 +20,15 @@ disambiguation on synthetic data and is not comparable to H1.
     python compliance_retrieval_colnomic.py
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import json
 import math
@@ -152,7 +151,7 @@ def main():
     miss = [r for r in records if not r["hit"]]
     filler = Counter(x for r in miss for x in r["top5_kinds"])
 
-    out = {"note": "Compliance-set retrieval on ColNomic-3B (A29b / Cluster E).",
+    out = {"note": "Compliance-set retrieval on ColNomic-3B.",
            "model_id": MODEL_ID, "k": K,
            "n_queries": n, "n_index_pages": len(all_paths),
            "n_real_pages": len(paths), "n_mockups": len(mock_embs),

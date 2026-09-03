@@ -1,7 +1,7 @@
 """Record exactly which source documents the corpus was built from.
 
-Reviewer #2 (major 9, repro 1 and 7) asks for page identifiers and for the plan
-images to be referenced rather than redistributed. Referencing only works if the
+Page identifiers are shipped and the plan images are referenced rather than
+redistributed. Referencing only works if the
 reader can confirm they hold the *same* document: DOT standard plans are revised,
 so "download it from the agency website" is not by itself reproducible.
 

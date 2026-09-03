@@ -1,6 +1,6 @@
 """Eval a trained ColNomic adapter (head or full-LoRA) vs zero-shot ColNomic on the
 424-pair test split (over the 1,898-page index) + Michigan transfer -- the H3
-ablation numbers for manuscript_swap.
+ablation numbers.
 
 Usage:
   python eval_colnomic.py --mode head --adapter lora_finetune/colnomic_head_standard --tag head_standard

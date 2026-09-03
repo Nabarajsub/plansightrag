@@ -1,5 +1,5 @@
 {
- "note": "Threshold-sensitivity analysis for the pre-declared hypotheses H1-H4 (R2.10, stats 7).",
+ "note": "Threshold-sensitivity analysis for the pre-declared hypotheses H1-H4.",
  "n_boot": 10000,
  "seed": 20260810,
  "hypotheses": {

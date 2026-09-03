@@ -49,7 +49,7 @@ git clone git@github.com:Nabarajsub/plansightrag.git && cd plansightrag
 pip install -r requirements.txt
 
 # Plan images are not redistributed. Rebuild them from the public DOT PDFs,
-# then point PLANS_ROOT at the rasterized output (200 DPI page-level).
+# then point PLANS_ROOT at the rasterized output (per-document DPI in data/render_map.json).
 export PLANS_ROOT=/path/to/rasterized/pages
 export PSR_ROOT=$(pwd)          # optional; defaults to the repo root
 ```
@@ -153,7 +153,7 @@ the committed report of the same name.
 
 ## Reproducibility manifest
 
-Everything reviewer-requested for exact re-execution is committed:
+Everything needed for exact re-execution is committed:
 
 | Artifact | File | Contents |
 |---|---|---|
@@ -167,7 +167,7 @@ Everything reviewer-requested for exact re-execution is committed:
 | Model revisions | `data/models.json` | 20 models pinned to commit SHAs |
 | Decoding settings | `data/models.json` | greedy throughout (`do_sample=False`), per-task `max_new_tokens` |
 | Environment | `requirements.txt` | pinned versions |
-| Evaluation code | `code/` | 72 scripts; table→report→script map in `TABLE_PROVENANCE.md` |
+| Evaluation code | `code/` | 88 scripts; table→report→script map in `TABLE_PROVENANCE.md` |
 
 Regenerate the derived artifacts with:
 
@@ -251,10 +251,9 @@ annotations (CC BY 4.0).
 
 Funded by the Wyoming Department of Transportation, grant RS03225.
 
-## Revision analyses (`code/analysis/`)
+## Additional analyses (`code/analysis/`)
 
-Added during the *Automation in Construction* major revision. Each script is
-self-contained and reads only artefacts shipped in this repository. Set
+Each script is self-contained and reads only artefacts shipped in this repository. Set
 `PSR_ROOT` to the repository root; scripts that need the full page corpus also
 honour `CLUSTER_ROOT`.
 
@@ -267,10 +266,10 @@ honour `CLUSTER_ROOT`.
 | `compliance_retrieval_colnomic.py` | Compliance-set retrieval re-measured on ColNomic-3B | 1 GPU, ~2 min |
 | `stats_all_methods.py` | Wilson, bootstrap and page-clustered intervals for all 57 retrieval runs | CPU, ~2 min |
 | `split_similarity.py` | Duplicate / near-duplicate rates and cross-split similarity, page and question level | CPU, ~10 min |
-| `baseline_settings.py` | Per-baseline implementation settings across the eight fields R2 names | CPU, seconds |
+| `baseline_settings.py` | Per-baseline implementation settings across eight reproducibility fields | CPU, seconds |
 | `baseline_settings_table.py` | Per-baseline implementation settings, with each generating script's documentation | CPU, seconds |
 | `compliance_calibration.py` | ECE, MCE, Brier and abstention for the compliance judge | 1 GPU, ~1.5 h |
 | `qa_grounding_cis.py` | Wilson, bootstrap and page-clustered intervals for the QA and grounding families | CPU, seconds |
-| `table9_frozen.py` | Table 9 re-run on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
-| `faithfulness_probe.py` | Causal probe of the MaxSim heatmaps. **Result is confounded — see the docstring; not used as evidence in the paper.** | 1 GPU, ~5 min |
+| `table9_frozen.py` | Judge configurations on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
+| `faithfulness_probe.py` | Causal occlusion probe of the MaxSim attribution maps: top-5% patches masked vs. an equal-area, equal-shape control | 1 GPU, ~5 min |
 

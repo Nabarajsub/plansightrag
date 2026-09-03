@@ -1,4 +1,4 @@
-"""Consolidated deployment-latency benchmark on a single GPU (reviewer request).
+"""Consolidated deployment-latency benchmark on a single GPU.
 
 Measures, one query at a time (batch 1) on the stated hardware:
   - indexing throughput  : ColNomic encode of the 1,898-page index (one-time, offline)

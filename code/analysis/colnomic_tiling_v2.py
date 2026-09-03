@@ -1,4 +1,4 @@
-"""Tiling aggregations designed for a late-interaction retriever (Cluster E follow-up).
+"""Tiling aggregations designed for a late-interaction retriever.
 
 The published tiling study applied ColPali's recipe unchanged: crop the page into
 1024 px tiles, score each tile independently, and take the MAX over tile scores. On
@@ -35,16 +35,15 @@ every row is comparable to the manuscript.
     python colnomic_tiling_v2.py [--grid coarse]
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 import argparse, json, math, os, sys, time
 
 import numpy as np

@@ -1,6 +1,5 @@
-"""Generate the four release artifacts requested by reviewer #2 (major issue 9,
-reproducibility item 1): prompts, seeds, model checkpoints/revisions, and the
-environment pin.
+"""Generate the four release artifacts: prompts, seeds, model checkpoints/revisions,
+and the environment pin.
 
     python code/make_release_artifacts.py [--no-network]
 

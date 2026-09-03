@@ -1,5 +1,5 @@
 {
- "note": "Cross-split similarity and duplicate/near-duplicate rates (R2 reproducibility 2).",
+ "note": "Cross-split similarity and duplicate/near-duplicate rates.",
  "near_duplicate_threshold": 0.8,
  "ngram": 5,
  "splits": {

@@ -1,15 +1,13 @@
-"""Judge-free numeric scoring for the Dimensional Accuracy category (Cluster C).
+"""Judge-free numeric scoring for the Dimensional Accuracy category.
 
-All three reviewers object that the benchmark is scored by an LLM judge that was
-never validated against people. For the largest answer-bearing category the judge
-is avoidable entirely: a dimensional answer is a physical quantity, and two
+The benchmark is scored by an LLM judge. For the largest answer-bearing category
+the judge is avoidable entirely: a dimensional answer is a physical quantity, and two
 quantities can be compared arithmetically.
 
 This parses the reference and the model answer into physical lengths, normalises
 to millimetres, and scores a match on tolerance. It removes the judge from the
 loop for 112 of 424 test items and gives us a second, mechanical estimate to set
-against the LLM judge -- the disagreements are themselves the judge-error
-analysis the reviewers asked for.
+against the LLM judge; the disagreements are themselves a judge-error analysis.
 
 Handled: 4'-10", 21", 4' [1220], 1.5 m, 12 in, 300 mm, 2.5 ft, bare numbers with
 a unit named in the question, and multi-quantity answers (any reference quantity
@@ -23,16 +21,15 @@ content ('Not specified'). Those still need the judge, and we say so.
     python numeric_match.py
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import json
 import math
@@ -127,7 +124,7 @@ def main():
 
     W = 84
     print("=" * W)
-    print("JUDGE-FREE NUMERIC SCORING -- Dimensional Accuracy  (Cluster C, R1.3/R2.3)")
+    print("JUDGE-FREE NUMERIC SCORING -- Dimensional Accuracy")
     print("=" * W)
     print(f"\n  Dimensional Accuracy items on the 424 test split : {total}")
     print(f"  parseable as a physical length                   : {len(scorable)} "
@@ -185,7 +182,7 @@ def main():
         print(f"  net judge bias                  : "
               f"{'lenient' if fa > fr else 'strict'} by {abs(fa - fr)} decisions")
 
-    out = {"note": "Judge-free numeric scoring for Dimensional Accuracy (Cluster C).",
+    out = {"note": "Judge-free numeric scoring for Dimensional Accuracy.",
            "tolerance": {"relative": TOL_REL, "absolute_mm": TOL_ABS_MM},
            "n_dimensional_items": total, "n_scorable": len(scorable),
            "n_unscorable": len(unscorable),

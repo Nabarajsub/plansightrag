@@ -1,11 +1,7 @@
-"""Causal faithfulness probe for the MaxSim grounding heatmaps (Cluster F, R2.6).
+"""Causal probe for the MaxSim retrieval-attribution heatmaps.
 
-Reviewer 2 objects that we present MaxSim heatmaps as if they explained the
-answer, when they only show where the *retriever* matched the query. That is
-correct as written, and the safe fix is to rename them "retrieval attribution"
-and drop every causal word.
-
-This asks whether a weaker causal claim survives: if the highlighted region is
+The heatmaps show where the *retriever* matched the query, not which region the
+answering model used. This asks whether a weaker causal claim holds: if the highlighted region is
 where the evidence actually lives, then hiding it should change the answer, and
 hiding an equal amount of unrelated page should not.
 
@@ -49,16 +45,15 @@ stop asserting it without evidence.
     python faithfulness_probe.py --n 100
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import argparse
 import json
@@ -301,7 +296,7 @@ def main():
     # SECONDARY: flip of correctness, on items the model got right unmasked
     b01, b10, p = mcnemar([(not x["masked_ok"], not x["control_ok"]) for x in live])
 
-    out = {"note": "Causal faithfulness probe for MaxSim heatmaps (R2.6).",
+    out = {"note": "Causal occlusion probe for MaxSim attribution heatmaps.",
            "retriever": RETRIEVER, "vlm": VLM, "top_pct_hidden": TOP_PCT,
            "seed": SEED, "n_items": N, "n_base_correct": n,
            "primary_change_rate": {

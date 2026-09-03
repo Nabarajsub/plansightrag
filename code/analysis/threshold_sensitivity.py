@@ -1,16 +1,14 @@
-"""Threshold-sensitivity analysis for the pre-declared hypotheses H1-H4 (R2.10, stats 7).
+"""Threshold-sensitivity analysis for the pre-declared hypotheses H1-H4.
 
-Reviewer 2 objects that the acceptance thresholds (15 pp, 90%, 60%, 20 pp) are
-arbitrary. Rather than retro-fit a justification for each number -- which would
-read as post-hoc rationalisation of values that were fixed in advance -- this
-asks the question the objection actually implies:
+The acceptance thresholds (15 pp, 90%, 60%, 20 pp) were fixed in advance. Rather
+than justify each number after the fact, this asks:
 
     Does the verdict depend on the threshold we happened to choose?
 
 For each hypothesis we sweep the threshold across its whole admissible range and
 report the value at which the verdict flips. Where the flip point is far from the
-declared threshold, the conclusion is insensitive to the choice and the objection
-is immaterial. Where it is close, we say so.
+declared threshold, the conclusion is insensitive to the choice. Where it is
+close, we say so.
 
 Every point estimate is reported with an interval and an effect size, so the
 inference rests on those rather than on the threshold crossing.
@@ -18,16 +16,15 @@ inference rests on those rather than on the threshold crossing.
     python threshold_sensitivity.py
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import json
 import math
@@ -86,7 +83,7 @@ def main():
            "hypotheses": {}}
     W = 78
     print("=" * W)
-    print("THRESHOLD-SENSITIVITY ANALYSIS  (R2.10 / statistics item 7)")
+    print("THRESHOLD-SENSITIVITY ANALYSIS")
     print("=" * W)
 
     # ---------------------------------------------------------------- H1

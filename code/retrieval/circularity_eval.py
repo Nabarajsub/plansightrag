@@ -1,4 +1,4 @@
-"""Construct-validity / circularity experiment for manuscript_swap.
+"""Construct-validity / circularity experiment.
 
 The QnA benchmark was built with ColPali in the refine loop (a question is
 accepted when ColPali ranks its target page in the top-5; otherwise it is

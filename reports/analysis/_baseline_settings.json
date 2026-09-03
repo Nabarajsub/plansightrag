@@ -1,5 +1,5 @@
 {
- "note": "Per-baseline implementation settings (R2 repro 4).",
+ "note": "Per-baseline implementation settings.",
  "n_baselines": 58,
  "field_coverage": {
   "model": 58,
@@ -23,7 +23,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 95.28301886792453,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -37,7 +37,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "same-backbone counterpart to the manuscript's ColPali rerank table",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 94.5754716981132,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -51,7 +51,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 93.86792452830188,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -65,7 +65,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 93.86792452830188,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -79,7 +79,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 93.63207547169812,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -93,7 +93,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 93.39622641509433,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -107,7 +107,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.9245283018868,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -121,7 +121,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.68867924528301,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -135,7 +135,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.68867924528301,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -149,7 +149,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "same-backbone counterpart to the manuscript's ColPali tiling row",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.45283018867924,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -163,7 +163,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.45283018867924,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -177,7 +177,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 92.45,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -191,7 +191,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 91.98113207547169,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -205,7 +205,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 91.27358490566037,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -219,7 +219,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 91.27358490566037,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -233,7 +233,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "same-backbone counterpart to the manuscript's HPC-ColPali row (65.09%)",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 90.33018867924528,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -247,7 +247,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 90.09433962264151,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -261,7 +261,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 87.26415094339623,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -275,7 +275,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 84.19811320754717,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -289,7 +289,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 83.9622641509434,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -303,7 +303,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "same-backbone counterpart to the manuscript's ColPali tiling row",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 83.72641509433963,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -331,7 +331,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Tiles are crops of the 200 DPI render (3400x4400); they add no resolut",
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 81.83962264150944,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -359,7 +359,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 69.5754716981132,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -373,7 +373,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 65.09433962264151,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -387,7 +387,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": "lowercase, [a-z0-9]+, min length 2, no stemming",
    "intended_task": null,
-   "documentation": "Strong lexical baseline: OCR + BM25 (reviewer #2, major issue 8). R2.8: \"Strong OCR+BM25 and tuned OCR+BGE-M3 baselines should be included under identical corpus and duplicate-handling conditions.\" BM25 is the right strong lexical control for this corpus: standard-plan queries often carry alphanumeric identifiers (plan IDs, sheet titles, dimension callouts) that a sparse exact-match retriever handles better than a dense encoder. If the visual retriever's margin survives BM25, the margin is not an artifact of having compared only against weak text baselines. Identical protocol to every other ba",
+   "documentation": "Strong lexical baseline: OCR + BM25. BM25 is the right strong lexical control for this corpus: standard-plan queries often carry alphanumeric identifiers (plan IDs, sheet titles, dimension callouts) that a sparse exact-match retriever handles better than a dense encoder. If the visual retriever's margin survives BM25, the margin is not an artifact of having compared only against weak text baselines. Identical protocol to every other ba",
    "recall@5": 58.0188679245283,
    "generating_script": "bench_ocr_bm25.py"
   },
@@ -401,7 +401,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": "lowercase, [a-z0-9]+, min length 2, no stemming",
    "intended_task": null,
-   "documentation": "Strong lexical baseline: OCR + BM25 (reviewer #2, major issue 8). R2.8: \"Strong OCR+BM25 and tuned OCR+BGE-M3 baselines should be included under identical corpus and duplicate-handling conditions.\" BM25 is the right strong lexical control for this corpus: standard-plan queries often carry alphanumeric identifiers (plan IDs, sheet titles, dimension callouts) that a sparse exact-match retriever handles better than a dense encoder. If the visual retriever's margin survives BM25, the margin is not an artifact of having compared only against weak text baselines. Identical protocol to every other ba",
+   "documentation": "Strong lexical baseline: OCR + BM25. BM25 is the right strong lexical control for this corpus: standard-plan queries often carry alphanumeric identifiers (plan IDs, sheet titles, dimension callouts) that a sparse exact-match retriever handles better than a dense encoder. If the visual retriever's margin survives BM25, the margin is not an artifact of having compared only against weak text baselines. Identical protocol to every other ba",
    "recall@5": 54.716981132075475,
    "generating_script": "bench_ocr_bm25.py"
   },
@@ -429,7 +429,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 50.0,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -443,7 +443,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": "best of the configurations above; all are reported individually so the",
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 50.0,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -457,7 +457,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 46.93396226415094,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -471,7 +471,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected CLIP / Nougat / Pix2Struct baselines (reviewer #2, major issue 8). Three more baselines whose low scores reflected the harness rather than the model. Each diagnosis is stated with the evidence that produced it. CLIP (manuscript: 1.89%) CLIPProcessor resizes every input to 224x224. A 4400x3400 standard-plan sheet becomes 224x224, at which point no dimension callout is legible - the model was being asked to match text against an unreadable thumbnail. The text tower also truncates at 77 tokens. Fix: tile the page, encode each tile at native processor resolution, and score a page by the ",
+   "documentation": "Corrected CLIP / Nougat / Pix2Struct baselines. Three more baselines whose low scores reflected the harness rather than the model. Each diagnosis is stated with the evidence that produced it. CLIP (manuscript: 1.89%) CLIPProcessor resizes every input to 224x224. A 4400x3400 standard-plan sheet becomes 224x224, at which point no dimension callout is legible - the model was being asked to match text against an unreadable thumbnail. The text tower also truncates at 77 tokens. Fix: tile the page, encode each tile at native processor resolution, and score a page by the ",
    "recall@5": 45.990566037735846,
    "generating_script": "bench_visual_fixed.py"
   },
@@ -485,7 +485,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 44.81132075471698,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -499,7 +499,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected OCR+MiniLM and VisionRAG-Pyramid baselines (reviewer #2, major issue 8). Both were crippled by the same defect, measured not assumed: all-MiniLM-L6-v2 has max_seq_length = 256 tokens. Median OCR page = 852 tokens; 98% of pages exceed the limit. The median page therefore lost ~70% of its text to silent truncation. OCR + MiniLM (manuscript: 25.24%) encoded each page's full OCR string in one call, so only the first 256 tokens of a 852-token page were ever seen. Fix: overlapping chunks, each encoded within the model's real context, page score = max over its chunks. VisionRAG Pyramid + RR",
+   "documentation": "Corrected OCR+MiniLM and VisionRAG-Pyramid baselines. Both were crippled by the same defect, measured not assumed: all-MiniLM-L6-v2 has max_seq_length = 256 tokens. Median OCR page = 852 tokens; 98% of pages exceed the limit. The median page therefore lost ~70% of its text to silent truncation. OCR + MiniLM (manuscript: 25.24%) encoded each page's full OCR string in one call, so only the first 256 tokens of a 852-token page were ever seen. Fix: overlapping chunks, each encoded within the model's real context, page score = max over its chunks. VisionRAG Pyramid + RR",
    "recall@5": 40.56603773584906,
    "generating_script": "bench_text_fixed.py"
   },
@@ -513,7 +513,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 36.79245283018868,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -527,7 +527,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": "reproduction of the manuscript's BGE-M3 + OCR baseline",
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 36.79245283018868,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -541,7 +541,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 36.79245283018868,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -555,7 +555,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Tuned OCR + BGE-M3 baseline (reviewer #2, major issue 8). The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. R2 asks for a *tuned* version so the reported text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
+   "documentation": "Tuned OCR + BGE-M3 baseline. The manuscript's BGE-M3 baseline encodes each page's full OCR text into a single dense vector (max_length=8192). On dense plan sheets that averages a whole page of scattered callouts into one point, which is the weakest possible use of the model. A *tuned* version is reported so the text-retrieval ceiling is not an artifact of an untuned baseline. Every configuration is reported, not just the best, so the tuning is auditable: full_single the manuscript's setting - one vector per page (reproduction check) chunk_maxpool OCR split",
    "recall@5": 36.320754716981135,
    "generating_script": "bench_bge_m3_tuned.py"
   },
@@ -569,7 +569,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected OCR+MiniLM and VisionRAG-Pyramid baselines (reviewer #2, major issue 8). Both were crippled by the same defect, measured not assumed: all-MiniLM-L6-v2 has max_seq_length = 256 tokens. Median OCR page = 852 tokens; 98% of pages exceed the limit. The median page therefore lost ~70% of its text to silent truncation. OCR + MiniLM (manuscript: 25.24%) encoded each page's full OCR string in one call, so only the first 256 tokens of a 852-token page were ever seen. Fix: overlapping chunks, each encoded within the model's real context, page score = max over its chunks. VisionRAG Pyramid + RR",
+   "documentation": "Corrected OCR+MiniLM and VisionRAG-Pyramid baselines. Both were crippled by the same defect, measured not assumed: all-MiniLM-L6-v2 has max_seq_length = 256 tokens. Median OCR page = 852 tokens; 98% of pages exceed the limit. The median page therefore lost ~70% of its text to silent truncation. OCR + MiniLM (manuscript: 25.24%) encoded each page's full OCR string in one call, so only the first 256 tokens of a 852-token page were ever seen. Fix: overlapping chunks, each encoded within the model's real context, page score = max over its chunks. VisionRAG Pyramid + RR",
    "recall@5": 25.235849056603772,
    "generating_script": "bench_text_fixed.py"
   },
@@ -583,7 +583,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected CLIP / Nougat / Pix2Struct baselines (reviewer #2, major issue 8). Three more baselines whose low scores reflected the harness rather than the model. Each diagnosis is stated with the evidence that produced it. CLIP (manuscript: 1.89%) CLIPProcessor resizes every input to 224x224. A 4400x3400 standard-plan sheet becomes 224x224, at which point no dimension callout is legible - the model was being asked to match text against an unreadable thumbnail. The text tower also truncates at 77 tokens. Fix: tile the page, encode each tile at native processor resolution, and score a page by the ",
+   "documentation": "Corrected CLIP / Nougat / Pix2Struct baselines. Three more baselines whose low scores reflected the harness rather than the model. Each diagnosis is stated with the evidence that produced it. CLIP (manuscript: 1.89%) CLIPProcessor resizes every input to 224x224. A 4400x3400 standard-plan sheet becomes 224x224, at which point no dimension callout is legible - the model was being asked to match text against an unreadable thumbnail. The text tower also truncates at 77 tokens. Fix: tile the page, encode each tile at native processor resolution, and score a page by the ",
    "recall@5": 23.11320754716981,
    "generating_script": "bench_visual_fixed.py"
   },
@@ -597,7 +597,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions (Cluster B). Needed because two reviewer requests cannot be answered from the 424-query test split alone: R2.2 \"The main claim should rely on a strictly page-disjoint, preferably plan-family-disjoint test set\" - a family-disjoint split draws different queries than the current test split, so their hits are not yet known. R1.2 the refine-path breakdown is currently computable only on the test split; reviewers will want it on the whole benchmark. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
+   "documentation": "Per-query gold-page rank for ALL 4,056 benchmark questions. Needed because a family-disjoint split draws different queries than the test split, so their hits must be known for every question, and the refine-path breakdown is then computable on the whole benchmark rather than the test split alone. Computes, for every question in train+dev+test, the rank of its gold page under ColNomic-3B o",
    "recall@5": 22.169811320754718,
    "generating_script": "full_benchmark_retrieval.py"
   },
@@ -611,7 +611,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 16.27358490566038,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -625,7 +625,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 13.915094339622641,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -639,7 +639,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 9.669811320754716,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -653,7 +653,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 7.311320754716981,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -667,7 +667,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 2.358490566037736,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -681,7 +681,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 1.8867924528301887,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -695,7 +695,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 1.8867924528301887,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -709,7 +709,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.4716981132075472,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -723,7 +723,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -737,7 +737,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -751,7 +751,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -765,7 +765,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -779,7 +779,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -793,7 +793,7 @@
    "query_formulation": "raw question text",
    "hyperparameters": null,
    "intended_task": null,
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -807,7 +807,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   },
@@ -821,7 +821,7 @@
    "query_formulation": "raw question text (visual encoder)",
    "hyperparameters": null,
    "intended_task": "Model has no retrieval pretraining objective; reported as a representa",
-   "documentation": "Corrected implementations of the near-zero baselines (reviewer #2, major issue 8). R2.8: \"Near-zero results for LayoutLMv3, UDOP, and several page-to-text pipelines may reflect unsuitable implementations.\" They did. Diagnosed and fixed rather than excused: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
+   "documentation": "Corrected implementations of the near-zero baselines. Diagnosed and fixed: LayoutLMv3 - the original took the [CLS] vector of a model that has no contrastive pretraining objective, so [CLS] is not a similarity space. Measured mean pairwise cosine between DIFFERENT pages: 0.9605 - every page looked ~96% identical, which is why Recall@5 was exactly 0.00%. Queries were additionally encoded against a blank white image ",
    "recall@5": 0.0,
    "generating_script": "bench_weak_fixed.py"
   }

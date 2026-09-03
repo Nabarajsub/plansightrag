@@ -1,11 +1,9 @@
-"""Benchmark-validity analysis (Cluster B): does the refine loop make the benchmark
+"""Benchmark-validity analysis: does the refine loop make the benchmark
 retrievable-by-construction?
 
-R1.2  "report the number of rephrased questions and separately evaluate the original
-       and rephrased questions"
-R2.1  "quantify anchor usage, report results with and without such anchors"
-R2.2  "It is unclear how pages, plans, and question patterns overlap across splits"
-R2 limitations 1-3, R3.2 - same concern.
+Reports the number of rephrased questions with original and rephrased questions
+evaluated separately, anchor usage with results with and without each anchor
+type, and how pages, plans and question patterns overlap across splits.
 
 Everything here is a join over data already on disk: the stored per-query hit vector
 for the adopted retriever and the refine-loop attempt chain carried by every

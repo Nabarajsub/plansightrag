@@ -1,5 +1,5 @@
 {
- "note": "Capability ladder for R2.4. CPU-only; derived from existing logs.",
+ "note": "Capability ladder. CPU-only; derived from existing logs.",
  "n_cases": 100,
  "rungs": {
   "retrieval": "gold page in top-5",

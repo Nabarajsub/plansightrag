@@ -1,8 +1,7 @@
-"""Capability ladder: decompose compliance verdict accuracy into its stages (R2.4).
+"""Capability ladder: decompose compliance verdict accuracy into its stages.
 
-Reviewer 2 major 4 asks us to separate retrieval, rule identification, rule
-interpretation, value extraction, arithmetic and the final verdict, because a
-single "verdict accuracy" number hides which capability is actually carrying the
+Separates retrieval, rule identification, rule interpretation, value extraction,
+arithmetic and the final verdict, because a single "verdict accuracy" number hides which capability is actually carrying the
 result -- and hides which one fails first when the task gets harder.
 
 Nothing here needs a GPU. Every stage is recoverable from logs already on disk:
@@ -26,22 +25,20 @@ The six rungs, and what each one isolates:
 
 Rung 5 is deliberately scored against the judge's own inputs rather than against
 ground truth. That separates "cannot compare two numbers" from "read the wrong
-number" -- which is exactly the distinction the reviewer is asking for, and the
-two failure modes carry very different engineering implications.
+number", and the two failure modes carry very different engineering implications.
 
     python capability_ladder.py
 """
 
-# --- release path resolution (added for the release copy; the run-time originals
-# under baselines_v2/ and explanability/ are unchanged and still carry the
-# absolute ARCC paths the experiments were executed with) ---
+from __future__ import annotations
+
+# --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
     _os.path.dirname(_os.path.abspath(__file__))))
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import glob
 import json
@@ -298,7 +295,7 @@ def main():
 
     W = 96
     print("=" * W)
-    print("CAPABILITY LADDER  (R2.4 / R2-interp 3 / R2-fig 4)")
+    print("CAPABILITY LADDER")
     print("n = 100 CAD compliance cases, five judge configurations")
     print("=" * W)
     print(f"\n{'stage':<16}" + "".join(f"{l:>16}" for l in table))
@@ -327,7 +324,7 @@ def main():
             lo, hi = wilson(k, n)
             print(f"  {r:<16} {k/n*100:6.2f}%  ({k}/{n})   [{lo:.1f}, {hi:.1f}]")
 
-    out = {"note": "Capability ladder for R2.4. CPU-only; derived from existing logs.",
+    out = {"note": "Capability ladder. CPU-only; derived from existing logs.",
            "n_cases": 100, "rungs": {r: d for r, d in RUNGS},
            "derivation": derivation,
            "configs": {lbl: {r: {"k": v[0], "n": v[1],

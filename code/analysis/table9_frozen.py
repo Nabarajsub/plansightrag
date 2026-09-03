@@ -1,18 +1,17 @@
-"""Table 9 re-run on a frozen question set, with and without supplied design facts.
+"""Judge configurations on a frozen question set, with and without supplied design facts.
 
-Two defects found in the revision audit motivate this. Neither was introduced by
-the revision; both are properties of the submitted experiment.
+Two protocol choices motivate this.
 
-D8 -- THE CONFIGURATIONS WERE NOT GIVEN THE SAME QUESTIONS.
+SAME QUESTIONS FOR EVERY CONFIGURATION.
 `compliance_smoke_n10.py` generates the compliance question with a VLM at run
 time, so every configuration produced its own question set (the five differ on
-100/100 cases). The question drives retrieval, so the retrieval column of Table 9
-is not a controlled comparison. Here the question is frozen: it is composed
+100/100 cases). The question drives retrieval, so a per-configuration question set is not a
+controlled comparison. Here the question is frozen: it is composed
 deterministically from the manifest by the same `compose_query` the agentic
 configuration uses, which names the injected check and is therefore aligned by
 construction on every case.
 
-D9 -- THE JUDGE WAS TOLD THE ANSWER.
+WHETHER THE JUDGE IS GIVEN THE DESIGN FACTS.
 Every configuration builds its prompt with
     summary = ... f"design_facts={json.dumps(d['design_facts'])}"
 and `design_facts` contains the exact drawn value the violation turns on
@@ -23,19 +22,19 @@ that protocol cannot distinguish reading a drawing from copying a JSON field.
 
 So each configuration runs twice:
 
-  facts_supplied   design_facts in the prompt -- reproduces the published
-                   protocol exactly, and isolates the effect of freezing the
-                   question set
+  facts_supplied   design_facts in the prompt -- isolates the effect of
+                   freezing the question set
   facts_withheld   design_facts removed from the summary, everything else
                    identical -- the model must read the value off the drawing
 
-The gap between the two arms is the quantity the manuscript currently reports as
-if it were the second arm. Retrieval is computed once, on the adopted ColNomic-3B
+The gap between the two arms is reported explicitly. Retrieval is computed once, on the adopted ColNomic-3B
 backbone, and shared by every configuration so the comparison is controlled.
 
     python table9_frozen.py --configs 7b_plain,7b_cot,72b_plain,72b_cot_thresh
     python table9_frozen.py --configs 72b_cot_thresh --arms withheld
 """
+
+from __future__ import annotations
 
 # --- release path resolution (release copy; the run-time original under
 # compliance/ is unchanged) ---
@@ -45,7 +44,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import argparse
 import json

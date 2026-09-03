@@ -1,26 +1,24 @@
-"""Per-baseline implementation settings table (R2 reproducibility 4).
+"""Per-baseline implementation settings table.
 
-R2 asks that every baseline be described in enough detail to reproduce it: OCR
-engine and settings, image resolution, chunking, pooling, metadata use, query
-formulation, hyperparameter selection, and whether the method was applied in its
-intended task setting.
+Every baseline is described in enough detail to reproduce it: OCR engine and
+settings, image resolution, chunking, pooling, metadata use, query formulation,
+hyperparameter selection, and whether the method was applied in its intended
+task setting. The information lives in two places:
 
-That table did not exist. `09_baseline_audit.md` explains why six baselines were
-defective and what was corrected, but not how each one was configured. The
-information does exist, spread across two places:
-
-  reports/*.json   the newer and corrected runs record their own settings
+  reports/*.json   the newer runs record their own settings
                    (`retriever`, `text_source`, `tokeniser`, `indexes_metadata`, ...)
   the run scripts  resolution, chunk size, pooling and query formulation are
                    literals in bench_*.py
 
 This walks both and emits one row per baseline. Fields it cannot find are printed
-as "not recorded" rather than guessed -- a reviewer needs to know which settings
-are documented and which are only recoverable by reading code.
+as "not recorded" rather than guessed, so it is clear which settings are
+documented and which are only recoverable by reading code.
 
     python baseline_settings_table.py            # console + JSON
     python baseline_settings_table.py --latex    # LaTeX longtable for the appendix
 """
+
+from __future__ import annotations
 
 # --- release path resolution (release copy; the run-time original under
 # baselines_v2/ is unchanged) ---
@@ -30,7 +28,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import argparse
 import glob
@@ -167,7 +164,7 @@ def main():
     ordered = sorted(rows, key=lambda t: -reps[t]["recall@5_overall"])
     W = 108
     print("=" * W)
-    print("PER-BASELINE IMPLEMENTATION SETTINGS (R2 reproducibility 4)")
+    print("PER-BASELINE IMPLEMENTATION SETTINGS")
     print("=" * W)
     print(f"\n  {len(ordered)} baselines. Fields marked 'not recorded' are recoverable")
     print("  only by reading the generating script, which is named in the last column.\n")
@@ -187,7 +184,7 @@ def main():
         print(f"    {f:<20} {cov[f]:>3}/{len(rows)}"
               + ("" if cov[f] == len(rows) else "   <-- gaps must be filled by hand"))
 
-    out = {"note": "Per-baseline implementation settings (R2 repro 4).",
+    out = {"note": "Per-baseline implementation settings.",
            "n_baselines": len(rows), "field_coverage": cov,
            "baselines": {t: {**rows[t], "recall@5": reps[t]["recall@5_overall"],
                              "generating_script": scripts[t]} for t in ordered}}

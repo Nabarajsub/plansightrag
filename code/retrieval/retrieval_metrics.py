@@ -1,7 +1,7 @@
-"""Reviewer-requested retrieval metrics (Majors #2 and #9).
+"""Rank-sensitive retrieval metrics and the Michigan transfer over the joint index.
 
-#9  Rank-sensitive metrics on the 424-pair test split: Recall@1, Recall@5, MRR, nDCG@10
-#2  Michigan transfer over the JOINT 1,898+298 index (not the 298-only pool), to
+  Rank-sensitive metrics on the 424-pair test split: Recall@1, Recall@5, MRR, nDCG@10
+  Michigan transfer over the JOINT 1,898+298 index (not the 298-only pool), to
     remove the pool-size confound; report joint vs Michigan-only.
 Reuses the cached ColNomic page embeddings for the 1,898 plan pages.
 """

@@ -1,16 +1,16 @@
 """Pooled statistics for EVERY 424-query run, not just the 25 headline methods.
 
-R2 statistics 3 asks for confidence intervals on all headline results. The
-existing `_stats_full.json` covers 25 methods -- the main comparison table -- but
+Confidence intervals for all headline results. The existing `_stats_full.json`
+covers 25 methods -- the main comparison table -- but
 leaves out every run added afterwards, several of which are cited as headline
 numbers in their own right:
 
   colnomic_rerank_monoqwen_424   94.58%   the re-ranking ablation
   colnomic_binary_quantized      90.33%   the quantization ablation
   bge_m3_ocr_tuned               50.00%   the strongest dense text baseline
-  clip_l14_336_tiled             36.79%   the corrected CLIP
-  pix2struct_textcaps_fixed      16.27%   the corrected Pix2Struct
-  nougat_base_fixed               2.36%   the corrected Nougat
+  clip_l14_336_tiled             36.79%   CLIP ViT-L/14-336, tiled
+  pix2struct_textcaps_fixed      16.27%   Pix2Struct
+  nougat_base_fixed               2.36%   Nougat
 
 Every one of those has a stored per-query hit vector, so the intervals are pure
 post-processing. Three intervals per method, matching `_stats_full.json`:
@@ -25,6 +25,8 @@ unqualified filename) are collapsed to the grid-qualified copy.
     python stats_all_methods.py
 """
 
+from __future__ import annotations
+
 # --- release path resolution (release copy; the run-time original under
 # baselines_v2/ is unchanged) ---
 import os as _os
@@ -33,7 +35,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 import glob, json, math, os, random, re
 from collections import defaultdict
 

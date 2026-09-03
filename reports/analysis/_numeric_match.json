@@ -1,5 +1,5 @@
 {
- "note": "Judge-free numeric scoring for Dimensional Accuracy (Cluster C).",
+ "note": "Judge-free numeric scoring for Dimensional Accuracy.",
  "tolerance": {
   "relative": 0.02,
   "absolute_mm": 1.5

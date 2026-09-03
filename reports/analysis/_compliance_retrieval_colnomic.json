@@ -1,5 +1,5 @@
 {
- "note": "Compliance-set retrieval on ColNomic-3B (A29b / Cluster E).",
+ "note": "Compliance-set retrieval on ColNomic-3B.",
  "model_id": "nomic-ai/colnomic-embed-multimodal-3b",
  "k": 5,
  "n_queries": 100,

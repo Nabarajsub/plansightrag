@@ -32,6 +32,8 @@ Recipe (otherwise matches the official ColPali fine-tuning):
 - Page-disjoint train/dev/test (see split_dataset.py) -> no memorization.
 - Saves the best-dev LoRA adapter to lora_adapter/.
 """
+from __future__ import annotations
+
 # --- release path resolution ---
 import os as _os
 PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
@@ -40,7 +42,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(_os.
 PLANS_ROOT = _os.environ.get("PLANS_ROOT") or _os.path.join(PSR_ROOT, "data", "pages")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import argparse, json, os, random, time
 from collections import defaultdict

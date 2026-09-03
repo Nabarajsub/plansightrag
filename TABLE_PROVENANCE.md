@@ -1,8 +1,8 @@
 # Table → Report → Script provenance
 
-Every data-bearing table in `manuscript_swap.tex` maps to a JSON report in this
-package and the script that produced it. Verified values are the ones quoted in the
-manuscript; see `CONSISTENCY_CHECK.md` for the full diff.
+Every data-bearing table in the manuscript maps to a JSON report in this package
+and the script that produced it. Verified values are the ones quoted in the
+manuscript.
 
 | # | Manuscript table (label) | Backing report (`reports/...`) | Generator (`code/...`) | Key verified values |
 |---|--------------------------|--------------------------------|------------------------|---------------------|
@@ -13,7 +13,7 @@ manuscript; see `CONSISTENCY_CHECK.md` for the full diff.
 | 4 | Category Recall@5 (`tbl:overall`) | `retrieval/colnomic_3b.json` (`by_category`) | `retrieval/bench_colx.py` | Dim 97.32 / Vis 93.10 / Log 88.33 / Hal 89.36 |
 | 5 | VQA prompting grid (`tbl:vqa-techniques`) | `retrieval/vqa_results.json` | `vqa_eval` prompting harness | best 82.31; union 97.16; zero-shot 78.30; self-consistency 69.58 |
 | 6 | Judge configs CAD (`tbl:compliance-cad`) | `compliance/compliance_n10_report_{7b_cot,72b_judge_only,72b_cot_thresh,agentic_72b_v2}.json` | `compliance/judge_only_n10*.py`, `agentic_n10.py` | 7B-CoT 50%; 72B+thresh 100%; agentic 100% |
-| 7 | Multi-plan compliance, n=100 (`tbl:multi100`) | `compliance/multi100_path_b_report.json` (before fix), `compliance/multi100_path_b_report_v2.json` (after fix) | `compliance/make_multi100.py`, `agentic_multi.py` | before 88/100 (36/48 + 52/52); after **100/100** (48/48 + 52/52) |
+| 7 | Multi-plan compliance, n=100 (`tbl:multi100`) | `compliance/multi100_path_b_report.json` (textual `d/2` threshold), `compliance/multi100_path_b_report_v2.json` (pre-resolved threshold) | `compliance/make_multi100.py`, `agentic_multi.py` | before 88/100 (36/48 + 52/52); after **100/100** (48/48 + 52/52) |
 | 8 | Six CAD sets (`tbl:compliance-scale`) | `compliance/scale500_path_a_report.json`, `multi100`-set, `dense4_72b_report.json`, `stress50_path_a_report.json`, pilot | `compliance/run_500_queries.py`, `dense_eval.py`, etc. | scale500 100% (250/250, 250/250); all-sets 673/674 = 99.85% |
 | 9 | OCR baseline (`tbl:ocr-baseline`) | `compliance/ocr_baseline_report.json` | `compliance/ocr_compliance_baseline.py` | OCR 76.4; culvert 100 / inlet 99 / guardrail 82 / rebar 50 / sign 51; VLM 100 |
 | 10 | Rule-grounding (`tbl:rule-grounding`) | `compliance/rule_grounding_hard_report.json` | `compliance/rule_grounding_hard.py` | R@1 80.0; R@5 100.0; 1,913 cand; verdict 100/100 |
@@ -32,7 +32,7 @@ manuscript; see `CONSISTENCY_CHECK.md` for the full diff.
 | 23 | Consolidated latency (`tbl` @ "Consolidated deployment latency") | `retrieval/latency_bench.json` | `retrieval/latency_bench.py` | index 7.3 min; retrieval p50; agentic 60.9 s/query |
 | — | Circularity / ColPali-miss control (in-text) | `retrieval/colnomic_circularity.json` | `retrieval/circularity_eval.py` | overall 92.45; HIT 96.66 / MISS 77.89 |
 
-## Notes (carried into `CONSISTENCY_CHECK.md`)
+## Notes
 
 - **Note A — ColPali version.** The ColPali entry in `tbl:comparison` (and the
   76.89% quoted throughout) is **colpali-v1.2** (full-page, 424/1,898 protocol,
@@ -44,7 +44,7 @@ manuscript; see `CONSISTENCY_CHECK.md` for the full diff.
   **76.89** (the canonical full-page ColPali R@5), while `bench_rerank.py`'s own
   report measured **76.65** for the top-20 retrieval pass (Δ 0.24 pp). The reranked
   value (85.14) and the top-20 ceiling are taken directly from the report.
-- **Note C — latency GPU.** `tbl:latency` is captioned "single NVIDIA A100 80GB";
-  `latency_424.json` does not record the GPU string. `latency_bench.json` (the
-  consolidated table) was collected on an H100. The per-query distribution and the
-  consolidated table are two separate measurements.
+- **Note C — latency GPU.** Both latency reports carry a `hardware` block
+  (NVIDIA H100 80GB HBM3, one GPU). The per-query distribution
+  (`latency_424.json`) and the consolidated table (`latency_bench.json`) are two
+  separate measurements.

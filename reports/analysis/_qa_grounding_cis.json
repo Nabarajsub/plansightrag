@@ -1,5 +1,5 @@
 {
- "note": "Confidence intervals for the QA and grounding headline numbers (R2 statistics 3).",
+ "note": "Confidence intervals for the QA and grounding headline numbers.",
  "n_boot": 10000,
  "seed": 42,
  "qa": {

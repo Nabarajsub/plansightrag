@@ -1,5 +1,5 @@
 """LoRA / head fine-tuning of ColNomic-3B (the adopted retriever) on the 5-DOT
-engineering-plan train split -- the H3 ablation for manuscript_swap.
+engineering-plan train split -- the H3 ablation.
 
 Mirrors the ColPali ablation (train_head.py / train_lora.py) but on ColQwen2_5 /
 nomic-ai/colnomic-embed-multimodal-3b. Three configs (selected by flags):

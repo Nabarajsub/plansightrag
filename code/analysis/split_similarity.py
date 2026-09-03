@@ -1,10 +1,7 @@
-"""Cross-split similarity and duplicate/near-duplicate rates (R2 reproducibility 2).
+"""Cross-split similarity and duplicate/near-duplicate rates.
 
-R2 asks for the exact construction of the full, page-disjoint and Michigan
-evaluation sets: unique pages, questions per page, duplicate and near-duplicate
-handling, and cross-split similarity. The first two were already reported (A5,
-A6); the last two were flagged as owed in `07_release_artifacts.md` and are
-computed here.
+Documents the construction of the full, page-disjoint and Michigan evaluation
+sets: duplicate and near-duplicate handling, and cross-split similarity.
 
 Two questions, kept separate because they can fail independently:
 
@@ -19,12 +16,13 @@ Two questions, kept separate because they can fail independently:
                page-disjoint split. Measured with character 5-gram Jaccard, which
                needs no model and is reproducible anywhere.
 
-No embedding model is used on purpose: a lexical measure is auditable by a
-reviewer with a text editor, and the claim we need to support is about
-construction, not semantics.
+No embedding model is used on purpose: a lexical measure is auditable with a
+text editor, and the claim to support is about construction, not semantics.
 
     python split_similarity.py
 """
+
+from __future__ import annotations
 
 # --- release path resolution (release copy; the run-time original under
 # baselines_v2/ is unchanged) ---
@@ -34,7 +32,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import glob
 import hashlib

@@ -1,18 +1,17 @@
-"""Per-baseline implementation settings table (R2 reproducibility item 4).
+"""Per-baseline implementation settings table.
 
-Reviewer 2 asks us to "describe every baseline implementation in sufficient
-detail: OCR engine and settings, image resolution, chunking, pooling, metadata
-use, query formulation, hyperparameter selection, and whether the method was
-applied in its intended task setting."
-
-`09_baseline_audit.md` explains why six baselines were defective and how they were
-fixed, but it never tabulated those eight fields. This compiles them, preferring
+Describes every baseline implementation in the eight fields needed to reproduce
+it: OCR engine and settings, image resolution, chunking, pooling, metadata use,
+query formulation, hyperparameter selection, and whether the method was applied
+in its intended task setting. This compiles them, preferring
 what the report JSON recorded at run time and falling back to a curated mapping
 read off the generating scripts. Every cell is sourced; nothing is inferred from
 the method name.
 
     python baseline_settings.py
 """
+
+from __future__ import annotations
 
 # --- release path resolution (release copy; the run-time original under
 # baselines_v2/ is unchanged) ---
@@ -22,7 +21,6 @@ PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
 CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
 # --- end release path resolution ---
 
-from __future__ import annotations
 
 import json
 import os
@@ -89,7 +87,7 @@ def main():
 
     W = 150
     print("=" * W)
-    print("PER-BASELINE IMPLEMENTATION SETTINGS  (R2 reproducibility 4)")
+    print("PER-BASELINE IMPLEMENTATION SETTINGS")
     print("=" * W)
     print(f"\n  {'baseline':<26}{'R@5':>7}  {'OCR engine':<30}{'resolution':<26}"
           f"{'chunking':<32}{'intended?':<10}")
