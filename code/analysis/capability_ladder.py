@@ -1,5 +1,10 @@
 """Capability ladder: decompose compliance verdict accuracy into its stages.
 
+Scored on the FROZEN question set (`_table9_frozen.json`), so every configuration
+answers the same 100 questions about the same 100 drawings with one shared
+retrieval pass. The earlier per-configuration runs generated their own questions
+at run time and are not a controlled comparison.
+
 Separates retrieval, rule identification, rule interpretation, value extraction,
 arithmetic and the final verdict, because a single "verdict accuracy" number hides which capability is actually carrying the
 result -- and hides which one fails first when the task gets harder.
@@ -60,12 +65,15 @@ CHECK_FIELD = {
     "Anchor bolt embedment": "anchor_embed_in",
 }
 
+FROZEN = (os.path.join(REPORTS, "_table9_frozen.json")
+          if os.path.exists(os.path.join(REPORTS, "_table9_frozen.json"))
+          else os.path.join(PSR_ROOT, "reports", "analysis", "_table9_frozen.json"))
+ARM = os.environ.get("LADDER_ARM", "supplied")     # "supplied" or "withheld"
 CONFIGS = {
-    "7B plain": "compliance_n10_report_n100_7b_plain.json",
-    "7B + CoT": "compliance_n10_report_n100_7b_cot.json",
-    "72B plain": "compliance_n10_report_n100_72b_plain.json",
-    "72B + CoT + thresholds": "compliance_n10_report_n100_72b_cot_thresh.json",
-    "72B agentic": "compliance_n10_report_n100_agentic_72b.json",
+    "7B plain": "7b_plain",
+    "7B + CoT": "7b_cot",
+    "72B plain": "72b_plain",
+    "72B + CoT + thresholds": "72b_cot_thresh",
 }
 
 RUNGS = [
@@ -172,18 +180,25 @@ def judge_checks(case):
     return [], "none"
 
 
+def frozen_arms():
+    """{config_key: [case, ...]} for the chosen arm of the frozen re-run."""
+    d = json.load(open(FROZEN))
+    out = {}
+    for name, v in d["arms"].items():
+        cfg, arm = name.split("::")
+        if arm == ARM:
+            out[cfg] = v["records"]
+    return out
+
+
 def canonical_injected():
     """The injected check for every case, from the one log that records it.
 
-    The plain configs do not store `checks_injected`, only a free-text
-    `expected_violated_rule`. Scoring each config against a different notion of
-    ground truth would make the columns incomparable, so we take the injected
-    check for all five configs from the single report that carries it and key it
-    by case name.
+    Every frozen run records `checks_injected`; this keys them by case name so
+    the columns are scored against one identical notion of ground truth.
     """
-    src = os.path.join(COMP, "compliance_n10_report_n100_72b_cot_thresh.json")
     out = {}
-    for c in load_cases(src):
+    for c in frozen_arms().get("72b_cot_thresh", []):
         ci = (c.get("checks_injected") or [None])[0]
         if ci:
             out[c.get("name")] = ci
@@ -272,13 +287,13 @@ def main():
                 json.load(open(os.path.join(COMP, "table9_n100", "manifest.json")))}
 
     injected_by_name = canonical_injected()
+    arms = frozen_arms()
     table, derivation = {}, {}
-    for label, fname in CONFIGS.items():
-        path = os.path.join(COMP, fname)
-        if not os.path.exists(path):
-            print(f"  [skip] {label}: {fname} not found")
+    for label, key in CONFIGS.items():
+        cases = arms.get(key)
+        if not cases:
+            print(f"  [skip] {label}: arm {key}::{ARM} not in {os.path.basename(FROZEN)}")
             continue
-        cases = load_cases(path)
         agg = {r: [0, 0] for r, _ in RUNGS}   # [k, n]
         modes = set()
         for c in cases:
@@ -296,7 +311,7 @@ def main():
     W = 96
     print("=" * W)
     print("CAPABILITY LADDER")
-    print("n = 100 CAD compliance cases, five judge configurations")
+    print(f"n = 100 CAD compliance cases, frozen question set, arm = {ARM}")
     print("=" * W)
     print(f"\n{'stage':<16}" + "".join(f"{l:>16}" for l in table))
     print("-" * W)
@@ -324,15 +339,17 @@ def main():
             lo, hi = wilson(k, n)
             print(f"  {r:<16} {k/n*100:6.2f}%  ({k}/{n})   [{lo:.1f}, {hi:.1f}]")
 
-    out = {"note": "Capability ladder. CPU-only; derived from existing logs.",
-           "n_cases": 100, "rungs": {r: d for r, d in RUNGS},
+    out = {"note": "Capability ladder on the frozen question set. CPU-only.",
+           "arm": ARM, "source": os.path.basename(FROZEN), "n_cases": 100, "rungs": {r: d for r, d in RUNGS},
            "derivation": derivation,
            "configs": {lbl: {r: {"k": v[0], "n": v[1],
                                  "pct": round(v[0] / v[1] * 100, 2) if v[1] else None,
                                  "wilson95": [round(x, 2) for x in wilson(*v)] if v[1] else None}
                              for r, v in agg.items()}
                        for lbl, agg in table.items()}}
-    dst = os.path.join(REPORTS, "_capability_ladder.json")
+    dst = os.path.join(REPORTS if os.path.isdir(REPORTS) else
+                       os.path.join(PSR_ROOT, "reports", "analysis"),
+                       "_capability_ladder.json")
     json.dump(out, open(dst, "w"), indent=1)
     print(f"\n  wrote {dst}")
 

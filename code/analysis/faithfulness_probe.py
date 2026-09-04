@@ -1,7 +1,11 @@
-"""Causal probe for the MaxSim retrieval-attribution heatmaps.
+"""Causal faithfulness probe for the MaxSim grounding heatmaps (Cluster F, R2.6).
 
-The heatmaps show where the *retriever* matched the query, not which region the
-answering model used. This asks whether a weaker causal claim holds: if the highlighted region is
+Reviewer 2 objects that we present MaxSim heatmaps as if they explained the
+answer, when they only show where the *retriever* matched the query. That is
+correct as written, and the safe fix is to rename them "retrieval attribution"
+and drop every causal word.
+
+This asks whether a weaker causal claim survives: if the highlighted region is
 where the evidence actually lives, then hiding it should change the answer, and
 hiding an equal amount of unrelated page should not.
 
@@ -44,16 +48,7 @@ stop asserting it without evidence.
 
     python faithfulness_probe.py --n 100
 """
-
 from __future__ import annotations
-
-# --- release path resolution ---
-import os as _os
-PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(
-    _os.path.dirname(_os.path.abspath(__file__))))
-CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
-# --- end release path resolution ---
-
 
 import argparse
 import json
@@ -66,11 +61,19 @@ import numpy as np
 import torch
 from PIL import Image
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "baselines_v2"))
 from numeric_match import quantities, matches          # noqa: E402  (reuse the scorer)
 
+
+# --- release path resolution ---
+import os as _os
+PSR_ROOT = _os.environ.get("PSR_ROOT") or _os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+CLUSTER_ROOT = _os.environ.get("CLUSTER_ROOT", "/project/gr-wydot-chatbot/copalirag")
+# --- end release path resolution ---
+
 ROOT = CLUSTER_ROOT
-OUT = f"{PSR_ROOT}/reports/analysis/_faithfulness_probe.json"
+OUT = f"{ROOT}/baselines_v2/reports/_faithfulness_probe.json"
 RETRIEVER = "nomic-ai/colnomic-embed-multimodal-3b"
 VLM = "Qwen/Qwen2.5-VL-7B-Instruct"
 TOP_PCT = 0.05        # fraction of patches to hide
@@ -101,16 +104,46 @@ def changed(a, b):
     return norm(a) != norm(b)
 
 
+
+STOPWORDS = {
+    "what", "which", "who", "whom", "whose", "when", "where", "why", "how",
+    "is", "are", "was", "were", "be", "been", "being", "do", "does", "did",
+    "the", "a", "an", "of", "for", "to", "in", "on", "at", "by", "with",
+    "from", "as", "and", "or", "if", "it", "its", "this", "that", "these",
+    "those", "there", "shown", "indicated", "used", "per", "into", "about",
+}
+
+
+def content_token_idx(tokens):
+    keep = []
+    for i, t in enumerate(tokens):
+        if t == "<|endoftext|>":
+            continue
+        c = t.replace("\u0120", "").replace("Ġ", "").strip()
+        if not c or not any(ch.isalnum() for ch in c) or c.lower() in STOPWORDS:
+            continue
+        keep.append(i)
+    return keep or list(range(len(tokens)))
+
+
 def paint(img, heat, n_patches, idx):
-    """Blank the patch cells listed in `idx` (flat indices into the ph x pw grid)."""
-    ph, pw = n_patches
+    """Blank the patch cells listed in `idx` (flat indices into the grid).
+
+    get_n_patches / get_similarity_maps_from_embeddings work in (n_patches_X,
+    n_patches_Y) order -- axis 0 spans the image WIDTH. The map is ravelled
+    row-major, so a flat index f decomposes as xi = f // n_y, yi = f % n_y.
+    The previous version read the axes as (rows, cols) and scaled each by the
+    other dimension, so it blanked transposed cells -- i.e. it masked regions
+    that were NOT the salient ones, which would make this probe meaningless.
+    """
+    n_x, n_y = n_patches
     W, H = img.size
     out = np.array(img).copy()
-    cw, chh = W / pw, H / ph
+    cw, chh = W / n_x, H / n_y          # cell width spans x, cell height spans y
     for f in idx:
-        r, c = divmod(int(f), pw)
-        x0, x1 = int(c * cw), int(math.ceil((c + 1) * cw))
-        y0, y1 = int(r * chh), int(math.ceil((r + 1) * chh))
+        xi, yi = divmod(int(f), n_y)
+        x0, x1 = int(xi * cw), int(math.ceil((xi + 1) * cw))
+        y0, y1 = int(yi * chh), int(math.ceil((yi + 1) * chh))
         out[y0:y1, x0:x1] = 255            # paper white, not black: less OOD
     return Image.fromarray(out)
 
@@ -191,35 +224,42 @@ def main():
         maps = get_similarity_maps_from_embeddings(
             image_embeddings=ie, query_embeddings=qe,
             n_patches=n_patches, image_mask=rp.get_image_mask(bimg))[0]
-        heat = maps.float().max(dim=0).values.cpu().numpy().ravel()
+        # mask the SAME map the manuscript figures display: mean over content
+        # tokens (padding/stopwords excluded), so the probe tests the published
+        # explanation rather than a different pooling of the same embeddings.
+        _toks = rp.tokenizer.convert_ids_to_tokens(bq["input_ids"][0].tolist())
+        heat = maps.float()[content_token_idx(_toks)].mean(dim=0).cpu().numpy().ravel()
 
         ph, pw = n_patches
         n_hide = max(1, int(round(TOP_PCT * heat.size)))
         top_idx = np.argsort(-heat)[:n_hide].tolist()
 
-        # Shape-matched control: take the bounding box of the masked patches and
-        # slide that exact window to wherever the page is least salient.
-        rows_i = [i // pw for i in top_idx]
-        cols_i = [i % pw for i in top_idx]
-        bh = min(ph, max(1, max(rows_i) - min(rows_i) + 1))
-        bw = min(pw, max(1, max(cols_i) - min(cols_i) + 1))
+        # Geometry-matched control: translate the EXACT mask pattern to the
+        # least-salient position on the page. Sliding a bounding box does not
+        # work here -- the top-5% cells are scattered, so their bbox covers most
+        # of the page and no disjoint window of that size exists. Translating the
+        # pattern itself (on a torus, so no cell is lost at an edge) preserves
+        # the number of hidden cells AND their spatial arrangement, which is the
+        # nuisance variable: scattered occlusion disrupts a dense drawing more
+        # than one contiguous blank, independently of what is hidden.
         H2 = heat.reshape(ph, pw)
-        best, best_rc = None, (0, 0)
-        for r0 in range(0, ph - bh + 1):
-            for c0 in range(0, pw - bw + 1):
-                win = H2[r0:r0 + bh, c0:c0 + bw]
-                # skip windows that overlap the masked region at all
-                if any(r0 <= i // pw < r0 + bh and c0 <= i % pw < c0 + bw
-                       for i in top_idx):
+        cells = [(i // pw, i % pw) for i in top_idx]
+        masked_set = set(top_idx)
+        best, best_idx = None, None
+        for dr in range(ph):
+            for dc in range(pw):
+                if dr == 0 and dc == 0:
                     continue
-                v = float(win.mean())
+                idx = [((r + dr) % ph) * pw + ((c + dc) % pw) for r, c in cells]
+                if masked_set.intersection(idx):
+                    continue
+                v = float(np.mean([heat[i] for i in idx]))
                 if best is None or v < best:
-                    best, best_rc = v, (r0, c0)
-        r0, c0 = best_rc
-        ctl_idx = [(r0 + i) * pw + (c0 + j) for i in range(bh) for j in range(bw)]
-        if best is None:                       # no disjoint window fits: fall back
+                    best, best_idx = v, idx
+        if best_idx is None:      # every translation overlaps: fall back
             cold = np.argsort(heat)[: max(n_hide, heat.size // 2)].tolist()
-            ctl_idx = rng.sample(cold, n_hide)
+            best_idx = rng.sample(cold, n_hide)
+        ctl_idx = best_idx
 
         def dispersion(idx):
             """Mean nearest-neighbour Chebyshev distance between hidden cells.
@@ -233,10 +273,10 @@ def main():
                            for b_i, (rb, cb) in enumerate(pts) if b_i != a_i)
             return tot / len(pts)
 
-        geom = {"bbox": [bh, bw], "grid": [ph, pw],
+        geom = {"grid": [ph, pw],
                 "masked_dispersion": round(dispersion(top_idx), 3),
                 "control_dispersion": round(dispersion(ctl_idx), 3),
-                "masked_bbox_frac": round(bh * bw / (ph * pw), 3)}
+                "hidden_frac": round(n_hide / heat.size, 3)}
 
         base = ask(small, r["query"])
         mask = ask(paint(small, heat, n_patches, top_idx), r["query"])
@@ -296,7 +336,7 @@ def main():
     # SECONDARY: flip of correctness, on items the model got right unmasked
     b01, b10, p = mcnemar([(not x["masked_ok"], not x["control_ok"]) for x in live])
 
-    out = {"note": "Causal occlusion probe for MaxSim attribution heatmaps.",
+    out = {"note": "Causal faithfulness probe for MaxSim heatmaps (R2.6).",
            "retriever": RETRIEVER, "vlm": VLM, "top_pct_hidden": TOP_PCT,
            "seed": SEED, "n_items": N, "n_base_correct": n,
            "primary_change_rate": {

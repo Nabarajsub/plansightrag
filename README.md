@@ -270,6 +270,7 @@ honour `CLUSTER_ROOT`.
 | `baseline_settings_table.py` | Per-baseline implementation settings, with each generating script's documentation | CPU, seconds |
 | `compliance_calibration.py` | ECE, MCE, Brier and abstention for the compliance judge | 1 GPU, ~1.5 h |
 | `qa_grounding_cis.py` | Wilson, bootstrap and page-clustered intervals for the QA and grounding families | CPU, seconds |
+| `bench_tiling_judge_colnomic_424.py` | H4 judge-accuracy endpoint on the adopted ColNomic-3B backbone: full-page vs. tile-level retrieval, 397 dense queries | 2 GPU, ~7 h |
 | `table9_frozen.py` | Judge configurations on a frozen question set, with and without supplied design facts | 1 GPU, ~2 h |
-| `faithfulness_probe.py` | Causal occlusion probe of the MaxSim attribution maps: top-5% patches masked vs. an equal-area, equal-shape control | 1 GPU, ~5 min |
+| `faithfulness_probe.py` | Causal occlusion probe of the MaxSim attribution maps: the top-5% patches masked vs. the same pattern translated to the least-salient position | 1 GPU, ~5 min |
 

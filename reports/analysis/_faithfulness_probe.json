@@ -1,0 +1,3145 @@
+{
+ "note": "Causal faithfulness probe for MaxSim heatmaps (R2.6).",
+ "retriever": "nomic-ai/colnomic-embed-multimodal-3b",
+ "vlm": "Qwen/Qwen2.5-VL-7B-Instruct",
+ "top_pct_hidden": 0.05,
+ "seed": 20260810,
+ "n_items": 100,
+ "n_base_correct": 56,
+ "primary_change_rate": {
+  "masked_pct": 49.0,
+  "control_pct": 23.0,
+  "gap_pp": 26.0,
+  "ci_masked": [
+   39.42,
+   58.65
+  ],
+  "ci_control": [
+   15.84,
+   32.15
+  ],
+  "mcnemar": {
+   "masked_only": 31,
+   "control_only": 5,
+   "exact_p": 1.2913485988974571e-05
+  }
+ },
+ "flip_rate_masked_pct": 51.79,
+ "flip_rate_control_pct": 7.14,
+ "flip_ci_masked": [
+  39.01,
+  64.33
+ ],
+ "flip_ci_control": [
+  2.81,
+  16.98
+ ],
+ "gap_pp": 44.64,
+ "mcnemar": {
+  "masked_only": 26,
+  "control_only": 1,
+  "exact_p": 4.172325134277344e-07
+ },
+ "records": [
+  {
+   "query": "What is the purpose of the \"Strain Relief Fitting\" symbol on page 1 of 3 of the \"Wiring and Installation Details\" section of the \"Conventional Lighting\" plan?",
+   "reference": "The purpose of the \"Strain Relief Fitting\" symbol is to provide a secure connection for the cable, ensuring it remains in place and does not become loose or damaged.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_757.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.694,
+    "control_dispersion": 1.823,
+    "hidden_frac": 0.05
+   },
+   "base": "To provide an angleable length of cable for removal of fuseholders from the transformer base, pole base, or pullbox for maintenance.",
+   "masked": "To provide tension relief for the luminaire cable at the connection point to the pole or conduit.",
+   "control": "To provide a means to secure the luminaire cable to the pole or conduit, allowing for movement without damaging the cable.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the maximum spacing between the W6x15 Hanger and the W8x15 Walkway Support?",
+   "reference": "The maximum spacing between the W6x15 Hanger and the W8x15 Walkway Support is 5'-0\".",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_679.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.516,
+    "control_dispersion": 1.548,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "5'-0\"",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": true
+  },
+  {
+   "query": "**Rewritten Question:**",
+   "reference": "The plan view - end segment for guardrail connection is 3'-0\".",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_368.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.935,
+    "control_dispersion": 1.968,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the length of the LIVESTOCK WALK PROTECTOR in feet and inches?",
+   "reference": "3'-9\" [1145]",
+   "category": "Dimensional Accuracy",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_615-1  (NOV_2004)_page_1.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.726,
+    "control_dispersion": 1.887,
+    "hidden_frac": 0.05
+   },
+   "base": "3'-9\"",
+   "masked": "Not specified",
+   "control": "3'-9\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"CONCRETE WASHOUT SIGN DETAIL\" section?",
+   "reference": "The purpose of the \"CONCRETE WASHOUT SIGN DETAIL\" section is to provide a detailed description of the concrete washout sign, including its size, material, and installation requirements.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_383.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.548,
+    "control_dispersion": 1.71,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"CONCRETE WASHOUT SIGN DETAIL\" section is to provide specific details about the sign used for the temporary concrete washout facility.",
+   "masked": "Not specified",
+   "control": "The purpose of the \"CONCRETE WASHOUT SIGN DETAIL\" section is to provide specific details about the sign used for the concrete washout facility.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "When do left edge lines use traffic stripe details with type RY markers?",
+   "reference": "On freeways.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_036.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.629,
+    "control_dispersion": 1.887,
+    "hidden_frac": 0.05
+   },
+   "base": "On freeways",
+   "masked": "Not specified",
+   "control": "On freeways",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the use of the sign with the text \"WEIGH STATION AGRICULTURAL INSPECTION 1 MILE\" according to the note \"Other Than Freeway Use\"?",
+   "reference": "The sign is used for other than freeway use.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_695.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.5,
+    "control_dispersion": 1.5,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Riding Surface\" label?",
+   "reference": "The Riding Surface label indicates the area where vehicles will travel.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_411.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.565,
+    "control_dispersion": 1.823,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Riding Surface\" label is to indicate the area where vehicles will travel on the road or shoulder.",
+   "masked": "Not specified",
+   "control": "The purpose of the \"Riding Surface\" label is to indicate the area where vehicles or pedestrians can travel or ride on the structure depicted in the drawing.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the minimum clearance between obstruction and flow line of outlet pipe, per Note 3?",
+   "reference": "The minimum clearance between obstruction and flow line of outlet pipe is 1-0\".",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_220.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.452,
+    "control_dispersion": 1.468,
+    "hidden_frac": 0.05
+   },
+   "base": "1'-0\"",
+   "masked": "1'-0\"",
+   "control": "1'-0\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the hatching pattern used to represent the soil embedded in the surface mount?",
+   "reference": "The hatching pattern is used to represent the soil embedded in the surface mount.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_073.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.5,
+    "control_dispersion": 1.581,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum earth cover height for a 10' span?",
+   "reference": "The maximum earth cover height for a 10' span is 12'.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_255.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.887,
+    "control_dispersion": 1.919,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum diameter for the cross braces?",
+   "reference": "4 inches [100].",
+   "category": "Visual Interpretation",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_607-1A  (DEC_2006)_page_4.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.823,
+    "control_dispersion": 2.0,
+    "hidden_frac": 0.05
+   },
+   "base": "4 inches",
+   "masked": "6\"",
+   "control": "4 inches",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What does \"Minimum V Allowable = 1 fps\" in Note 3 require for the flow velocity at the outlet?",
+   "reference": "The flow velocity at the outlet must be at least 1 foot per second.",
+   "category": "Logical Reasoning",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_024.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.484,
+    "control_dispersion": 1.677,
+    "hidden_frac": 0.05
+   },
+   "base": "The minimum allowable flow velocity at the outlet is 1 foot per second (fps).",
+   "masked": "The minimum allowable flow velocity at the outlet is 1 foot per second (fps).",
+   "control": "The minimum allowable flow velocity at the outlet is 1 foot per second (fps).",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "When does \"Eliminate Type I Preformed Joint at end bent\" apply, as specified in Note 2 where \"gutters are used with Type D Approach Slabs\"?",
+   "reference": "Eliminate Type I Preformed Joint at end bent when gutters are used with Type D Approach Slabs and poured joint sealer is required.",
+   "category": "Logical Reasoning",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_025.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.726,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "When gutters are used with Type D Approach Slabs.",
+   "masked": "When the Type I preformed joint is required at the end bent of gutters used with Type D Approach Slabs.",
+   "control": "When gutters are used with Type D Approach Slabs.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Transition Panel\" label?",
+   "reference": "The Transition Panel is a part of the crash cushion that is used to connect the crash cushion to the barrier.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_038.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.629,
+    "control_dispersion": 1.726,
+    "hidden_frac": 0.05
+   },
+   "base": "The Transition Panel is used to construct a transition between the Temporary Barrier and the Crash Cushion when subjected to reverse direction hits.",
+   "masked": "Not specified",
+   "control": "The Transition Panel is used to construct a transition between the Temporary Barrier and the Crash Cushion when subjected to reverse direction hits.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the label \"Pipe\" in the section view of the \"STRAIGHT CONCRETE ENDWALLS SINGLE AND MULTIPLE PIPE\" plan?",
+   "reference": "The label \"Pipe\" in the section view of the \"STRAIGHT CONCRETE ENDWALLS SINGLE AND MULTIPLE PIPE\" plan indicates the location of the pipe.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_255.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.565,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "To identify the pipe within the endwall structure.",
+   "masked": "To identify the pipe within the concrete structure.",
+   "control": "To identify the pipe within the concrete endwall structure.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the \"Slotted Drain\" as indicated in the notes?",
+   "reference": "When Shown on Plans",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_162.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.71,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Slotted Drain\" as indicated in the notes is to allow water to flow through when shown on the plans.",
+   "masked": "Not specified",
+   "control": "When shown on plans.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the \"FABRIC SPLICE\" label on the \"ALTERNATIVE DETAILING OPTION\" section of the \"PRECAST REINFORCED CONCRETE BOX CULVERT\" plan?",
+   "reference": "The \"FABRIC SPLICE\" label is used to indicate the location of the fabric splice in the precast reinforced concrete box culvert.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_257.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.613,
+    "control_dispersion": 2.065,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "When called for in the Plans, what types of A-2-4 material may be approved in writing by the District Materials Engineer?",
+   "reference": "Nonplastic, and not exceed 12% passing the No. 200 U.S. Standard sieve.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_098.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.226,
+    "control_dispersion": 1.339,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the hatching pattern used to represent the drop-off hazard in the plan ID 102-100?",
+   "reference": "The hatching pattern is used to represent the drop-off hazard in the plan ID 102-100.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_021.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.677,
+    "control_dispersion": 1.758,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"flared length of barrier\" label?",
+   "reference": "The purpose of the \"flared length of barrier\" label is to indicate the length of the barrier that is flared or tapered.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_100.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.419,
+    "control_dispersion": 1.452,
+    "hidden_frac": 0.05
+   },
+   "base": "The flared length of barrier is typically used for crossing large size animals.",
+   "masked": "Not specified",
+   "control": "The flared length of barrier is typically used for crossing large size animals.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the distance between the center of the concrete barrier and the center of the passageway?",
+   "reference": "The distance between the center of the concrete barrier and the center of the passageway is 24 inches.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_098.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.758,
+    "control_dispersion": 1.968,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Typical\" label in the \"Detail D\" section of the 2025 Standard Plan ES-3F?",
+   "reference": "The \"Typical\" label in the \"Detail D\" section of the 2025 Standard Plan ES-3F indicates that the dimensions are typical.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_567.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.613,
+    "control_dispersion": 1.726,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Slope to Drain\" callout in Section C-C?",
+   "reference": "To indicate the direction and gradient for water drainage.",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_128.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.532,
+    "control_dispersion": 1.806,
+    "hidden_frac": 0.05
+   },
+   "base": "To indicate the direction and gradient of the slope leading to the drain.",
+   "masked": "Not specified",
+   "control": "To indicate the direction and gradient of the drainage slope.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the minimum width of the Type A Dike in feet?",
+   "reference": "10' Minimum",
+   "category": "Dimensional Accuracy",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_014.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.726,
+    "control_dispersion": 1.823,
+    "hidden_frac": 0.05
+   },
+   "base": "10' Minimum",
+   "masked": "Not specified",
+   "control": "10' Minimum",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum panel length for the 2025 Standard Plan S81?",
+   "reference": "The maximum panel length is 24'-0\".",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_511.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.871,
+    "control_dispersion": 1.935,
+    "hidden_frac": 0.05
+   },
+   "base": "24'-0\"",
+   "masked": "24'-0\"",
+   "control": "24'-0\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Guardrail Panels And Lengths Same As Taper Side For Plan Quantities\" label?",
+   "reference": "The purpose of the \"Guardrail Panels And Lengths Same As Taper Side For Plan Quantities\" label is to indicate that the guardrail panels and lengths are the same as the taper side for plan quantities.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_504.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.871,
+    "control_dispersion": 1.887,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Guardrail Panels And Lengths Same As Taper Side For Plan Quantities\" label is to ensure that the guardrail panels and their lengths are consistent with the taper side quantities as specified in the plan.",
+   "masked": "The purpose of the label is to indicate that the guardrail panels and their lengths should be the same as those required for the taper side of the plan quantities.",
+   "control": "The purpose of the \"Guardrail Panels And Lengths Same As Taper Side For Plan Quantities\" label is to ensure that the guardrail panels and their lengths are consistent with those required for the taper side as per the plan quantities.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the label \"Twistlock disconnect\" on the page labeled \"HIGH MAST LIGHTING\"?",
+   "reference": "The label \"Twistlock disconnect\" is used to indicate the location of a disconnect mechanism on the high mast lighting page.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_776.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.419,
+    "control_dispersion": 1.532,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum width for TYPE A DIKE?",
+   "reference": "10' Minimum",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_014.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.774,
+    "control_dispersion": 1.871,
+    "hidden_frac": 0.05
+   },
+   "base": "10' Minimum",
+   "masked": "10' Minimum",
+   "control": "10' Minimum",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the width of the retention curb in inches?",
+   "reference": "4\" [100] WIDE",
+   "category": "Dimensional Accuracy",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_608-1B  (JUL_2018)_page_5.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.452,
+    "control_dispersion": 1.581,
+    "hidden_frac": 0.05
+   },
+   "base": "4\"",
+   "masked": "Not specified",
+   "control": "4\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "When does the installation of an extra apron occur, per Note 3, which states, \"Install extra apron when existing slot exceeds 12\" in depth?",
+   "reference": "The installation of an extra apron occurs when the existing slot exceeds 12 inches in depth.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_193.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.919,
+    "control_dispersion": 1.839,
+    "hidden_frac": 0.05
+   },
+   "base": "When the existing slot exceeds 12 inches in depth.",
+   "masked": "Not specified",
+   "control": "When the existing slot exceeds 12 inches in depth.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum dowel bar diameter according to the plan P10?",
+   "reference": "The minimum dowel bar diameter is 1 inch.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_202.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.839,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "1\"",
+   "masked": "1\"",
+   "control": "1\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the clearance at the top of concrete curb, per Note 1?",
+   "reference": "1\" clearance.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_456.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.968,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "1\"",
+   "masked": "Not specified",
+   "control": "1\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Pedestrian Actuation Sign\" label?",
+   "reference": "The purpose of the \"Pedestrian Actuation Sign\" label is to indicate the location of the sign that informs pedestrians when to press the button to activate the pedestrian signal.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_609.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.968,
+    "control_dispersion": 2.032,
+    "hidden_frac": 0.05
+   },
+   "base": "To indicate where pedestrians should press to activate the crossing signal.",
+   "masked": "To indicate where pedestrians should press to activate the crossing signal.",
+   "control": "To indicate where pedestrians should press to activate the crossing signal.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"CJP\" abbreviation in the plan labeled \"ES-70\"?",
+   "reference": "The abbreviation \"CJP\" stands for \"Continuous Joint Plate\".",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_601.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.677,
+    "control_dispersion": 1.871,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum distance between rail splices as indicated in the \"RAIL POST SPACING DETAIL\"?",
+   "reference": "50'-0\" max. between splices",
+   "category": "Dimensional Accuracy",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_014.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.355,
+    "control_dispersion": 1.355,
+    "hidden_frac": 0.05
+   },
+   "base": "50'-0\"",
+   "masked": "50'-0\"",
+   "control": "50'-0\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "When does RETROREFLECTIVE WHITE BANDS REQUIRED FOR NIGHT USE apply per the diagram for the CONE?",
+   "reference": "3\"[75] TO 4\"[100]",
+   "category": "Logical Reasoning",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_703-1H  (OCT_2018)_page_3.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.19,
+    "control_dispersion": 1.349,
+    "hidden_frac": 0.05
+   },
+   "base": "Night use",
+   "masked": "Not specified",
+   "control": "Night use",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the length of the transition section in feet and inches as shown on the plan?",
+   "reference": "24'-0\" [7315]",
+   "category": "Dimensional Accuracy",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_606-6C (SEP_2023) Box Beam Guardrail (3.3 MB)-_page_7.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.778,
+    "control_dispersion": 1.905,
+    "hidden_frac": 0.05
+   },
+   "base": "24'-0\"",
+   "masked": "Not specified",
+   "control": "24'-0\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the abbreviation for 'Feet per Foot' as listed in the \"General Abbreviations\" table?",
+   "reference": "/ft",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_008.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.645,
+    "control_dispersion": 1.758,
+    "hidden_frac": 0.05
+   },
+   "base": "Yn",
+   "masked": "Yn",
+   "control": "Yn",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum length of tangent for the flared installation?",
+   "reference": "24'[7.3m]",
+   "category": "Visual Interpretation",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_606-6C (SEP_2023) Box Beam Guardrail (3.3 MB)-_page_2.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.683,
+    "control_dispersion": 1.889,
+    "hidden_frac": 0.05
+   },
+   "base": "12' [3.6 m] MIN.",
+   "masked": "Not specified",
+   "control": "12' (3.6 m)",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Work Area\" symbol on the page labeled \"Multilane Roadway, Intersection Work\"?",
+   "reference": "The purpose of the \"Work Area\" symbol is to indicate the area where work is being done.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_077.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.468,
+    "control_dispersion": 1.5,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Work Area\" symbol is to indicate the area where construction or maintenance work is taking place within the intersection.",
+   "masked": "The purpose of the \"Work Area\" symbol is to indicate the area where road work is being conducted.",
+   "control": "The purpose of the \"Work Area\" symbol is to indicate the area where construction or maintenance work is taking place within the intersection.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the distance between the top of the sign and the bottom of the text \"EMERGENCY STOPPING SITE\" in the sign labeled \"EMERGENCY STOPPING SITE X MILES\"?",
+   "reference": "The distance is 5.5 inches.",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_684.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.532,
+    "control_dispersion": 1.5,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the depth of the longitudinal scores specified in Section A-A of the concrete gore area?",
+   "reference": "1\" Deep Longitudinal Scores",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_059.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.484,
+    "control_dispersion": 1.548,
+    "hidden_frac": 0.05
+   },
+   "base": "1\"",
+   "masked": "Not specified",
+   "control": "1\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "In Plan 55040E, what is the minimum compressive strength of concrete as specified in the note on the drawing labeled \"TYPE E APPROACH SLAB,\" which also mentions \"S403 Dowels @18\"sp.\" and includes the unique numeric value \"28 day\"?",
+   "reference": "The minimum compressive strength of concrete is 4,000 psi at 28 days.",
+   "category": "Logical Reasoning",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_038.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.839,
+    "control_dispersion": 1.855,
+    "hidden_frac": 0.05
+   },
+   "base": "4000 psi",
+   "masked": "Not specified",
+   "control": "4000 psi",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum depth for the leaveout around the guardrail post?",
+   "reference": "7\" Minimum",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_079.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.694,
+    "control_dispersion": 1.694,
+    "hidden_frac": 0.05
+   },
+   "base": "7\" Minimum",
+   "masked": "0\" Minimum",
+   "control": "3\" Minimum",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the \"SHIM BETWEEN FRAME AND CLIP AS REQUIRED\" label on the \"OVERHEAD SIGNS STEEL FRAMES REMOVABLE SIGN PANEL FRAME\" plan?",
+   "reference": "The purpose of the \"SHIM BETWEEN FRAME AND CLIP AS REQUIRED\" label is to indicate that shims are required between the frame and clip as needed.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_495.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.758,
+    "control_dispersion": 1.855,
+    "hidden_frac": 0.05
+   },
+   "base": "To ensure proper alignment and secure mounting of the sign panel frame to the clip L's.",
+   "masked": "To ensure proper alignment and secure mounting of the sign panel to the frame.",
+   "control": "To ensure proper alignment and secure mounting of the sign panel frame to the clip, providing necessary clearance or leveling adjustments as required.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the distance between the bars in the 3rd piece of the WWR Reinforcing Details section?",
+   "reference": "The distance between the bars in the 3rd piece of the WWR Reinforcing Details section is 1'-0\".",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_139.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.952,
+    "control_dispersion": 1.903,
+    "hidden_frac": 0.05
+   },
+   "base": "1'-0\" Sp.",
+   "masked": "1'-0\" Sp.",
+   "control": "5 Sp. @ 5\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": true
+  },
+  {
+   "query": "What is the thickness of the slotted drain in the alternate installation?",
+   "reference": "2.0 thick",
+   "category": "Visual Interpretation",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_631-1  (NOV_2004)_page_2.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.774,
+    "control_dispersion": 1.758,
+    "hidden_frac": 0.05
+   },
+   "base": "2.0 thick",
+   "masked": "2.0 THICK",
+   "control": "2.0 thick",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"WASHER FOR BUTTON HEAD BOLT AT NESTED SPLICES\" callout on the \"TRANSITION RAILING (TYPE AGT) DETAILS\" page?",
+   "reference": "The purpose of the \"WASHER FOR BUTTON HEAD BOLT AT NESTED SPLICES\" callout is to provide a washer for the button head bolt at nested splices.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_168.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.548,
+    "control_dispersion": 1.806,
+    "hidden_frac": 0.05
+   },
+   "base": "To provide additional support and prevent the button head bolt from coming into direct contact with the nested splices, ensuring a secure connection.",
+   "masked": "Not specified",
+   "control": "To provide additional support and prevent the button head bolt from coming into direct contact with the nested splices, ensuring a secure connection.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What does \"If an existing drop inlet is located within the Plan of the approach gutter\" require per DETAIL X, as indicated in the \"Note: Field bend bars as shown\"?",
+   "reference": "Adjust the reinforcing as needed to facilitate construction of the approach gutter, unless otherwise noted.",
+   "category": "Logical Reasoning",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_031.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.177,
+    "control_dispersion": 2.177,
+    "hidden_frac": 0.05
+   },
+   "base": "The note indicates that if an existing drop inlet is located within the plan of the approach gutter, the reinforcing as needed to facilitate construction of the approach gutter must be provided, unless otherwise noted.",
+   "masked": "The note indicates that if an existing drop inlet is located within the plan of the approach gutter, the reinforcing as needed to facilitate construction of the approach gutter, unless otherwise noted.",
+   "control": "The note indicates that if an existing drop inlet is located within the plan of the approach gutter, the reinforcing as needed to facilitate construction of the approach gutter, unless otherwise noted.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the hatching pattern used in the section view of the \"Landscape Installation\" plan?",
+   "reference": "The hatching pattern in the section view of the \"Landscape Installation\" plan is used to indicate existing undisturbed soil.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_555.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.935,
+    "control_dispersion": 2.081,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the slope of the 30-inch diameter pipe with a rise of 2 feet and a span of 5 feet, as shown in the table for single and multiple concrete pipe dimensions and quantities?",
+   "reference": "The slope of the 30-inch diameter pipe with a rise of 2 feet and a span of 5 feet is 0.40.",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_244.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.323,
+    "control_dispersion": 1.371,
+    "hidden_frac": 0.05
+   },
+   "base": "1/2",
+   "masked": "1/4",
+   "control": "1/2",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the meaning of the symbol of a person with their arms outstretched on the 2025 Standard Plan T13B?",
+   "reference": "The symbol of a person with their arms outstretched on the 2025 Standard Plan T13B represents a flagger.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_356.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.597,
+    "control_dispersion": 1.613,
+    "hidden_frac": 0.05
+   },
+   "base": "BE PREPARED TO STOP",
+   "masked": "BE PREPARED TO STOP",
+   "control": "BE PREPARED TO STOP",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the meaning of the symbol \"UL-96A\" in the upper left corner of the page labeled \"CONCRETE CCTV POLE\"?",
+   "reference": "The symbol \"UL-96A\" in the upper left corner of the page labeled \"CONCRETE CCTV POLE\" refers to the UL-96A standard for air terminal and attachment hardware.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_583.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.968,
+    "control_dispersion": 1.984,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum length for the joint sequence as indicated in the plan?",
+   "reference": "60' Maximum",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_049.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.758,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "60' Maximum",
+   "masked": "60'",
+   "control": "60' Maximum",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the diameter of the weep hole labeled as \"2\" Diameter Weep Hole in the elevation view of the concrete half barrier?",
+   "reference": "2 inches",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_096.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.613,
+    "control_dispersion": 1.726,
+    "hidden_frac": 0.05
+   },
+   "base": "2 inches",
+   "masked": "Not specified",
+   "control": "2 inches",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum length of the concrete pavement to be removed in Option 1?",
+   "reference": "6'-0\" [1.8m] MIN.",
+   "category": "Dimensional Accuracy",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_415-1D  (OCT_2018)_page_1.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.556,
+    "control_dispersion": 1.619,
+    "hidden_frac": 0.05
+   },
+   "base": "6'-0\" [1.8 m]",
+   "masked": "6'-0\" [1.8 m]",
+   "control": "6'-0\" [1.8 m]",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum wall thickness for the 2 3/8\" O.D. tube?",
+   "reference": "The minimum wall thickness for the 2 3/8\" O.D. tube is 0.188\".",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_770.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.565,
+    "control_dispersion": 1.661,
+    "hidden_frac": 0.05
+   },
+   "base": "0.188\"",
+   "masked": "0.11\"",
+   "control": "0.188\"",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Pavement Edge or Signal and Gate\" label?",
+   "reference": "The label 'Pavement Edge or Signal and Gate' indicates the location where the pavement edge or signal and gate should be placed.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_307.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.694,
+    "control_dispersion": 1.742,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Pavement Edge or Signal and Gate\" label is to denote the location where the pavement edge intersects with the railroad crossing signal and gate, ensuring proper placement for safety.",
+   "masked": "Not specified",
+   "control": "The purpose of the \"Pavement Edge or Signal and Gate\" label is to denote the location where the pavement edge intersects with the railroad crossing signal and gate, ensuring proper placement for safety.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "In Plan TYPE AT2 APPROACH GUTTERS - 55038, what is the purpose of the \"Dummy Grooved Joint\" as indicated by the note stating \"Provide \u00bd\" clear between new and existing concrete\", considering the plan includes a unique detail labeled \"SECTION A-A\" and the specific mention of \"11\u00bd\" hi-chairs at 4'-0\" ctrs. max.\"?",
+   "reference": "The \"Dummy Grooved Joint\" provides a \u00bd\" clearance to separate new from existing concrete, ensuring proper expansion and contraction without interference.",
+   "category": "Visual Interpretation",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_031.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.855,
+    "control_dispersion": 1.823,
+    "hidden_frac": 0.05
+   },
+   "base": "To ensure proper transition and alignment between new and existing concrete structures, providing a gap to prevent misalignment or structural issues.",
+   "masked": "To provide a transition or connection point for the approach gutter to fit seamlessly with the existing concrete structure, ensuring a smooth transition without gaps.",
+   "control": "To provide a transition for the gutter system where there is an existing concrete structure, ensuring a smooth connection without damaging the existing concrete.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the distance between the \"Road Work Ahead\" sign and the \"Lane Closed\" sign on the plan labeled \"T18\"?",
+   "reference": "The distance between the \"Road Work Ahead\" sign and the \"Lane Closed\" sign on the plan labeled \"T18\" is 1500 feet.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_361.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.694,
+    "control_dispersion": 1.694,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "When is it appropriate to use markings only when there is 5'-0\" of clear space, per Note 3?",
+   "reference": "When there is 5'-0\" of clear space.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_051.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.758,
+    "control_dispersion": 1.823,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"SLOW DOWN MY DADDY WORKS HERE\" sign?",
+   "reference": "The purpose of the \"SLOW DOWN MY DADDY WORKS HERE\" sign is to alert drivers to slow down as they approach a location where a child's father is working.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_701.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.306,
+    "control_dispersion": 1.435,
+    "hidden_frac": 0.05
+   },
+   "base": "To encourage drivers to slow down when workers are present.",
+   "masked": "Not specified",
+   "control": "To slow down vehicles when workers are present.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "When alternative gabion joint material fasteners are not capable of enclosing all wires along a joint, especially at basket-to-basket joints, what must be used instead?",
+   "reference": "Either a standard tie wire or spiral binder, as applicable, must be used.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_298.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.919,
+    "control_dispersion": 1.903,
+    "hidden_frac": 0.05
+   },
+   "base": "Spiral binder",
+   "masked": "Spiral binder",
+   "control": "Spiral binder or other strong wire spiral binder",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": true
+  },
+  {
+   "query": "What is the distance between the yield line and the limit line at the exit ramp?",
+   "reference": "The distance between the yield line and the limit line at the exit ramp is 1'-0\" to 2'-0\".",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_048.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.339,
+    "control_dispersion": 1.645,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "1'-0\" to 2'-0\"",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": true,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the diameter of the rebar specified for the anchor plate and hardware in the drawing labeled \"Sheet 2 of 2\" on the page with the section titled \"CONCRETE HALF BARRIER TRANSITION TO VERTICAL\"?",
+   "reference": "1\" Diameter",
+   "category": "Dimensional Accuracy",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_108.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.21,
+    "control_dispersion": 2.21,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "1\"",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": true
+  },
+  {
+   "query": "What is the distance between the longitudinal bars in the longitudinal joint?",
+   "reference": "The distance between the longitudinal bars in the longitudinal joint is 24 inches.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_197.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.613,
+    "control_dispersion": 1.419,
+    "hidden_frac": 0.05
+   },
+   "base": "10'-0\"",
+   "masked": "Not specified",
+   "control": "10'-0\"",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum width for pipe stability in a trench or non-trench condition?",
+   "reference": "The minimum width for pipe stability is 5D on each side of the pipe, totaling 11D including the pipe diameter.",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_142.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.742,
+    "control_dispersion": 1.839,
+    "hidden_frac": 0.05
+   },
+   "base": "5D",
+   "masked": "5D",
+   "control": "5D",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum cover thickness for the concrete apron in the Ditch Bottom Inlet Types C, D, E, and H?",
+   "reference": "The minimum cover thickness for the concrete apron is 2 inches.",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_181.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.935,
+    "control_dispersion": 1.871,
+    "hidden_frac": 0.05
+   },
+   "base": "2 inches",
+   "masked": "2 inches",
+   "control": "2 inches",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the additional reinforcing for the electrical details, as shown for other typical reinforcing for type 85 barrier, and B11-83, B11-834?",
+   "reference": "Only the additional reinforcing for the electrical details, as shown for other typical reinforcing for type 85 barrier, and B11-83, B11-834.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_449.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.952,
+    "control_dispersion": 2.0,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Transformer Base\" label on the page titled \"Pedestrian Control Signal Installation Details\"?",
+   "reference": "The Transformer Base is a component of the Pedestrian Control Signal Installation Details, serving as a mounting point for the signal's electrical components.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_601.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.516,
+    "control_dispersion": 1.484,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the diameter of the fully threaded bolts specified in the Wyoming Department of Transportation's 10 FT [3m] Wood Snow Fence standard plan?",
+   "reference": "5/8\" [16] DIA. BOLT",
+   "category": "Dimensional Accuracy",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_616-1C (SEP_2023) 10 FT (3m) Wood Snow Fence (386 kB)-_page_2.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.444,
+    "control_dispersion": 1.524,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "5/8\" (16) DIA. BOLT",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": true,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum thickness of the Junction Slab at the inside edge of the slab, per Note 3?",
+   "reference": "The minimum thickness of the Junction Slab at the inside edge of the slab is 1-6\".",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_422.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.806,
+    "control_dispersion": 1.774,
+    "hidden_frac": 0.05
+   },
+   "base": "6\"",
+   "masked": "6\"",
+   "control": "6\"",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum cover for reinforcing steel bars in the Curb and Gutter Barrier Inlet plan?",
+   "reference": "The minimum cover for reinforcing steel bars is 2 inches.",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_159.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.016,
+    "control_dispersion": 1.887,
+    "hidden_frac": 0.05
+   },
+   "base": "2\"",
+   "masked": "2\"",
+   "control": "2\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum distance between the edge of the grate frame and the pavement?",
+   "reference": "The minimum distance between the edge of the grate frame and the pavement is 1'-2\".",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_277.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.823,
+    "control_dispersion": 1.79,
+    "hidden_frac": 0.05
+   },
+   "base": "1'-2\"",
+   "masked": "1'-2\"",
+   "control": "1'-2\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"KEYED JOINT\" label in the context of the \"STANDARD TYPE G2 OR G4\" plan?",
+   "reference": "The \"KEYED JOINT\" label is used to indicate the location of a keyed joint in the \"STANDARD TYPE G2 OR G4\" plan.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_236.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.565,
+    "control_dispersion": 1.758,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum spacing for #4 bars in the bottom of the approach slab as specified in the \"PLAN - SQUARE BRIDGES\" section?",
+   "reference": "18\" max. sp.",
+   "category": "Dimensional Accuracy",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_031.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.806,
+    "control_dispersion": 1.871,
+    "hidden_frac": 0.05
+   },
+   "base": "18 inches",
+   "masked": "18 inches",
+   "control": "18 inches",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the current sign number for the sign description 'LITTER PICK UP AHEAD' in the 'SPECIAL SIGN DETAILS CROSSWALK' table?",
+   "reference": "The current sign number for the sign description 'LITTER PICK UP AHEAD' is TTC-002-25.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_705.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.016,
+    "control_dispersion": 1.871,
+    "hidden_frac": 0.05
+   },
+   "base": "TTC-002-25",
+   "masked": "TTC-002-25",
+   "control": "TTC-002-25",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the diameter of the weep holes shown in the \"SECTION CONCRETE SURFACE ROAD WITH CONCRETE WALLS\" detail?",
+   "reference": "3\" Diameter Weep Holes",
+   "category": "Dimensional Accuracy",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_178.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.629,
+    "control_dispersion": 1.774,
+    "hidden_frac": 0.05
+   },
+   "base": "3 inches",
+   "masked": "3 inches",
+   "control": "3 inches",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the maximum distance between the handrail and the landing at the top of the sidewalk, as shown in the Pedestrian/Bicycle Railing (Steel) plan?",
+   "reference": "The maximum distance between the handrail and the landing at the top of the sidewalk is 1'-6\".",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_312.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.839,
+    "control_dispersion": 1.919,
+    "hidden_frac": 0.05
+   },
+   "base": "2'-6\"",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the recommended clearance on all reinforcement, including the metal pipe shown, per Note 1?",
+   "reference": "The recommended clearance on all reinforcement, including the metal pipe shown, is 2 inches.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_260.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.887,
+    "control_dispersion": 2.097,
+    "hidden_frac": 0.05
+   },
+   "base": "2 inches",
+   "masked": "2 inches",
+   "control": "2\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum diameter of the void in the concrete plug at the tip end, per Note 3?",
+   "reference": "The minimum diameter of the void in the concrete plug at the tip end is 6.5 inches.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_577.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.5,
+    "control_dispersion": 1.645,
+    "hidden_frac": 0.05
+   },
+   "base": "6\u00bd\"",
+   "masked": "6 inches",
+   "control": "6 inches",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the maximum spacing in feet for cones or tubular markers in a work zone, according to the table in the \"General Information for Traffic Control Through Work Zones\" section?",
+   "reference": "The maximum spacing for cones or tubular markers in a work zone is 50 feet.",
+   "category": "Dimensional Accuracy",
+   "agency": "FDOT",
+   "image": "florida_2026_page_047.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.758,
+    "control_dispersion": 1.645,
+    "hidden_frac": 0.05
+   },
+   "base": "50",
+   "masked": "50",
+   "control": "50",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the hatching pattern in the section view of the plan sheet labeled \"102-601\"?",
+   "reference": "The hatching pattern in the section view of the plan sheet labeled \"102-601\" represents the work area.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_058.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.726,
+    "control_dispersion": 1.677,
+    "hidden_frac": 0.05
+   },
+   "base": "Work Area",
+   "masked": "The hatching pattern in the section view of the plan sheet labeled \"102-601\" indicates an area that encroaches on a sidewalk.",
+   "control": "Work Area",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum cover over pipe culverts as specified in the general notes?",
+   "reference": "Minimum cover over pipe culverts shall be 12\", measured from the top of pipe.",
+   "category": "Dimensional Accuracy",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_141.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.081,
+    "control_dispersion": 2.065,
+    "hidden_frac": 0.05
+   },
+   "base": "12 inches",
+   "masked": "9 inches",
+   "control": "12 inches",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the hatching pattern used in the section view of the concrete barrier wildlife passage?",
+   "reference": "The hatching pattern is used to indicate the concrete barrier.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_098.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.694,
+    "control_dispersion": 1.661,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "When does \"ADDITIONAL SIGNS ('BE PREPARED TO STOP' OR 'FLAGGER AHEAD')\" apply per Note: \"ADDITIONAL SIGNS ('BE PREPARED\"?",
+   "reference": "ADDITIONAL SIGNS ('BE PREPARED TO STOP' OR 'FLAGGER AHEAD') may be added if queue lengths are too long for the sign spacing shown.",
+   "category": "Logical Reasoning",
+   "agency": "WYDOT",
+   "image": "Wyoming_DOT_703-2G  (OCT_2018)_page_9.png",
+   "n_patches": [
+    45,
+    28
+   ],
+   "n_hidden": 63,
+   "n_control_hidden": 63,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     45,
+     28
+    ],
+    "masked_dispersion": 1.635,
+    "control_dispersion": 1.683,
+    "hidden_frac": 0.05
+   },
+   "base": "If queue lengths are too long for the sign spacing shown.",
+   "masked": "If queue length is too long for the sign space.",
+   "control": "If queue lengths are too long for the sign spacing shown.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the required distance between anchors in the outside crest of corrugation, as stated in Note 5?",
+   "reference": "The required distance between anchors in the outside crest of corrugation is 4 feet.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_253.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.855,
+    "control_dispersion": 2.016,
+    "hidden_frac": 0.05
+   },
+   "base": "Four (4) corrugations",
+   "masked": "Not specified",
+   "control": "Four (4) corrugations",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"DETAIL 'D'\" section in the plan with the ID \"FY 2026-27 STANDARD PLANS\"?",
+   "reference": "The purpose of the \"DETAIL 'D'\" section is to provide a detailed view of the Mast Arm Extension Base Plate.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_598.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.016,
+    "control_dispersion": 2.0,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the highlighted sign controller?",
+   "reference": "The highlighted sign controller is used to control the highlighted sign.",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_726.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.629,
+    "control_dispersion": 1.661,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the minimum distance the conduit should extend into the shoulder pavement when the shoulder and traveled way are paved with the same material and there is no joint between them, per Note 9?",
+   "reference": "The conduit should extend only 2\"-0\" into the shoulder pavement.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_579.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.887,
+    "control_dispersion": 2.016,
+    "hidden_frac": 0.05
+   },
+   "base": "3'-0\"",
+   "masked": "3 inches",
+   "control": "3\"",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the \"SEE JOINT DETAIL\" callout?",
+   "reference": "The purpose of the \"SEE JOINT DETAIL\" callout is to refer to the detailed drawing of the joint.",
+   "category": "Visual Interpretation",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_288.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.919,
+    "control_dispersion": 2.177,
+    "hidden_frac": 0.05
+   },
+   "base": "To reference the detailed design and construction specifications for the joint connection.",
+   "masked": "Not specified",
+   "control": "To reference the detailed design and specifications for the joint connection.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the maximum skew angle for a 20'-0\" slab width as specified in the \"TYPE E APPROACH SLAB\" drawing?",
+   "reference": "45\u00b0",
+   "category": "Visual Interpretation",
+   "agency": "CDOT",
+   "image": "colorado_2025_page_038.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.661,
+    "control_dispersion": 1.645,
+    "hidden_frac": 0.05
+   },
+   "base": "45\u00b0",
+   "masked": "50\u00b0",
+   "control": "45\u00b0",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the general note for finish requirements?",
+   "reference": "See general notes for finish requirements.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_094.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.661,
+    "control_dispersion": 1.742,
+    "hidden_frac": 0.05
+   },
+   "base": "See General Notes for finish requirements.",
+   "masked": "Not specified",
+   "control": "See General Notes for finish requirements.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of Note 3, which states that \"Drilled and tapped holes 1/4\" may be used where interference due to welds or structural members is encountered\"?",
+   "reference": "The purpose of Note 3 is to provide an alternative solution for situations where interference occurs due to welds or structural members.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_495.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.726,
+    "control_dispersion": 1.661,
+    "hidden_frac": 0.05
+   },
+   "base": "To allow for flexibility in hole placement when there are obstructions from welds or structural members.",
+   "masked": "The purpose of Note 3 is to provide an alternative for mounting holes when interference from welds or structural members makes the use of tapped holes impractical.",
+   "control": "To allow for flexibility in mounting where welding or structural elements might interfere with the use of standard holes.",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "What is the purpose of the \"Trailing Anchorage Type II\" callout in the DIVIDED ROADWAY?",
+   "reference": "The purpose of the \"Trailing Anchorage Type II\" callout in the DIVIDED ROADWAY is to provide details for the \"Trailing Anchorage\".",
+   "category": "Visual Interpretation",
+   "agency": "FDOT",
+   "image": "florida_2026_page_008.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.452,
+    "control_dispersion": 1.548,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "Not specified",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the slope ratio indicated by the hatching pattern in the \"Ramp Curb\" detail shown in Section A-A of the drawing labeled \"DEPRESSED CURB AT SIDEWALK RAMP\"?",
+   "reference": "15:1",
+   "category": "Visual Interpretation",
+   "agency": "AZDOT",
+   "image": "arizona_2025_page_033.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 2.065,
+    "control_dispersion": 2.048,
+    "hidden_frac": 0.05
+   },
+   "base": "15:1",
+   "masked": "Not specified",
+   "control": "15:1",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": false
+  },
+  {
+   "query": "What is the distance between the pipe hangers or supports?",
+   "reference": "The distance between the pipe hangers or supports is 10'-0\" unless otherwise detailed on the plans.",
+   "category": "Dimensional Accuracy",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_468.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.984,
+    "control_dispersion": 1.968,
+    "hidden_frac": 0.05
+   },
+   "base": "10'-0\"",
+   "masked": "10'-0\"",
+   "control": "10'-0\"",
+   "base_ok": true,
+   "masked_ok": true,
+   "control_ok": true,
+   "masked_changed": false,
+   "control_changed": false
+  },
+  {
+   "query": "What is the purpose of the \"Footing Not Shown\" notation in the plan, as indicated in Note 6, which states \"See Sheet 6 for Options\"?",
+   "reference": "The purpose of the \"Footing Not Shown\" notation in the plan is to refer to Sheet 6 for options, as indicated in Note 6.",
+   "category": "Logical Reasoning",
+   "agency": "FDOT",
+   "image": "florida_2026_page_376.png",
+   "n_patches": [
+    44,
+    28
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     44,
+     28
+    ],
+    "masked_dispersion": 1.613,
+    "control_dispersion": 1.629,
+    "hidden_frac": 0.05
+   },
+   "base": "The purpose of the \"Footing Not Shown\" notation is to indicate that the foundation details are not included on the current sheet and can be found on Sheet 6 with options provided there.",
+   "masked": "Not specified",
+   "control": "The purpose of the \"Footing Not Shown\" notation is to indicate that the foundation details are not depicted on the current sheet and can be found on Sheet 6 with various options available.",
+   "base_ok": true,
+   "masked_ok": false,
+   "control_ok": true,
+   "masked_changed": true,
+   "control_changed": true
+  },
+  {
+   "query": "When does the detectable warning surface be used, per Note 10?",
+   "reference": "The detectable warning surface is used for corner installations similar to those shown in detail A and detail B.",
+   "category": "Logical Reasoning",
+   "agency": "Caltrans",
+   "image": "Caltrans_california drawings_California_2025-standard-plans-locked_page_188.png",
+   "n_patches": [
+    40,
+    31
+   ],
+   "n_hidden": 62,
+   "n_control_hidden": 62,
+   "control_shape_matched": true,
+   "geometry": {
+    "grid": [
+     40,
+     31
+    ],
+    "masked_dispersion": 1.71,
+    "control_dispersion": 1.758,
+    "hidden_frac": 0.05
+   },
+   "base": "Not specified",
+   "masked": "Not specified",
+   "control": "When the ramp is reversed.",
+   "base_ok": false,
+   "masked_ok": false,
+   "control_ok": false,
+   "masked_changed": false,
+   "control_changed": true
+  }
+ ]
+}

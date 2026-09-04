@@ -1,5 +1,7 @@
 {
- "note": "Capability ladder. CPU-only; derived from existing logs.",
+ "note": "Capability ladder on the frozen question set. CPU-only.",
+ "arm": "withheld",
+ "source": "_table9_frozen.json",
  "n_cases": 100,
  "rungs": {
   "retrieval": "gold page in top-5",
@@ -11,147 +13,37 @@
  },
  "derivation": {
   "7B plain": "text",
-  "7B + CoT": "none+structured",
+  "7B + CoT": "structured",
   "72B plain": "text",
-  "72B + CoT + thresholds": "structured",
-  "72B agentic": "agentic"
+  "72B + CoT + thresholds": "structured"
  },
  "configs": {
   "7B plain": {
    "retrieval": {
-    "k": 32,
+    "k": 100,
     "n": 100,
-    "pct": 32.0,
-    "wilson95": [
-     23.67,
-     41.66
-    ]
-   },
-   "rule_id": {
-    "k": 79,
-    "n": 100,
-    "pct": 79.0,
-    "wilson95": [
-     70.02,
-     85.83
-    ]
-   },
-   "rule_interp": {
-    "k": 74,
-    "n": 100,
-    "pct": 74.0,
-    "wilson95": [
-     64.63,
-     81.6
-    ]
-   },
-   "value_extract": {
-    "k": 78,
-    "n": 100,
-    "pct": 78.0,
-    "wilson95": [
-     68.93,
-     85.0
-    ]
-   },
-   "arithmetic": {
-    "k": 0,
-    "n": 0,
-    "pct": null,
-    "wilson95": null
-   },
-   "verdict": {
-    "k": 68,
-    "n": 100,
-    "pct": 68.0,
-    "wilson95": [
-     58.34,
-     76.33
-    ]
-   }
-  },
-  "7B + CoT": {
-   "retrieval": {
-    "k": 32,
-    "n": 100,
-    "pct": 32.0,
-    "wilson95": [
-     23.67,
-     41.66
-    ]
-   },
-   "rule_id": {
-    "k": 93,
-    "n": 100,
-    "pct": 93.0,
-    "wilson95": [
-     86.25,
-     96.57
-    ]
-   },
-   "rule_interp": {
-    "k": 93,
-    "n": 93,
     "pct": 100.0,
     "wilson95": [
-     96.03,
+     96.3,
      100.0
     ]
    },
-   "value_extract": {
-    "k": 63,
-    "n": 93,
-    "pct": 67.74,
-    "wilson95": [
-     57.7,
-     76.38
-    ]
-   },
-   "arithmetic": {
-    "k": 87,
-    "n": 93,
-    "pct": 93.55,
-    "wilson95": [
-     86.63,
-     97.01
-    ]
-   },
-   "verdict": {
-    "k": 51,
-    "n": 100,
-    "pct": 51.0,
-    "wilson95": [
-     41.35,
-     60.58
-    ]
-   }
-  },
-  "72B plain": {
-   "retrieval": {
-    "k": 38,
-    "n": 100,
-    "pct": 38.0,
-    "wilson95": [
-     29.1,
-     47.79
-    ]
-   },
    "rule_id": {
-    "k": 94,
+    "k": 80,
     "n": 100,
-    "pct": 94.0,
+    "pct": 80.0,
     "wilson95": [
-     87.52,
-     97.22
+     71.12,
+     86.66
     ]
    },
    "rule_interp": {
-    "k": 44,
+    "k": 70,
     "n": 100,
-    "pct": 44.0,
+    "pct": 70.0,
     "wilson95": [
-     34.67,
-     53.77
+     60.41,
+     78.11
     ]
    },
    "value_extract": {
@@ -170,53 +62,73 @@
     "wilson95": null
    },
    "verdict": {
-    "k": 80,
+    "k": 74,
     "n": 100,
-    "pct": 80.0,
+    "pct": 74.0,
     "wilson95": [
-     71.12,
-     86.66
+     64.63,
+     81.6
     ]
    }
   },
-  "72B + CoT + thresholds": {
+  "7B + CoT": {
    "retrieval": {
-    "k": 32,
+    "k": 100,
     "n": 100,
-    "pct": 32.0,
+    "pct": 100.0,
     "wilson95": [
-     23.67,
-     41.66
+     96.3,
+     100.0
     ]
    },
    "rule_id": {
-    "k": 100,
+    "k": 39,
     "n": 100,
-    "pct": 100.0,
+    "pct": 39.0,
     "wilson95": [
-     96.3,
-     100.0
+     30.02,
+     48.8
     ]
    },
    "rule_interp": {
-    "k": 100,
-    "n": 100,
-    "pct": 100.0,
+    "k": 38,
+    "n": 39,
+    "pct": 97.44,
     "wilson95": [
-     96.3,
-     100.0
+     86.82,
+     99.55
     ]
    },
    "value_extract": {
-    "k": 100,
-    "n": 100,
-    "pct": 100.0,
+    "k": 31,
+    "n": 39,
+    "pct": 79.49,
     "wilson95": [
-     96.3,
-     100.0
+     64.47,
+     89.22
     ]
    },
    "arithmetic": {
+    "k": 37,
+    "n": 38,
+    "pct": 97.37,
+    "wilson95": [
+     86.5,
+     99.53
+    ]
+   },
+   "verdict": {
+    "k": 61,
+    "n": 100,
+    "pct": 61.0,
+    "wilson95": [
+     51.2,
+     69.98
+    ]
+   }
+  },
+  "72B plain": {
+   "retrieval": {
     "k": 100,
     "n": 100,
     "pct": 100.0,
@@ -225,23 +137,59 @@
      100.0
     ]
    },
-   "verdict": {
-    "k": 100,
+   "rule_id": {
+    "k": 97,
     "n": 100,
-    "pct": 100.0,
+    "pct": 97.0,
     "wilson95": [
-     96.3,
-     100.0
+     91.55,
+     98.97
     ]
-   }
-  },
-  "72B agentic": {
-   "retrieval": {
+   },
+   "rule_interp": {
+    "k": 51,
+    "n": 100,
+    "pct": 51.0,
+    "wilson95": [
+     41.35,
+     60.58
+    ]
+   },
+   "value_extract": {
+    "k": 52,
+    "n": 100,
+    "pct": 52.0,
+    "wilson95": [
+     42.32,
+     61.54
+    ]
+   },
+   "arithmetic": {
     "k": 0,
     "n": 0,
     "pct": null,
     "wilson95": null
    },
+   "verdict": {
+    "k": 68,
+    "n": 100,
+    "pct": 68.0,
+    "wilson95": [
+     58.34,
+     76.33
+    ]
+   }
+  },
+  "72B + CoT + thresholds": {
+   "retrieval": {
+    "k": 100,
+    "n": 100,
+    "pct": 100.0,
+    "wilson95": [
+     96.3,
+     100.0
+    ]
+   },
    "rule_id": {
     "k": 100,
     "n": 100,
@@ -261,30 +209,30 @@
     ]
    },
    "value_extract": {
-    "k": 100,
+    "k": 97,
     "n": 100,
-    "pct": 100.0,
+    "pct": 97.0,
     "wilson95": [
-     96.3,
-     100.0
+     91.55,
+     98.97
     ]
    },
    "arithmetic": {
-    "k": 100,
-    "n": 100,
+    "k": 92,
+    "n": 92,
     "pct": 100.0,
     "wilson95": [
-     96.3,
+     95.99,
      100.0
     ]
    },
    "verdict": {
-    "k": 100,
+    "k": 97,
     "n": 100,
-    "pct": 100.0,
+    "pct": 97.0,
     "wilson95": [
-     96.3,
-     100.0
+     91.55,
+     98.97
     ]
    }
   }
