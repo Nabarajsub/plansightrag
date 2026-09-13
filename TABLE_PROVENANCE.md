@@ -28,7 +28,7 @@ manuscript.
 | 19 | Cross-family judge (appendix `app:extra`) | `retrieval/crossfamily_judge.json` | `retrieval/crossfamily_judge.py` | Qwen72 79.95 / InternVL8 85.61 / agree 92.92 / κ 0.7532 |
 | 20 | Agentic confusion (`tbl` @ "confusion matrix over 8 cross-plan") | `compliance/batch_compliance_results.json` | (agentic pipeline) | 8-query GT/Pred/steps |
 | 21 | FN sensitivity (`tbl:fn-sensitivity`) | `compliance/fn_sensitivity_results.json` | (agentic pipeline) | false-negative sweep |
-| 22 | Retrieval latency (`tbl:latency`) | `retrieval/latency_424.json` | `retrieval/measure_latency.py` | min 98.72 / p50 101.26 / mean 101.24 / max 138.19 |
+| 22 | Retrieval latency (`tbl:latency`) | `retrieval/latency_424.json` | `retrieval/measure_latency.py` | min 85.40 / p50 97.94 / p95 102.86 / mean 97.67 / max 151.97 (H100, job 12028420) |
 | 23 | Consolidated latency (`tbl` @ "Consolidated deployment latency") | `retrieval/latency_bench.json` | `retrieval/latency_bench.py` | index 7.3 min; retrieval p50; agentic 60.9 s/query |
 | — | Circularity / ColPali-miss control (in-text) | `retrieval/colnomic_circularity.json` | `retrieval/circularity_eval.py` | overall 92.45; HIT 96.66 / MISS 77.89 |
 
