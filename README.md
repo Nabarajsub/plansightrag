@@ -12,6 +12,12 @@ Every number in every table of the manuscript is reproduced by a script in `code
 that writes a JSON report in `reports/`. The mapping from each manuscript table to
 its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 
+Tables that were moved out of the article's appendix at the handling editor's
+request are published here as **[`SUPPLEMENTARY.md`](SUPPLEMENTARY.md)**
+(Tables S1-S5: per-run implementation provenance, benchmark distribution by
+agency and category, the 78-pair anchor set, retrieval latency percentiles, and
+the multi-plan threshold study).
+
 ## Demo
 
 A two-minute silent walkthrough of the pipeline, built from the actual plan sheets
@@ -79,6 +85,7 @@ plansightrag/
 ├── CITATION.cff
 ├── requirements.txt          # pinned environment
 ├── TABLE_PROVENANCE.md       # manuscript table  ->  report JSON  ->  generating script
+├── SUPPLEMENTARY.md          # Tables S1-S5, moved from the article appendix
 ├── reports/                  # source-of-truth result JSONs (back every table)
 │   ├── retrieval/            # H1 retrieval comparison, rank metrics, tiling, rerank, CIs, latency, circularity
 │   ├── compliance/           # H2 CAD compliance, OCR baseline, rule-grounding, real-plan, agentic
