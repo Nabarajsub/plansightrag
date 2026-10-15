@@ -1,0 +1,17 @@
+title: PlanSightRAG
+description: >-
+  A Visual-First Multimodal RAG for Retrieval-Assisted Question Answering and
+  Compliance Checking of Civil Standard Plans
+theme: null
+plugins: []
+exclude:
+  - DEMO_PROVENANCE.md
+nav:
+  - title: Overview
+    url: /
+  - title: Supplementary
+    url: /supplementary/
+  - title: Reproducibility
+    url: /reproducibility/
+  - title: Demo
+    url: /demo/

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#d1d9e0;
+    --accent:#0969da; --accent-soft:#ddf4ff; --code-bg:#f6f8fa;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#3d444d;
+      --accent:#4493f8; --accent-soft:#121d2f; --code-bg:#151b23;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#3d444d;
+    --accent:#4493f8; --accent-soft:#121d2f; --code-bg:#151b23;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:980px; margin:0 auto; padding:0 16px}
+  header{border-bottom:1px solid var(--line); padding:28px 0 0}
+  header h1{margin:0 0 4px; font-size:1.5rem; letter-spacing:-.01em}
+  header p.sub{margin:0 0 18px; color:var(--muted); font-size:.95rem; max-width:62ch}
+  nav{display:flex; gap:4px; flex-wrap:wrap}
+  nav a{
+    padding:8px 14px; border-radius:6px 6px 0 0; text-decoration:none;
+    color:var(--fg); font-size:.92rem; border:1px solid transparent; border-bottom:none;
+    margin-bottom:-1px;
+  }
+  nav a:hover{background:var(--code-bg)}
+  nav a.on{border-color:var(--line); background:var(--bg); font-weight:600}
+  main{padding:30px 0 60px}
+  main h2{margin:34px 0 10px; font-size:1.25rem; padding-bottom:6px; border-bottom:1px solid var(--line)}
+  main h3{margin:26px 0 8px; font-size:1.02rem}
+  a{color:var(--accent)}
+  code,kbd{background:var(--code-bg); padding:.15em .35em; border-radius:4px; font-size:.88em}
+  pre{background:var(--code-bg); padding:14px; border-radius:6px; overflow-x:auto}
+  pre code{background:none; padding:0}
+  table{border-collapse:collapse; width:100%; margin:14px 0; font-size:.88rem; display:block; overflow-x:auto}
+  th,td{border:1px solid var(--line); padding:6px 10px; text-align:left; white-space:nowrap}
+  th{background:var(--code-bg)}
+  blockquote{margin:14px 0; padding:2px 14px; border-left:3px solid var(--accent); background:var(--accent-soft)}
+  em{color:var(--muted)}
+  footer{border-top:1px solid var(--line); padding:18px 0 40px; color:var(--muted); font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>{{ site.title }}</h1>
+    <p class="sub">{{ site.description }}</p>
+    <nav>
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="on"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<main><div class="wrap">{{ content }}</div></main>
+<footer><div class="wrap">
+  Nabaraj Subedi, Shuvo Dip Datta, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar — University of Wyoming ·
+  <a href="https://github.com/Nabarajsub/plansightrag">Repository</a>
+</div></footer>
+</body>
+</html>
