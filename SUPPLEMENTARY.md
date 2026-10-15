@@ -138,7 +138,3 @@ Multi-plan compliance verdict accuracy on the n=100 scale set, before and after 
 | N=4 | 25/25 | 25/25 |
 | N=5 | 13/25 | 25/25 |
 | Total | 88/100 (88%) | 100/100 (100%) |
-
----
-
-Generated 2026-10-14 from the submitted manuscript source.

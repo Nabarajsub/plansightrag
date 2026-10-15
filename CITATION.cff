@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: >-
-  PlanSightRAG: A Visual-First Multimodal RAG for Question Answering and
-  Compliance Checking on Civil Standard Plans
+  A Visual-First Multimodal RAG for Retrieval-Assisted Question Answering and
+  Compliance Checking of Civil Standard Plans
 message: If you use this software or benchmark, please cite it as below.
 type: software
 authors:

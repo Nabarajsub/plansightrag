@@ -1,7 +1,7 @@
 # PlanSightRAG
 
-**A Visual-First Multimodal RAG for Automating Question Answering and Compliance
-Checking for Civil Standard Plans**
+**A Visual-First Multimodal RAG for Retrieval-Assisted Question Answering and
+Compliance Checking of Civil Standard Plans**
 
 Nabaraj Subedi, Shuvo Dip Datta, Ahmed Abdelaty, Shivanand Venkanna Sheshappanavar
 — University of Wyoming
@@ -12,11 +12,12 @@ Every number in every table of the manuscript is reproduced by a script in `code
 that writes a JSON report in `reports/`. The mapping from each manuscript table to
 its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 
-Tables that were moved out of the article's appendix at the handling editor's
-request are published here as **[`SUPPLEMENTARY.md`](SUPPLEMENTARY.md)**
-(Tables S1-S5: per-run implementation provenance, benchmark distribution by
-agency and category, the 78-pair anchor set, retrieval latency percentiles, and
-the multi-plan threshold study).
+### 📑 [Supplementary information →](SUPPLEMENTARY.md)
+
+Tables S1–S5, moved out of the article's appendix at the handling editor's
+request: per-run implementation provenance, benchmark distribution by agency and
+reasoning category, the 78-pair anchor set, retrieval latency percentiles, and
+the multi-plan threshold study.
 
 ## Demo
 
