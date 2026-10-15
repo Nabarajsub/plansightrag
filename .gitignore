@@ -18,6 +18,12 @@ cache/
 *.png
 *.jpg
 *.jpeg
+# ...except our own figures: the tiling-scheme diagram is generated from this
+# project's TikZ source, and the specification sheet is a synthetic corpus we
+# render ourselves (code/compliance/rule_grounding_hard.py). Neither reproduces
+# an agency document.
+!docs/figures/*.png
+!docs/*.gif
 *.pdf
 !docs/*.png
 
