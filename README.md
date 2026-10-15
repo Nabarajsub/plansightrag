@@ -14,10 +14,9 @@ its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 
 ### 📑 [Supplementary information →](SUPPLEMENTARY.md)
 
-Tables S1–S5, moved out of the article's appendix at the handling editor's
-request: per-run implementation provenance, benchmark distribution by agency and
-reasoning category, the 78-pair anchor set, retrieval latency percentiles, and
-the multi-plan threshold study.
+Additional tables supporting the article (S1–S5): per-run implementation
+provenance, benchmark distribution by agency and reasoning category, the 78-pair
+anchor set, retrieval latency percentiles, and the multi-plan threshold study.
 
 ## Demo
 
@@ -86,7 +85,7 @@ plansightrag/
 ├── CITATION.cff
 ├── requirements.txt          # pinned environment
 ├── TABLE_PROVENANCE.md       # manuscript table  ->  report JSON  ->  generating script
-├── SUPPLEMENTARY.md          # Tables S1-S5, moved from the article appendix
+├── SUPPLEMENTARY.md          # additional supporting tables (S1-S5)
 ├── reports/                  # source-of-truth result JSONs (back every table)
 │   ├── retrieval/            # H1 retrieval comparison, rank metrics, tiling, rerank, CIs, latency, circularity
 │   ├── compliance/           # H2 CAD compliance, OCR baseline, rule-grounding, real-plan, agentic
@@ -111,8 +110,9 @@ plansightrag/
 
 - **The 1,898-page five-DOT plan image corpus** is not redistributed here. The
   source documents are public: WYDOT Standard Plans are available from the Wyoming
-  DOT website; the other four agencies (Caltrans, AZDOT, CDOT, FDOT) publish their
-  standard plans on their respective DOT sites. Page-rasterization settings are in
+  DOT website; the other four agencies (Caltrans, AZDOT, ARDOT, FDOT) publish their
+  standard plans on their respective sites. See `data/sources.json` for the
+  per-document record, including a provenance correction for the Arkansas set. Page-rasterization settings are in
   the methodology (200 DPI page-level; 400 DPI for the tiling study).
 - **The 2 GB CAD-generated compliance image sets** (`compliance/scale500`, etc.) are
   regenerable from `code/compliance/make_*.py` + `archetypes*.py`. **Verified:** a
@@ -237,7 +237,7 @@ Download from:
 | Wyoming DOT | Standard Plans | 237 |
 | Caltrans | 2025 Standard Plans | 638 |
 | Arizona DOT | 2025 Standard Drawings | 181 |
-| Colorado DOT | 2025 Bridge Detail Worksheets | 62 |
+| Arkansas (ARDOT) | Standard bridge drawings | 62 |
 | Florida DOT | 2026 Design Standards | 780 |
 | Michigan DOT | Standard Plans (held-out transfer set) | 298 |
 

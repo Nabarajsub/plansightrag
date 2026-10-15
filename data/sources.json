@@ -33,10 +33,6 @@
    "documents": 1,
    "pages": 638
   },
-  "CDOT": {
-   "documents": 1,
-   "pages": 62
-  },
   "FDOT": {
    "documents": 1,
    "pages": 780
@@ -44,6 +40,10 @@
   "WYDOT": {
    "documents": 53,
    "pages": 237
+  },
+  "ARDOT": {
+   "documents": 1,
+   "pages": 62
   }
  },
  "rendered_pages_by_collection": {
@@ -70,16 +70,16 @@
    "used_in_reported_index": true
   },
   {
-   "agency": "CDOT",
-   "collection": "Colorado DOT Standard Bridge Drawings",
+   "agency": "ARDOT",
+   "collection": "Arkansas standard bridge drawings",
    "document": "Colorado-Standard-Bridge-Drawings-Full-Book.pdf",
    "used_for": "retrieval index",
    "pages": 62,
    "bytes": 24726368,
    "sha256": "bba4f3e25ab49382deae30e20632ea720f6a8af1226cba663634158b7b346769",
    "file_mtime": "2026-05-14",
-   "url": "https://www.codot.gov/programs/bridge/bridge-manuals/design-standards/structural-worksheets-pdfs",
-   "access_note": "",
+   "url": "",
+   "access_note": "PROVENANCE CORRECTION (2026-10-14): this file was originally recorded as Colorado DOT with a codot.gov URL. Its sheets in fact carry ARKANSAS STATE HIGHWAY COMMISSION, LITTLE ROCK, ARK. title blocks and Arkansas PE seals (55000-series drawing numbers), and the document text contains no occurrence of 'Colorado'. The agency is therefore ARDOT, not CDOT. The sha256 below identifies the exact file used. The original publisher URL has not yet been re-established; verify by sha256 rather than by URL. The local collection key remains 'colorado_2025' so that the frozen reports in reports/ continue to match the artefacts that produced them.",
    "benchmark_pages_from_this_document": 62,
    "used_in_reported_index": true
   },
@@ -979,5 +979,8 @@
    "benchmark_pages_from_this_document": 2,
    "used_in_reported_index": true
   }
+ ],
+ "_provenance_corrections": [
+  "2026-10-14: the 62-page bridge-drawing document previously attributed to Colorado DOT (CDOT) is Arkansas (ARDOT) material. Agency labels corrected; the directory/collection key 'colorado_2025' is retained as a legacy identifier so that the frozen result JSONs in reports/ remain consistent with the run that produced them."
  ]
 }

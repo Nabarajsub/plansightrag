@@ -4,12 +4,10 @@ Supporting tables for *A Visual-First Multimodal RAG for Retrieval-Assisted
 Question Answering and Compliance Checking of Civil Standard Plans*
 (submitted to *Automation in Construction*, AUTCON-D-26-04051).
 
-These tables were moved out of the article's appendix at the request of the
-handling editor, who asked that supporting material live in an online
-environment rather than extend the printed appendix. Nothing here is needed to
-follow the argument of the paper: each table either records implementation
-provenance or gives a breakdown whose headline figures are already stated in the
-article text. No value differs from the version that was reviewed.
+Additional material supporting the article is published here. Nothing in this
+page is needed to follow the argument of the paper: each table either records
+implementation provenance or gives a breakdown whose headline figures are
+already stated in the article text.
 
 Every number below is reproduced by a script in `code/` and written to
 `reports/`. See [`TABLE_PROVENANCE.md`](TABLE_PROVENANCE.md) for the mapping from
@@ -92,13 +90,19 @@ Implementation provenance for every retrieval run. The generating script is the 
 
 Distribution of the 4,056-pair five-DOT benchmark by agency and reasoning category. The held-out Michigan DOT zero-shot set (93 pairs) is not included in this table.
 
-| Category | WYDOT | Caltrans | AZDOT | CDOT | FDOT | Total |
+| Category | WYDOT | Caltrans | AZDOT | ARDOT | FDOT | Total |
 |---|---|---|---|---|---|---|
 | Visual Interpretation | 201 | 416 | 149 | 85 | 549 | 1,400 |
 | Dimensional Accuracy | 170 | 287 | 144 | 87 | 327 | 1,015 |
 | Logical Reasoning | 172 | 331 | 104 | 104 | 446 | 1,157 |
 | Hallucination Rate | 15 | 192 | 17 | 2 | 258 | 484 |
 | Total | 558 | 1,226 | 414 | 278 | 1,580 | 4,056 |
+
+
+*Note: the agency column shown as ARDOT is Arkansas material. It was recorded as
+Colorado DOT (CDOT) in the initial release; the sheets carry Arkansas State Highway
+Commission title blocks, and `data/sources.json` documents the correction. The local
+collection key remains `colorado_2025` so that the frozen reports stay consistent.*
 
 ## Table S3. Human-curated 78-pair WYDOT anchor set
 
