@@ -19,6 +19,8 @@ assert body[0].startswith("# Supplementary"), "unexpected first line in SUPPLEME
 body = "\n".join(body[1:]).lstrip("\n")
 body = body.replace("[`TABLE_PROVENANCE.md`](TABLE_PROVENANCE.md)",
                     f"[`TABLE_PROVENANCE.md`]({REPO}/TABLE_PROVENANCE.md)")
+# the site is served with docs/ as its root, so image paths lose that prefix
+body = body.replace("](docs/figures/", "](figures/")
 
 # the site has navigation, so the in-page contents list is redundant
 i, j = body.find("## Contents"), body.find("## Table S1.")

@@ -4,10 +4,11 @@ Supporting tables for *A Visual-First Multimodal RAG for Retrieval-Assisted
 Question Answering and Compliance Checking of Civil Standard Plans*
 (submitted to *Automation in Construction*, AUTCON-D-26-04051).
 
-Additional material supporting the article is published here. Nothing in this
-page is needed to follow the argument of the paper: each table either records
-implementation provenance or gives a breakdown whose headline figures are
-already stated in the article text.
+Additional material supporting the article is published here: twelve tables,
+figures and notes (S1–S12). Nothing on this page is needed to follow the
+argument of the paper. Each item either records implementation provenance, or
+gives a breakdown whose headline figures are already stated in the article text,
+or illustrates a procedure the article describes in words.
 
 Every number below is reproduced by a script in `code/` and written to
 `reports/`. See [`TABLE_PROVENANCE.md`](TABLE_PROVENANCE.md) for the mapping from
@@ -20,6 +21,14 @@ each table to its backing report and script.
 - [Table S3. Human-curated 78-pair WYDOT anchor set](#table-s3-humancurated-78pair-wydot-anchor-set)
 - [Table S4. Retrieval-only latency distribution](#table-s4-retrievalonly-latency-distribution)
 - [Table S5. Multi-plan compliance before and after threshold pre-resolution](#table-s5-multiplan-compliance-before-and-after-threshold-preresolution)
+
+- [Figure S6. Sliding-window tiling scheme](#figure-s6-slidingwindow-tiling-scheme)
+- [Table S7. Judge accuracy, full-page against tile-level retrieval](#table-s7-judge-accuracy-fullpage-against-tilelevel-retrieval)
+- [Table S8. Rank-conditioned end-to-end judge accuracy](#table-s8-rankconditioned-endtoend-judge-accuracy)
+- [Table S9. Zero-shot Michigan transfer, joint against Michigan-only pool](#table-s9-zeroshot-michigan-transfer-joint-against-michiganonly-pool)
+- [Table S10. Agentic compliance confusion matrix](#table-s10-agentic-compliance-confusion-matrix)
+- [Note S11. Complementary retrieval enhancements](#note-s11-complementary-retrieval-enhancements)
+- [Figure S12. Standard-Specifications reference sheet](#figure-s12-standardspecifications-reference-sheet)
 
 ## Table S1. Implementation provenance for every retrieval run
 
@@ -142,3 +151,63 @@ Multi-plan compliance verdict accuracy on the n=100 scale set, before and after 
 | N=4 | 25/25 | 25/25 |
 | N=5 | 13/25 | 25/25 |
 | Total | 88/100 (88%) | 100/100 (100%) |
+
+## Figure S6. Sliding-window tiling scheme
+
+Sliding-window tiling used in the companion tiling study. Sheets are rasterized at 400 DPI and cut into overlapping 1024×1024 tiles with 256-pixel overlap, so fine annotations survive at native resolution and retrieval can be scored per tile. The deployed configuration indexes full pages; tiling is evaluated only as an ablation.
+
+![Sliding-window tiling scheme](docs/figures/tiling_scheme.png)
+
+## Table S7. Judge accuracy, full-page against tile-level retrieval
+
+Judge accuracy of full-page against tile-level retrieval on the 424-pair test split (N=397 queries whose target page yields at least 15 tiles at 400 DPI, about half the 30 tiles a typical landscape sheet yields, which in practice is nearly all plan pages). Measured on the predecessor ColPali backbone.
+
+| Retrieval granularity | Judge accuracy (%) |
+|---|---|
+| Full-page (200 DPI) | 64.23 [59.4, 68.8] |
+| Tile-level (400 DPI) | 68.77 [64.2, 73.3] |
+| Gain (tile - full) | +4.53 pp |
+
+## Table S8. Rank-conditioned end-to-end judge accuracy
+
+End-to-end judge accuracy on the 424-pair test split when the answerer sees only the rank-1 retrieved page, partitioned by whether that page is the gold page. Wilson 95% intervals; Fisher exact p=9.7 10^-12.
+
+| Partition | n | Correct | Judge acc. [95% CI] |
+|---|---|---|---|
+| Rank-1 hit | 284 | 231 | 81.34% [76.4, 85.4] |
+| Rank-1 miss | 140 | 68 | 48.57% [40.4, 56.8] |
+| Overall (top-1 answering) | 424 | 299 | 70.52% [66.0, 74.7] |
+
+## Table S9. Zero-shot Michigan transfer, joint against Michigan-only pool
+
+Zero-shot Michigan transfer, joint against Michigan-only candidate pool.
+
+| Candidate pool | # Candidates | R@1 | R@5 |
+|---|---|---|---|
+| Joint (1,898+298) | 2,196 | 68.82 [58.8, 77.3] | 91.40 [83.9, 95.6] |
+| Michigan-only | 298 | 74.19 [64.5, 82.0] | 93.55 [86.6, 97.0] |
+
+## Table S10. Agentic compliance confusion matrix
+
+Agentic compliance confusion matrix over 8 cross-plan verification queries. GT and Pred are the ground-truth and predicted verdicts; Match indicates agreement; Steps is the number of verification steps the Planner produced. Expected minimum decomposition is 2 steps per query.
+
+| ID | Plans | GT | Pred | Match | Steps |
+|---|---|---|---|---|---|
+| comp_01 | 511-1A, 203-2A | PASS | PASS | yes | 8 |
+| comp_02 | 606-7C, 606-2B | PASS | PASS | yes | 7 |
+| comp_03 | 511-1A | PASS | PASS | yes | 8 |
+| comp_04 | 202-1 | PASS | PASS | yes | 9 |
+| comp_05 | 511-1A | PASS | PASS | yes | 10 |
+| comp_06 | 606-4B | PASS | PASS | yes | 8 |
+| comp_07 | 203-2A | PASS | PASS | yes | 10 |
+| comp_08 | 203-2A | PASS | PASS | yes | 9 |
+
+## Note S11. Complementary retrieval enhancements
+
+Two further enhancements are available as drop-in additions and are orthogonal to LoRA: (i) a VLM cross-encoder re-rank, where the Top-k retrieved candidates are each passed to a VLM with a binary “does this plan answer the query?” prompt. This sharpens Recall@1 on visually-similar sheet pairs at a latency cost; and (ii) hybrid BM25 fusion, combining dense MaxSim scores with a sparse BM25 score over plan-ID/sheet-title metadata for queries that target alphanumeric identifiers. Pointwise VLM re-ranking (MonoQwen2-VL-v0.1, 2B parameters) over the Top-20 retrieved candidates adds 5.91 s of latency per query (averaging 295 ms per pointwise candidate pass) on a single NVIDIA H100 GPU, corresponding to a throughput of approximately 610 queries per hour. Both are reported as secondary options; the off-the-shelf, zero-shot retriever (ColNomic-3B) is the primary deployment configuration because it relies on the pretrained embedding space alone without introducing the latency of cross-encoder re-ranking or the metadata dependencies of hybrid search.
+
+## Figure S12. Standard-Specifications reference sheet
+
+A rendered Standard-Specifications reference sheet from the rule-grounding corpus. The seven governing limits for the compliance archetypes (e.g., min. cover 2.0”, max. stirrup spacing d/2) are embedded among distractor rows; the agent must retrieve the correct sheet among 1,913 candidates and extract the governing limit from the table.
+
+![Standard-Specifications reference sheet](docs/figures/spec_sheet_601.png)

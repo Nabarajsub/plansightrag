@@ -14,9 +14,11 @@ its backing report and generating script is in **`TABLE_PROVENANCE.md`**.
 
 ### 📑 [Supplementary information →](SUPPLEMENTARY.md)
 
-Additional tables supporting the article (S1–S5): per-run implementation
-provenance, benchmark distribution by agency and reasoning category, the 78-pair
-anchor set, retrieval latency percentiles, and the multi-plan threshold study.
+Additional tables, figures and notes supporting the article (S1–S12): per-run
+implementation provenance, benchmark distribution, the 78-pair anchor set,
+latency percentiles, the multi-plan threshold study, the sliding-window tiling
+scheme, tile-level and rank-conditioned judge accuracy, Michigan transfer by
+candidate pool, the agentic confusion matrix, and a rendered specification sheet.
 
 ## Demo
 
